@@ -9,6 +9,7 @@ export default class Header extends React.Component {
 
 componentDidMount() {
 this.header = document.querySelector('header')
+this.window = window
 }
 
     render() {
@@ -26,9 +27,11 @@ this.header.querySelector('#brand-text').classList.add('text-5xl');
         }
 }
 
-//window.addEventListener('scroll', function() {
-//handleScroll()
-//})
+if (this.window !== undefined) {
+window.addEventListener('scroll', function() {
+handleScroll()
+})
+}
 
         return (
 
