@@ -13,7 +13,7 @@ export default class Meta extends React.Component {
         return (
             <Head>
                 <title>Create Next Appy</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="" />
                 <link rel="css/stylesheet" href="" />
             </Head>
         )
