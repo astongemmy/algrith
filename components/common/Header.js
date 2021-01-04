@@ -34,11 +34,13 @@ this.brandTitle.classList.add('text-5xl');
 }
 
 useEffect(() => {
+if (typeof window !== "undefined") {
     window.addEventListener("scroll", handleScroll)
-    return () => {
+    }
+return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  })
+  }, [handleScroll])
 
 
         return (
