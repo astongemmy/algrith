@@ -20,18 +20,18 @@ this.brandTitle = document.querySelector('#brand-title')
 
     render() {
 
-const handleScroll = () => {
+//const handleScroll = () => {
 // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
-        if (this.header !== undefined) {
-if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-this.brandTitle.classList.remove('text-5xl');
-this.brandTitle.classList.add('text-2xl');
-} else {
-            this.brandTitle.classList.remove('text-2xl');
-this.brandTitle.classList.add('text-5xl');
-        }
-        }
-}
+        //if (this.header !== undefined) {
+//if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+//this.brandTitle.classList.remove('text-5xl');
+//this.brandTitle.classList.add('text-2xl');
+//} else {
+           // this.brandTitle.classList.remove('text-2xl');
+//this.brandTitle.classList.add('text-5xl');
+        //}
+      //  }
+//}
 
 //useEffect(() => {
     //window.addEventListener("scroll", handleScroll)
