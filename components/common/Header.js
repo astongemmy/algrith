@@ -10,6 +10,7 @@ export default class Header extends React.Component {
 componentDidMount() {
 this.header = document.querySelector('header')
 this.brandTitle = document.querySelector('#brand-title')
+this.window = window
 }
 
     render() {
@@ -27,8 +28,8 @@ this.brandTitle.classList.add('text-5xl');
         }
 }
 
-if (window !== undefined) {
-window.addEventListener('scroll', () => {
+if (this.window !== undefined) {
+this.window.addEventListener('scroll', () => {
 handleScroll()
 })
 }
