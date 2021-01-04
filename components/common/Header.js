@@ -33,12 +33,12 @@ this.brandTitle.classList.add('text-5xl');
         }
 }
 
-useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  })
+//useEffect(() => {
+    //window.addEventListener("scroll", handleScroll)
+    //return () => {
+      //window.removeEventListener("scroll", handleScroll)
+    //}
+  //})
 
 
         return (
