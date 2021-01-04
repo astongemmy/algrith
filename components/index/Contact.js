@@ -17,7 +17,7 @@ export default class Contact extends React.Component {
                     Contact us
                 </h1>
 
-                <div className="flex flex-wrap lg:flex-nowrap justify-around items-start px-16 py-0 lg:py-16 w-full">
+                <div className="flex flex-wrap lg:flex-nowrap justify-start md:justify-around items-start px-16 py-0 lg:py-16 w-full">
 
                     <div className="relative w-full md:w-2/4 m-0 p-4">
 
@@ -44,9 +44,9 @@ export default class Contact extends React.Component {
 
                     </div>
 
-                    <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
+                    <div className="relative bg-blue-500 w-full md:w-2/4 m-0 p-0 md:p-4">
 
-                        <div className="relative flex justify-start items-center w-full m-0 p-0 md:p-2 lg:p-12">
+                        <div className="relative flex justify-start items-center content-start w-full m-0 p-0 md:p-2 lg:p-12">
                             <img src="./images/backgrounds/contact_us.webp" />
                         </div>
 
