@@ -21,7 +21,7 @@ export default class About extends React.Component {
 
                     <div className="relative w-full lg:w-2/4 xl:w-2/4 m-4 md:m-0 p-4">
 
-                        <div className="relative w-full m-4 md:m-0 p-0 lg:p-12">
+                        <div className="relative w-full m-4 md:m-0 p-4 lg:p-12">
                         
                             <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 left-10 p-4 rounded-xl ring-purple-300">
                                 Secretary
@@ -46,7 +46,7 @@ export default class About extends React.Component {
                     
                     <div className="relative w-full lg:w-2/4 xl:w-2/4 m-4 md:m-0 p-4">
 
-                        <div className="relative w-full m-4 md:m-0 p-0 lg:p-12">
+                        <div className="relative w-full m-4 md:m-0 p-4 lg:p-12">
 
                             <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-10 p-4 rounded-xl ring-purple-300">
                                 Co Founder
@@ -71,7 +71,7 @@ export default class About extends React.Component {
 
                     <div className="relative w-full lg:w-2/4 xl:w-2/4 m-4 md:m-0 p-4">
 
-                        <div className="relative w-full m-4 md:m-0 p-0 lg:p-12">
+                        <div className="relative w-full m-4 md:m-0 p-4 lg:p-12">
                         
                             <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-2/4 transform translate-x-2/4 p-4 rounded-xl ring-purple-300">
                                 Founder / CEO
