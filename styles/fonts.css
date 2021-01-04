@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Raleway/Raleway-Bold.ttf");
+	src: url("./webfonts/Raleway/Raleway-Medium.woff2") format("woff2"), url("./webfonts/Raleway/Raleway-Regular.woff2") format("woff2"), url("./webfonts/Raleway/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Dosis';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Dosis/Dosis-VariableFont_wght.ttf");
+	src: url("./webfonts/Dosis/Dosis-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Manrope/Manrope-VariableFont_wght.ttf");
+	src: url("./webfonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Roboto/Roboto-Regular.ttf");
+	src: url("./webfonts/Roboto/Roboto-Medium.ttf") format("truetype"), url("./webfonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Nunito-Light';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Nunito/Nunito-Light.ttf");
+	src: url("./webfonts/Nunito/Nunito-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Nunito-Black';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Nunito/Nunito-Black.ttf");
+	src: url("./webfonts/Nunito/Nunito-Black.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Montserrat/Montserrat-Medium.ttf");
+	src: url("./webfonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
