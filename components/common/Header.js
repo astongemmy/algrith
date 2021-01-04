@@ -27,9 +27,11 @@ this.brandTitle.classList.add('text-5xl');
         }
 }
 
+if (window !== undefined) {
 window.addEventListener('scroll', () => {
 handleScroll()
 })
+}
 
         return (
 
