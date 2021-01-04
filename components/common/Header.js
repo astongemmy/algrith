@@ -14,9 +14,9 @@ this.brandTitle = document.querySelector('#brand-title')
 //window​.​addEventListener​(​'scroll'​,​ ​this​.​handleScroll​,​ ​false​)​;
 ​}​
 
-componentWillUnmount​(​)​ ​{​
+//componentWillUnmount​(​)​ ​{​
     //window​.​removeEventListener​(​'scroll'​,​ ​this​.​handleScroll​,​ ​false​)​;​
-}
+//}
 
     render() {
 
@@ -34,13 +34,11 @@ this.brandTitle.classList.add('text-5xl');
 }
 
 useEffect(() => {
-if (typeof window !== "undefined") {
     window.addEventListener("scroll", handleScroll)
-    }
-return () => {
+    return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [handleScroll])
+  })
 
 
         return (
