@@ -5,17 +5,20 @@ export default class Header extends React.Component {
     
     constructor() {
         super()
+this.handleScroll = this.handleScroll.bind(this)
     }
 
 componentDidMount() {
 this.header = document.querySelector('header')
 this.brandTitle = document.querySelector('#brand-title')
-this.window = window
+window​.​addEventListener​(​'scroll'​,​ ​this​.​handleScroll​,​ ​false​)​;
+​}​
+
+componentWillUnmount​(​)​ ​{​
+    window​.​removeEventListener​(​'scroll'​,​ ​this​.​handleScroll​,​ ​false​)​;​
 }
 
-    render() {
-
-const handleScroll = () => {
+handleScroll() {
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
         if (this.header !== undefined) {
 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -28,11 +31,7 @@ this.brandTitle.classList.add('text-5xl');
         }
 }
 
-if (this.window !== undefined) {
-this.window.addEventListener('scroll', () => {
-handleScroll()
-})
-}
+    render() {
 
         return (
 
