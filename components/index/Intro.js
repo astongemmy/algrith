@@ -11,13 +11,13 @@ export default class Intro extends React.Component {
 
         return (
 
-            <div className="flex flex-wrap xl:flex-nowrap justify-around items-center bg-green-300 p-4 lg:p-16 w-full dark:bg-black">
+            <div className="flex flex-wrap xl:flex-nowrap justify-around items-center bg-green-300 w-full dark:bg-black">
 
-                <div className="w-full bg-red-400 xl:w-2/3 text-yellow-200 m-0 md:m-4 p-4 lg:p-16 text-5xl lg:text-8xl">
+                <div className="w-full xl:w-2/3 text-yellow-200 m-0 md:m-4 p-8 lg:p-20 text-5xl lg:text-8xl">
                     "The best software algorithm solution"
                 </div>
 
-                <div className="relative bg-blue-500 w-full xl:w-1/3 m-0 md:m-4 p-2 lg:p-16">                    
+                <div className="relative w-full xl:w-1/3 m-0 md:m-4 p-8 lg:p-20">                    
                     <div className="relative">
                         <button className="bg-green-500 relative rounded-full ring-4 ring-green-300 text-3xl text-green-200 m-8 md:m-4 px-8 lg:px-16 py-4 lg:py-8">
                             <div className="absolute top-0 -left-1 flex w-8 h-8">
