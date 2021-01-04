@@ -26,6 +26,10 @@ this.header.classList.querySelector('#brand-text').add('text-5xl');
         }
 }
 
+window.addEventListener('scroll', () => {
+handleScroll()
+}
+
         return (
 
             <header className="flex sticky top-0 z-20 justify-between items-start bg-green-300 p-4 w-full dark:bg-black">
