@@ -11,7 +11,7 @@ export default class Contact extends React.Component {
 
         return (
 
-            <div className="py-16 px-0 lg:px-32 w-full dark:bg-black">
+            <div className="pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
 
                 <h1 className="uppercase text-5xl text-red-600 mx-auto w-full text-center font-medium">
                     Contact us
@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
 
                     <div className="relative w-full md:w-2/4 m-0 p-4">
 
-                        <div className="relative flex flex-wrap w-full m-0 p-2 lg:p-12">
+                        <div className="relative flex flex-wrap w-full m-0 p-4 lg:p-12">
                             <div className="w-full lg:w-2/4 p-4">
                                 <input type="email" placeholder="email" className="w-full outline-none ring ring-green-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
@@ -44,7 +44,7 @@ export default class Contact extends React.Component {
 
                     </div>
 
-                    <div className="relative bg-blue-500 w-full md:w-2/4 m-0 p-0 md:p-4">
+                    <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
 
                         <div className="relative flex justify-start items-center w-full m-0 p-0 md:p-2 lg:p-12">
                             <img src="./images/backgrounds/contact_us.webp" />
