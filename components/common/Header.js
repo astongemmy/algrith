@@ -8,7 +8,7 @@ export default class Header extends React.Component {
     }
 
 componentDidMount() {
-this.header = document.querySelector('#header')
+this.header = document.querySelector('header')
 }
 
     render() {
@@ -18,10 +18,10 @@ const handleScroll = () => {
         if (this.header !== undefined) {
 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             this.header.querySelector('#brand-text').classList.remove('text-5xl');
-this.header.classList.querySelector('#brand-text').add('text-5xl');
+this.header.querySelector('#brand-text').classList.add('text-5xl');
         } else {
             this.header.querySelector('#brand-text').classList.remove('text-5xl');
-this.header.classList.querySelector('#brand-text').add('text-5xl');
+this.header.querySelector('#brand-text').classList.add('text-5xl');
         }
         }
 }
