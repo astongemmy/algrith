@@ -26,9 +26,9 @@ this.header.querySelector('#brand-text').classList.add('text-5xl');
         }
 }
 
-window.addEventListener('scroll', function() {
-handleScroll()
-})
+//window.addEventListener('scroll', function() {
+//handleScroll()
+//})
 
         return (
 
