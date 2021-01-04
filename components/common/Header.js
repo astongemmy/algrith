@@ -9,6 +9,7 @@ export default class Header extends React.Component {
 
 componentDidMount() {
 this.header = document.querySelector('header')
+this.brandTitle = document.querySelector('#brand-title')
 }
 
     render() {
@@ -17,11 +18,11 @@ const handleScroll = () => {
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
         if (this.header !== undefined) {
 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-           this.header.querySelector('#brand-text').classList.remove('text-5xl');
-this.header.querySelector('#brand-text').classList.add('text-5xl');
+           this.brandTitle.classList.remove('text-5xl');
+this.brandTitle.classList.add('text-5xl');
 } else {
-            this.header.querySelector('#brand-text').classList.remove('text-5xl');
-this.header.querySelector('#brand-text').classList.add('text-5xl');
+            this.brandTitle.classList.remove('text-5xl');
+this.brandTitle.classList.add('text-5xl');
         }
         }
 }
@@ -35,7 +36,7 @@ this.header.querySelector('#brand-text').classList.add('text-5xl');
                 </div> */}
                 <div className="ml-4 lg:ml-32 md:mt-4 mt-1">
                     <a href="/">
-                        <h1 id="brand-text" className="uppercase hover:bg-green-400 p-4 rounded-full text-5xl text-yellow-100 mx-auto w-full text-center font-medium">
+                        <h1 id="brand-title" className="uppercase hover:bg-green-400 p-4 rounded-full text-5xl text-yellow-100 mx-auto w-full text-center font-medium">
                             Algrith
                         </h1>
                     </a>
