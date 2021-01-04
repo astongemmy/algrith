@@ -17,6 +17,7 @@ this.brandTitle = document.querySelector('#brand-title')
 const handleScroll = () => {
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
         if (this.header !== undefined) {
+alert('here')
 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
            this.brandTitle.classList.remove('text-5xl');
 this.brandTitle.classList.add('text-5xl');
