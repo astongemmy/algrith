@@ -18,15 +18,18 @@ const handleScroll = () => {
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
         if (this.header !== undefined) {
 if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-alert('here')
 this.brandTitle.classList.remove('text-5xl');
-this.brandTitle.classList.add('text-5xl');
+this.brandTitle.classList.add('text-2xl');
 } else {
-            this.brandTitle.classList.remove('text-5xl');
+            this.brandTitle.classList.remove('text-2xl');
 this.brandTitle.classList.add('text-5xl');
         }
         }
 }
+
+window.addEventListener('scroll', () => {
+handleScroll()
+})
 
         return (
 
