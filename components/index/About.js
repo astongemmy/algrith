@@ -17,7 +17,7 @@ export default class About extends React.Component {
                     Why choose us
                 </h1>
 
-                <div className="flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-16 px-2 lg:px-32 w-full dark:bg-black">
+                <div className="flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 lg:px-32 w-full dark:bg-black">
 
                     <div className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4">
                         <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-2xl rounded-xl text-center shadow">
