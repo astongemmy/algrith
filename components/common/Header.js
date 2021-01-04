@@ -26,7 +26,7 @@ this.header.querySelector('#brand-text').classList.add('text-5xl');
         }
 }
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', function() {
 handleScroll()
 })
 
