@@ -26,21 +26,33 @@ export default class Header extends React.Component {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 this.brandTitle.classList.remove('text-5xl')
                 this.brandTitle.classList.add('text-2xl')
+                this.brandTitle.classList.remove('p-4')
+                this.brandTitle.classList.add('p-1')
                 this.hamburger.classList.remove('p-4')
-                this.hamburger.classList.add('p-2')
-                // this.hamburger.classList.remove('text-3xl')
-                // this.hamburger.classList.add('text-xl')
+                this.hamburger.classList.add('p-1')
+                this.hamburger.classList.remove('text-3xl')
+                this.hamburger.classList.add('text-2xl')
+                this.hamburger.classList.remove('mt-1')
+                this.hamburger.classList.add('mt-0')
                 this.brand.classList.remove('md:mt-4')
                 this.brand.classList.add('md:mt-0')
+                this.header.classList.remove('p-4')
+                this.header.classList.add('p-0')
             } else {
                 this.brandTitle.classList.remove('text-2xl')
                 this.brandTitle.classList.add('text-5xl')
-                this.hamburger.classList.remove('p-2')
+                this.brandTitle.classList.remove('p-1')
+                this.brandTitle.classList.add('p-4')
+                this.hamburger.classList.remove('p-1')
                 this.hamburger.classList.add('p-4')
-                // this.hamburger.classList.remove('text-xl')
-                // this.hamburger.classList.add('text-3xl')
+                this.hamburger.classList.remove('text-2xl')
+                this.hamburger.classList.add('text-3xl')
+                this.hamburger.classList.remove('mt-0')
+                this.hamburger.classList.add('mt-1')
                 this.brand.classList.remove('md:mt-0')
                 this.brand.classList.add('md:mt-4')
+                this.header.classList.remove('p-0')
+                this.header.classList.add('p-4')
             }
         }
     }
@@ -50,7 +62,7 @@ export default class Header extends React.Component {
 
         return (
 
-            <header className="flex sticky top-0 z-20 justify-between items-start bg-green-300 p-4 w-full dark:bg-black">
+            <header className="flex sticky top-0 z-20 justify-between items-center bg-green-300 p-4 w-full dark:bg-black">
                 
                 {/* <div className="w-16 ml-4 lg:ml-64 md:mt-4 mt-1">
                     <img src="./images/logo/algrith.png" alt="brand-logo" />
