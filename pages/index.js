@@ -14,11 +14,62 @@ export default class Index extends React.Component {
   
     constructor() {
         super()
+        this.handleScroll = this.handleScroll.bind(this)
     }
 
     componentDidMount() {
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
+        this.header = document.querySelector('header');
+        this.brand = document.querySelector('#brand');
+        this.brandTitle = document.querySelector('#brand-title');
+        this.hamburger = document.querySelector('#hamburger');
+        window.addEventListener('scroll', this.handleScroll, false)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll, false)
+    }
+
+    handleScroll() {
+        // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
+        if (this.header !== undefined) {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                this.brandTitle.classList.remove('text-5xl')
+                this.brandTitle.classList.add('text-2xl')
+                this.brandTitle.classList.remove('p-4')
+                this.brandTitle.classList.add('p-1')
+                this.hamburger.classList.remove('p-4')
+                this.hamburger.classList.add('p-1')
+                this.hamburger.classList.remove('text-3xl')
+                this.hamburger.classList.add('text-2xl')
+                this.hamburger.classList.remove('mt-1')
+                this.hamburger.classList.add('mt-0')
+                this.brand.classList.remove('md:mt-4')
+                this.brand.classList.add('md:mt-0')
+                this.nav_menu.classList.remove('md:top-4')
+                this.nav_menu.classList.add('md:top-0')
+                this.nav_menu.classList.remove('md:mt-4')
+                this.nav_menu.classList.add('md:mt-1')
+            } else {
+                this.brandTitle.classList.remove('text-2xl')
+                this.brandTitle.classList.add('text-5xl')
+                this.brandTitle.classList.remove('p-1')
+                this.brandTitle.classList.add('p-4')
+                this.hamburger.classList.remove('p-1')
+                this.hamburger.classList.add('p-4')
+                this.hamburger.classList.remove('text-2xl')
+                this.hamburger.classList.add('text-3xl')
+                this.hamburger.classList.remove('mt-0')
+                this.hamburger.classList.add('mt-1')
+                this.brand.classList.remove('md:mt-0')
+                this.brand.classList.add('md:mt-4')
+                this.nav_menu.classList.remove('md:top-0')
+                this.nav_menu.classList.add('md:top-4')
+                this.nav_menu.classList.remove('md:mt-1')
+                this.nav_menu.classList.add('md:mt-4')
+            }
+        }
     }
 
     render() {

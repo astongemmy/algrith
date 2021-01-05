@@ -4,65 +4,22 @@ import Link from 'next/link'
 export default class Header extends React.Component {
     
     constructor() {
-        super()
-        this.handleScroll = this.handleScroll.bind(this)
+        super()        
     }
 
     componentDidMount() {
-        this.header = document.querySelector('header');
-        this.brand = document.querySelector('#brand');
-        this.brandTitle = document.querySelector('#brand-title');
-        this.hamburger = document.querySelector('#hamburger');
-        window.addEventListener('scroll', this.handleScroll, false)
+
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll, false)
+        
     }
-
-    handleScroll() {
-        // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
-        if (this.header !== undefined) {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                this.brandTitle.classList.remove('text-5xl')
-                this.brandTitle.classList.add('text-2xl')
-                this.brandTitle.classList.remove('p-4')
-                this.brandTitle.classList.add('p-1')
-                this.hamburger.classList.remove('p-4')
-                this.hamburger.classList.add('p-1')
-                this.hamburger.classList.remove('text-3xl')
-                this.hamburger.classList.add('text-2xl')
-                this.hamburger.classList.remove('mt-1')
-                this.hamburger.classList.add('mt-0')
-                this.brand.classList.remove('md:mt-4')
-                this.brand.classList.add('md:mt-0')
-                // this.header.classList.remove('p-4')
-                // this.header.classList.add('p-0')
-            } else {
-                this.brandTitle.classList.remove('text-2xl')
-                this.brandTitle.classList.add('text-5xl')
-                this.brandTitle.classList.remove('p-1')
-                this.brandTitle.classList.add('p-4')
-                this.hamburger.classList.remove('p-1')
-                this.hamburger.classList.add('p-4')
-                this.hamburger.classList.remove('text-2xl')
-                this.hamburger.classList.add('text-3xl')
-                this.hamburger.classList.remove('mt-0')
-                this.hamburger.classList.add('mt-1')
-                this.brand.classList.remove('md:mt-0')
-                this.brand.classList.add('md:mt-4')
-                // this.header.classList.remove('p-0')
-                // this.header.classList.add('p-4')
-            }
-        }
-    }
-
 
     render() {
 
         return (
 
-            <header className="flex sticky top-0 z-20 justify-between items-center bg-green-300 p-4 w-full dark:bg-black">
+            <header className="flex sticky top-0 z-20 justify-between items-center bg-green-300 p-4 w-full dark:bg-black transition-all ease-in-out duration-1000">
                 
                 {/* <div className="w-16 ml-4 lg:ml-64 md:mt-4 mt-1">
                     <img src="./images/logo/algrith.png" alt="brand-logo" />
