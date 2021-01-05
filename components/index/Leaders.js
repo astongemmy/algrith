@@ -33,7 +33,7 @@ export default class About extends React.Component {
 
                             <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-                                <img className="relative" src="./images/logo/algrith.png" width={200} height={200} alt="leader_image" />
+                                <img className="relative" src="./images/board/secretary.png" width={200} height={200} alt="leader_image" />
                             </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-12 rounded-xl">
@@ -58,7 +58,7 @@ export default class About extends React.Component {
 
                             <div className="flex relative mt-28 ml-auto mr-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-                                <img className="relative" src="./images/logo/algrith.png" width={200} height={200} alt="leader_image" />
+                                <img className="relative" src="./images/board/cto.png" width={200} height={200} alt="leader_image" />
                             </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 right-48 top-12 rounded-xl">
@@ -83,7 +83,7 @@ export default class About extends React.Component {
 
                             <div className="flex relative mt-48 mx-auto w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-                                <img className="relative" src="./images/logo/algrith.png" width={200} height={200} alt="leader_image" />
+                                <img className="relative" src="./images/board/ceo.png" width={200} height={200} alt="leader_image" />
                             </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-2/4 transform -translate-x-2/4 top-32 rounded-xl">
