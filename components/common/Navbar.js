@@ -19,7 +19,7 @@ export default class Header extends React.Component {
                         Menu
                     </div>
 
-                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center bg-red-300 rounded-full text-3xl items-center w-16 h-16 text-white">
+                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center p-2 text-xl items-center text-white">
                         <i className="fa fa-times"></i>
                     </div>
 
