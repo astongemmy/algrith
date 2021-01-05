@@ -23,7 +23,7 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-4 md:m-0 p-4 lg:p-12">
                         
-                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 left-10 p-4 rounded-xl ring-purple-300">
+                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 left-10 p-4 rounded-xl">
                                 Secretary
                             </div>
                             
@@ -31,7 +31,7 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 left-52 bg-red-400 transform rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-300">
+                            <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
                                 <img className="relative" src="./images/logo/algrith.png" width={200} height={200} alt="leader_image" />
                             </div>
@@ -48,7 +48,7 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-4 md:m-0 p-4 lg:p-12">
 
-                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-10 p-4 rounded-xl ring-purple-300">
+                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-10 p-4 rounded-xl">
                                 Co Founder
                             </div>
                             
@@ -56,7 +56,7 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 right-52 bg-red-400 transform -rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-auto mr-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-300">
+                            <div className="flex relative mt-28 ml-auto mr-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
                                 <img className="relative" src="./images/logo/algrith.png" width={200} height={200} alt="leader_image" />
                             </div>
@@ -73,7 +73,7 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-4 md:m-0 p-4 lg:p-12">
                         
-                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-2/4 transform translate-x-2/4 p-4 rounded-xl ring-purple-300">
+                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-2/4 transform translate-x-2/4 p-4 rounded-xl">
                                 Founder / CEO
                             </div>
                             
@@ -81,7 +81,7 @@ export default class About extends React.Component {
 
                             <div className="absolute top-32 left-2/4 transform -translate-x-2/4 bg-red-400 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-48 mx-auto w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-300">
+                            <div className="flex relative mt-48 mx-auto w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
                                 <img className="relative" src="./images/logo/algrith.png" width={200} height={200} alt="leader_image" />
                             </div>
