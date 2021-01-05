@@ -47,7 +47,7 @@ export default class Contact extends React.Component {
                     <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
 
                         <div className="relative flex justify-start items-center w-full m-0 p-0 md:p-2 lg:p-12">
-                            <img src="./images/backgrounds/contact_us.webp" />
+                            <img src="./images/locate.webp" />
                         </div>
 
                     </div>
