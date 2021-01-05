@@ -15,6 +15,7 @@ export default class Index extends React.Component {
     constructor() {
         super()
         this.handleScroll = this.handleScroll.bind(this)
+        this.deviceView = this.deviceView.bind(this)
     }
 
     componentDidMount() {
@@ -31,6 +32,17 @@ export default class Index extends React.Component {
         window.removeEventListener('scroll', this.handleScroll, false)
     }
 
+    //	Viewport observer	//
+	//	Checks if viewport is mobile
+	deviceView() {
+		let viewport_width = document.documentElement.clientWidth;
+		if (viewport_width < '702') {
+			return "mobile";
+		} else {
+			return "desktop";
+		}
+	}
+
     handleScroll() {
 
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
@@ -41,13 +53,15 @@ export default class Index extends React.Component {
                 this.header.style.transformOrigin = 'top'
                 this.brand.style.transform = 'scale(0.7, 1)'
                 this.brand.style.transformOrigin = 'left top'
-                this.nav_menu.classList.remove('md:top-4')
-                this.nav_menu.classList.add('md:top-1')
+                if (this.deviceView() == 'desktop') {
+                    this.nav_menu.style.top = '0.25rem'
+                }
             } else {
                 this.header.style.transform = 'scale(1)'
                 this.brand.style.transform = 'scale(1)'
-                this.nav_menu.classList.remove('md:top-1')
-                this.nav_menu.classList.add('md:top-4')
+                if (this.deviceView() == 'desktop') {
+                    this.nav_menu.style.top = '4rem'
+                }
             }
 
         }
@@ -95,7 +109,7 @@ export default class Index extends React.Component {
         
             <div className="">
               
-                <Meta />
+                <Meta title="Home | Algrith" />
 
                 <Header event={{open_nav_bar}} />
 

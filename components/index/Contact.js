@@ -11,13 +11,13 @@ export default class Contact extends React.Component {
 
         return (
 
-            <div className="pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
+            <div className="relative pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
 
-                <h1 className="uppercase text-3xl md:text-5xl text-red-600 mx-auto w-full text-center font-medium">
+                <h1 className="relative uppercase text-3xl md:text-5xl text-red-600 mx-auto w-full text-center font-medium">
                     Contact us
                 </h1>
 
-                <div className="flex flex-wrap lg:flex-nowrap justify-around items-start p-0 md:p-16 w-full">
+                <div className="relative flex flex-wrap lg:flex-nowrap justify-around items-start p-0 md:p-16 w-full">
 
                     <div className="relative w-full md:w-2/4 m-0 p-4">
 
@@ -46,8 +46,8 @@ export default class Contact extends React.Component {
 
                     <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
 
-                        <div className="relative flex justify-start items-center w-full m-0 p-0 md:p-2 lg:p-12">
-                            <img src="./images/locate.webp" />
+                        <div className="relative overflow-hidden flex justify-center lg:justify-start items-center w-full m-0 p-0 md:p-2 lg:p-12">
+                            <img src="./images/illustrations/man-on-laptop.png" />
                         </div>
 
                     </div>

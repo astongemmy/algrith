@@ -11,13 +11,17 @@ export default class About extends React.Component {
 
         return (
 
-            <div className="py-16 px-2 lg:px-32 w-full bg-gray-100 dark:bg-black">
+            <div className="relative py-16 px-2 lg:px-32 w-full bg-gray-100 dark:bg-black">
+                
+                <div className="absolute -top-72 -right-80 bg-gray-200 rounded-full overflow-hidden p-8 transform scale-65 animation-all duration-1000 ease-in-out">
+                    <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" />
+                </div>
 
-                <h1 className="uppercase text-3xl md:text-5xl text-yellow-600 mx-auto w-full text-center font-medium">
+                <h1 className="relative uppercase text-3xl md:text-5xl text-yellow-600 mx-auto w-full text-center font-medium">
                     The company
                 </h1>
 
-                <div className="flex flex-wrap justify-around items-center px-2 xl:px-64 py-0 lg:py-16 w-full">
+                <div className="relative flex flex-wrap justify-around items-center px-2 xl:px-64 py-0 lg:py-16 w-full">
 
                     <div className="relative w-full lg:w-2/4 xl:w-2/4 my-0 mx-4 md:mx-0 p-0 md:p-4">
 
@@ -31,11 +35,12 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 left-52 bg-red-400 transform rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
+                            <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-"                                <div className="overflow-hidden">
-<img className="relative" src="./images/Nsikak-Akpan-gravatar.jpg" width={200} height={200} alt="leader_image" />
-                            </div></div>
+                                <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                                    <img className="relative" src="./images/board/secretary.jpg" width={200} height={200} alt="leader_image" />
+                                </div>
+                            </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-12 rounded-xl">
                                 Edwin, Leatherman
@@ -57,9 +62,11 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 right-52 bg-red-400 transform -rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-auto mr-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
+                            <div className="flex relative mt-28 ml-auto mr-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-                                <img className="relative" src="./images/Jide-Ilori-gravatar.jpg" width={200} height={200} alt="leader_image" />
+                                <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                                    <img className="relative" src="./images/board/cto.jpg" width={200} height={200} alt="leader_image" />
+                                </div>
                             </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 right-48 top-12 rounded-xl">
@@ -82,9 +89,11 @@ export default class About extends React.Component {
 
                             <div className="absolute top-32 left-2/4 transform -translate-x-2/4 bg-red-400 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-48 mx-auto w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
+                            <div className="flex relative mt-48 mx-auto w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-                                <img className="relative" src="./images/.png" width={200} height={200} alt="leader_image" />
+                                <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                                    <img src="./images/board/ceo.jpg" width={200} height={200} alt="leader_image" />
+                                </div>
                             </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-2/4 transform -translate-x-2/4 top-32 rounded-xl">
@@ -95,6 +104,10 @@ export default class About extends React.Component {
 
                     </div>
                     
+                </div>
+
+                <div className="absolute top-3/4 bg-gray-200 rounded-full overflow-hidden p-8 -left-1/3 lg:-left-0 transform scale-65 animation-all duration-1000 ease-in-out">
+                    <img className="rounded-full" src="./images/illustrations/man-on-laptop.png" />
                 </div>
 
             </div>

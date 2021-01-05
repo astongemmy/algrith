@@ -11,13 +11,17 @@ export default class About extends React.Component {
 
         return (
 
-            <div className="py-16 px-1 lg:px-32 w-full dark:bg-black">
+            <div className="relative py-16 px-1 lg:px-32 w-full dark:bg-black">
 
-                <h1 className="uppercase text-3xl md:text-5xl text-green-600 mx-auto w-full text-center font-medium">
+                <div className="relative w-3/4 lg:w-auto mx-auto lg:absolute lg:-top-28 lg:-left-28 rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
+                    <img className="rounded-full" src="./images/illustrations/team.png" />
+                </div>
+
+                <h1 className="relative uppercase text-3xl md:text-5xl text-green-600 mx-auto w-full text-center font-medium">
                     Why choose us
                 </h1>
 
-                <div className="flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 lg:px-32 w-full dark:bg-black">
+                <div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 lg:px-32 w-full dark:bg-black">
 
                     <div className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4">
                         <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-lg md:text-2xl rounded-xl text-center shadow">
