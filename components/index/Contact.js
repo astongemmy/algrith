@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
 
             <div className="pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
 
-                <h1 className="uppercase text-5xl text-red-600 mx-auto w-full text-center font-medium">
+                <h1 className="uppercase text-3xl md:text-5xl text-red-600 mx-auto w-full text-center font-medium">
                     Contact us
                 </h1>
 
