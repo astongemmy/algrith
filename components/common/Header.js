@@ -26,7 +26,7 @@ export default class Header extends React.Component {
                 </div> */}
                 <div id="brand" className="ml-4 lg:ml-24 transition-all ease-in-out duration-1000">
                     <a href="/">
-                        <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-gray-600 mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
+                        <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-black mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
                             Algrith
                         </h1>
                     </a>
