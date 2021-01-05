@@ -26,13 +26,13 @@ export default class Header extends React.Component {
                 </div> */}
                 <div id="brand" className="ml-4 lg:ml-24 transition-all ease-in-out duration-1000">
                     <a href="/">
-                        <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-black mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
+                        <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-gray-600 mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
                             Algrith
                         </h1>
                     </a>
                 </div>
                 
-                <div id="hamburger" onClick={this.props.event.open_nav_bar} className="md:hidden flex justify-center items-center text-3xl cursor-pointer p-4 ml-4 mr-1 text-black transform scale-y-75 transition-all ease-in-out duration-1000">
+                <div id="hamburger" onClick={this.props.event.open_nav_bar} className="md:hidden flex justify-center items-center text-3xl cursor-pointer p-4 ml-4 mr-1 text-gray-600 transform scale-y-75 transition-all ease-in-out duration-1000">
                     <i className="fa fa-bars"></i>
                 </div>
 
