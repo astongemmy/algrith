@@ -32,43 +32,49 @@ export default class Index extends React.Component {
     }
 
     handleScroll() {
+
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
         if (this.header !== undefined) {
+
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                this.brandTitle.classList.remove('text-5xl')
-                this.brandTitle.classList.add('text-2xl')
-                this.brandTitle.classList.remove('p-4')
-                this.brandTitle.classList.add('p-1')
-                this.hamburger.classList.remove('p-4')
-                this.hamburger.classList.add('p-1')
-                this.hamburger.classList.remove('text-3xl')
-                this.hamburger.classList.add('text-2xl')
-                this.hamburger.classList.remove('mt-1')
-                this.hamburger.classList.add('mt-0')
-                this.brand.classList.remove('md:mt-4')
-                this.brand.classList.add('md:mt-0')
+                this.header.style.transform = 'scale(1, 0.7)'
+                this.header.style.transformOrigin = 'top'
+                // this.brandTitle.classList.remove('text-5xl')
+                // this.brandTitle.classList.add('text-2xl')
+                // this.brandTitle.classList.remove('p-4')
+                // this.brandTitle.classList.add('p-1')
+                // this.hamburger.classList.remove('p-4')
+                // this.hamburger.classList.add('p-1')
+                // this.hamburger.classList.remove('text-3xl')
+                // this.hamburger.classList.add('text-2xl')
+                // this.hamburger.classList.remove('mt-1')
+                // this.hamburger.classList.add('mt-0')
+                // this.brand.classList.remove('md:mt-4')
+                // this.brand.classList.add('md:mt-0')
                 this.nav_menu.classList.remove('md:top-4')
-                this.nav_menu.classList.add('md:top-0')
-                this.nav_menu.classList.remove('md:mt-4')
-                this.nav_menu.classList.add('md:mt-1')
+                this.nav_menu.classList.add('md:top-1')
+                // this.nav_menu.classList.remove('md:mt-4')
+                // this.nav_menu.classList.add('md:mt-1')
             } else {
-                this.brandTitle.classList.remove('text-2xl')
-                this.brandTitle.classList.add('text-5xl')
-                this.brandTitle.classList.remove('p-1')
-                this.brandTitle.classList.add('p-4')
-                this.hamburger.classList.remove('p-1')
-                this.hamburger.classList.add('p-4')
-                this.hamburger.classList.remove('text-2xl')
-                this.hamburger.classList.add('text-3xl')
-                this.hamburger.classList.remove('mt-0')
-                this.hamburger.classList.add('mt-1')
-                this.brand.classList.remove('md:mt-0')
-                this.brand.classList.add('md:mt-4')
-                this.nav_menu.classList.remove('md:top-0')
+                this.header.style.transform = 'scale(1)'
+                // this.brandTitle.classList.remove('text-2xl')
+                // this.brandTitle.classList.add('text-5xl')
+                // this.brandTitle.classList.remove('p-1')
+                // this.brandTitle.classList.add('p-4')
+                // this.hamburger.classList.remove('p-1')
+                // this.hamburger.classList.add('p-4')
+                // this.hamburger.classList.remove('text-2xl')
+                // this.hamburger.classList.add('text-3xl')
+                // this.hamburger.classList.remove('mt-0')
+                // this.hamburger.classList.add('mt-1')
+                // this.brand.classList.remove('md:mt-0')
+                // this.brand.classList.add('md:mt-4')
+                this.nav_menu.classList.remove('md:top-1')
                 this.nav_menu.classList.add('md:top-4')
-                this.nav_menu.classList.remove('md:mt-1')
-                this.nav_menu.classList.add('md:mt-4')
+                // this.nav_menu.classList.remove('md:mt-1')
+                // this.nav_menu.classList.add('md:mt-4')
             }
+
         }
     }
 
