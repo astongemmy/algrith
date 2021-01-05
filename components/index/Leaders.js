@@ -37,7 +37,7 @@ export default class About extends React.Component {
                             </div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-12 rounded-xl">
-                                Eddy, Leatherman
+                                Edwin, Leatherman
                             </div>
 
                         </div>
