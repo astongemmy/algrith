@@ -36,8 +36,8 @@ export default class Header extends React.Component {
                 this.hamburger.classList.add('mt-0')
                 this.brand.classList.remove('md:mt-4')
                 this.brand.classList.add('md:mt-0')
-                this.header.classList.remove('p-4')
-                this.header.classList.add('p-0')
+                // this.header.classList.remove('p-4')
+                // this.header.classList.add('p-0')
             } else {
                 this.brandTitle.classList.remove('text-2xl')
                 this.brandTitle.classList.add('text-5xl')
@@ -51,8 +51,8 @@ export default class Header extends React.Component {
                 this.hamburger.classList.add('mt-1')
                 this.brand.classList.remove('md:mt-0')
                 this.brand.classList.add('md:mt-4')
-                this.header.classList.remove('p-0')
-                this.header.classList.add('p-4')
+                // this.header.classList.remove('p-0')
+                // this.header.classList.add('p-4')
             }
         }
     }
