@@ -11,9 +11,9 @@ export default class Intro extends React.Component {
 
         return (
 
-            <div className="flex flex-wrap xl:flex-nowrap justify-around items-center bg-gren-300 w-full dark:bg-black bg-intro">
+            <div className="flex flex-wrap xl:flex-nowrap justify-around items-center bg-gren-300 w-full dark:bg-black bg-intro bg-left-top bg-contain">
 
-                <div className="w-full xl:w-2/3 text-yellow-200 m-0 md:m-4 p-8 lg:p-20 text-5xl lg:text-8xl">
+                <div className="w-full xl:w-2/3 text-green-600 text-yelow-200 m-0 md:m-4 p-8 lg:p-20 text-5xl lg:text-8xl">
                     The best software algorithm solution
                 </div>
 
