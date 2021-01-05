@@ -3,10 +3,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: theme => ({
-        'contact-us': 'url("/images/contact.png")',
-      })
-    },
+backgroundImage: theme => ({
+         'intro': "url('/images/images (2).jpeg')",
+        })},
   },
   variants: {
     extend: {},
