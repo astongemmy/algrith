@@ -29,10 +29,10 @@ export default class Header extends React.Component {
                     <a className="m-1 md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-black">About</a>
                 </Link>
                 <Link href="/contact">
-                    <a className="m-1 md:m-4 p-4 hover:bg-gray-100 text-left md:text-center w-full md:w-auto text-xl text-black">Contact</a>
+                    <a className="m-1 md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-black">Contact</a>
                 </Link>
                 <Link href="/support">
-                    <a className="m-1 md:m-4 p-4 hover:bg-gray-100 text-left md:text-center w-full md:w-auto text-xl text-black">Support</a>
+                    <a className="m-1 md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-black">Support</a>
                 </Link>
 
             </nav>
