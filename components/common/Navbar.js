@@ -11,15 +11,15 @@ export default class Header extends React.Component {
         
         return (
 
-            <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-1000 shadow md:shadow-none bg-green-500 md:bg-transparent flex md:flex fixed top-0 md:top-4 -right-full md:right-12 flex-wrap md:flex-nowrap justify-start md:justify-end items-start md:items-center content-start w-screen lg:w-auto h-screen md:h-16 text-gray-600 p-4">
+            <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-1000 shadow md:shadow-none bg-white flex md:flex fixed top-0 md:top-4 -right-full md:right-12 flex-wrap md:flex-nowrap justify-start md:justify-end items-start md:items-center content-start w-screen lg:w-auto h-screen md:h-16 text-gray-600 p-4">
                                 
                 <div className="md:hidden flex justify-between items-center m-1 text-left w-full text-xl">
                     
-                    <div className="flex text-white">
-                        Menu
+                    <div className="flex text-green-600">
+                        Algrith
                     </div>
 
-                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center p-2 text-xl items-center text-white">
+                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center p-2 text-xl items-center text-black">
                         <i className="fa fa-times"></i>
                     </div>
 
