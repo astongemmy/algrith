@@ -13,7 +13,7 @@ export default class About extends React.Component {
 
             <div className="py-16 px-1 lg:px-32 w-full dark:bg-black">
 
-                <h1 className="uppercase text-5xl text-green-600 mx-auto w-full text-center font-medium">
+                <h1 className="uppercase text-3xl md:text-5xl text-green-600 mx-auto w-full text-center font-medium">
                     Why choose us
                 </h1>
 
