@@ -24,9 +24,9 @@ export default class Header extends React.Component {
                 {/* <div className="w-16 ml-4 lg:ml-64 md:mt-4 mt-1">
                     <img src="./images/logo/algrith.png" alt="brand-logo" />
                 </div> */}
-                <div id="brand" className="ml-0 lg:ml-20 transition-all ease-in-out duration-1000">
+                <div id="brand" className="ml-0 lg:ml-24 transition-all ease-in-out duration-1000">
                     <a href="/">
-                        <h1 id="brand-title" className="flex items-center pt-4 p-4 uppercase hover:bg-green-400 rounded-full text-5xl text-white mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
+                        <h1 id="brand-title" className="flex items-center uppercase text-5xl text-white mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
                             Algrith
                         </h1>
                     </a>
