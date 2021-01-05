@@ -40,7 +40,7 @@ export default class Index extends React.Component {
                 this.header.style.transform = 'scale(1, 0.7)'
                 this.header.style.transformOrigin = 'top'
                 this.brand.style.transform = 'scale(0.7, 1)'
-                this.brand.style.transformOrigin = 'top'
+                this.brand.style.transformOrigin = 'left top'
                 this.nav_menu.classList.remove('md:top-4')
                 this.nav_menu.classList.add('md:top-1')
             } else {
