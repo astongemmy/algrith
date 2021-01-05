@@ -31,10 +31,11 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 left-52 bg-red-400 transform rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex overflow-hidden relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
+                            <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-500">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
-                                <img className="relative" src="./images/Nsikak-Akpan-gravatar.jpg" width={200} height={200} alt="leader_image" />
-                            </div>
+"                                <div className="overflow-hidden">
+<img className="relative" src="./images/Nsikak-Akpan-gravatar.jpg" width={200} height={200} alt="leader_image" />
+                            </div></div>
 
                             <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-12 rounded-xl">
                                 Edwin, Leatherman
