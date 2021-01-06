@@ -35,7 +35,7 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 left-52 bg-red-400 transform rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-20 w-32 h-32 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
+                            <div className="flex relative mt-28 ml-20 w-72 h-72 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
                                 <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
                                 <div className="relative w-32 h-32 rounded-full overflow-hidden">
                                     <img className="relative" src="./images/board/secretary.jpg" width={200} height={200} alt="leader_image" />
