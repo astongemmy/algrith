@@ -42,7 +42,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-12 rounded-xl">
+                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-4 rounded-xl">
                                 Edwin, Leatherman
                             </div>
 
@@ -60,7 +60,7 @@ export default class About extends React.Component {
                             
                             <div className="absolute top-16 right-16 w-20 h-32 border-t-4 border-l-4 border-green-400 rounded-xl"></div>
 
-                            <div className="absolute top-12 right-52 bg-red-400 transform -rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
+                            <div className="absolute top-6 right-52 bg-red-400 transform -rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
                             <div className="flex relative mt-28 ml-auto mr-20 w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-gray-100">
                                 <div className="absolute w-full rounded-full h-full"></div>
@@ -69,7 +69,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 right-48 top-12 rounded-xl">
+                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 right-48 top-6 rounded-xl">
                                 Ilori, OluJide
                             </div>
 
