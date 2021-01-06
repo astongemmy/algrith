@@ -38,7 +38,7 @@ export default class About extends React.Component {
                             <div className="flex relative mt-28 ml-20 w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-gray-100">
                                 <div className="absolute w-full rounded-full h-full"></div>
                                 <div className="relative flex justify-center items-center w-72 h-72 rounded-full overflow-hidden">
-                                    <img className="relative" src="./images/board/secretary.jpg" width={200} height={200} alt="leader_image" />
+                                    <img className="relative rounded-full" src="./images/board/secretary.jpg" width={200} height={200} alt="leader_image" />
                                 </div>
                             </div>
 
@@ -64,8 +64,8 @@ export default class About extends React.Component {
 
                             <div className="flex relative mt-28 ml-auto mr-20 w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-gray-100">
                                 <div className="absolute w-full rounded-full h-full"></div>
-                                <div className="relative w-72 h-72 rounded-full overflow-hidden">
-                                    <img className="relative" src="./images/board/cto.jpg" width={200} height={200} alt="leader_image" />
+                                <div className="relative flex justify-center items-center w-72 h-72 rounded-full overflow-hidden">
+                                    <img className="relative rounded-full" src="./images/board/cto.jpg" width={200} height={200} alt="leader_image" />
                                 </div>
                             </div>
 
@@ -91,8 +91,8 @@ export default class About extends React.Component {
 
                             <div className="flex relative mt-48 mx-auto w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-gray-100">
                                 <div className="absolute w-full rounded-full h-full"></div>
-                                <div className="relative w-72 h-72 rounded-full overflow-hidden">
-                                    <img src="./images/board/ceo.jpg" width={200} height={200} alt="leader_image" />
+                                <div className="relative flex justify-center items-center w-72 h-72 rounded-full overflow-hidden">
+                                    <img className="rounded-full" src="./images/board/ceo.jpg" width={200} height={200} alt="leader_image" />
                                 </div>
                             </div>
 
