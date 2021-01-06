@@ -15,9 +15,9 @@ export default class Header extends React.Component {
                                 
                 <div className="md:hidden flex justify-between items-center m-1 text-left w-full text-2xl">
                     
-                    <div className="uppercase flex text-black p-2">
+                    <h1 className="uppercase flex text-black p-2 font-medium">
                         Algrith
-                    </div>
+                    </h1>
 
                     <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center p-2 text-xl items-center text-black">
                         <i className="fa fa-times"></i>
