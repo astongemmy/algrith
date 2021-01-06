@@ -27,21 +27,21 @@ export default class Contact extends React.Component {
 
                         <div className="relative flex flex-wrap w-full m-0 py-2 px-8 lg:p-12">
                             <div className="w-full lg:w-2/4 p-4">
-                                <input type="email" placeholder="Email" className="w-full outline-none ring ring-green-300 rounded p-4 my-4 mx-auto text-xl" />
+                                <input type="email" placeholder="Email" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
                             <div className="w-full lg:w-2/4 p-4">
-                                <input type="text" placeholder="Name" className="w-full outline-none ring ring-green-300 rounded p-4 my-4 mx-auto text-xl" />
+                                <input type="text" placeholder="Name" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
                             <div className="w-full lg:w-2/4 p-4">
-                                <input type="text" placeholder="Phone" className="w-full outline-none ring ring-green-300 rounded p-4 my-4 mx-auto text-xl" />
+                                <input type="text" placeholder="Phone" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
                             <div className="w-full lg:w-2/4 p-4">
-                                <input type="text" placeholder="Location" className="w-full outline-none ring ring-green-300 rounded p-4 my-4 mx-auto text-xl" />
+                                <input type="text" placeholder="Location" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
                             <div className="w-full p-4">
-                                <textarea placeholder="Write message..." className="w-full outline-none h-32 ring ring-green-300 rounded p-4 my-4 mx-auto text-xl" />
+                                <textarea placeholder="Write message..." className="w-full outline-none h-32 ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
-                            <button className="w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-4 ring-green-500 bg-green-500 text-green-100">
+                            <button className="w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-green-500 bg-green-500 text-green-100">
                                 Send
                             </button>
                         </div>
