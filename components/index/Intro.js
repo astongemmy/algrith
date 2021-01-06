@@ -19,7 +19,7 @@ export default class Intro extends React.Component {
 
                 <div className="relative w-full xl:w-1/3 m-0 md:m-4 p-8 lg:p-20">                    
                     <div className="relative">
-                        <button className="bg-green-500 relative rounded-full ring-4 ring-green-300 text-3xl text-green-200 mx-4 my-8 md:my-4 px-8 lg:px-16 py-4 lg:py-8 outline-none">
+                        <button className="bg-green-500 relative rounded-full ring-4 ring-green-300 text-3xl text-green-200 mx-4 my-8 md:my-4 px-8 lg:px-16 py-4 lg:py-8 focus:outline-none">
                             <div className="absolute top-0 -left-1 flex w-8 h-8">
                                 <div className="absolute inline-flex bg-yellow-500 w-full h-full animate-ping rounded-full"></div>
                                 <div className="relative inline-flex bg-green-400 w-8 h-8 rounded-full px-2 py-2"></div>
