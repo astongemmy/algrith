@@ -13,7 +13,7 @@ export default class About extends React.Component {
 
             <div className="relative overflow-hidden py-16 px-2 lg:px-32 w-full bg-gray-100 dark:bg-black">
                 
-                <div className="absolute -top-72 -right-80 bg-gray-200 rounded-full overflow-hidden p-8 transform scale-65 animation-all duration-1000 ease-in-out">
+                <div className="relative w-3/5 lg:w-auto mx-auto lg:absolute top-auto lg:-top-72 right-auto lg:-right-80 bg-gray-200 rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" />
                 </div>
 
@@ -104,10 +104,6 @@ export default class About extends React.Component {
 
                     </div>
                     
-                </div>
-
-                <div className="absolute top-3/4 bg-gray-200 rounded-full overflow-hidden p-8 -left-1/3 lg:-left-0 transform scale-65 animation-all duration-1000 ease-in-out">
-                    <img className="rounded-full" src="./images/illustrations/man-on-laptop.png" />
                 </div>
 
             </div>
