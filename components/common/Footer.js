@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
 
         return (
 
-            <footer className="">
+            <footer className="p-4">
 
                 <a href="/" target="_blank" rel="noopener noreferrer" className="text-xl">
 
