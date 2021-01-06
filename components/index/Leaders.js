@@ -35,8 +35,8 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 left-52 bg-red-400 transform rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-20 w-72 h-72 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
-                                <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
+                            <div className="flex relative mt-28 ml-20 w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-green-400">
+                                <div className="absolute w-full rounded-full h-full bg-red-500"></div>
                                 <div className="relative w-72 h-72 rounded-full overflow-hidden">
                                     <img className="relative" src="./images/board/secretary.jpg" width={200} height={200} alt="leader_image" />
                                 </div>
@@ -62,8 +62,8 @@ export default class About extends React.Component {
 
                             <div className="absolute top-12 right-52 bg-red-400 transform -rotate-45 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-28 ml-auto mr-20 w-72 h-72 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
-                                <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
+                            <div className="flex relative mt-28 ml-auto mr-20 w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-green-400">
+                                <div className="absolute w-full rounded-full h-full bg-red-500"></div>
                                 <div className="relative w-72 h-72 rounded-full overflow-hidden">
                                     <img className="relative" src="./images/board/cto.jpg" width={200} height={200} alt="leader_image" />
                                 </div>
@@ -89,8 +89,8 @@ export default class About extends React.Component {
 
                             <div className="absolute top-32 left-2/4 transform -translate-x-2/4 bg-red-400 w-4 h-32 border-t-4 border-r-4 border-red-600 rounded-xl"></div>
 
-                            <div className="flex relative mt-48 mx-auto w-72 h-72 rounded-full ring-8 ring-red-600 ring-offset-4 ring-offset-green-400">
-                                <div className="absolute w-full rounded-full h-full bg-red-500 opacity-75 animate-ping"></div>
+                            <div className="flex relative mt-48 mx-auto w-72 h-72 rounded-full ring-8 ring-red-200 ring-offset-4 ring-offset-green-400">
+                                <div className="absolute w-full rounded-full h-full bg-red-500"></div>
                                 <div className="relative w-72 h-72 rounded-full overflow-hidden">
                                     <img src="./images/board/ceo.jpg" width={200} height={200} alt="leader_image" />
                                 </div>
