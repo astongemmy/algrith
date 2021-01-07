@@ -46,7 +46,7 @@ export default class Contact extends React.Component {
 <label className="text-gray-600 p-2" for="contact-us-message">Message</label>
                                 <textarea placeholder="Write message..." id="contact-us-message" className="w-full outline-none h-32 ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
-                            <button className="w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-green-500 bg-green-500 text-green-100">
+                            <button className="w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-green-500 bg-green-500 text-white">
                                 Send
                             </button>
                         </form>
