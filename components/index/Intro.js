@@ -17,9 +17,9 @@ export default class Intro extends React.Component {
                     The best software algorithm solution <span className="text-purple-600 text-3xl lg:text-5xl">We make happy clients</span>
                 </div>
 
-                <div className="relative w-full xl:w-1/3 m-0 md:m-4 p-8 lg:p-20">                    
+                <div className="relative w-full xl:w-1/3 m-0 md:m-4 px-8 py-2 lg:p-20">                    
                     <div className="relative">
-                        <button className="bg-green-500 relative rounded-full ring-4 ring-green-30p text-3xl text-white mx-4 my-8 md:my-4 px-8 lg:px-16 py-4 lg:py-8 focus:outline-none select-none focus:select-none">
+                        <button className="bg-green-500 relative rounded-full ring-4 ring-green-30 text-3xl text-white mx-4 my-8 md:my-4 px-8 lg:px-16 py-4 lg:py-8 focus:outline-none select-none focus:select-none">
                             <div className="absolute top-0 -left-1 flex w-8 h-8">
                                 <div className="absolute inline-flex bg-yellow-500 w-full h-full animate-ping rounded-full"></div>
                                 <div className="relative inline-flex bg-green-400 w-8 h-8 rounded-full px-2 py-2"></div>
