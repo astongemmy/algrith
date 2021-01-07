@@ -19,7 +19,7 @@ export default class Header extends React.Component {
 
         return (
 
-            <header className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 p-4 w-full dark:bg-black">
+            <header className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 py-1 px-4 md:p-4 w-full dark:bg-black">
                 
                 {/* <div className="w-16 ml-4 lg:ml-64 md:mt-4 mt-1">
                     <img src="./images/logo/algrith.png" alt="brand-logo" />
