@@ -13,6 +13,8 @@ export default class Meta extends React.Component {
 
             <Head>
 
+<html lang="en-US" />
+
                 <meta name="theme-color" content="" />
                 <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
