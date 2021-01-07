@@ -37,7 +37,8 @@ export default class Header extends React.Component {
 </div>
 
 <div className="absolute bottom-0 p-4 w-full bg-gray-200">
-© Powered by Algrith
+Powered by <span className="ml-1 text-green-600"> Algrith</span>
+                    <img src="./images/logo/algrith.png" alt="brand logo" className="logo" />
 </div>
 
             </nav>
