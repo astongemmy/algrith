@@ -14,7 +14,7 @@ export default class About extends React.Component {
             <div className="relative overflow-hidden py-16 px-2 lg:px-32 w-full bg-gray-100 dark:bg-black">
                 
                 <div className="relative w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute top-auto lg:-top-72 right-auto lg:-right-80 bg-gray-200 rounded-full overflow-hidden p-0 lg:p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
-                    <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" />
+                    <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" alt="team setup illustration" />
                 </div>
 
                 <h1 className="relative uppercase text-3xl md:text-5xl text-yellow-600 mx-auto w-full text-center font-medium">
@@ -27,7 +27,7 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-0 p-4 lg:p-12">
                         
-                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 left-10 p-4 rounded-xl">
+                            <div className="z-10 uppercase absolute bg-green-500 text-white top-10 left-10 p-4 rounded-xl">
                                 Secretary
                             </div>
                             
@@ -42,7 +42,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-48 top-4 rounded-xl">
+                            <div className="absolute uppercase bg-red-500 text-white py-2 px-4 left-48 top-4 rounded-xl">
                                 Edwin, Leatherman
                             </div>
 
@@ -54,7 +54,7 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-0 p-4 lg:p-12">
 
-                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-10 p-4 rounded-xl">
+                            <div className="z-10 uppercase absolute bg-green-500 text-white top-10 right-10 p-4 rounded-xl">
                                 Co Founder
                             </div>
                             
@@ -69,7 +69,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 right-48 top-6 rounded-xl">
+                            <div className="absolute uppercase bg-red-500 text-white py-2 px-4 right-48 top-6 rounded-xl">
                                 Ilori, OluJide
                             </div>
 
@@ -81,7 +81,7 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-0 p-4 lg:p-12">
                         
-                            <div className="z-10 uppercase absolute bg-green-500 text-green-100 top-10 right-2/4 transform translate-x-2/4 p-4 rounded-xl">
+                            <div className="z-10 uppercase absolute bg-green-500 text-white top-10 right-2/4 transform translate-x-2/4 p-4 rounded-xl">
                                 Founder / CEO
                             </div>
                             
@@ -96,7 +96,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="absolute uppercase bg-red-500 text-red-100 py-2 px-4 left-2/4 transform -translate-x-2/4 top-32 rounded-xl">
+                            <div className="absolute uppercase bg-red-500 text-white py-2 px-4 left-2/4 transform -translate-x-2/4 top-32 rounded-xl">
                                 Akpan, Uwakmfon
                             </div>
 
