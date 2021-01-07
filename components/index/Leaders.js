@@ -21,7 +21,7 @@ export default class About extends React.Component {
                     The company
                 </h1>
 
-                <div className="relative flex flex-wrap justify-around items-center mt-8 md:mt-0 px-2 xl:px-64 py-0 lg:py-16 w-full">
+                <div className="relative flex flex-wrap justify-around items-center mt-12 lg:mt-0 px-2 xl:px-64 py-0 lg:py-16 w-full">
 
                     <div className="relative w-full lg:w-2/4 xl:w-2/4 my-0 mx-4 md:mx-0 p-0 md:p-4">
 
