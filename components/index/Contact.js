@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
 
             <div className="relative pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
 
-<div className="relative w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute top-auto lg:-top-64 left-auto lg:-left-12 rounded-full overflow-hidden p-0 lg:p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
+<div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-64 lg:-left-12 rounded-full overflow-hidden lg:p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
                 </div>
 
