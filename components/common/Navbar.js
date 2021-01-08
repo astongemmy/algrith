@@ -38,11 +38,11 @@ export default class Header extends React.Component {
 </div>
 
 <div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-100 mt-2">
-<div className="inline-flex">Powered by <span className="ml-1 text-green-600"> Algrith</span>
+<div className="inline-flex h-full">Powered by <span className="ml-1 text-green-600"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
 </div>
 
-<div className="inline-flex justify-center items-center h-full>
+<div className="inline-flex justify-center items-center h-full">
 <i className="fas fa-facebook rounded-xl text-gray-400 text-xl"></>
 </div>
 </div>
