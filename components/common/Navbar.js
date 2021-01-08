@@ -19,7 +19,7 @@ export default class Header extends React.Component {
                         Algrith
                     </h1>
 
-                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center p-2 text-xl items-center text-black">
+                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center p-4 bg-gray-100 text-xl items-center text-black">
                         <i className="fa fa-times"></i>
                     </div>
 
@@ -27,13 +27,13 @@ export default class Header extends React.Component {
 
 <div className="flex flex-col lg:flex-row flex-grow flex-shrink-0 w-11/12 lg:w-full p-8 rounded-xl my-4 lg:my-0 mx-auto">
                 <Link href="/about">
-                    <a className="mt-1 mb-1 ml-8 mr-1 md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">About</a>
+                    <a className="my-2 mx-auto md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">About</a>
                 </Link>
                 <Link href="/contact">
-                    <a className="mt-1 mb-1 ml-8 mr-1 md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">Contact</a>
+                    <a className="my-2 mx-auto md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">Contact</a>
                 </Link>
                 <Link href="/support">
-                    <a className="mt-1 mb-1 ml-8 mr-1 md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">Support</a>
+                    <a className="my-2 mx-auto md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">Support</a>
                 </Link>
 </div>
 
