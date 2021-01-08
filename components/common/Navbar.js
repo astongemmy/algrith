@@ -50,7 +50,7 @@ export default class Header extends React.Component {
 <i className="fab fa-twitter"></i>
 </span>
 <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
-<i className="fab fa-linkedin-square"></i>
+<i className="fab fa-linkedin"></i>
 </span>
 </div>
 </div>
