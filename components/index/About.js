@@ -14,7 +14,7 @@ export default class About extends React.Component {
             <div className="relative py-16 px-1 lg:px-32 w-full dark:bg-black">
 
                 <div className="relative w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-28 lg:-left-28 rounded-full overflow-hidden p-0 lg:p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
-                    <img className="rounded-full" src="./images/illustrations/team.png" alt="about us illustration image" />
+                    <img className="rounded-full" src="./images/illustrations/tam.png" alt="about us illustration image" />
                 </div>
 
                 <h1 className="relative uppercase text-3xl md:text-5xl text-green-600 mx-auto w-full text-center font-medium">
