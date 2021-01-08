@@ -16,6 +16,7 @@ export default class Index extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
+this.registerServiceWorker = this.registerServiceWorker.bind(this)
     }
 
     componentDidMount() {
@@ -25,7 +26,9 @@ export default class Index extends React.Component {
         this.brand = document.querySelector('#brand');
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
-        window.addEventListener('scroll', this.handleScroll, false)
+        window.addEventListener('scroll', this.handleScroll, false);
+window.addEventListener('load', this.registerServiceWorker)
+
     }
 
     componentWillUnmount() {
@@ -42,6 +45,18 @@ export default class Index extends React.Component {
 			return "desktop";
 		}
 	}
+
+registerServiceWorker() {
+if('serviceWorker' in navigator) {
+						navigator.serviceWorker
+						.register('/service-worker.js')
+						.then(function(registration) {
+							console.log("Service Worker Registered");
+							swRegistration = registration;
+						})
+					}
+				}
+}
 
     handleScroll() {
 
