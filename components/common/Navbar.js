@@ -30,10 +30,10 @@ export default class Header extends React.Component {
                     <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">About</a>
                 </Link>
                 <Link href="/contact">
-                    <a className="my-2 mx-auto md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">Contact</a>
+                    <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Contact</a>
                 </Link>
                 <Link href="/support">
-                    <a className="my-2 mx-auto md:m-4 p-4 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-3xl md:text-xl text-green-500">Support</a>
+                    <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Support</a>
                 </Link>
 </div>
 
