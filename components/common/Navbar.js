@@ -25,7 +25,7 @@ export default class Header extends React.Component {
 
                 </div>
 
-<div className="flex flex-col lg:flex-row flex-grow flex-shrink-0 w-11/12 lg:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
+<div className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
                 <Link href="/about">
                     <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">About</a>
                 </Link>
