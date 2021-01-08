@@ -37,7 +37,7 @@ export default class Header extends React.Component {
                 </Link>
 </div>
 
-<div className="inline-flex flex-grow-0 flex-shrink relative p-4 w-full bg-gray-100 mt-2">
+<div className="md:hidden inline-flex flex-grow-0 flex-shrink relative p-4 w-full bg-gray-100 mt-2">
 Powered by <span className="ml-1 text-green-600"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
 </div>
