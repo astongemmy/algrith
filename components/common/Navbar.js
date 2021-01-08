@@ -43,7 +43,15 @@ export default class Header extends React.Component {
 </div>
 
 <div className="flex justify-center items-center h-full">
-<i className="fab fa-facebook rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200"></i>
+<span className="flex justify-center items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200">
+<i className="fab fa-facebook"></i>
+</span>
+<span className="flex justify-center items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200">
+<i className="fab fa-twitter"></i>
+</span>
+<span className="flex justify-center items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200">
+<i className="fab fa-linkedIn"></i>
+</span>
 </div>
 </div>
 
