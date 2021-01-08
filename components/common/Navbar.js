@@ -43,7 +43,7 @@ export default class Header extends React.Component {
 </div>
 
 <div className="inline-flex justify-center items-center h-full">
-<i className="fas fa-facebook rounded-xl text-gray-400 text-xl"></i>
+<i className="fab fa-facebook rounded-xl text-gray-600 text-xl flex justify-center items-center h-16 w-16 bg-gray-200"></i>
 </div>
 </div>
 
