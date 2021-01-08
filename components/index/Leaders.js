@@ -14,7 +14,7 @@ export default class About extends React.Component {
             <div className="relative overflow-hidden py-16 px-2 lg:px-32 w-full bg-gray-100 dark:bg-black">
                 
                 <div className="relative w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-72 lg:-right-80 bg-gray-200 rounded-full overflow-hidden p-0 lg:p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
-                    <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" alt="team setup illustration" />
+                    <img className="rounded-full" src="./images/illustrations/setup-tem.jpeg" alt="team setup illustration" />
                 </div>
 
                 <h1 className="relative uppercase text-3xl md:text-5xl text-yellow-600 mx-auto w-full text-center font-medium">
