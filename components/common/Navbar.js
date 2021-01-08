@@ -19,7 +19,7 @@ export default class Header extends React.Component {
                         Algrith
                     </h1>
 
-                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center h-8 w-8 bg-gray-100 rounded-xl text-xl items-center text-black">
+                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
                         <i className="fa fa-times"></i>
                     </div>
 
@@ -43,14 +43,14 @@ export default class Header extends React.Component {
 </div>
 
 <div className="flex justify-center items-center h-full">
-<span className="flex justify-center items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200">
+<span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
 <i className="fab fa-facebook"></i>
 </span>
-<span className="flex justify-center items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200">
+<span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
 <i className="fab fa-twitter"></i>
 </span>
-<span className="flex justify-center items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200">
-<i className="fab fa-linkedIn"></i>
+<span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+<i className="fab fa-linked-in"></i>
 </span>
 </div>
 </div>
