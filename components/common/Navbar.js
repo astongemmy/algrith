@@ -37,7 +37,7 @@ export default class Header extends React.Component {
                 </Link>
 </div>
 
-<div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-100 mt-2">
+<div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-200 mt-2">
 <div className="inline-flex h-full">Powered by <span className="ml-1 text-green-600"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
 </div>
@@ -50,7 +50,7 @@ export default class Header extends React.Component {
 <i className="fab fa-twitter"></i>
 </span>
 <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
-<i className="fab fa-linked-in"></i>
+<i className="fab fa-linkedin-square"></i>
 </span>
 </div>
 </div>
