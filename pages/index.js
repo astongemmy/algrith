@@ -32,7 +32,8 @@ window.addEventListener('load', this.registerServiceWorker)
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll, false)
+        window.removeEventListener('scroll', this.handleScroll)
+window.removeEventListener('load', this.registerServiceWorker)
     }
 
     //	Viewport observer	//
@@ -56,7 +57,7 @@ if('serviceWorker' in navigator) {
 						})
 					}
 				}
-}
+
 
     handleScroll() {
 
