@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 
             <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-1000 shadow md:shadow-none bg-white fixed top-0 md:top-4 lg:top-16 -right-full md:right-12 flex flex-col lg:flex-row justify-between md:justify-end lg:items-center content-betwen w-screen md:w-auto h-screen md:h-12 text-gray-600 p-0 lg:p-4 lg:bg-gradient-to-t lg:from-gray-100 lg:via-white lg:rounded-b-full">
                                 
-                <div className="md:hidden bg-red-300 flex flex-1 justify-between content-center m-1 text-left w-full text-2xl">
+                <div className="md:hidden bg-red-300 flex flex-shrink justify-between content-center m-1 text-left w-full text-2xl">
                     
                     <h1 className="uppercase flex text-black p-2 font-medium">
                         Algrith
@@ -37,7 +37,7 @@ export default class Header extends React.Component {
                 </Link>
 </div>
 
-<div className="inline-flex flex-1 relative p-4 w-full bg-gray-200">
+<div className="inline-flex flex-shrink relative p-4 w-full bg-gray-200">
 Powered by <span className="ml-1 text-green-600"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
 </div>
