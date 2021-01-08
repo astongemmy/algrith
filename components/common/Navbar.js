@@ -11,7 +11,7 @@ export default class Header extends React.Component {
         
         return (
 
-            <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-1000 shadow md:shadow-none bg-white fixed top-0 md:top-4 lg:top-16 -right-full md:right-12 flex flex-col lg:flex-row justify-start md:justify-end items-beteen content-between w-screen md:w-auto h-screen md:h-12 text-gray-600 p-0 lg:p-4 lg:bg-gradient-to-t lg:from-gray-100 lg:via-white lg:rounded-b-full">
+            <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-1000 shadow md:shadow-none bg-white fixed top-0 md:top-4 lg:top-16 -right-full md:right-12 flex flex-col lg:flex-row justify-between md:justify-end items-beteen content-between w-screen md:w-auto h-screen md:h-12 text-gray-600 p-0 lg:p-4 lg:bg-gradient-to-t lg:from-gray-100 lg:via-white lg:rounded-b-full">
                                 
                 <div className="md:hidden bg-red-300 flex flex-none justify-between content-center m-1 text-left w-full text-2xl">
                     
