@@ -28,7 +28,7 @@ export default class Meta extends React.Component {
 
                 <link rel="shortcut icon" href="images/favicon/algrith.png" />
                 
-                {/* <link rel="manifest" href="manifest.json"></link> */}
+                <link rel="manifest" href="manifest.json"></link>
 
             </Head>
 
