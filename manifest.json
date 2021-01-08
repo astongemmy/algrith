@@ -1,0 +1,23 @@
+{
+  "short_name": "Algrith LLC",
+  "name": "Algrith",
+  "description": "Algrith official website",
+  "icons": [
+    {
+      "src": "/images/logo/algrith.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo/algrith.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#fff",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
