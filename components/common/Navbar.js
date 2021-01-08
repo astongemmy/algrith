@@ -42,8 +42,8 @@ export default class Header extends React.Component {
                     <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
 </div>
 
-<div className="inline-flex justify-center items-center h-full">
-<i className="fab fa-facebook rounded-xl text-gray-600 text-xl flex justify-center items-center h-8 w-8 bg-gray-200"></i>
+<div className="flex justify-center items-center h-full">
+<i className="fab fa-facebook rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-200"></i>
 </div>
 </div>
 
