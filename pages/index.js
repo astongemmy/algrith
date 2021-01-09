@@ -16,7 +16,6 @@ export default class Index extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
-this.registerServiceWorker = this.registerServiceWorker.bind(this)
     }
 
     componentDidMount() {
@@ -27,13 +26,10 @@ this.registerServiceWorker = this.registerServiceWorker.bind(this)
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', this.registerServiceWorker)
-
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
-window.removeEventListener('load', this.registerServiceWorker)
     }
 
     //	Viewport observer	//
@@ -45,25 +41,11 @@ window.removeEventListener('load', this.registerServiceWorker)
 		} else {
 			return "desktop";
 		}
-	}
-
-registerServiceWorker() {
-if('serviceWorker' in navigator) {
-						navigator.serviceWorker
-						.register('/service-worker.js')
-						.then(function(registration) {
-							console.log("Service Worker Registered");
-							swRegistration = registration;
-						})
-					}
-				}
-
-
+    }
+    
     handleScroll() {
-
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
         if (this.header !== undefined) {
-
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 this.header.style.transform = 'scale(1, 0.7)'
                 this.header.style.transformOrigin = 'top'
@@ -79,7 +61,6 @@ if('serviceWorker' in navigator) {
                     this.nav_menu.style.top = '4rem'
                 }
             }
-
         }
     }
 

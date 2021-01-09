@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Link from 'next/link'
 
 export default class Header extends React.Component {
@@ -24,36 +24,41 @@ export default class Header extends React.Component {
                     </div>
 
                 </div>
+                
+                <div className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
+                    
+                    <Link href="/about">
+                        <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">About</a>
+                    </Link>
+                    <Link href="/contact">
+                        <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Contact</a>
+                    </Link>
+                    <Link href="/support">
+                        <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Support</a>
+                    </Link>
 
-<div className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
-                <Link href="/about">
-                    <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">About</a>
-                </Link>
-                <Link href="/contact">
-                    <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Contact</a>
-                </Link>
-                <Link href="/support">
-                    <a className="my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Support</a>
-                </Link>
-</div>
+                </div>
 
-<div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-200 mt-2">
-<div className="inline-flex h-full">Powered by <span className="ml-1 text-green-600"> Algrith</span>
-                    <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
-</div>
+                <div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-200 mt-2">
+                    
+                    <div className="inline-flex items-center h-full">
+                        Powered by <span className="ml-1 text-green-600"> Algrith</span>
+                        <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
+                    </div>
+                    
+                    <div className="flex justify-center items-center h-full">
+                        <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                            <i className="fab fa-facebook"></i>
+                        </span>
+                        <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                            <i className="fab fa-twitter"></i>
+                        </span>
+                        <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                            <i className="fab fa-linkedin"></i>
+                        </span>
+                    </div>
 
-<div className="flex justify-center items-center h-full">
-<span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
-<i className="fab fa-facebook"></i>
-</span>
-<span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
-<i className="fab fa-twitter"></i>
-</span>
-<span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
-<i className="fab fa-linkedin"></i>
-</span>
-</div>
-</div>
+                </div>
 
             </nav>
 
