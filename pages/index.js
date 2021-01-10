@@ -68,8 +68,8 @@ this.cursor.remove()
           this.count = counter + 1
       }
 
-     let cursor = document.createElement("span")
-     cursor.className = "cursor"
+     let cursor_elem = document.createElement("span")
+     cursor_elem.className = "cursor"
      
       let element = document.createElement("span")
       
@@ -79,7 +79,7 @@ this.cursor.remove()
           element.style.marginLeft = "12px"
           }
           this.lead_intro.append(element)
-          this.lead_intro.append(cursor)
+          this.lead_intro.append(cursor_elem)
           
      let typing_timeout = setTimeout(function(){
           this.Typing(this.count)
