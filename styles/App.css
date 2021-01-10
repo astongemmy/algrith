@@ -149,7 +149,6 @@ navbar {
   animation:blink .5s step-end infinite alternate;
   border-left: 3px red solid;
   margin-left:10px;
-  font-family: monospace;
   font-size: 3.0em;
 }
 
