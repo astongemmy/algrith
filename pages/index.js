@@ -30,13 +30,13 @@ this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
 this.count;
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', this.Typing(-1), false);
+//window.addEventListener('load', this.Typing(-1), false);
 
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
-window.removeEventListener('load', this.Typing)
+//window.removeEventListener('load', this.Typing)
     }
 
 Typing(counter) {
@@ -71,7 +71,7 @@ this.cursor.remove()
           this.lead_intro.append(element)
           this.lead_intro.append(cursor_elem)
           
-     typing_timeout = setTimeout(function(){
+     let typing_timeout = setTimeout(function(){
           this.Typing(this.count)
       }, 100)
 
@@ -148,6 +148,8 @@ alert(counter)
         const close_all = () => {
             close_nav_bar()
         }
+
+this.Typing(-1)
         
         return (
         
