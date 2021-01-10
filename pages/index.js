@@ -50,8 +50,8 @@ window.removeEventListener('load', this.Typing)
 
 Typing(counter) {
       const intro_string = "The best software algorithm solution"
-      
-      if (this.cursor) {
+      alert(counter)
+      /*if (this.cursor) {
           if (counter !== intro_string.length - 1) {
 this.cursor.remove()
           }
@@ -80,7 +80,7 @@ this.cursor.remove()
           
      let typing_timeout = setTimeout(function(){
           this.Typing(count)
-      }, 100)
+      }, 100)*/
   }
     
     handleScroll() {
