@@ -85,6 +85,8 @@ this.cursor.remove()
           this.Typing(this.count)
       }, 100)
 
+alert(counter)
+
   }
     
     handleScroll() {
