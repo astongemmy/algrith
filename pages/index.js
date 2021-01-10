@@ -16,6 +16,7 @@ export default class Index extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
+this.Typing = this.Typing.bind(this)
     }
 
     componentDidMount() {
@@ -26,10 +27,12 @@ export default class Index extends React.Component {
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         window.addEventListener('scroll', this.handleScroll, false);
+window.addEventListener('load', this.Typing, false);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
+window.removeEventListener('load', this.Typing)
     }
 
     //	Viewport observer	//
@@ -42,6 +45,42 @@ export default class Index extends React.Component {
 			return "desktop";
 		}
     }
+
+Typing(counter) {
+      
+      const intro_string = "The best software algorithm solution"
+      
+      if (document.querySelector(".intro-lead .cursor")) {
+          if (counter !== intro_string.length - 1) {
+                  document.querySelector(".intro-lead .cursor").remove()
+          }
+      }
+      
+      if (counter >= intro_string.length) {
+          count = 0
+          clearTimeout(typing_timeout)
+      }
+      
+      if (counter <= intro_string.length) {
+          count = counter + 1
+      }
+     let cursor = document.createElement("span")
+     cursor.className = "cursor"
+     
+      let element = document.createElement("span")
+      
+      element.textContent = intro_string[count];
+      
+      if (intro_string[count] == " ") {
+          element.style.marginLeft = "12px"
+          }
+          document.querySelector(".intro-lead").append(element)
+          document.querySelector(".intro-lead").append(cursor)
+          
+      let typing_timeout = setTimeout(function(){
+          Typing(count)
+      }, 100)
+  }
     
     handleScroll() {
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
