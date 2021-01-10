@@ -75,8 +75,6 @@ this.cursor.remove()
           this.typing(counter)
       }, 100)
 
-alert(counter)
-
   }
 
     //	Viewport observer	//
