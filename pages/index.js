@@ -44,7 +44,7 @@ typing(counter) {
 
       const intro_string = "The best software algorithm solution"
       
-      if (this.cursor) {
+      if (this.cursor !== undefined) {
           if (counter !== intro_string.length - 1) {
 this.cursor.remove()
 alert("here")
@@ -68,7 +68,7 @@ alert("here")
       element.textContent = intro_string[this.count];
       
       if (intro_string[this.count] == " ") {
-          element.style.marginLeft = "12px"
+          element.style.marginLeft = "10px"
           }
           this.lead_intro.append(element)
           this.lead_intro.append(cursor_elem)
