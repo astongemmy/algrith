@@ -31,13 +31,13 @@ this.lead_intro = document.querySelector(".intro-lead");
 this.count;
 this.typing_timeout
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', this.typing(-1), false);
+this.typing(-1)
 
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
-window.removeEventListener('load', this.typing)
+//window.removeEventListener('load', this.typing)
     }
 
 typing(counter) {
