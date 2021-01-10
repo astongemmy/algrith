@@ -27,7 +27,7 @@ this.Typing = this.Typing.bind(this)
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', function() {this.Typing(-1)}, false);
+window.addEventListener('load', function() {this.Typing(-1)});
     }
 
     componentWillUnmount() {
@@ -47,6 +47,7 @@ window.removeEventListener('load', this.Typing)
     }
 
 Typing(counter) {
+alert("a")
       
       const intro_string = "The best software algorithm solution"
       
