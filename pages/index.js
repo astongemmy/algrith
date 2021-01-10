@@ -47,6 +47,7 @@ typing(counter) {
       if (this.cursor) {
           if (counter !== intro_string.length - 1) {
 this.cursor.remove()
+alert("here")
           }
       }
       
