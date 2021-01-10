@@ -30,7 +30,7 @@ this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
 this.count;
         window.addEventListener('scroll', this.handleScroll, false);
-//window.addEventListener('load', this.Typing(-1), false);
+window.addEventListener('load', this.typing(-1), false);
 
     }
 
@@ -188,8 +188,6 @@ this.cursor.remove()
 alert(counter)
 
   }
-
-typing(-1)
         
         return (
         
