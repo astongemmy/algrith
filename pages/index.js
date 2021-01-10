@@ -28,6 +28,7 @@ this.Typing = this.Typing.bind(this)
         this.hamburger = document.querySelector('#hamburger');
 this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
+this.count = 0
         window.addEventListener('scroll', this.handleScroll, false);
 window.addEventListener('load', this.Typing(-1));
     }
@@ -58,12 +59,12 @@ this.cursor.remove()
       }
       
      if (counter >= intro_string.length) {
-          count = 0
+          this.count = 0
           clearTimeout(typing_timeout)
       }
-      alert(counter)
-      /*if (counter <= intro_string.length) {
-          count = counter + 1
+      
+      if (counter <= intro_string.length) {
+          this.count = counter + 1
       }
 
      let cursor = document.createElement("span")
@@ -71,17 +72,17 @@ this.cursor.remove()
      
       let element = document.createElement("span")
       
-      element.textContent = intro_string[count];
+      element.textContent = intro_string[this.count];
       
-      if (intro_string[count] == " ") {
+      if (intro_string[this.count] == " ") {
           element.style.marginLeft = "12px"
           }
           this.lead_intro.append(element)
           this.lead_intro.append(cursor)
           
      let typing_timeout = setTimeout(function(){
-          this.Typing(count)
-      }, 100)*/
+          this.Typing(this.count)
+      }, 100)
   }
     
     handleScroll() {
