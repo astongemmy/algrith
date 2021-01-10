@@ -40,7 +40,6 @@ typing(counter) {
 
       const intro_string = "The best software algorithm solution"
 let count;
-let typing_timeout;
 
       if (document.querySelector('.intro-lead .cursor')) {
           if (counter !== intro_string.length - 1) {
