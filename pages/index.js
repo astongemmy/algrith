@@ -39,14 +39,11 @@ this.typing(-1)
 typing(counter) {
 
       const intro_string = "The best software algorithm solution"
-      //let cursor = document.querySelector('.intro-lead .cursor');
-//let lead_intro = document.querySelector('.intro-lead');
 let count;
 
       if (document.querySelector('.intro-lead .cursor')) {
           if (counter !== intro_string.length - 1) {
 document.querySelector('.intro-lead .cursor').remove()
-alert("here")
           }
       }
       
