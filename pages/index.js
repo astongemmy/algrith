@@ -17,6 +17,7 @@ export default class Index extends React.Component {
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
 this.typing = this.typing.bind(this)
+this.typing_timeout
     }
 
     componentDidMount() {
@@ -27,7 +28,6 @@ this.typing = this.typing.bind(this)
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         window.addEventListener('scroll', this.handleScroll, false);
-this.typing_timeout
 this.typing(-1)
 
     }
