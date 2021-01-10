@@ -61,12 +61,12 @@ this.cursor.remove()
           count = 0
           clearTimeout(typing_timeout)
       }
-      
-      if (counter <= intro_string.length) {
+      alert(counter)
+      /*if (counter <= intro_string.length) {
           count = counter + 1
       }
-alert(counter)
-     /*let cursor = document.createElement("span")
+
+     let cursor = document.createElement("span")
      cursor.className = "cursor"
      
       let element = document.createElement("span")
