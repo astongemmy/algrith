@@ -26,6 +26,8 @@ this.Typing = this.Typing.bind(this)
         this.brand = document.querySelector('#brand');
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
+this.cursor = document.querySelector(".intro-lead .cursor");
+this.lead_intro = document.querySelector(".intro-lead");
         window.addEventListener('scroll', this.handleScroll, false);
 window.addEventListener('load', this.Typing(-1));
     }
@@ -49,9 +51,9 @@ window.removeEventListener('load', this.Typing)
 Typing(counter) {
       const intro_string = "The best software algorithm solution"
       
-      if (document.querySelector(".intro-lead .cursor")) {
+      if (this.cursor) {
           if (counter !== intro_string.length - 1) {
-                  document.querySelector(".intro-lead .cursor").remove()
+this.cursor.remove()
           }
       }
       
@@ -73,12 +75,12 @@ Typing(counter) {
       if (intro_string[count] == " ") {
           element.style.marginLeft = "12px"
           }
-          document.querySelector(".intro-lead").append(element)
-          document.querySelector(".intro-lead").append(cursor)
+          this.lead_intro.append(element)
+          this.lead_intro.append(cursor)
           
-     /* let typing_timeout = setTimeout(function(){
+     let typing_timeout = setTimeout(function(){
           this.Typing(count)
-      }, 100)*/
+      }, 100)
   }
     
     handleScroll() {
