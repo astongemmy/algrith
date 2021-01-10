@@ -16,7 +16,7 @@ export default class Index extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
-this.Typing = this.Typing.bind(this)
+//this.Typing = this.Typing.bind(this)
     }
 
     componentDidMount() {
@@ -30,26 +30,9 @@ this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
 this.count;
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', this.Typing(-1));
-    }
+window.addEventListener('load', function() {
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll)
-//window.removeEventListener('load', this.Typing)
-    }
-
-    //	Viewport observer	//
-	//	Checks if viewport is mobile
-	deviceView() {
-		let viewport_width = document.documentElement.clientWidth;
-		if (viewport_width < '702') {
-			return "mobile";
-		} else {
-			return "desktop";
-		}
-    }
-
-Typing(counter) {
+function Typing(counter) {
 
       const intro_string = "The best software algorithm solution"
       
@@ -88,6 +71,26 @@ this.cursor.remove()
 alert(counter)
 
   }
+
+Typing(-1)});
+
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll)
+//window.removeEventListener('load', this.Typing)
+    }
+
+    //	Viewport observer	//
+	//	Checks if viewport is mobile
+	deviceView() {
+		let viewport_width = document.documentElement.clientWidth;
+		if (viewport_width < '702') {
+			return "mobile";
+		} else {
+			return "desktop";
+		}
+    }
     
     handleScroll() {
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
