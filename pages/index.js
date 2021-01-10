@@ -26,10 +26,6 @@ this.typing = this.typing.bind(this)
         this.brand = document.querySelector('#brand');
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
-this.cursor = document.querySelector(".intro-lead .cursor");
-this.lead_intro = document.querySelector(".intro-lead");
-this.count;
-this.typing_timeout
         window.addEventListener('scroll', this.handleScroll, false);
 this.typing(-1)
 
@@ -43,21 +39,24 @@ this.typing(-1)
 typing(counter) {
 
       const intro_string = "The best software algorithm solution"
-      
-      if (this.cursor !== undefined) {
+      let cursor = document.querySelector('.intro-lead .cursor');
+let lead_intro = document.querySelector('.intro-lead');
+let count;
+
+      if (cursor !== undefined) {
           if (counter !== intro_string.length - 1) {
-this.cursor.remove()
+cursor.remove()
 alert("here")
           }
       }
       
      if (counter >= intro_string.length) {
-          this.count = 0
-          clearTimeout(this.typing_timeout)
+          count = 0
+          clearTimeout(typing_timeout)
       }
       
       if (counter <= intro_string.length) {
-          this.count = counter + 1
+          count = counter + 1
       }
 
      let cursor_elem = document.createElement("span")
@@ -65,16 +64,16 @@ alert("here")
      
       let element = document.createElement("span")
       
-      element.textContent = intro_string[this.count];
+      element.textContent = intro_string[count];
       
-      if (intro_string[this.count] == " ") {
+      if (intro_string[count] == " ") {
           element.style.marginLeft = "10px"
           }
-          this.lead_intro.append(element)
-          this.lead_intro.append(cursor_elem)
+         lead_intro.append(element)
+         lead_intro.append(cursor_elem)
           
-     this.typing_timeout = setTimeout(() => {
-          this.typing(this.count)
+     let typing_timeout = setTimeout(() => {
+          this.typing(count)
       }, 100)
 
   }
