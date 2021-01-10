@@ -39,13 +39,13 @@ this.typing(-1)
 typing(counter) {
 
       const intro_string = "The best software algorithm solution"
-      let cursor = document.querySelector('.intro-lead .cursor');
-let lead_intro = document.querySelector('.intro-lead');
+      //let cursor = document.querySelector('.intro-lead .cursor');
+//let lead_intro = document.querySelector('.intro-lead');
 let count;
 
-      if (cursor !== undefined) {
+      if (document.querySelector('.intro-lead .cursor')) {
           if (counter !== intro_string.length - 1) {
-cursor.remove()
+document.querySelector('.intro-lead .cursor').remove()
 alert("here")
           }
       }
@@ -69,8 +69,8 @@ alert("here")
       if (intro_string[count] == " ") {
           element.style.marginLeft = "10px"
           }
-         lead_intro.append(element)
-         lead_intro.append(cursor_elem)
+         document.querySelector('.intro-lead').append(element)
+         document.querySelector('.intro-lead').append(cursor_elem)
           
      let typing_timeout = setTimeout(() => {
           this.typing(count)
