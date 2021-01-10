@@ -50,14 +50,14 @@ window.removeEventListener('load', this.Typing)
 
 Typing(counter) {
       const intro_string = "The best software algorithm solution"
-      alert(counter)
-      /*if (this.cursor) {
+      
+      if (this.cursor) {
           if (counter !== intro_string.length - 1) {
 this.cursor.remove()
           }
       }
-      
-      if (counter >= intro_string.length) {
+      alert(counter)
+     /* if (counter >= intro_string.length) {
           count = 0
           clearTimeout(typing_timeout)
       }
