@@ -75,7 +75,7 @@ this.cursor.remove()
           typing(this.count)
       }, 100)
 
-alert(counter)
+alert(count)
 
   }
 
