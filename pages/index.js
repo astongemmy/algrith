@@ -71,7 +71,7 @@ this.cursor.remove()
           this.lead_intro.append(element)
           this.lead_intro.append(cursor_elem)
           
-     let typing_timeout = setTimeout(function(){
+     let typing_timeout = setTimeout(() => {
           this.typing(counter)
       }, 100)
 
