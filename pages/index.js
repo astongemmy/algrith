@@ -26,7 +26,6 @@ this.typing = this.typing.bind(this)
         this.brand = document.querySelector('#brand');
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
-let typing_timeout
         window.addEventListener('scroll', this.handleScroll, false);
 this.typing(-1)
 
@@ -41,6 +40,7 @@ typing(counter) {
 
       const intro_string = "The best software algorithm solution"
 let count;
+let typing_timeout;
 
       if (document.querySelector('.intro-lead .cursor')) {
           if (counter !== intro_string.length - 1) {
