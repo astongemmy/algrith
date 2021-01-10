@@ -142,6 +142,29 @@ navbar {
     height: 1.5em;
 }
 
+.intro-lead {
+}
+
+.cursor {
+  animation:blink .5s step-end infinite alternate;
+  border-left: 3px red solid;
+  margin-left:10px;
+  font-family: monospace;
+  font-size: 3.0em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
 @media (max-width: 600px) {
     .grid {
     width: 100%;
