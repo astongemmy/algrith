@@ -29,8 +29,48 @@ export default class Index extends React.Component {
 this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
 this.count;
+const typing = (counter) => {
+
+      const intro_string = "The best software algorithm solution"
+      
+      if (this.cursor) {
+          if (counter !== intro_string.length - 1) {
+this.cursor.remove()
+          }
+      }
+      
+     if (counter >= intro_string.length) {
+          this.count = 0
+          clearTimeout(typing_timeout)
+      }
+      
+      if (counter <= intro_string.length) {
+          this.count = counter + 1
+      }
+
+     let cursor_elem = document.createElement("span")
+     cursor_elem.className = "cursor"
+     
+      let element = document.createElement("span")
+      
+      element.textContent = intro_string[this.count];
+      
+      if (intro_string[this.count] == " ") {
+          element.style.marginLeft = "12px"
+          }
+          this.lead_intro.append(element)
+          this.lead_intro.append(cursor_elem)
+          
+     let typing_timeout = setTimeout(function(){
+          typing(this.count)
+      }, 100)
+
+alert(counter)
+
+  }
+this.typing(-1)
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', this.typing(-1), false);
+//window.addEventListener('load', this.typing(-1), false);
 
     }
 
@@ -149,46 +189,6 @@ alert(counter)
             close_nav_bar()
         }
 
-const typing = (counter) => {
-
-      const intro_string = "The best software algorithm solution"
-      
-      if (this.cursor) {
-          if (counter !== intro_string.length - 1) {
-this.cursor.remove()
-          }
-      }
-      
-     if (counter >= intro_string.length) {
-          this.count = 0
-          clearTimeout(typing_timeout)
-      }
-      
-      if (counter <= intro_string.length) {
-          this.count = counter + 1
-      }
-
-     let cursor_elem = document.createElement("span")
-     cursor_elem.className = "cursor"
-     
-      let element = document.createElement("span")
-      
-      element.textContent = intro_string[this.count];
-      
-      if (intro_string[this.count] == " ") {
-          element.style.marginLeft = "12px"
-          }
-          this.lead_intro.append(element)
-          this.lead_intro.append(cursor_elem)
-          
-     let typing_timeout = setTimeout(function(){
-          typing(this.count)
-      }, 100)
-
-alert(counter)
-
-  }
-        
         return (
         
             <div className="">
