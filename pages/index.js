@@ -84,6 +84,7 @@ this.cursor.remove()
      let typing_timeout = setTimeout(function(){
           this.Typing(this.count)
       }, 100)
+typing_timeout()
 
 alert(counter)
 
