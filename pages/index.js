@@ -49,7 +49,7 @@ window.removeEventListener('load', this.Typing)
 		}
     }
 
-Typing = (counter) => {
+Typing(counter) {
       const intro_string = "The best software algorithm solution"
       
       if (this.cursor) {
@@ -79,10 +79,13 @@ this.cursor.remove()
           }
           this.lead_intro.append(element)
           this.lead_intro.append(cursor)
-          alert(this.count)
+          
      let typing_timeout = setTimeout(function(){
           this.Typing(this.count)
       }, 100)
+
+alert(this.count)
+
   }
     
     handleScroll() {
