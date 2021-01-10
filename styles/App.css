@@ -147,7 +147,7 @@ navbar {
 
 .cursor {
   animation:blink .5s step-end infinite alternate;
-  border-left: 3px red solid;
+  border-left: 3px black solid;
   margin-left:10px;
   font-size: 1.0em;
 }
