@@ -28,7 +28,7 @@ this.typing = this.typing.bind(this)
         this.hamburger = document.querySelector('#hamburger');
 this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
-this.count;
+this.count = 0
         window.addEventListener('scroll', this.handleScroll, false);
 window.addEventListener('load', this.typing(-1), false);
 
