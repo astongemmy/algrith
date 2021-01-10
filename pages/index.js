@@ -35,7 +35,7 @@ window.addEventListener('load', this.Typing(-1));
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
-window.removeEventListener('load', this.Typing)
+//window.removeEventListener('load', this.Typing)
     }
 
     //	Viewport observer	//
