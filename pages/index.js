@@ -47,9 +47,9 @@ window.removeEventListener('load', this.Typing)
     }
 
 Typing(counter) {
-alert("a")
+alert(counter)
       
-      const intro_string = "The best software algorithm solution"
+      /*const intro_string = "The best software algorithm solution"
       
       if (document.querySelector(".intro-lead .cursor")) {
           if (counter !== intro_string.length - 1) {
@@ -79,8 +79,8 @@ alert("a")
           document.querySelector(".intro-lead").append(cursor)
           
       let typing_timeout = setTimeout(function(){
-          Typing(count)
-      }, 100)
+          this.Typing(count)
+      }, 100)*/
   }
     
     handleScroll() {
