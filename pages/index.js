@@ -16,7 +16,7 @@ export default class Index extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
-//this.Typing = this.Typing.bind(this)
+this.Typing = this.Typing.bind(this)
     }
 
     componentDidMount() {
@@ -30,9 +30,16 @@ this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
 this.count;
         window.addEventListener('scroll', this.handleScroll, false);
-window.addEventListener('load', function() {
+window.addEventListener('load', this.Typing(-1), false);
 
-function Typing(counter) {
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll)
+window.removeEventListener('load', this.Typing)
+    }
+
+Typing(counter) {
 
       const intro_string = "The best software algorithm solution"
       
@@ -65,21 +72,12 @@ this.cursor.remove()
           this.lead_intro.append(cursor_elem)
           
      typing_timeout = setTimeout(function(){
-          Typing(this.count)
+          this.Typing(this.count)
       }, 100)
 
 alert(counter)
 
   }
-
-Typing(-1)});
-
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll)
-//window.removeEventListener('load', this.Typing)
-    }
 
     //	Viewport observer	//
 	//	Checks if viewport is mobile
