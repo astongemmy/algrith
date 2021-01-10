@@ -56,8 +56,8 @@ Typing(counter) {
 this.cursor.remove()
           }
       }
-      alert(counter)
-     /* if (counter >= intro_string.length) {
+      
+     if (counter >= intro_string.length) {
           count = 0
           clearTimeout(typing_timeout)
       }
@@ -65,7 +65,8 @@ this.cursor.remove()
       if (counter <= intro_string.length) {
           count = counter + 1
       }
-     let cursor = document.createElement("span")
+alert(counter)
+     /*let cursor = document.createElement("span")
      cursor.className = "cursor"
      
       let element = document.createElement("span")
