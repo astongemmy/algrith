@@ -27,20 +27,18 @@ this.typing = this.typing.bind(this)
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         window.addEventListener('scroll', this.handleScroll, false);
-this.typing_timeout
 this.typing(-1)
 
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
-//window.removeEventListener('load', this.typing)
     }
 
 typing = (counter) => {
 
       const intro_string = "The best software algorithm solution"
-let count;
+let count, typing_timeout;
 
       if (document.querySelector('.intro-lead .cursor')) {
           if (counter !== intro_string.length - 1) {
@@ -50,7 +48,7 @@ document.querySelector('.intro-lead .cursor').remove()
       
      if (counter >= intro_string.length) {
           count = 0
-          clearTimeout(this.typing_timeout)
+          clearTimeout(typing_timeout)
 return
       }
       
@@ -66,12 +64,12 @@ return
       element.textContent = intro_string[count];
       
       if (intro_string[count] == " ") {
-          element.style.marginLeft = "10px"
+          element.style.marginLeft = "5px"
           }
          document.querySelector('.intro-lead').append(element)
          document.querySelector('.intro-lead').append(cursor_elem)
           
-     this.typing_timeout = setTimeout(() => {
+    typing_timeout = setTimeout(() => {
           this.typing(count)
       }, 100)
 
