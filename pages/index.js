@@ -28,7 +28,8 @@ this.typing = this.typing.bind(this)
         this.hamburger = document.querySelector('#hamburger');
 this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
-//this.count;
+this.count;
+this.typing_timeout
         window.addEventListener('scroll', this.handleScroll, false);
 window.addEventListener('load', this.typing(-1), false);
 
@@ -50,12 +51,12 @@ this.cursor.remove()
       }
       
      if (counter >= intro_string.length) {
-          counter = 0
-          clearTimeout(typing_timeout)
+          this.count = 0
+          clearTimeout(this.typing_timeout)
       }
       
       if (counter <= intro_string.length) {
-          counter = counter + 1
+          this.count = counter + 1
       }
 
      let cursor_elem = document.createElement("span")
@@ -63,16 +64,16 @@ this.cursor.remove()
      
       let element = document.createElement("span")
       
-      element.textContent = intro_string[counter];
+      element.textContent = intro_string[this.count];
       
-      if (intro_string[counter] == " ") {
+      if (intro_string[this.count] == " ") {
           element.style.marginLeft = "12px"
           }
           this.lead_intro.append(element)
           this.lead_intro.append(cursor_elem)
           
-     let typing_timeout = setTimeout(() => {
-          this.typing(counter)
+     this.typing_timeout = setTimeout(() => {
+          this.typing(this.count)
       }, 100)
 
   }
