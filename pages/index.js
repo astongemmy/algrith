@@ -16,7 +16,7 @@ export default class Index extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
-this.Typing = this.Typing.bind(this)
+//this.Typing = this.Typing.bind(this)
     }
 
     componentDidMount() {
@@ -39,7 +39,7 @@ this.count;
 //window.removeEventListener('load', this.Typing)
     }
 
-Typing(counter) {
+/*Typing(counter) {
 
       const intro_string = "The best software algorithm solution"
       
@@ -77,7 +77,7 @@ this.cursor.remove()
 
 alert(counter)
 
-  }
+  }*/
 
     //	Viewport observer	//
 	//	Checks if viewport is mobile
@@ -149,7 +149,47 @@ alert(counter)
             close_nav_bar()
         }
 
-this.Typing(-1)
+const Typing = (counter) => {
+
+      const intro_string = "The best software algorithm solution"
+      
+      if (this.cursor) {
+          if (counter !== intro_string.length - 1) {
+this.cursor.remove()
+          }
+      }
+      
+     if (counter >= intro_string.length) {
+          this.count = 0
+          clearTimeout(typing_timeout)
+      }
+      
+      if (counter <= intro_string.length) {
+          this.count = counter + 1
+      }
+
+     let cursor_elem = document.createElement("span")
+     cursor_elem.className = "cursor"
+     
+      let element = document.createElement("span")
+      
+      element.textContent = intro_string[this.count];
+      
+      if (intro_string[this.count] == " ") {
+          element.style.marginLeft = "12px"
+          }
+          this.lead_intro.append(element)
+          this.lead_intro.append(cursor_elem)
+          
+     let typing_timeout = setTimeout(function(){
+          Typing(this.count)
+      }, 100)
+
+alert(counter)
+
+  }
+
+Typing(-1)
         
         return (
         
