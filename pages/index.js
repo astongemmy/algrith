@@ -149,7 +149,7 @@ alert(counter)
             close_nav_bar()
         }
 
-const Typing = (counter) => {
+const typing = (counter) => {
 
       const intro_string = "The best software algorithm solution"
       
@@ -182,14 +182,14 @@ this.cursor.remove()
           this.lead_intro.append(cursor_elem)
           
      let typing_timeout = setTimeout(function(){
-          Typing(this.count)
+          typing(this.count)
       }, 100)
 
 alert(counter)
 
   }
 
-Typing(-1)
+typing(-1)
         
         return (
         
