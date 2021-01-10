@@ -28,7 +28,7 @@ this.Typing = this.Typing.bind(this)
         this.hamburger = document.querySelector('#hamburger');
 this.cursor = document.querySelector(".intro-lead .cursor");
 this.lead_intro = document.querySelector(".intro-lead");
-this.count = 0
+this.count;
         window.addEventListener('scroll', this.handleScroll, false);
 window.addEventListener('load', this.Typing(-1));
     }
@@ -50,6 +50,7 @@ window.removeEventListener('load', this.Typing)
     }
 
 Typing(counter) {
+
       const intro_string = "The best software algorithm solution"
       
       if (this.cursor) {
@@ -83,8 +84,6 @@ this.cursor.remove()
      let typing_timeout = setTimeout(function(){
           this.Typing(this.count)
       }, 100)
-
-alert(this.count)
 
   }
     
