@@ -51,6 +51,7 @@ document.querySelector('.intro-lead .cursor').remove()
      if (counter >= intro_string.length) {
           count = 0
           clearTimeout(this.typing_timeout)
+alert("here")
       }
       
       if (counter <= intro_string.length) {
