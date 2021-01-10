@@ -79,7 +79,7 @@ alert("a")
           document.querySelector(".intro-lead").append(cursor)
           
       let typing_timeout = setTimeout(function(){
-          this.Typing(count)
+          Typing(count)
       }, 100)
   }
     
