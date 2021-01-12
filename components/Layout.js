@@ -73,11 +73,6 @@ export default class Layout extends React.Component {
                     this.overlay.classList.remove('block')
                     this.overlay.classList.add('hidden')
                 }
-
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-})
             }
         }
 
