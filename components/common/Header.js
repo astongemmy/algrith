@@ -21,9 +21,9 @@ export default class Header extends React.Component {
 
             <header className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 py-1 px-4 md:p-4 w-full dark:bg-black">
                 
-                {/* <div className="w-16 ml-4 lg:ml-64 md:mt-4 mt-1">
+                <div className="w-16 ml-4 lg:ml-24">
                     <img src="./images/logo/algrith.png" alt="brand-logo" />
-                </div> */}
+                </div>
                 <div id="brand" className="ml-4 lg:ml-24 transition-all ease-in-out duration-1000">
                     <a href="/">
                         <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-black mx-auto w-full text-center font-medium transition-all ease-in-out duration-1000">
