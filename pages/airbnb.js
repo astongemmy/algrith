@@ -8,20 +8,21 @@ client.connect(err => {
 console.log("Connected to DB");
   // perform actions on the collection object
   //client.close();
-    findDocuments(db, function() {
-      client.close();
-    });
-
+    findDocuments(db, res, req)
+    client.close();
 });
 
-const findDocuments = function(db, callback) {
+const findDocuments = async function(db, res, req) {
   // Get the documents collection
   const collection = db.collection('listingsAndReviews');
+const myDoc = await collection.findOne();
+         // Print to the console
+         res.json(myDoc);
   // Find some documents
-  collection.find({}).toArray(function(err, docs) {
-    assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs)
-    callback(docs);
-  });
+  //collection.find({}).toArray(function(err, docs) {
+    //assert.equal(err, null);
+    //console.log("Found the following records");
+    //console.log(docs)
+    //callback(docs);
+  //});
 }
