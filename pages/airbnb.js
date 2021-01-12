@@ -1,5 +1,5 @@
 
-const MongoClient = require('mongodb').MongoClient;
+/*const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://adminUser:%40Kleezpass01@cluster0.zzdo1.mongodb.net/sample_airbnb?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 
@@ -26,3 +26,4 @@ const myDoc = await collection.findOne();
     //callback(docs);
   //});
 }
+*/
