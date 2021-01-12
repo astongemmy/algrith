@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
         window.removeEventListener('scroll', this.handleScroll)
     }
     
-    //	Viewport observer	//
+    //	Viewport observer
 	//	Checks if viewport is mobile
 	deviceView() {
 		let viewport_width = document.documentElement.clientWidth;

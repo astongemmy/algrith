@@ -42,7 +42,7 @@ export default class Header extends React.Component {
                 <div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-200 mt-2">
                     
                     <div className="inline-flex items-center h-full">
-                        Powered by <span className="ml-1 text-green-600"> Algrith</span>
+                        Powered by <span className="mx-1 text-green-600"> Algrith</span>
                         <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
                     </div>
                     
