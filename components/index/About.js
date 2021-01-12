@@ -31,7 +31,7 @@ export default class About extends React.Component {
                             <span className="flex justify-center items-center my-2 mx-auto p-1 text-5xl text-green-300 bg-green-100 w-20 h-20 rounded-full">
                                 <i className="fa fa-handshake"></i>
                             </span>
-                            lorem ipsum lvmesn  fdreajs fagsre ghate
+                            We posses sufficiency of skills to drive your web presence and experience to the next level
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ export default class About extends React.Component {
                             <span className="flex justify-center items-center my-2 mx-auto p-1 text-5xl text-green-300 bg-green-100 w-20 h-20 rounded-full">
                                 <i className="fa fa-plane"></i>
                             </span>
-                            lorem ipsum lvmesn  fdreajs fagsre ghate
+                            Time is a valuable currency of business and we give our clients value in time
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@ export default class About extends React.Component {
                             <span className="flex justify-center items-center my-2 mx-auto p-1 text-5xl text-green-300 bg-green-100 w-20 h-20 rounded-full">
                                 <i className="fa fa-shield-alt"></i>
                             </span>
-                            lorem ipsum lvmesn  fdreajs fagsre ghate
+                            Integrity defines business life span and we are determined to live long with you
                         </div>
                     </div>
 
