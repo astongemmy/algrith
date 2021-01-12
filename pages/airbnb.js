@@ -26,5 +26,4 @@ const myDoc = await collection.findOne();
     //callback(docs);
   //});
 }
-
 */
