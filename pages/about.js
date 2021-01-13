@@ -25,7 +25,6 @@ Fetch = () => {
 fetch('/api/airbnb', {
 method: 'POST',
 body: ''
-}
 }).then(response => response.json())
 .then(response => {
 alert(JSON.stringify(response))
