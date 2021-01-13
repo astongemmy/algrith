@@ -128,6 +128,11 @@ export default class Layout extends React.Component {
                 <Footer />
                     
                 <div id="overlay" onClick={close_all} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
+                
+                <div id="alert" className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-200 text-white p-4 w-3/5 flex justify-between items-center">
+                    <span id="message">Message</span>
+                    <i className="fa fa-times" id="close"></i>
+                </div>        
 
             </div>
 
