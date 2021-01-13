@@ -55,12 +55,11 @@ export default class Contact extends React.Component {
     contactUs = (e) => {
         e.preventDefault()
 
-        const form = document.querySelector('#contact-us')
         const contact = this.serializeArray({
-            form: form
+            form: document.querySelector('#contact-us')
         })
 
-        fetch('/api/airbnb', {
+        fetch('/api/contacts', {
             method: 'POST',
             mode: 'same-origin',
             credentials: 'same-origin',
@@ -71,22 +70,27 @@ export default class Contact extends React.Component {
             body: JSON.stringify(contact)
         }).then(response => response.json())
         .then(response => {
-            if (response.status == 'success') {
+
+            // Append response message to feedback element
+            if (response.success) {
                 document.querySelector('#alert #message').textContent = response.message
             } else {
                 document.querySelector('#alert #message').textContent = 'Something went wrong!'
             }
+            // Display feedback element
             document.querySelector('#alert').classList.remove('-top-32');
             document.querySelector('#alert').classList.add('top-4');
 
-            const show_alert = setInterval(function() {                
+            // Hide feedback element after set time
+            const show_alert = setInterval(() => {
+                document.querySelector('#alert #message').textContent = '';
                 document.querySelector('#alert').classList.remove('top-4');
                 document.querySelector('#alert').classList.add('-top-32');
                 clearInterval(show_alert);
             }, 2000);
         
         }).catch(error => {
-            console.error('Error while sending data!')
+            console.error('Error while sending mail!')
         })
 
     }

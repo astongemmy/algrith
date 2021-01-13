@@ -27,11 +27,13 @@ export default class Header extends React.Component {
                         <img src="./images/logo/algrith.png" alt="brand-logo" />
                     </div>
                     
-                    <a href="/">
-                        <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-black mx-auto text-center font-medium transition-all ease-in-out duration-1000">
-                            Algrith
-                        </h1>
-                    </a>
+                    <Link href="/">
+                        <a>
+                            <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-black mx-auto text-center font-medium transition-all ease-in-out duration-1000">
+                                Algrith
+                            </h1>
+                        </a>
+                    </Link>
 
                 </div>
                 
