@@ -31,7 +31,7 @@ client.connect(async (req, res, err) => {
     const myDoc = await collection.findOne();*/
     // Print to the console
 export default function(req, res) {
-    res.status(200).json(VERCEL_ENV);
+    res.status(200).json(process.env.MONGO_DB_USER);
 }
 
     /*client.close();
