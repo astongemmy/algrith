@@ -31,7 +31,7 @@ client.connect(async (req, res, err) => {
     const myDoc = await collection.findOne();*/
     // Print to the console
 export default function(req, res) {
-    res.status(200).json(PROCESS.ENV.MONGO_DB_NAME);
+    res.status(200).json('PROCESS.ENV.MONGO_DB_NAME');
 }
 
     /*client.close();
