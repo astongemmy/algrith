@@ -8,7 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 }*/
 
 // Construct a document                                                                                                                                                              
-let contact = {
+/*let contact = {
     "name": { "first": "Alan", "last": "Turing" },
     "birth": new Date(1912, 5, 23), // June 23, 1912                                                                                                                                 
     "death": new Date(1954, 5, 7),  // June 7, 1954                                                                                                                                  
@@ -28,10 +28,12 @@ client.connect(async (req, res, err) => {
     // Insert a single document, wait for promise so we can read it back
     const insert_contact = await collection.insertOne(contact);
     
-    const myDoc = await collection.findOne();
+    const myDoc = await collection.findOne();*/
     // Print to the console
-    res.status(200).json(myDoc);
+export default function(req, res) {
+    res.status(200).json(PROCESS.ENV.MONGO_DB_NAME);
+}
 
-    client.close();
+    /*client.close();
 
-});
+});*/
