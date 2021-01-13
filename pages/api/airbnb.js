@@ -1,11 +1,11 @@
 const MongoClient = require('mongodb').MongoClient;
 
-const db = {
+/*const db = {
     user: 'adminUser',
     password: '%40Kleezpass01',
     name: 'algrith',
     collection: 'contacts'
-}
+}*/
 
 // Construct a document                                                                                                                                                              
 let contact = {
@@ -16,12 +16,12 @@ let contact = {
     "views": 1250000
 }
 
-const uri = `mongodb+srv://${db.user}:${db.password}@cluster0.zzdo1.mongodb.net/${db.name}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${PROCESS.ENV.MONGO_DB_USER}:${PROCESS.ENV.MONGO_DB_PASSWORD}@cluster0.zzdo1.mongodb.net/${PROCESS.ENV.MONGO_DB_NAME}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useUnifiedTopology: true });
 
 client.connect(async (req, res, err) => {
 
-    const collection = client.db(db.name).collection(db.collection);
+    const collection = client.db(PROCESS.ENV.MONGO_DB_NAME).collection('contact');
     
     // perform actions on the collection object  
 
@@ -30,7 +30,7 @@ client.connect(async (req, res, err) => {
     
     const myDoc = await collection.findOne();
     // Print to the console
-    res.statusCode(200).end(myDoc);
+    res.status(200).json(myDoc);
 
     client.close();
 
