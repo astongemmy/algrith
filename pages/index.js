@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import Styles from '../components/styles/index/index.module.css'
 import Intro from '../components/index/Intro'
-import About from '../components/index/About'
+import Outline from '../components/index/Outline'
 import Leaders from '../components/index/Leaders'
 import Contact from '../components/index/Contact'
 
@@ -80,7 +80,7 @@ export default class Index extends React.Component {
 
                     <Intro />
 
-                    <About />
+                    <Outline />
 
                     <Leaders />
 

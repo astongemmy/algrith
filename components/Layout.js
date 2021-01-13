@@ -10,6 +10,7 @@ export default class Layout extends React.Component {
         super()
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
+        this.sectionScroll = this.sectionScroll.bind(this)
     }
 
     componentDidMount() {
@@ -19,6 +20,7 @@ export default class Layout extends React.Component {
         this.brand = document.querySelector('#brand');
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
+        this.sectionScroll();
         window.addEventListener('scroll', this.handleScroll, false);
     }
 
@@ -35,6 +37,24 @@ export default class Layout extends React.Component {
 		} else {
 			return "desktop";
 		}
+    }
+
+    sectionScroll() {
+
+        const scroll_selectors = document.querySelectorAll(".scroll-selector");
+        
+        scroll_selectors.forEach(selector => {
+            selector.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute("href");
+                const offset_top = document.querySelector(href).offsetTop;                
+                scroll({
+                    top: offset_top,
+                    behavior: "smooth"
+                });
+            });
+        });
+
     }
     
     handleScroll() {
