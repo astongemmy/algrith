@@ -32,6 +32,6 @@ client.connect(async (req, res, err) => {
     // Print to the console
     res.status(200).json(myDoc);
 
-    /*client.close();
+    client.close();
 
 });
