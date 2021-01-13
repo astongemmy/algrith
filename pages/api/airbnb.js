@@ -16,7 +16,7 @@ const MongoClient = require('mongodb').MongoClient;
     "views": 1250000
 }
 
-const uri = `mongodb+srv://${PROCESS.ENV.MONGO_DB_USER}:${PROCESS.ENV.MONGO_DB_PASSWORD}@cluster0.zzdo1.mongodb.net/${PROCESS.ENV.MONGO_DB_NAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${PROCESS.ENV.MONGO_DB_USER}:${PROCESS.ENV.MONGO_DB_PASSWORD}cluster0.zzdo1.mongodb.net/${PROCESS.ENV.MONGO_DB_NAME}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useUnifiedTopology: true });
 
 client.connect(async (req, res, err) => {
