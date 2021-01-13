@@ -10,14 +10,29 @@ export default class About extends React.Component {
   
     constructor() {
         super()
+this.Fetch = this.Fetch.bind(this)
     }
 
     componentDidMount() {
+this.Fetch()
     }
 
     componentWillUnmount() {
         
     }
+
+Fetch = () => {
+fetch('/api/airbnb', {
+method: 'POST',
+body: ''
+}).then(response => response.text())
+.then(response => {
+alert(JSON.stringify(response))
+}).catch(error => {
+alert(error)
+})
+
+}
     
     render() {
         

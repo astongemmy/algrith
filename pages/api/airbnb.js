@@ -1,40 +1,40 @@
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
 
-const db = {
-    user: 'adminUser',
-    password: '%40Kleezpass01',
-    name: 'algrith',
-    collection: 'contacts'
-}
+// /*const db = {
+//     user: 'adminUser',
+//     password: '%40Kleezpass01',
+//     name: 'algrith',
+//     collection: 'contacts'
+// }*/
 
-const uri = `mongodb+srv://${db.user}:${db.password}@cluster0.zzdo1.mongodb.net/${db.name}?retryWrites=true&w=majority`;
-const client = new MongoClient(uri, { useUnifiedTopology: true });
+// // Construct a document                                                                                                                                                              
+// let contact = {
+//     "name": { "first": "Alan", "last": "Turing" },
+//     "birth": new Date(1912, 5, 23), // June 23, 1912                                                                                                                                 
+//     "death": new Date(1954, 5, 7),  // June 7, 1954                                                                                                                                  
+//     "contribs": [ "Turing machine", "Turing test", "Turingery" ],
+//     "views": 1250000
+// }
+
+// const uri = `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.zzdo1.mongodb.net/${process.env.MONGO_DB_NAME}?retryWrites=true&w=majority`;
+// const client = new MongoClient(uri, { useUnifiedTopology: true });
 
 
-export default function contactHandler(req, res) {
+//     const collection = client.db(process.env.MONGO_DB_NAME).collection('contact');
     
-    const client.connect()
+//     // const client.connect()
 
-        const collection = client.db(db.name).collection(db.collection);
+//         const collection = client.db(db.name).collection(db.collection);
         
-        // perform actions on the collection object  
-        // Insert a single document, wait for promise so we can read it back
+//         // perform actions on the collection object  
+//         // Insert a single document, wait for promise so we can read it back
         
-        let contact = req.body
+//         let contact = req.body
     
-        // const insert = await collection.insertOne(contact);    
-    
-        // Return response
-        res.status(200).json({
-            status: 'success',
-            message: 'Sent successfully',
-            body: contact
-        });
-        
-        // const myDoc = await collection.findOne();
-    
-        client.close();
-    
-    });
-        
-}
+//     const myDoc = await collection.findOne();
+//     // Print to the console
+//     res.status(200).json(myDoc);
+
+//     client.close();
+
+// });
