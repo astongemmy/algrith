@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                     
                     <Link href="/">
                         <a>
-                            <h1 id="brand-title" className="flex items-center uppercase text-3xl md:text-5xl text-black mx-auto text-center font-medium transition-all ease-in-out duration-1000">
+                            <h1 id="brand-title" className="ripple-node flex items-center uppercase text-3xl md:text-5xl text-black mx-auto text-center font-medium transition-all ease-in-out duration-1000">
                                 Algrith
                             </h1>
                         </a>

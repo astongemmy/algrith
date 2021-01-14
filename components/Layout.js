@@ -11,6 +11,8 @@ export default class Layout extends React.Component {
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
         this.sectionScroll = this.sectionScroll.bind(this)
+        this.rippleEffect = this.rippleEffect.bind(this)
+        this.typing = this.typing.bind(this)
     }
 
     componentDidMount() {
@@ -21,11 +23,57 @@ export default class Layout extends React.Component {
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         this.sectionScroll();
+        this.rippleEffect();
+        if (this.props.intro_string) {
+            this.typing(-1)
+        }
         window.addEventListener('scroll', this.handleScroll, false);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll)
+    }
+
+    typing = (counter) => {
+        
+        const intro_string = this.props.intro_string
+        let count, typing_timeout;
+        
+        if (document.querySelector('.intro-lead .cursor')) {
+            
+            if (counter !== intro_string.length - 1) {
+                document.querySelector('.intro-lead .cursor').remove()
+            }
+        
+        }
+        
+        if (counter >= intro_string.length) {
+            count = 0
+            clearTimeout(typing_timeout)
+            return
+        }
+        
+        if (counter <= intro_string.length) {
+            count = counter + 1
+        }
+        
+        let cursor_elem = document.createElement("span")
+        cursor_elem.className = "cursor"
+        
+        let element = document.createElement("span")
+        element.textContent = intro_string[count];
+        
+        if (intro_string[count] == " ") {
+            element.style.marginLeft = "5px"
+        }
+        
+        document.querySelector('.intro-lead').append(element)
+        document.querySelector('.intro-lead').append(cursor_elem)
+        
+        typing_timeout = setTimeout(() => {
+            this.typing(count)
+        }, 100)
+    
     }
     
     //	Viewport observer
@@ -56,6 +104,40 @@ export default class Layout extends React.Component {
         });
 
     }
+
+    rippleEffect = () => {
+
+		document.querySelectorAll('.ripple-node').forEach(button => {
+			
+			button.addEventListener('mousedown', function(e) {
+				
+				const target = e.target;
+				const rect = target.getBoundingClientRect();
+				let ripple = target.querySelector('.ripple');
+				
+				if (ripple) {
+					ripple.remove();
+				}
+				
+				ripple = document.createElement('span');
+				ripple.className = 'ripple';
+
+				ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
+				target.appendChild(ripple);
+				const top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.documentElement.scrollTop;
+				const left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.documentElement.scrollLeft;
+
+				ripple.style.top = top + 'px';
+				ripple.style.left = left + 'px';
+
+				return false;
+				
+			});
+
+		});
+
+	}
+
     
     handleScroll() {
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size

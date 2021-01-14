@@ -24,7 +24,7 @@ export default class About extends React.Component {
         
         return (
         
-            <Layout>
+            <Layout intro_string="Algrith is a software company dedicated to delivering elegant, efficient, secure, accessible etc, web applications and websites  for use by clients both in the public and private software." >
                 
                 <Head>
                     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
@@ -34,7 +34,7 @@ export default class About extends React.Component {
                 <main>
 
                     <Intro />
-
+                    
                     <Outline />             
                 
                 </main>

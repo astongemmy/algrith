@@ -164,6 +164,57 @@ navbar {
   }
 }
 
+.ripple {
+    position:absolute;
+    background-color:inherit;
+    border-radius:100%;
+    transform:scale(0.2);
+    opacity:0;
+    pointer-events:none;
+    -webkit-animation:ripple .3s ease-out;
+    -moz-animation:ripple .3s ease-out;
+    animation:ripple .3s ease-in-out;
+}
+
+.ripple-node {
+    position: relative;
+}
+
+@-webkit-keyframes ripple {
+    
+    from {
+        opacity:1;
+    }
+    to {
+        transform:scale(1);
+        opacity:0;
+    }
+    
+}
+
+@-moz-keyframes ripple {
+    
+    from {
+        opacity:1;
+    }
+    to {
+        transform:scale(1);
+        opacity:0;
+    }
+    
+}
+
+@keyframes ripple {
+    from {
+        opacity:1;
+    }
+    to {
+        transform:scale(1);
+        opacity:0;
+    }
+    
+}
+
 @media (max-width: 600px) {
     .grid {
     width: 100%;
