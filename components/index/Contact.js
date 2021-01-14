@@ -75,16 +75,16 @@ export default class Contact extends React.Component {
             if (response.success) {
                 document.querySelector('#alert #message').textContent = response.message
             } else {
-                document.querySelector('#alert #message').textContent = 'Something went wrong!'
+                //document.querySelector('#alert #message').textContent = 'Something went wrong!'
             }
             // Display feedback element
             document.querySelector('#alert').classList.remove('-top-32');
-            document.querySelector('#alert').classList.add('top-4');
+            document.querySelector('#alert').classList.add('top-8');
 
             // Hide feedback element after set time
             const show_alert = setInterval(() => {
                 document.querySelector('#alert #message').textContent = '';
-                document.querySelector('#alert').classList.remove('top-4');
+                document.querySelector('#alert').classList.remove('top-8');
                 document.querySelector('#alert').classList.add('-top-32');
                 clearInterval(show_alert);
             }, 2000);

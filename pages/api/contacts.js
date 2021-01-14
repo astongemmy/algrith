@@ -49,7 +49,7 @@ export default async (req, res) => {
                 });                
 
             } catch (error) {
-                res.status(400).json({ success: false, data: {message: 'An error occured!'}});
+                res.status(400).json({ success: false, data: {message: 'An error occurred!'}});
             }
             break;
 
