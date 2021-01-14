@@ -32,9 +32,9 @@ export default async (req, res) => {
                 });
 
                 const mailOption = {
-                    from: email,
+                    from: `${email}`,
                     to: process.env.EMAIL_ADDRESS,
-                    subject: `@Contact Algrith from ${name}`,
+                    subject: `@Contact Algrith`,
                     text: message,
                 };
 
