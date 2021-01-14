@@ -75,7 +75,7 @@ export default class Contact extends React.Component {
             if (response.success) {
                 document.querySelector('#alert #message').textContent = response.data.message
             } else {
-                document.querySelector('#alert #message').textContent = response.data.message
+                document.querySelector('#alert #message').textContent = 'Something went wrong!'
             }
             // Display feedback element
             document.querySelector('#alert').classList.remove('-top-32');
