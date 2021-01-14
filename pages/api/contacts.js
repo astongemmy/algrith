@@ -40,7 +40,7 @@ export default async (req, res) => {
 
                 transporter.sendMail(mailOption, (err, data) => {
                     if (err) {
-                        return res.status(400).json({ success: false, data: {message: 'An error occured!'} });
+                        return res.status(400).json({ success: false, data: {message: err.message} });
                     } else {
                         // const contact = await Contacts.create(req.body);
                         // res.status(201).json({ success: true, data: contact })
