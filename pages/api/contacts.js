@@ -22,7 +22,7 @@ export default async (req, res) => {
                 const contact = await Contacts.create(req.body);
                 res.status(201).json({ success: true, data: contact })
             } catch (error) {
-                res.status(400).json({ success: false, data: {message: 'An error occured!'}});
+                res.status(400).json({ success: false, data: {message: error.message}});
             }
             break;
 
