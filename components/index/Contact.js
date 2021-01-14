@@ -55,9 +55,14 @@ export default class Contact extends React.Component {
     contactUs = (e) => {
         e.preventDefault()
 
+        const contactForm = document.querySelector('#contact-us');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+
         const contact = this.serializeArray({
-            form: document.querySelector('#contact-us')
+            form: contactForm
         })
+
+        submitBtn.textContent = 'Sending...';
 
         fetch('/api/contacts', {
             method: 'POST',
@@ -71,12 +76,13 @@ export default class Contact extends React.Component {
         }).then(response => response.json())
         .then(response => {
 
+            submitBtn.textContent = 'Send';
+
             // Append response message to feedback element
-            if (response.success) {
+            if (response) {
                 document.querySelector('#alert #message').textContent = response.data.message
-            } else {
-                document.querySelector('#alert #message').textContent = 'Something went wrong!'
             }
+
             // Display feedback element
             document.querySelector('#alert').classList.remove('-top-32');
             document.querySelector('#alert').classList.add('top-8');
@@ -88,6 +94,10 @@ export default class Contact extends React.Component {
                 document.querySelector('#alert').classList.add('-top-32');
                 clearInterval(show_alert);
             }, 2000);
+
+            if (response.success) {
+                contactForm.reset();
+            }
         
         }).catch(error => {
             console.error('Error while sending mail!')
@@ -140,7 +150,7 @@ export default class Contact extends React.Component {
                                 <textarea placeholder="Write message..." name="message" id="contact-us-message" className="w-full outline-none h-32 ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <button type="submit" className="w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-green-500 focus:outline-none focus:select-none bg-green-500 text-white">
+                            <button type="submit" className="ripple-node w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-green-500 focus:outline-none focus:select-none bg-green-500 text-white">
                                 Send
                             </button>
 
