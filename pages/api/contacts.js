@@ -21,7 +21,7 @@ export default async (req, res) => {
                     secure: false, // true for 465, false for other ports
                     auth: {
                         user: process.env.CONTACT_EMAIL_ADDRESS, // generated ethereal user
-                        pass: process.env.EMAIL_PASSWORD, // generated ethereal password
+                        pass: process.env.CONTACT_EMAIL_PASSWORD, // generated ethereal password
                     },
                     // tls: {
                     //     rejectUnauthorized: true
