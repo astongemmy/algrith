@@ -165,7 +165,7 @@ export default class Contact extends React.Component {
                             <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
                         </div>
 <div className="relative">
-<div className="text-3xl p-8 text-white rounded-t-xl bg-gradient-to-b from-red-400 via-red-400 text-center">
+<div className="text-2xl p-8 uppercase text-white rounded-t-xl bg-gradient-to-b from-red-400 via-red-400 text-center">
 Want to talk to us about anything?
 </div>
 <ul className="text-xl text-purple-600 p-4">
@@ -173,7 +173,7 @@ Want to talk to us about anything?
 <li className="p-4">Feedback?</li>
 <li className="p-4">Questions?</li>
 </ul>
-<div className="text-white text-xl py-8 px-4 text-center bg-gradient-to-t from-blue-400 rounded-b-xl">
+<div className="text-white text-xl py-8 px-4 text-center bg-gradient-to-t from-blue-600 rounded-b-xl">
 We are one click away!
 </div>
 </div>
