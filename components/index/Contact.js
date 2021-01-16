@@ -173,7 +173,7 @@ Want to talk to us about anything?
 <li className="p-4">Feedback?</li>
 <li className="p-4">Questions?</li>
 </ul>
-<div className="text-blue-600 text-xl py-8 px-4 text-center bg-gradient-to-t from-red-400 via-transparent via-transparent rounded-b-xl">
+<div className="text-blue-600 text-xl py-8 px-4 text-center bg-gradient-to-t from-red-400 rounded-b-xl">
 We are one click away!
 </div>
 </div>
