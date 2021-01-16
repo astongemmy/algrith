@@ -21,10 +21,10 @@ export default class Header extends React.Component {
 
             <header className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 py-1 px-4 md:p-4 w-full dark:bg-black">
                 
-                <div id="brand" className="flex justify-start items-center ml-2 lg:ml-24 transition-all ease-in-out duration-1000">
+                <div id="brand" className="flex justify-start items-center ml-2 lg:ml-20 transition-all ease-in-out duration-1000">
                     
                     <Link href="/">
-                        <a id="brand-title" className="transform origin-left scale-65 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000">
+                        <a id="brand-title" className="transform origin-left scale-65 lg:scale-100 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000">
                             <img src="./images/logo/algrith-brand.jpg" alt="brand-logo" />                            
                         </a>
                     </Link>
