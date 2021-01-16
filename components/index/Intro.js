@@ -13,7 +13,7 @@ export default class Intro extends React.Component {
 
             <div className="relative flex flex-wrap xl:flex-nowrap justify-around items-center w-full dark:bg-black bg-intro-index bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 
-                <div className="w-full xl:w-2/3 text-green-600 m-0 md:m-4 p-8 lg:p-20">
+                <div className="w-full xl:w-2/3 text-green-500 m-0 md:m-4 p-8 lg:p-20">
                     <span className="w-full text-5xl lg:text-8xl intro-lead"></span> <span className="inline-block mt-4 text-purple-500 text-3xl font-medium lg:text-5xl">We make happy clients</span>
                 </div>
 
