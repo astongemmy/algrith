@@ -168,7 +168,7 @@ export default class Contact extends React.Component {
 <div className="text-3xl p-8 text-white rounded-t-xl bg-gradient-to-b from-red-400 via-red-400">
 Want to talk to us about anything?
 </div>
-<ul className="text-xl text-blue-600 text-shadow p-4">
+<ul className="text-xl text-purple-400 p-4">
 <li className="p-4">Business?</li>
 <li className="p-4">Feedback?</li>
 <li className="p-4">Questions?</li>
