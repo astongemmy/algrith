@@ -161,6 +161,10 @@ export default class Contact extends React.Component {
                     <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4 bg-green-400">
 
                         <div className="relative overflow-hidden w-full m-0 py-2 px-8 lg:p-12 bg-green-200">
+<div className="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 overflow-hidden flex justify-start lg:justify-center w-full m-0 py-2 px-8 lg:p-12 bg-red-400">
+                            <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
+                        </div>
+<div ClassName="relative">
 <div className="text-4xl p-4 text-red-600 bg-gray-200">
 Want to talk to us about anything?
 </div>
@@ -172,10 +176,8 @@ Want to talk to us about anything?
 <div className="text-red-500 text-3xl p-4 text-center bg-purple-200">
 We are one click away!
 </div>
+</div>
 
-<div className="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 overflow-hidden flex justify-start lg:justify-center w-full m-0 py-2 px-8 lg:p-12 bg-red-400">
-                            <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
-                        </div>
 </div>
 
                     </div>
