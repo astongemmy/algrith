@@ -160,7 +160,7 @@ export default class Contact extends React.Component {
 
                     <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
 
-                        <div className="relative overflow-hidden flex justify-center lg:justify-start items-center w-full m-0 p-0 md:p-2 lg:p-12">
+                        <div className="relative overflow-hidden w-full m-0 p-0 md:p-2 lg:p-12">
 Want to talk to us about anything?
 <ul>
 <li>Business?</li>
