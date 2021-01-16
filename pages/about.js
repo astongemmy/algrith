@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import Styles from '../components/styles/about/about.module.css'
 import Intro from '../components/about/Intro'
-import Outline from '../components/index/Outline'
+import Outline from '../components/common/Outline'
 
 export default class About extends React.Component {
   

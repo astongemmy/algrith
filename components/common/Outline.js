@@ -13,7 +13,7 @@ export default class Outline extends React.Component {
         
         const outlines = items.map((outline) => {
             return (
-                <div className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4">
+                <div key={title} className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4">
                     <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-lg md:text-2xl rounded-xl text-center shadow">
                         <h2 className="uppercase text-xl md:text-2xl text-black font-semibold mb-4">
                             {outline.title}
