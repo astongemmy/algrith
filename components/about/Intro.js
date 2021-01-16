@@ -25,7 +25,7 @@ export default class Intro extends React.Component {
                     </span>
                 </div>
 
-                <a href="#outline" className="scroll-selector cursor-pointer absolute flex justify-center items-center right-12 lg:right-32 -bottom-8 rounded-full bg-green-600 text-white p-8 text-3xl w-20 h-20"><i className="fa fa-arrow-down"></i></a>
+                <a href="#outline" className="scroll-selector cursor-pointer absolute flex justify-center items-center right-12 lg:right-32 -bottom-8 rounded-full bg-green-500 text-white p-8 text-3xl w-20 h-20"><i className="fa fa-arrow-down"></i></a>
 
             </div>
 
