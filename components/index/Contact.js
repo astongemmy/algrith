@@ -173,7 +173,7 @@ Want to talk to us about anything?
 <li className="p-4">Feedback?</li>
 <li className="p-4">Questions?</li>
 </ul>
-<div className="text-blue-500 text-xl py-8 px-4 text-center">
+<div className="text-red-300 text-xl py-8 px-4 text-center">
 We are one click away!
 </div>
 </div>
