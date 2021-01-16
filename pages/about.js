@@ -23,7 +23,7 @@ export default class About extends React.Component {
     render() {
 
         const outlines = {
-            title: 'Why we really do',
+            title: 'What we really do',
             items: [
                 {
                     title: 'Web Application',
