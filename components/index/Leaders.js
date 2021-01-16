@@ -23,7 +23,7 @@ export default class About extends React.Component {
 
                 <div className="relative z-10 flex flex-wrap justify-around items-center mt-12 lg:mt-0 px-2 xl:px-64 py-0 lg:py-16 w-full">
 
-                    <div className="relative w-full shadow-2xl lg:w-80 bg-red-200 rounded-xl m-4 md:mx-0 p-0 md:p-4">
+                    <div className="relative w-full shadow-2xl lg:w-80 bg-red-200 rounded-xl my-4 mx-16 md:mx-0 p-0 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
 
