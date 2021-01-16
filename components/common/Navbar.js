@@ -11,7 +11,7 @@ export default class Header extends React.Component {
         
         return (
 
-            <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-700 shadow md:shadow-none bg-white fixed top-0 md:top-4 lg:top-16 -right-full md:right-12 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-screen md:w-auto h-screen md:h-12 text-gray-600 lg:p-4 lg:bg-gradient-to-t lg:from-gray-100 lg:via-white lg:rounded-b-full">
+            <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-700 shadow md:shadow-none bg-white fixed top-0 md:top-4 lg:top-6 -right-full md:right-12 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-screen md:w-auto h-screen md:h-12 text-gray-600 lg:p-4">
                                 
                 <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
                     
@@ -28,13 +28,13 @@ export default class Header extends React.Component {
                 <div className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
                     
                     <Link href="/about">
-                        <a className="ripple-node my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">About</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-500 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">About</a>
                     </Link>
                     <Link href="/contact">
-                        <a className="ripple-node my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Contact</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-500 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Contact</a>
                     </Link>
                     <Link href="/support">
-                        <a className="ripple-node my-2 mx-auto md:m-4 p-2 hover:bg-gray-200 text-left md:text-center w-full md:w-auto text-xl text-green-500">Support</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-500 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Support</a>
                     </Link>
 
                 </div>

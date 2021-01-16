@@ -19,7 +19,7 @@ export default class Header extends React.Component {
 
         return (
 
-            <header className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 py-1 px-4 md:p-4 w-full dark:bg-black">
+            <header id="header" className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 py-1 px-4 md:p-4 w-full dark:bg-black">
                 
                 <div id="brand" className="flex justify-start items-center ml-2 lg:ml-20 transition-all ease-in-out duration-1000">
                     
