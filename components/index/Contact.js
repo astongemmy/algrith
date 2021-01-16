@@ -176,6 +176,7 @@ We are one click away!
 <div className="absolute left-2/4 top-2/4 transform -translate-2/4 overflow-hidden flex justify-start lg:justify-center w-full m-0 py-2 px-8 lg:p-12">
                             <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
                         </div>
+</div>
 
                     </div>
 
