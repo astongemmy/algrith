@@ -8,20 +8,29 @@ export default class Layout extends React.Component {
     
     constructor() {
         super()
+        // Method binding
         this.handleScroll = this.handleScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
         this.sectionScroll = this.sectionScroll.bind(this)
         this.rippleEffect = this.rippleEffect.bind(this)
+        this.open_nav_bar = this.open_nav_bar.bind(this)
+        this.close_nav_bar = this.close_nav_bar.bind(this)
+        this.close_all = this.close_all.bind(this)
         this.typing = this.typing.bind(this)
     }
 
     componentDidMount() {
+        // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
         this.header = document.querySelector('header');
         this.brand = document.querySelector('#brand');
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
+        // Event trigger on mount
+        this.open_nav_bar()
+        this.close_nav_bar()
+        this.close_all()
         this.sectionScroll();
         this.rippleEffect();
         if (this.props.intro_string) {
@@ -31,9 +40,11 @@ export default class Layout extends React.Component {
     }
 
     componentWillUnmount() {
+        // Event Trigger on unmount
         window.removeEventListener('scroll', this.handleScroll)
     }
 
+    // Custom Methods
     typing = (counter) => {
         
         const intro_string = this.props.intro_string
@@ -78,7 +89,7 @@ export default class Layout extends React.Component {
     
     //	Viewport observer
 	//	Checks if viewport is mobile
-	deviceView() {
+	deviceView = () => {
 		let viewport_width = document.documentElement.clientWidth;
 		if (viewport_width < '702') {
 			return "mobile";
@@ -87,7 +98,7 @@ export default class Layout extends React.Component {
 		}
     }
 
-    sectionScroll() {
+    sectionScroll = () => {
 
         const scroll_selectors = document.querySelectorAll(".scroll-selector");
         
@@ -139,79 +150,75 @@ export default class Layout extends React.Component {
 	}
 
     
-    handleScroll() {
-        // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size
-        if (this.header !== undefined) {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                this.header.style.transform = 'scale(1, 0.7)'
-                this.header.style.transformOrigin = 'top'
-                this.brand.style.transform = 'scale(0.7, 1)'
-                this.brand.style.transformOrigin = 'left top'
-                this.header.classList.add('shadow-xl')
-                if (this.deviceView() == 'desktop') {
-                    this.nav_menu.style.top = '0.52rem'
-                }
-            } else {
-                this.header.style.transform = 'scale(1)'
-                this.brand.style.transform = 'scale(1)'
-                this.header.classList.remove('shadow-xl')
-                if (this.deviceView() == 'desktop') {
-                    this.nav_menu.style.top = '1.5rem'
-                }
+    handleScroll = () => {
+        // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size    
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            this.header.style.transform = 'scale(1, 0.7)'
+            this.header.style.transformOrigin = 'top'
+            this.brand.style.transform = 'scale(0.7, 1)'
+            this.brand.style.transformOrigin = 'left top'
+            this.header.classList.add('shadow-xl')
+            if (this.deviceView() == 'desktop') {
+                this.nav_menu.style.top = '0.52rem'
+            }
+        } else {
+            this.header.style.transform = 'scale(1)'
+            this.brand.style.transform = 'scale(1)'
+            this.header.classList.remove('shadow-xl')
+            if (this.deviceView() == 'desktop') {
+                this.nav_menu.style.top = '1.5rem'
             }
         }
     }
 
+    open_nav_bar = () => {            
+        if (this.nav_menu.className.includes('-right-full')) {
+            this.nav_menu.classList.remove('-right-full')
+            this.nav_menu.classList.add('right-0')
+            this.overlay.classList.remove('hidden')
+            this.overlay.classList.add('block')
+        } else {
+            this.nav_menu.classList.remove('right-0')
+            this.nav_menu.classList.add('-right-full')
+            this.overlay.classList.remove('block')
+            this.overlay.classList.add('hidden')
+        }            
+    }
+
+    close_nav_bar = () => {            
+        if (this.nav_menu.className.includes('right-0')) {
+            this.nav_menu.classList.remove('right-0')
+            this.nav_menu.classList.add('-right-full')
+            this.overlay.classList.remove('block')
+            this.overlay.classList.add('hidden')
+        } else {
+            this.nav_menu.classList.remove('-right-full')
+            this.nav_menu.classList.add('right-0')
+            this.overlay.classList.remove('hidden')
+            this.overlay.classList.add('block')
+        }
+    }
+
+    close_all = () => {
+        this.close_nav_bar()
+    }
+
     render() {
 
-        const open_nav_bar = () => {
-            if (this.nav_menu !== undefined) {
-                if (this.nav_menu.className.includes('-right-full')) {
-                    this.nav_menu.classList.remove('-right-full')
-                    this.nav_menu.classList.add('right-0')
-                    this.overlay.classList.remove('hidden')
-                    this.overlay.classList.add('block')
-                } else {
-                    this.nav_menu.classList.remove('right-0')
-                    this.nav_menu.classList.add('-right-full')
-                    this.overlay.classList.remove('block')
-                    this.overlay.classList.add('hidden')
-                }
-            }
-        }
-
-        const close_nav_bar = () => {
-            if (this.nav_menu !== undefined) {
-                if (this.nav_menu.className.includes('right-0')) {
-                    this.nav_menu.classList.remove('right-0')
-                    this.nav_menu.classList.add('-right-full')
-                    this.overlay.classList.remove('block')
-                    this.overlay.classList.add('hidden')
-                } else {
-                    this.nav_menu.classList.remove('-right-full')
-                    this.nav_menu.classList.add('right-0')
-                    this.overlay.classList.remove('hidden')
-                    this.overlay.classList.add('block')
-                }
-            }
-        }
-
-        const close_all = () => {
-            close_nav_bar()
-        }
+        
 
         return (
             
             <div>
                 
-                <Header event={{open_nav_bar}} />
-                <Navbar event={{close_nav_bar}} />
+                <Header event={this.open_nav_bar} />
+                <Navbar event={this.close_nav_bar} />
 
                     {this.props.children}
 
                 <Footer />
                     
-                <div id="overlay" onClick={close_all} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
+                <div id="overlay" onClick={this.close_all} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
                 
                 <div id="alert" className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-100 text-green-500 p-4 w-3/5 flex justify-between items-center">
                     <span id="message">Message</span>
