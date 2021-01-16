@@ -169,7 +169,7 @@ Want to talk to us about anything?
 </ul>
 
 We are one click away!
-                            <img src="./images/illustrations/man-on-laptop.png" className="absolute left-2/4 top-2/4 w-full h-full" alt="contact us section image" />
+                            <img src="./images/illustrations/man-on-laptop.png" className="absolute left-2/4 top-2/4 transform -translate-2/4 w-full" alt="contact us section image" />
                         </div>
 
                     </div>
