@@ -142,7 +142,8 @@ navbar {
     height: 1.5em;
 }
 
-.intro-lead {
+.text-shadow {
+    text-shadow:2px 2px 4px #000000;
 }
 
 .cursor {

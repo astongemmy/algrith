@@ -23,6 +23,27 @@ export default class Index extends React.Component {
     }
         
     render() {
+
+        const outlines = {
+            title: 'Why choose us',
+            items: [
+                {
+                    title: 'Competence',
+                    icon: 'fa fa-handshake',
+                    content: 'We posses sufficiency of skills to drive your web presence and experience to the next level'
+                },
+                {
+                    title: 'Fast',
+                    icon: 'fa fa-plane',
+                    content: 'Time is a valuable currency of business and we give our clients value in time'
+                },
+                {
+                    title: 'Trusted',
+                    icon: 'fa fa-shield-alt',
+                    content: 'Integrity defines business life span and we are determined to live long with you'
+                }
+            ]
+        }
         
         return (
         
@@ -37,7 +58,7 @@ export default class Index extends React.Component {
 
                     <Intro />
 
-                    <Outline />
+                    <Outline outline={outlines}/>
 
                     <Leaders />
 

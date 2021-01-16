@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'intro': "url('/images/sections/intro.jpeg')",
+        'intro-index': "url('/images/sections/intro-index.jpeg')",
+        'intro-about': "url('/images/sections/intro-about.jpg')",
       }),
       scale: {
         '65': '.65',
