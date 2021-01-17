@@ -17,7 +17,7 @@ export default class Intro extends React.Component {
                     <h1 className="relative uppercase text-3xl md:text-7xl text-white p-8 m-0 md:m-4 w-full text-center font-bold">
                         Who we really are!
                     </h1>
-                    <p className="w-full text-center text-white text-2xl lg:text-5xl">
+                    <p className="w-full text-left text-white text-2xl lg:text-5xl">
                         Algrith is a software company dedicated to delivering elegant, efficient, secure, accessible etc, web applications and websites  for use by clients both in the public and private sector.
                     </p>                    
                     <span className="hidden mt-4 text-center text-black text-3xl font-medium lg:text-3xl">
