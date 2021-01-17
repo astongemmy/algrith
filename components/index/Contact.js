@@ -166,7 +166,7 @@ export default class Contact extends React.Component {
                                 <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
                             </div>
                             
-                            <div className="relative bg-gradient-to-b from-white to-purple-200 bg-opacity-10">
+                            <div className="relative bg-gradient-to-b from-white via-transparent to-purple-200">
                                 <h1 className="text-5xl p-4 font-bold uppercase text-purple-600 text-center lg:text-left">
                                     Want to talk to us about anything?
                                 </h1>
