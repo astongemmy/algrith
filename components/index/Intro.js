@@ -15,7 +15,7 @@ export default class Intro extends React.Component {
 
                 <div className="relative w-full bg-gradient-to-b from-white bg-opacity-30">
 <div className="uppercase w-full xl:w-2/3 text-green-500 m-0 md:m-4 p-8 lg:p-20">
-                    <span className="w-full text-3xl lg:text-8xl intro-lead"></span> <span className="inline-block mt-4 text-purple-500 text-3xl font-medium lg:text-5xl">We make happy clients</span>
+                    <span className="w-full text-3xl font-bold lg:text-8xl intro-lead"></span> <span className="inline-block mt-4 text-purple-500 text-2xl font-medium lg:text-5xl">We make happy clients</span>
                 </div>
 
                 <div className="relative w-full xl:w-1/3 m-0 md:m-4 px-8 pb-16 lg:p-20">                    
