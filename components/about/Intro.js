@@ -13,7 +13,7 @@ export default class Intro extends React.Component {
 
             <div className="relative w-full dark:bg-black bg-intro-about bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
                 
-                <div className="w-full bg-green-400 bg-opacity-30 m-0 md:m-4 p-8 lg:p-20">
+                <div className="w-full bg-black bg-opacity-30 m-0 md:m-4 p-8 lg:p-20">
                     <h1 className="relative uppercase text-3xl md:text-7xl text-green-500 p-8 m-0 md:m-4 w-full text-center font-bold">
                         Who we really are!
                     </h1>
