@@ -54,7 +54,7 @@ export default class About extends React.Component {
 
                 <main>
 
-                    <Intro />
+                    {//<Intro />}
                     
                     <Outline outline={outlines}/>             
                 
