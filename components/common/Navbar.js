@@ -19,7 +19,7 @@ export default class Header extends React.Component {
                         Algrith
                     </h1>
 
-                    <div id="close-menu" onClick={this.props.event.close_nav_bar} className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
+                    <div id="close-menu" onClick={this.props.close_nav_bar} className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
                         <i className="fa fa-times"></i>
                     </div>
 

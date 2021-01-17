@@ -13,9 +13,9 @@ export default class Layout extends React.Component {
         this.deviceView = this.deviceView.bind(this)
         this.sectionScroll = this.sectionScroll.bind(this)
         this.rippleEffect = this.rippleEffect.bind(this)
-        this.open_nav_bar = this.open_nav_bar.bind(this)
-        this.close_nav_bar = this.close_nav_bar.bind(this)
-        this.close_all = this.close_all.bind(this)
+        this.openNavBar = this.openNavBar.bind(this)
+        this.closeNavBar = this.closeNavBar.bind(this)
+        this.closeAll = this.closeAll.bind(this)
         this.typing = this.typing.bind(this)
     }
 
@@ -28,9 +28,6 @@ export default class Layout extends React.Component {
         this.brandTitle = document.querySelector('#brand-title');
         this.hamburger = document.querySelector('#hamburger');
         // Event trigger on mount
-        this.open_nav_bar()
-        this.close_nav_bar()
-        this.close_all()
         this.sectionScroll();
         this.rippleEffect();
         if (this.props.intro_string) {
@@ -171,7 +168,7 @@ export default class Layout extends React.Component {
         }
     }
 
-    open_nav_bar = () => {            
+    openNavBar = () => {            
         if (this.nav_menu.className.includes('-right-full')) {
             this.nav_menu.classList.remove('-right-full')
             this.nav_menu.classList.add('right-0')
@@ -185,7 +182,7 @@ export default class Layout extends React.Component {
         }            
     }
 
-    close_nav_bar = () => {            
+    closeNavBar = () => {            
         if (this.nav_menu.className.includes('right-0')) {
             this.nav_menu.classList.remove('right-0')
             this.nav_menu.classList.add('-right-full')
@@ -199,26 +196,24 @@ export default class Layout extends React.Component {
         }
     }
 
-    close_all = () => {
-        this.close_nav_bar()
+    closeAll = () => {
+        this.closeNavBar()
     }
 
-    render() {
-
-        
+    render() {        
 
         return (
             
             <div>
                 
-                <Header event={this.open_nav_bar} />
-                <Navbar event={this.close_nav_bar} />
+                <Header open_nav_bar={this.openNavBar} />
+                <Navbar close_nav_bar={this.closeNavBar} />
 
                     {this.props.children}
 
                 <Footer />
                     
-                <div id="overlay" onClick={this.close_all} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
+                <div id="overlay" onClick={this.closeAll} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
                 
                 <div id="alert" className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-100 text-green-500 p-4 w-3/5 flex justify-between items-center">
                     <span id="message">Message</span>
@@ -232,4 +227,3 @@ export default class Layout extends React.Component {
     }
 
 }
-  

@@ -31,7 +31,7 @@ export default class Header extends React.Component {
 
                 </div>
                 
-                <div id="hamburger" onClick={this.props.event.open_nav_bar} className="md:hidden flex justify-center items-center text-3xl cursor-pointer p-4 ml-4 mr-1 text-gray-600 transform scale-y-75 transition-all ease-in-out duration-1000">
+                <div id="hamburger" onClick={this.props.open_nav_bar} className="md:hidden flex justify-center items-center text-3xl cursor-pointer p-4 ml-4 mr-1 text-gray-600 transform scale-y-75 transition-all ease-in-out duration-1000">
                     <i className="fa fa-bars"></i>
                 </div>
 

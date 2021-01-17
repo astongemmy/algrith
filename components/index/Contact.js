@@ -115,7 +115,7 @@ export default class Contact extends React.Component {
                     <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
                 </div>
 
-                <h1 className="relative uppercase text-3xl md:text-5xl text-red-600 mx-auto w-full text-center font-medium">
+                <h1 className="relative uppercase text-3xl md:text-5xl text-purple-600 mx-auto w-full text-center font-medium">
                     Contact us
                 </h1>
 
@@ -126,31 +126,31 @@ export default class Contact extends React.Component {
                         <form onSubmit={this.contactUs} id="contact-us" method="post" className="relative flex flex-wrap w-full m-0 py-2 px-8 lg:p-12">
                             
                             <div className="w-full lg:w-2/4 p-4">
-                                <label className="text-gray-600 text-xl py-2" htmlFor="contact-us-email">Email</label>
+                                <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-email">Email</label>
                                 <input type="email" placeholder="Email" name="email" id="contact-us-email" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
                             <div className="w-full lg:w-2/4 p-4">
-                                <label className="text-gray-600 text-xl py-2" htmlFor="contact-us-name">Full Name</label>
+                                <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-name">Full Name</label>
                                 <input type="text" placeholder="Name" name="name" id="contact-us-name" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
                             <div className="w-full lg:w-2/4 p-4">
-                                <label className="text-gray-600 text-xl py-2" htmlFor="contact-us-phone">Phone</label>
+                                <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-phone">Phone</label>
                                 <input type="text" placeholder="Phone" name="phone" id="contact-us-phone" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
                             <div className="w-full lg:w-2/4 p-4">
-                                <label className="text-gray-600 text-xl py-2" htmlFor="contact-us-location">Location</label>
+                                <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-location">Location</label>
                                 <input type="text" placeholder="Location" name="location" id="contact-us-location" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
                             <div className="w-full p-4">
-                                <label className="text-gray-600 text-xl py-2" htmlFor="contact-us-message">Message</label>
+                                <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-message">Message</label>
                                 <textarea placeholder="Write message..." name="message" id="contact-us-message" className="w-full outline-none h-32 ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <button type="submit" className="ripple-node w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-green-500 focus:outline-none focus:select-none bg-green-500 text-white">
+                            <button type="submit" className="ripple-node w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-purple-500 focus:outline-none focus:select-none bg-purple-500 text-white">
                                 Send
                             </button>
 
@@ -161,24 +161,23 @@ export default class Contact extends React.Component {
                     <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
 
                         <div className="relative overflow-hidden w-full m-0 py-2 px-8 lg:p-12">
-<div className="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 overflow-hidden flex justify-start lg:justify-center w-full m-0 py-2 lg:p-12">
-                            <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
-                        </div>
-<div className="relative rounded-xl bg-gradient-to-b from-red-400 via-transparent to-purple-400">
-<div className="text-2xl p-8 uppercase text-white text-center">
-Want to talk to us about anything?
-</div>
-<ul className="text-xl text-purple-600 p-4">
-<li className="p-4">Business?</li>
-<li className="p-4">Feedback?</li>
-<li className="p-4">Questions?</li>
-</ul>
-<div className="text-white text-xl py-8 px-4 text-center">
-We are one click away!
-</div>
-</div>
+                            
+                            <div className="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 overflow-hidden flex justify-start lg:justify-center w-full m-0 py-2 lg:p-12">
+                                <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
+                            </div>
+                            
+                            <div className="relative rounded-xl">
+                                <h1 className="text-5xl p-4 font-bold uppercase text-purple-600 text-center lg:text-left">
+                                    Want to talk to us about anything?
+                                </h1>
+                                <ul className="text-2xl text-purple-900 font-bold p-4">
+                                    <li className="p-4">Business?</li>
+                                    <li className="p-4">Feedback?</li>
+                                    <li className="p-4">Questions?</li>
+                                </ul>
+                            </div>
 
-</div>
+                        </div>
 
                     </div>
 
