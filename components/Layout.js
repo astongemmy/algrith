@@ -154,14 +154,14 @@ export default class Layout extends React.Component {
             this.header.style.transformOrigin = 'top'
             this.brand.style.transform = 'scale(0.7, 1)'
             this.brand.style.transformOrigin = 'left top'
-            this.header.classList.add('shadow-xl')
+            this.header.classList.add('shadow')
             if (this.deviceView() == 'desktop') {
                 this.nav_menu.style.top = '0.52rem'
             }
         } else {
             this.header.style.transform = 'scale(1)'
             this.brand.style.transform = 'scale(1)'
-            this.header.classList.remove('shadow-xl')
+            this.header.classList.remove('shadow')
             if (this.deviceView() == 'desktop') {
                 this.nav_menu.style.top = '1.5rem'
             }
