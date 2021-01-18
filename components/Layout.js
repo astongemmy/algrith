@@ -34,6 +34,8 @@ export default class Layout extends React.Component {
             this.typing(-1)
         }
         window.addEventListener('scroll', this.handleScroll, false);
+AOS.init();
+
     }
 
     componentWillUnmount() {
