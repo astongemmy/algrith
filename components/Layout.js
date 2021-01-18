@@ -20,6 +20,9 @@ export default class Layout extends React.Component {
     }
 
     componentDidMount() {
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });          
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
@@ -174,22 +177,18 @@ export default class Layout extends React.Component {
             this.nav_menu.classList.add('right-0')
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
-document.querySelector('#navbar-title').setAttribute('data-aos', 'fade')
-document.querySelector('#close-menu').setAttribute('data-aos', 'fade-left')
-document.querySelectorAll('#navbar-links a').setAttribute('data-aos', 'fade-right')
-document.querySelector('#navbar-footer-brand').setAttribute('data-aos', 'fade')
-document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', 'fade-left')
-        } else {
-            this.nav_menu.classList.remove('right-0')
-            this.nav_menu.classList.add('-right-full')
-            this.overlay.classList.remove('block')
-            this.overlay.classList.add('hidden')
-document.querySelector('#navbar-title').setAttribute('data-aos', '')
-document.querySelector('#close-menu').setAttribute('data-aos', '')
-document.querySelectorAll('#navbar-links a').setAttribute('data-aos', '')
-document.querySelector('#navbar-footer-brand').setAttribute('data-aos', '')
-document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', '')
-        }            
+
+            document.querySelector('#navbar-title').classList.add('aos-animate')
+            document.querySelector('#close-menu').classList.add('aos-animate')
+            document.querySelectorAll('#navbar-links a').forEach(link => {
+                link.classList.add('fadeInLeft')
+            })
+            document.querySelector('#navbar-footer-brand').classList.add('aos-animate')
+            document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
+                social.classList.add('aos-animate')
+            })
+            
+        }          
     }
 
     closeNavBar = () => {            
@@ -204,11 +203,16 @@ document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', '')
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
         }
-document.querySelector('#navbar-title').setAttribute('data-aos', '')
-document.querySelector('#close-menu').setAttribute('data-aos', '')
-document.querySelectorAll('#navbar-links a').setAttribute('data-aos', '')
-document.querySelector('#navbar-footer-brand').setAttribute('data-aos', '')
-document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', '')
+
+        document.querySelector('#navbar-title').classList.remove('aos-animate')
+        document.querySelector('#close-menu').classList.remove('aos-animate')
+        document.querySelectorAll('#navbar-links a').forEach(link => {
+            link.classList.remove('fadeInLeft')
+        })
+        document.querySelector('#navbar-footer-brand').classList.remove('aos-animate')
+        document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
+            social.classList.remove('aos-animate')
+        })
     }
 
     closeAll = () => {

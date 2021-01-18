@@ -23,5 +23,6 @@
     "sequelize": "^6.3.5",
     "swr": "^0.4.0",
     "tailwindcss": "^2.0.2"
-  }
+  },
+  "devDependencies": {}
 }
