@@ -33,7 +33,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-green-600 p-4">
+                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-green-800 p-4">
                                 Co Founder
                             </div>
 
@@ -67,7 +67,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-00 text-green-100 p-4">
+                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-100 p-4">
                                 Founder / CEO
                             </div>
 
@@ -101,7 +101,7 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-green-600 p-4">
+                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-green-800 p-4">
                                 Secretary
                             </div>
                             
