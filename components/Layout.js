@@ -174,11 +174,21 @@ export default class Layout extends React.Component {
             this.nav_menu.classList.add('right-0')
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
+document.querySelector('#navbar-title').setAttribute('data-aos', 'fade')
+document.querySelector('#close-menu').setAttribute('data-aos', 'fade-left')
+document.querySelectorAll('#navbar-links a').setAttribute('data-aos', 'fade-right')
+document.querySelector('#navbar-footer-brand').setAttribute('data-aos', 'fade')
+document.querySelectorAll('#navbar-socials').setAttribute('data-aos', 'fade-left')
         } else {
             this.nav_menu.classList.remove('right-0')
             this.nav_menu.classList.add('-right-full')
             this.overlay.classList.remove('block')
             this.overlay.classList.add('hidden')
+document.querySelector('#navbar-title').setAttribute('data-aos', '')
+document.querySelector('#close-menu').setAttribute('data-aos', '')
+document.querySelectorAll('#navbar-links a').setAttribute('data-aos', '')
+document.querySelector('#navbar-footer-brand').setAttribute('data-aos', '')
+document.querySelectorAll('#navbar-socials').setAttribute('data-aos', '')
         }            
     }
 
@@ -194,6 +204,11 @@ export default class Layout extends React.Component {
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
         }
+document.querySelector('#navbar-title').setAttribute('data-aos', '')
+document.querySelector('#close-menu').setAttribute('data-aos', '')
+document.querySelectorAll('#navbar-links a').setAttribute('data-aos', '')
+document.querySelector('#navbar-footer-brand').setAttribute('data-aos', '')
+document.querySelectorAll('#navbar-socials').setAttribute('data-aos', '')
     }
 
     closeAll = () => {
