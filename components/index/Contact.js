@@ -176,7 +176,7 @@ export default class Contact extends React.Component {
                                     <li className="p-4 text-center">Questions?</li>
                                 </ul>
                                 
-                                <p className="text-xl text-black p-4 text-center">
+                                <p className="text-xl text-gray-600 p-8 text-center">
                                     Do not keep it in mind, just hit the send button and you will be glad you did
                                 </p>
 
