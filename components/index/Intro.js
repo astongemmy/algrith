@@ -15,7 +15,7 @@ export default class Intro extends React.Component {
 
                 <div className="relative px-4 flex flex-wrap xl:flex-nowrap justify-around xl:justify-start items-center w-full bg-gradient-to-b from-white bg-opacity-30">
                     
-                    <div className="relative uppercase w-full xl:w-3/4 text-green-500 m-0 p-8 lg:pr-0 lg:p-20">
+                    <div data-aos="fade" className="relative uppercase w-full xl:w-3/4 text-green-500 m-0 p-8 lg:pr-0 lg:p-20">
                         <span className="w-full text-3xl font-bold lg:text-8xl intro-lead"></span> <span className="inline-block mt-4 text-gray-600 text-2xl font-medium lg:text-5xl">We make happy clients</span>
                     </div>
 
