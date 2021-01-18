@@ -43,7 +43,7 @@ export default class About extends React.Component {
 
                             <div className="flex justify-center items-center">
                                 <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
-                                    <i className="fab fa-facebook"></i>
+                                    <i className="fab fa-facebook-f"></i>
                                 </span>
                                 <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
                                     <i className="fab fa-twitter"></i>
@@ -77,7 +77,7 @@ export default class About extends React.Component {
 
                             <div className="flex justify-center items-center">
                                 <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
-                                    <i className="fab fa-facebook"></i>
+                                    <i className="fab fa-facebook-f"></i>
                                 </span>
                                 <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
                                     <i className="fab fa-twitter"></i>
@@ -111,7 +111,7 @@ export default class About extends React.Component {
 
                             <div className="flex justify-center items-center">
                                 <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
-                                    <i className="fab fa-facebook"></i>
+                                    <i className="fab fa-facebook-f"></i>
                                 </span>
                                 <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
                                     <i className="fab fa-twitter"></i>
