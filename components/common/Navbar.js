@@ -15,11 +15,11 @@ export default class Header extends React.Component {
                                 
                 <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
                     
-                    <h1 id="navbar-title" className="uppercase flex text-black p-2 font-medium">
+                    <h1 id="navbar-title" className="animated uppercase flex text-black p-2 font-medium">
                         Algrith
                     </h1>
 
-                    <div id="close-menu" onClick={this.props.close_nav_bar} className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
+                    <div id="close-menu" onClick={this.props.close_nav_bar} className="animated flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
                         <i className="fa fa-times"></i>
                     </div>
 
@@ -41,19 +41,19 @@ export default class Header extends React.Component {
 
                 <div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-200 mt-2">
                     
-                    <div id="navbar-footer-brand" className="inline-flex items-center h-full">
+                    <div id="navbar-footer-brand" className="animated inline-flex items-center h-full">
                         Powered by <span className="mx-1 text-navyblue"> Algrith</span>
                         <img src="./images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
                     </div>
                     
                     <div id="navbar-footer-socials" className="flex justify-center items-center h-full">
-                        <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                        <span className="animated flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
                             <i className="fab fa-facebook"></i>
                         </span>
-                        <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                        <span className="animated flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
                             <i className="fab fa-twitter"></i>
                         </span>
-                        <span className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                        <span className="animated flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
                             <i className="fab fa-linkedin"></i>
                         </span>
                     </div>
