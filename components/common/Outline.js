@@ -35,7 +35,7 @@ export default class Outline extends React.Component {
                     <img className="rounded-full" src="./images/illustrations/team.png" alt="about us illustration image" />
                 </div>
 
-                <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-green-500 mx-auto w-full text-center font-bold">
+                <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full text-center font-bold">
                     {title}
                 </h1>
 
