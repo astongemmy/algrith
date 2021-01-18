@@ -13,7 +13,7 @@ export default class Outline extends React.Component {
         
         const outlines = items.map((outline) => {
             return (
-                <div key={outline.title} className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4">
+                <div key={outline.title} data-aos="fade-up" className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4">
                     <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-lg md:text-2xl rounded-xl text-center shadow">
                         <h2 className="uppercase text-xl md:text-2xl text-navyblue font-semibold mb-4">
                             {outline.title}
@@ -29,7 +29,7 @@ export default class Outline extends React.Component {
 
         return (
 
-            <div id="outline" data-aos="fade-up" className="relative py-16 px-1 lg:px-32 w-full dark:bg-black">
+            <div id="outline" className="relative py-16 px-1 lg:px-32 w-full dark:bg-black">
 
                 <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-28 lg:-left-28 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/team.png" alt="about us illustration image" />
