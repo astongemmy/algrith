@@ -17,7 +17,6 @@ export default class Layout extends React.Component {
         this.closeNavBar = this.closeNavBar.bind(this)
         this.closeAll = this.closeAll.bind(this)
         this.typing = this.typing.bind(this)
-this.aos = this.aos.bind(this)
     }
 
     componentDidMount() {
@@ -35,7 +34,6 @@ this.aos = this.aos.bind(this)
             this.typing(-1)
         }
         window.addEventListener('scroll', this.handleScroll, false);
-this.aos()
 
     }
 
@@ -43,8 +41,6 @@ this.aos()
         // Event Trigger on unmount
         window.removeEventListener('scroll', this.handleScroll)
     }
-
-aos => AOS.init()
 
     // Custom Methods
     typing = (counter) => {
