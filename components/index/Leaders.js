@@ -41,6 +41,18 @@ export default class About extends React.Component {
                                 Ilori, OluJide
                             </div>
 
+                            <div className="flex justify-center items-center">
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-facebook"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-twitter"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-linkedin"></i>
+                                </span>
+                            </div>
+
                         </div>
 
                     </div>
@@ -63,6 +75,18 @@ export default class About extends React.Component {
                                 Akpan, Uwakmfon
                             </div>
 
+                            <div className="flex justify-center items-center">
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-facebook"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-twitter"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-linkedin"></i>
+                                </span>
+                            </div>
+
                         </div>
 
                     </div>
@@ -83,6 +107,18 @@ export default class About extends React.Component {
                             
                             <div className="relative my-2 uppercase text-center shadow-2xl text-green-700 font-bold py-2 px-4 rounded-xl">
                                 Edwin, Leatherman
+                            </div>
+
+                            <div className="flex justify-center items-center">
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-facebook"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-twitter"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-linkedin"></i>
+                                </span>
                             </div>
 
                         </div>
