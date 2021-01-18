@@ -23,21 +23,21 @@ export default class About extends React.Component {
 
                 <div className="relative z-10 flex flex-wrap justify-around items-center mt-12 lg:mt-0 px-2 xl:px-64 py-0 lg:py-16 w-full">
 
-                    <div className="relative w-full shadow-2xl lg:w-80 bg-gradient-to-b from-green-200 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 p-0 md:p-4">
+                    <div className="relative w-full shadow-2xl lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 p-0 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
 
-                            <div className="flex relative mx-auto my-8 w-52 h-52 rounded-full ring-8 ring-green-200 shadow-2xl ring-offset-4 ring-offset-gray-100">
+                            <div className="flex relative mx-auto my-8 w-52 h-52 rounded-full ring-8 ring-green-400 shadow-2xl ring-offset-4 ring-offset-gray-100">
                                 <div className="relative flex justify-center items-center w-full h-full rounded-full overflow-hidden">
                                     <img className="relative rounded-full" src="./images/board/cto.png" width={200} height={200} alt="cto image" />
                                 </div>
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-200 text-green-600 p-4 rounded-xl">
+                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-white p-4 rounded-xl">
                                 Co Founder
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-600 font-bold py-2 px-4 rounded-xl">
+                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-700 font-bold py-2 px-4 rounded-xl">
                                 Ilori, OluJide
                             </div>
 
@@ -49,17 +49,17 @@ export default class About extends React.Component {
 
                         <div className="relative w-full m-0 rounded-xl">
                                                     
-                            <div className="flex relative mx-auto my-8 w-52 h-52 rounded-full shadow-2xl ring-8 ring-green-200 ring-offset-4 ring-offset-gray-100">
+                            <div className="flex relative mx-auto my-8 w-52 h-52 rounded-full shadow-2xl ring-8 ring-green-400 ring-offset-4 ring-offset-gray-100">
                                 <div className="relative flex justify-center items-center w-full h-full rounded-full overflow-hidden">
                                     <img className="relative rounded-full" src="./images/board/ceo.png" width={200} height={200} alt="ceo image" />
                                 </div>
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-200 text-green-600 p-4 rounded-xl">
+                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-00 text-green-100 p-4 rounded-xl">
                                 Founder / CEO
                             </div>
 
-                            <div className="relative my-2 text-center uppercase shadow-2xl text-green-600 font-bold py-2 px-4 rounded-xl">
+                            <div className="relative my-2 text-center uppercase shadow-2xl text-white font-bold py-2 px-4 rounded-xl">
                                 Akpan, Uwakmfon
                             </div>
 
@@ -67,7 +67,7 @@ export default class About extends React.Component {
 
                     </div>
                     
-                    <div className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-200 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 p-0 md:p-4">
+                    <div className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 p-0 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
                         
@@ -77,11 +77,11 @@ export default class About extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-200 text-green-600 p-4 rounded-xl">
+                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-white p-4 rounded-xl">
                                 Secretary
                             </div>
                             
-                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-600 font-bold py-2 px-4 rounded-xl">
+                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-700 font-bold py-2 px-4 rounded-xl">
                                 Edwin, Leatherman
                             </div>
 
