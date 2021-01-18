@@ -178,7 +178,7 @@ document.querySelector('#navbar-title').setAttribute('data-aos', 'fade')
 document.querySelector('#close-menu').setAttribute('data-aos', 'fade-left')
 document.querySelectorAll('#navbar-links a').setAttribute('data-aos', 'fade-right')
 document.querySelector('#navbar-footer-brand').setAttribute('data-aos', 'fade')
-document.querySelectorAll('#navbar-socials').setAttribute('data-aos', 'fade-left')
+document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', 'fade-left')
         } else {
             this.nav_menu.classList.remove('right-0')
             this.nav_menu.classList.add('-right-full')
@@ -188,7 +188,7 @@ document.querySelector('#navbar-title').setAttribute('data-aos', '')
 document.querySelector('#close-menu').setAttribute('data-aos', '')
 document.querySelectorAll('#navbar-links a').setAttribute('data-aos', '')
 document.querySelector('#navbar-footer-brand').setAttribute('data-aos', '')
-document.querySelectorAll('#navbar-socials').setAttribute('data-aos', '')
+document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', '')
         }            
     }
 
@@ -208,7 +208,7 @@ document.querySelector('#navbar-title').setAttribute('data-aos', '')
 document.querySelector('#close-menu').setAttribute('data-aos', '')
 document.querySelectorAll('#navbar-links a').setAttribute('data-aos', '')
 document.querySelector('#navbar-footer-brand').setAttribute('data-aos', '')
-document.querySelectorAll('#navbar-socials').setAttribute('data-aos', '')
+document.querySelectorAll('#navbar-footer-socials').setAttribute('data-aos', '')
     }
 
     closeAll = () => {
