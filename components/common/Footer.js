@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
 
                 <a href="/" target="_blank" rel="noopener noreferrer" className="text-xl">
 
-                    Powered by <span className="ml-1 text-green-500"> Algrith</span>
+                    Powered by <span className="ml-1 text-navyblue"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" />
 
                 </a>
