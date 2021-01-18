@@ -20,7 +20,7 @@ export default class Intro extends React.Component {
                     <p data-aos="fade-up" className="w-full text-left text-gray-600 text-2xl lg:text-5xl">
                         Algrith is a software company dedicated to delivering elegant, efficient, secure, accessible etc, web applications and websites  for use by clients both in the public and private sector.
                     </p>                    
-                    <aside data-aos="fade-right" className="mt-4 text-center text-navyblue text-3xl font-medium lg:text-3xl">
+                    <aside data-aos="fade-right" className="mt-4 text-navyblue text-xl font-medium lg:text-3xl">
                         We make happy clients
                     </aside>
                 </div>
