@@ -150,7 +150,7 @@ export default class Contact extends React.Component {
                                 <textarea placeholder="Write message..." name="message" id="contact-us-message" className="w-full outline-none h-32 ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <button type="submit" className="ripple-node w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-purple-500 focus:outline-none focus:select-none bg-purple-500 text-white">
+                            <button type="submit" className="ripple-node w-auto py-3 px-12 ml-4 my-8 text-2xl rounded-xl ring ring-offset-2 ring-purple-700 focus:outline-none focus:select-none bg-purple-700 text-white">
                                 Send
                             </button>
 
