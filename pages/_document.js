@@ -32,6 +32,8 @@ export default class MyDocument extends Document {
                     <NextScript />
                     
                 </body>
+
+<script type="text/javascript" src="/public/aos.js"></script>
                 
             </Html>
             
