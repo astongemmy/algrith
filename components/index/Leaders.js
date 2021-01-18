@@ -23,7 +23,7 @@ export default class About extends React.Component {
 
                 <div className="relative z-10 flex flex-wrap justify-around items-center mt-12 lg:mt-0 px-2 xl:px-64 py-0 lg:py-16 w-full">
 
-                    <div className="relative w-full shadow-2xl lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
+                    <div data-aos="fade-up" className="relative w-full shadow-2xl lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
 
@@ -57,7 +57,7 @@ export default class About extends React.Component {
 
                     </div>
 
-                    <div className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-400 via-transparent to-green-500 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
+                    <div data-aos="fade-up" className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-400 via-transparent to-green-500 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
                                                     
@@ -91,7 +91,7 @@ export default class About extends React.Component {
 
                     </div>
                     
-                    <div className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
+                    <div data-aos="fade-up" className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
                         
