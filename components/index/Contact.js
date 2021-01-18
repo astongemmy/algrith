@@ -111,7 +111,7 @@ export default class Contact extends React.Component {
 
             <div className="relative pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
                 
-                <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-96 lg:-left-32 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
+                <div data-aos="fade-down" className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-96 lg:-left-32 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
                 </div>
 
@@ -125,27 +125,27 @@ export default class Contact extends React.Component {
 
                         <form onSubmit={this.contactUs} id="contact-us" method="post" className="relative flex flex-wrap w-full m-0 py-2 px-8 lg:p-12">
                             
-                            <div className="w-full lg:w-2/4 p-4">
+                            <div data-aos="fade-right" className="w-full lg:w-2/4 p-4">
                                 <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-email">Email</label>
                                 <input type="email" placeholder="Email" name="email" id="contact-us-email" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <div className="w-full lg:w-2/4 p-4">
+                            <div data-aos="fade-right" className="w-full lg:w-2/4 p-4">
                                 <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-name">Full Name</label>
                                 <input type="text" placeholder="Name" name="name" id="contact-us-name" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <div className="w-full lg:w-2/4 p-4">
+                            <div data-aos="fade-right" className="w-full lg:w-2/4 p-4">
                                 <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-phone">Phone</label>
                                 <input type="text" placeholder="Phone" name="phone" id="contact-us-phone" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <div className="w-full lg:w-2/4 p-4">
+                            <div data-aos="fade-right" className="w-full lg:w-2/4 p-4">
                                 <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-location">Location</label>
                                 <input type="text" placeholder="Location" name="location" id="contact-us-location" className="w-full outline-none ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
 
-                            <div className="w-full p-4">
+                            <div data-aos="fade-right" className="w-full p-4">
                                 <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-message">Message</label>
                                 <textarea placeholder="Write message..." name="message" id="contact-us-message" className="w-full outline-none h-32 ring ring-gray-300 rounded p-4 my-4 mx-auto text-xl" />
                             </div>
