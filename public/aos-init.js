@@ -1,2 +1,1 @@
 AOS.init()
-alert("ddft")
