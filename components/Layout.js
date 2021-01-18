@@ -178,14 +178,14 @@ export default class Layout extends React.Component {
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
 
-            document.querySelector('#navbar-title').classList.add('aos-animate')
-            document.querySelector('#close-menu').classList.add('aos-animate')
+            document.querySelector('#navbar-title').classList.add('fadeInLeft')
+            document.querySelector('#close-menu').classList.add('fadeInRight')
             document.querySelectorAll('#navbar-links a').forEach(link => {
                 link.classList.add('fadeInLeft')
             })
-            document.querySelector('#navbar-footer-brand').classList.add('aos-animate')
+            document.querySelector('#navbar-footer-brand').classList.add('fadeInLeft')
             document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
-                social.classList.add('aos-animate')
+                social.classList.add('fadeInRight')
             })
             
         }          
@@ -204,14 +204,14 @@ export default class Layout extends React.Component {
             this.overlay.classList.add('block')
         }
 
-        document.querySelector('#navbar-title').classList.remove('aos-animate')
-        document.querySelector('#close-menu').classList.remove('aos-animate')
+        document.querySelector('#navbar-title').classList.remove('fadeInLeft')
+        document.querySelector('#close-menu').classList.remove('fadeInRight')
         document.querySelectorAll('#navbar-links a').forEach(link => {
             link.classList.remove('fadeInLeft')
         })
-        document.querySelector('#navbar-footer-brand').classList.remove('aos-animate')
+        document.querySelector('#navbar-footer-brand').classList.remove('fadeInLeft')
         document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
-            social.classList.remove('aos-animate')
+            social.classList.remove('fadeInRight')
         })
     }
 
