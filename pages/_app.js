@@ -1,5 +1,6 @@
 import '../public/styles/App.css'
 import '../public/styles/Icons.css'
+import '../public/styles/aos.css'
 import App from 'next/app'
 
 export default class MyApp extends App {
