@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
                     
                 </body>
 
-<script type="text/javascript" src="/public/aos.js"></script>
+<script type="text/javascript" src="/aos.js"></script>
                 
             </Html>
             
