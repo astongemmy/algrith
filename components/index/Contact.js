@@ -115,7 +115,7 @@ export default class Contact extends React.Component {
                     <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
                 </div>
 
-                <h1 className="relative uppercase text-3xl md:text-5xl text-purple-600 mx-auto w-full text-center font-medium">
+                <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-purple-600 mx-auto w-full text-center font-bold">
                     Contact us
                 </h1>
 
@@ -175,9 +175,11 @@ export default class Contact extends React.Component {
                                     <li className="p-4 text-center">Feedback?</li>
                                     <li className="p-4 text-center">Questions?</li>
                                 </ul>
-<p className="text-xl text-black p-4 text-center">
-Do not keep it in mind, just hit the send button and you will be glad you did
-</p>
+                                
+                                <p className="text-xl text-black p-4 text-center">
+                                    Do not keep it in mind, just hit the send button and you will be glad you did
+                                </p>
+
                             </div>
 
                         </div>
