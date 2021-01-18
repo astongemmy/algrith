@@ -17,7 +17,7 @@ export default class About extends React.Component {
                     <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" alt="team setup illustration" />
                 </div>
 
-                <h1 className="relative uppercase text-3xl py-4 md:text-4xl text-white mx-auto text-center font-bold">
+                <h1 className="relative ring-4-green uppercase text-3xl py-4 md:text-4xl text-white mx-auto text-center font-bold">
                     The company
                 </h1>
 
