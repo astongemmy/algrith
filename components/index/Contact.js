@@ -171,9 +171,9 @@ export default class Contact extends React.Component {
                                     Want to talk to us about something?
                                 </h1>
                                 <ul className="w-full text-2xl text-gray-700 font-bold p-4">
-                                    <li className="p-4 text-">Business?</li>
-                                    <li className="p-4 text-">Feedback?</li>
-                                    <li className="p-4 text-">Questions?</li>
+                                    <li className="p-4 text-center lg:text-left">Business?</li>
+                                    <li className="p-4 text-center lg:text-left">Feedback?</li>
+                                    <li className="p-4 text-center lg:text-left">Questions?</li>
                                 </ul>
                                 
                                 <p className="text-xl text-white p-8 bg-purple-600 text-center">
