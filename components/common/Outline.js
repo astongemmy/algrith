@@ -31,7 +31,7 @@ export default class Outline extends React.Component {
 
             <div id="outline" className="relative py-16 px-1 lg:px-32 w-full dark:bg-black">
 
-                <div data-aos="fade-down" className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-28 lg:-left-28 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
+                <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-28 lg:-left-28 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/team.png" alt="about us illustration image" />
                 </div>
 

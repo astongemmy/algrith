@@ -111,7 +111,7 @@ export default class Contact extends React.Component {
 
             <div className="relative pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
                 
-                <div data-aos="fade-down" className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-96 lg:-left-32 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
+                <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-96 lg:-left-32 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
                 </div>
 
@@ -166,17 +166,17 @@ export default class Contact extends React.Component {
                                 <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
                             </div>
                             
-                            <div className="relative bg-gradient-to-b from-white via-purple-200">
-                                <h1 className="text-5xl p-4 font-bold uppercase text-purple-600 text-center lg:text-left">
-                                    Want to talk to us about anything?
+                            <div className="relative bg-gradient-to-b from-transparent to-purple-200">
+                                <h1 className="text-5xl p-4 mt-8 font-bold uppercase text-purple-600 text-center lg:text-left">
+                                    Want to talk to us about something?
                                 </h1>
-                                <ul className="w-full text-2xl text-purple-900 font-bold p-4">
-                                    <li className="p-4 text-center">Business?</li>
-                                    <li className="p-4 text-center">Feedback?</li>
-                                    <li className="p-4 text-center">Questions?</li>
+                                <ul className="w-full text-2xl text-gray-700 font-bold p-4">
+                                    <li className="p-4 text-">Business?</li>
+                                    <li className="p-4 text-">Feedback?</li>
+                                    <li className="p-4 text-">Questions?</li>
                                 </ul>
                                 
-                                <p className="text-xl text-gray-600 p-8 text-center">
+                                <p className="text-xl text-white p-8 bg-purple-600 text-center">
                                     Do not keep it in mind, just hit the send button and you will be glad you did
                                 </p>
 
