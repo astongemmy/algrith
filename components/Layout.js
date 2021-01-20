@@ -19,9 +19,9 @@ export default class Layout extends React.Component {
     }
 
     componentDidMount() {
-        AOS.init({
-            easing: 'ease-in-out-sine'
-        });          
+        // AOS.init({
+        //     easing: 'ease-in-out-sine'
+        // });          
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
