@@ -30,6 +30,10 @@ export default class MyDocument extends Document {
                     
                     <Main />
                     <NextScript />
+
+<script type="text/javascript" src="js/aos.js"></script>
+                <script type="text/javascript" src="js/aos-init.js"></script>
+                
                     
                 </body>
 
