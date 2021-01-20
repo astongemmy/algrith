@@ -200,16 +200,14 @@ export default class Layout extends React.Component {
             this.overlay.classList.add('block')
         }
 
-        setInterval(function(){
-            document.querySelector('#navbar-title').classList.remove('fadeInLeft')
-            document.querySelector('#close-menu').classList.remove('fadeInRight')
-            document.querySelectorAll('#navbar-links a').forEach(link => {
-                link.classList.remove('fadeInLeft')
-            })
-            document.querySelector('#navbar-footer-brand').classList.remove('fadeInLeft')
-            document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
-                social.classList.remove('fadeInRight')
-            })
+        document.querySelector('#navbar-title').classList.remove('fadeInLeft')
+        document.querySelector('#close-menu').classList.remove('fadeInRight')
+        document.querySelectorAll('#navbar-links a').forEach(link => {
+            link.classList.remove('fadeInLeft')
+        })
+        document.querySelector('#navbar-footer-brand').classList.remove('fadeInLeft')
+        document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
+            social.classList.remove('fadeInRight')
         })
         
     }
