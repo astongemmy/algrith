@@ -15,11 +15,11 @@ export default class Header extends React.Component {
                                 
                 <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
                     
-                    <h1 id="navbar-title" data-aos="fade-right" className="bg-red-400 mt-0 h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
+                    <h1 id="navbar-title" className="bg-red-400 mt-0 h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
                             <img src="./images/logo/algrith-brand.jpg" alt="brand-logo" />
                     </h1>
 
-                    <div id="close-menu" onClick={this.props.close_nav_bar} data-aos="fade-left" className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
+                    <div id="close-menu" onClick={this.props.close_nav_bar} className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
                         <i className="fa fa-times"></i>
                     </div>
 
@@ -27,16 +27,16 @@ export default class Header extends React.Component {
                 
                 <div id="navbar-links" className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
                     <Link href="/">
-                        <a data-aos="fade-right" className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Home</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Home</a>
                     </Link>
                     <Link href="/about">
-                        <a data-aos="fade-right" className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">About</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">About</a>
                     </Link>
                     <Link href="/contact">
-                        <a data-aos="fade-right" className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Contact</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Contact</a>
                     </Link>
                     <Link href="/support">
-                        <a data-aos="fade-right" className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Support</a>
+                        <a className="ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Support</a>
                     </Link>
 
                 </div>
