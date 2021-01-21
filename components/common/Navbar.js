@@ -15,7 +15,7 @@ export default class Header extends React.Component {
                                 
                 <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
                     
-                    <h1 id="navbar-title" className="relative mt-0 h-16 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
+                    <h1 id="navbar-title" className="bg-red-400 mt-0 h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
                             <img src="./images/logo/algrith-brand.jpg" alt="brand-logo" />
                     </h1>
 
