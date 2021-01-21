@@ -16,14 +16,14 @@ export default class Layout extends React.Component {
         this.closeNavBar = this.closeNavBar.bind(this)
         this.closeAll = this.closeAll.bind(this)
         this.typing = this.typing.bind(this)
-        this.validLinksDisplay = this.validLinksDisplay.bind(this)
+this.validLinkDisplay = this.validLinkDisplay.bind(this)
     }
 
     componentDidMount() {
         AOS.init({
             easing: 'ease-in-out-sine'
         })
-        this.validLinksDisplay()
+this.validLinkDisplay()
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
@@ -46,21 +46,19 @@ export default class Layout extends React.Component {
         window.removeEventListener('scroll', this.handleScroll)
     }
 
-    validLinksDisplay = () => {
+validLinkDisplay = () => {
+const header_links = document.querySelectorAll('#navbar-links a')
 
-        const header_links = document.querySelectorAll('#navbar-links a')
-        const path = window.location.pathname;
-        const page_name = path.split("/").pop();
-        alert(page_name)
+const path = window.location.pathname
+const page_name = path.split('/').pop()
 
-        header_links.forEach(link => {
-            const link_href = link.split("/").pop();
-            alert(link_href)
-            if (link.href == page_name) {
-                link.style.display = 'none'
-            }
-        })
-    }
+header_links.forEach(link => {
+const link_href = link.href.split('/').pop()
+if (link_href == page_name) {
+link.style.display = 'none'
+}
+})
+}
 
     // Custom Methods
     typing = (counter) => {
@@ -199,7 +197,7 @@ export default class Layout extends React.Component {
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
 
-            document.querySelector('#navbar-title').classList.add('fadeInLeft')
+            /*document.querySelector('#navbar-title').classList.add('fadeInLeft')
             document.querySelector('#close-menu').classList.add('fadeInRight')
             document.querySelectorAll('#navbar-links a').forEach(link => {
                 link.classList.add('fadeInLeft')
@@ -207,7 +205,7 @@ export default class Layout extends React.Component {
             document.querySelector('#navbar-footer-brand').classList.add('fadeInLeft')
             document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
                 social.classList.add('fadeInRight')
-            })
+            })*/
             
         }          
     }
@@ -225,7 +223,7 @@ export default class Layout extends React.Component {
             this.overlay.classList.add('block')
         }
 
-        document.querySelector('#navbar-title').classList.remove('fadeInLeft')
+        /*document.querySelector('#navbar-title').classList.remove('fadeInLeft')
         document.querySelector('#close-menu').classList.remove('fadeInRight')
         document.querySelectorAll('#navbar-links a').forEach(link => {
             link.classList.remove('fadeInLeft')
@@ -233,7 +231,7 @@ export default class Layout extends React.Component {
         document.querySelector('#navbar-footer-brand').classList.remove('fadeInLeft')
         document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
             social.classList.remove('fadeInRight')
-        })
+        })*/
         
     }
 
