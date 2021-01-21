@@ -16,12 +16,14 @@ export default class Layout extends React.Component {
         this.closeNavBar = this.closeNavBar.bind(this)
         this.closeAll = this.closeAll.bind(this)
         this.typing = this.typing.bind(this)
+        this.validLinksDisplay = this.validLinksDisplay.bind(this)
     }
 
     componentDidMount() {
         AOS.init({
             easing: 'ease-in-out-sine'
         })
+        this.validLinksDisplay()
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
@@ -42,6 +44,22 @@ export default class Layout extends React.Component {
     componentWillUnmount() {
         // Event Trigger on unmount
         window.removeEventListener('scroll', this.handleScroll)
+    }
+
+    validLinksDisplay = () => {
+
+        const header_links = document.querySelectorAll('#navbar-links a')
+        const path = window.location.pathname;
+        const page_name = path.split("/").pop();
+        alert(page_name)
+
+        header_links.forEach(link => {
+            const link_href = link.split("/").pop();
+            alert(link_href)
+            if (link.href == page_name) {
+                link.style.display = 'none'
+            }
+        })
     }
 
     // Custom Methods
