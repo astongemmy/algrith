@@ -197,7 +197,7 @@ link.style.display = 'none'
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
 
-            document.querySelector('#navbar-title').classList.add('fadeInLeft')
+            /*document.querySelector('#navbar-title').classList.add('fadeInLeft')
             document.querySelector('#close-menu').classList.add('fadeInRight')
             document.querySelectorAll('#navbar-links a').forEach(link => {
                 link.classList.add('fadeInLeft')
@@ -205,7 +205,7 @@ link.style.display = 'none'
             document.querySelector('#navbar-footer-brand').classList.add('fadeInLeft')
             document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
                 social.classList.add('fadeInRight')
-            })
+            })*/
             
         }          
     }
@@ -223,7 +223,7 @@ link.style.display = 'none'
             this.overlay.classList.add('block')
         }
 
-        document.querySelector('#navbar-title').classList.remove('fadeInLeft')
+        /*document.querySelector('#navbar-title').classList.remove('fadeInLeft')
         document.querySelector('#close-menu').classList.remove('fadeInRight')
         document.querySelectorAll('#navbar-links a').forEach(link => {
             link.classList.remove('fadeInLeft')
@@ -231,7 +231,7 @@ link.style.display = 'none'
         document.querySelector('#navbar-footer-brand').classList.remove('fadeInLeft')
         document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
             social.classList.remove('fadeInRight')
-        })
+        })*/
         
     }
 
