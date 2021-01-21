@@ -16,14 +16,14 @@ export default class Layout extends React.Component {
         this.closeNavBar = this.closeNavBar.bind(this)
         this.closeAll = this.closeAll.bind(this)
         this.typing = this.typing.bind(this)
-this.validLinkDisplay = this.validLinkDisplay.bind(this)
+        this.hidePageLink = this.hidePageLink.bind(this)
     }
 
     componentDidMount() {
         AOS.init({
             easing: 'ease-in-out-sine'
         })
-this.validLinkDisplay()
+        this.hidePageLink()
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
@@ -46,19 +46,18 @@ this.validLinkDisplay()
         window.removeEventListener('scroll', this.handleScroll)
     }
 
-validLinkDisplay = () => {
-const header_links = document.querySelectorAll('#navbar-links a')
+    hidePageLink = () => {
+        const header_links = document.querySelectorAll('#navbar-links a')
+        const path = window.location.pathname
+        const page_name = path.split('/').pop()
 
-const path = window.location.pathname
-const page_name = path.split('/').pop()
-
-header_links.forEach(link => {
-const link_href = link.href.split('/').pop()
-if (link_href == page_name) {
-link.style.display = 'none'
-}
-})
-}
+        header_links.forEach(link => {
+            const link_href = link.href.split('/').pop()
+            if (link_href == page_name) {
+            link.style.display = 'none'
+            }
+        })
+    }
 
     // Custom Methods
     typing = (counter) => {
@@ -167,7 +166,6 @@ link.style.display = 'none'
 		});
 
 	}
-
     
     handleScroll = () => {
         // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size    
@@ -196,17 +194,6 @@ link.style.display = 'none'
             this.nav_menu.classList.add('right-0')
             this.overlay.classList.remove('hidden')
             this.overlay.classList.add('block')
-
-            /*document.querySelector('#navbar-title').classList.add('fadeInLeft')
-            document.querySelector('#close-menu').classList.add('fadeInRight')
-            document.querySelectorAll('#navbar-links a').forEach(link => {
-                link.classList.add('fadeInLeft')
-            })
-            document.querySelector('#navbar-footer-brand').classList.add('fadeInLeft')
-            document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
-                social.classList.add('fadeInRight')
-            })*/
-            
         }          
     }
 
@@ -216,23 +203,7 @@ link.style.display = 'none'
             this.nav_menu.classList.add('-right-full')
             this.overlay.classList.remove('block')
             this.overlay.classList.add('hidden')
-        } else {
-            this.nav_menu.classList.remove('-right-full')
-            this.nav_menu.classList.add('right-0')
-            this.overlay.classList.remove('hidden')
-            this.overlay.classList.add('block')
         }
-
-        /*document.querySelector('#navbar-title').classList.remove('fadeInLeft')
-        document.querySelector('#close-menu').classList.remove('fadeInRight')
-        document.querySelectorAll('#navbar-links a').forEach(link => {
-            link.classList.remove('fadeInLeft')
-        })
-        document.querySelector('#navbar-footer-brand').classList.remove('fadeInLeft')
-        document.querySelectorAll('#navbar-footer-socials span').forEach(social => {
-            social.classList.remove('fadeInRight')
-        })*/
-        
     }
 
     closeAll = () => {
