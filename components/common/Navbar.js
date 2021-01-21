@@ -16,7 +16,9 @@ export default class Header extends React.Component {
                 <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
                     
                     <h1 id="navbar-title" className="animated uppercase flex text-black p-2 font-medium">
-                        Algrith
+                        <a id="brand-title" className="transform origin-left scale-65 lg:scale-100 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000">
+                            <img src="./images/logo/algrith-brand.jpg" alt="brand-logo" />                            
+                        </a>
                     </h1>
 
                     <div id="close-menu" onClick={this.props.close_nav_bar} className="animated flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
