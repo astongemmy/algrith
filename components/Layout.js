@@ -19,6 +19,9 @@ export default class Layout extends React.Component {
     }
 
     componentDidMount() {
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        })
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
@@ -29,7 +32,8 @@ export default class Layout extends React.Component {
         // Event trigger on mount
         this.sectionScroll();
         this.rippleEffect();
-        if (this.props.intro_string) {
+        if (this.props.intro_string && typeof this.props.intro_string == 'string') {
+            // alert(typeof this.props.intro_string)
             this.typing(-1)
         }
         window.addEventListener('scroll', this.handleScroll, false);
@@ -44,43 +48,46 @@ export default class Layout extends React.Component {
     typing = (counter) => {
         
         const intro_string = this.props.intro_string
+
         let count, typing_timeout;
         
-        if (document.querySelector('.intro-lead .cursor')) {
+        if (document.querySelector('.intro-lead')) {
+            if (document.querySelector('.intro-lead .cursor')) {
+                
+                if (counter !== intro_string.length - 1) {
+                    document.querySelector('.intro-lead .cursor').remove()
+                }
             
-            if (counter !== intro_string.length - 1) {
-                document.querySelector('.intro-lead .cursor').remove()
             }
-        
+            
+            if (counter >= intro_string.length) {
+                clearTimeout(typing_timeout)
+                count = 0            
+                return
+            }
+            
+            if (counter <= intro_string.length) {
+                count = counter + 1
+            }
+            
+            let cursor_elem = document.createElement("span")
+            cursor_elem.className = "cursor"
+            
+            let element = document.createElement("span")
+            element.textContent = intro_string[count];
+            
+            if (intro_string[count] == " ") {
+                element.style.marginLeft = "5px"
+            }
+            
+            document.querySelector('.intro-lead').append(element)
+            document.querySelector('.intro-lead').append(cursor_elem)
+            
+            typing_timeout = setTimeout(() => {
+                this.typing(count)
+            }, 100)
         }
         
-        if (counter >= intro_string.length) {
-            count = 0
-            clearTimeout(typing_timeout)
-            return
-        }
-        
-        if (counter <= intro_string.length) {
-            count = counter + 1
-        }
-        
-        let cursor_elem = document.createElement("span")
-        cursor_elem.className = "cursor"
-        
-        let element = document.createElement("span")
-        element.textContent = intro_string[count];
-        
-        if (intro_string[count] == " ") {
-            element.style.marginLeft = "5px"
-        }
-        
-        document.querySelector('.intro-lead').append(element)
-        document.querySelector('.intro-lead').append(cursor_elem)
-        
-        typing_timeout = setTimeout(() => {
-            this.typing(count)
-        }, 100)
-    
     }
     
     //	Viewport observer

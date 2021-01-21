@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
                     <meta property="og:keywords" name="keywords" content="Business, Artisans, Buyers, Sellers, Online Market, Sales" />
                     <meta property="og:image" name="image" content="/images/logo/algrith.png" />
                     <link rel="shortcut icon" href="images/favicon/algrith.png" />
+                    <script type="text/javascript" src="/js/aos.js"></script>
                 </Head>
                 
                 <body>
@@ -31,10 +32,7 @@ export default class MyDocument extends Document {
                     <Main />
                     <NextScript />
                     
-                </body>
-
-                <script type="text/javascript" src="js/aos.js"></script>
-                <script type="text/javascript" src="js/aos-init.js"></script>
+                </body>                
                 
             </Html>
             
