@@ -26,7 +26,9 @@ export default class Header extends React.Component {
                 </div>
                 
                 <div id="navbar-links" className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
-                    
+                    <Link href="/">
+                        <a className="animated ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">Home</a>
+                    </Link>
                     <Link href="/about">
                         <a className="animated ripple-node transition all ease-in-out duration-700 my-2 mx-auto md:m-4 p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">About</a>
                     </Link>
