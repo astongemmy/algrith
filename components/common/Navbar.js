@@ -15,9 +15,9 @@ export default class Header extends React.Component {
                                 
                 <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
                     
-                    <h1 id="navbar-title" className="animated transform origin-left scale-65 lg:scale-100 h-16 w-64 flex justify-start items-center transition-all ease-in-out duration-1000">
+                    <a id="navbar-title" className="animated transform origin-left scale-65 lg:scale-100 h-16 w-64 flex justify-start items-center transition-all ease-in-out duration-1000">
                             <img src="./images/logo/algrith-brand.jpg" alt="brand-logo" />
-                    </h1>
+                    </a>
 
                     <div id="close-menu" onClick={this.props.close_nav_bar} className="animated flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
                         <i className="fa fa-times"></i>
