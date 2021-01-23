@@ -51,7 +51,7 @@ export default class Footer extends React.Component {
 
 <h1 className="p-4 m-4 text-navyblue text-2xl uppercase">Sitemap</h1>
 
-<div className="w-full p-8 flex justify-between items-start flex-wrap">
+<div className="mx-6 my-4 px-4 flex justify-between items-start flex-wrap">
 <a className="w-2/4 lg:text-center p-4 text-xl text-gray-600">Home</a>
 <a className="w-2/4 lg:text-center p-4 text-xl text-gray-600">About</a>
 <a className="w-2/4 lg:text-center p-4 text-xl text-gray-600">Contact Us</a>
