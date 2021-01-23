@@ -12,6 +12,7 @@ export default class Footer extends React.Component {
 
             <footer className="bg-gray-100">
 
+<h1 className="p-4 m-4 text-navyblue text-2xl uppercase">Featured</h1>
  <details className="mx-6 my-4 rounded-xl border-gray-200 border-2 border-solid">
             <summary className="flex justify-start items-center p-4 text-xl text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                 <span className="ml-4">Data for scientists</span>
@@ -47,6 +48,8 @@ export default class Footer extends React.Component {
                 More Content for data Interns
             </p>
         </details>
+
+<h1 className="p-4 m-4 text-navyblue text-2xl uppercase">Sitemap</h1>
 
 <div className="w-full p-8 flex justify-between items-start flex-wrap">
 <a className="w-2/4 lg:text-center p-4 text-xl text-gray-600">Home</a>
