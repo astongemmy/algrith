@@ -167,7 +167,7 @@ export default class Contact extends React.Component {
                             </div>
                             
                             <div className="relative bg-gradient-to-b from-transparent to-purple-200">
-                                <h1 className="text-5xl p-4 mt-8 font-bold uppercase text-purple-600 text-center lg:text-left">
+                                <h1 className="text-3xl p-4 mt-8 font-bold uppercase text-purple-600 text-center lg:text-left">
                                     Want to talk to us about something?
                                 </h1>
                                 <ul className="w-full bg-gray-100 bg-opacity-30 rounded-xl text-2xl text-gray-700 font-bold p-4">
