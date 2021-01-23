@@ -12,6 +12,16 @@ export default class Footer extends React.Component {
 
             <footer className="bg-gray-100">
 
+ <details className="w-full">
+            <summary className="flex justify-between items-center px-8 py-4 text-xl text-gray-600 rounded-xl ring-2 ring-gray-200">
+                <span>Data Science</span>
+<span className="flex justify-center items-center p-2">+</span>
+            </summary>
+            <p className="p-4 text-xl text-black">
+                More Content for data scientists
+            </p>
+        </details>
+
 <div className="w-full p-8 flex justify-between items-start flex-wrap">
 <a className="w-2/4 lg:text-center p-4 text-xl text-gray-600">Home</a>
 <a className="w-2/4 lg:text-center p-4 text-xl text-gray-600">About</a>
