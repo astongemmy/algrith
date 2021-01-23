@@ -16,8 +16,35 @@ export default class Footer extends React.Component {
             <summary className="flex justify-start items-center p-4 text-xl text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                 <span className="ml-4">Data for scientists</span>
             </summary>
-            <p className="p-4 text-xl text-gray-600 transition-all ease-in-out duration-700">
+            <p className="p-4 pl-8 text-xl text-gray-600 transition-all ease-in-out duration-700">
                 More Content for data scientists
+            </p>
+        </details>
+
+ <details className="mx-6 my-4 rounded-xl border-gray-200 border-2 border-solid">
+            <summary className="flex justify-start items-center p-4 text-xl text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                <span className="ml-4">Data for Web</span>
+            </summary>
+            <p className="p-4 pl-8 text-xl text-gray-600 transition-all ease-in-out duration-700">
+                More Content for data web
+            </p>
+        </details>
+
+ <details className="mx-6 my-4 rounded-xl border-gray-200 border-2 border-solid">
+            <summary className="flex justify-start items-center p-4 text-xl text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                <span className="ml-4">Data for UI/UX</span>
+            </summary>
+            <p className="p-4 pl-8 text-xl text-gray-600 transition-all ease-in-out duration-700">
+                More Content for data UI/UX
+            </p>
+        </details>
+
+ <details className="mx-6 my-4 rounded-xl border-gray-200 border-2 border-solid">
+            <summary className="flex justify-start items-center p-4 text-xl text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                <span className="ml-4">Data for Interns</span>
+            </summary>
+            <p className="p-4 pl-8 text-xl text-gray-600 transition-all ease-in-out duration-700">
+                More Content for data Interns
             </p>
         </details>
 
