@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
 
         return (
 
-            <footer className="bg-black">
+            <footer className="bg-green-100">
 
 <div className="w-full flex justify-between items-start flex-wrap">
 <a className="w-2/4 text-center p-4 text-xl text-green-600">Home</a>
@@ -20,7 +20,7 @@ export default class Footer extends React.Component {
 <a className="w-2/4 text-center p-4 text-xl text-green-600">FAQ</a>
 </div>
 
-                <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-4 text-xl">
+                <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center m-6 bg-red-400 text-xl">
 
                     Powered by <span className="ml-1 text-navyblue"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" />
