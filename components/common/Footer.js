@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
 
             <footer className="bg-gray-100">
 
- <details className="mx-6 my-4 transition-all ease-in-out duration-700 rounded-xl border-gray-300 border-2 border-solid">
+ <details className="mx-6 my-4 transition-all ease-in-out duration-700 rounded-xl border-gray-200 border-2 border-solid">
             <summary className="flex justify-start items-center p-4 text-xl text-gray-600 focus:outline-none hover:outline-none outline-none">
                 <span className="ml-4">Data for scientists</span>
             </summary>
