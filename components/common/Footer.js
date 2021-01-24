@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
 
         return (
 
-            <footer className="bg-gray-100">
+            <footer className="relative bg-gray-100">
                 
                 <div className="flex flex-col lg:flex-row justify-between mx-8 lg:mx-56">
                         
@@ -96,7 +96,7 @@ export default class Footer extends React.Component {
                         <div className="relative mx-4">                       
 
                             <div className="relative">
-                                <p className="px-4">
+                                <div className="px-4">
                                     <address className="font-bold">
                                         <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
                                             <i className="fa fa-home"></i>
@@ -122,7 +122,7 @@ export default class Footer extends React.Component {
                                         </span>
                                         <a href="mailto:algrithLLC@gmail.com">algrithLLC@gmail.com</a>
                                     </aside>
-                                </p>
+                                </div>
 
                                 <div className="px-4 flex justify-start items-center">
                                     <span data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
@@ -145,13 +145,10 @@ export default class Footer extends React.Component {
                 </div>
 
                 <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-6 py-8 text-xl">
-
                     Powered by <span className="ml-1 text-navyblue"> Algrith</span>
                     <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" />
-
                 </a>
-
-
+                
             </footer>
             
         )

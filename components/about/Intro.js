@@ -11,7 +11,7 @@ export default class Intro extends React.Component {
 
         return (
 
-            <div className="relative w-full dark:bg-black bg-intro-about bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
+            <div id="intro-about" className="relative w-full dark:bg-black bg-intro-about bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
                 
                 <div className="w-full bg-gradient-to-b from-white p-8 lg:p-20">
                     <h1 data-aos="fade-down" className="relative uppercase text-3xl md:text-8xl text-green-500 py-8 m-0 w-full text-left font-bold">
@@ -25,7 +25,9 @@ export default class Intro extends React.Component {
                     </aside>
                 </div>
 
-                <span href="#outline" className="scroll-selector cursor-pointer absolute flex justify-center items-center right-12 lg:right-32 -bottom-8 rounded-full bg-green-400 text-white p-8 text-3xl w-20 h-20"><i className="fa fa-arrow-down"></i></span>
+                <span href="#outline" className="scroll-selector cursor-pointer absolute flex justify-center items-center right-12 lg:right-32 -bottom-8 rounded-full bg-green-400 text-white p-8 text-3xl w-20 h-20">
+                    <i className="fa fa-arrow-down"></i>
+                </span>
 
             </div>
 

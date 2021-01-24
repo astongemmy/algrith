@@ -17,6 +17,8 @@ export default class Layout extends React.Component {
         this.closeAll = this.closeAll.bind(this)
         this.typing = this.typing.bind(this)
         this.hidePageLink = this.hidePageLink.bind(this)
+        // this.backToTop = this.backToTop.bind(this)
+        this.scrollToTopObserver = this.scrollToTopObserver.bind(this)
     }
 
     componentDidMount() {
@@ -24,6 +26,7 @@ export default class Layout extends React.Component {
             easing: 'ease-in-out-sine'
         })
         this.hidePageLink()
+        // this.backToTop()
         // Selector used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
@@ -38,13 +41,46 @@ export default class Layout extends React.Component {
             // alert(typeof this.props.intro_string)
             this.typing(-1)
         }
-        window.addEventListener('scroll', this.handleScroll, false);
+        window.addEventListener('scroll', () => {
+            this.handleScroll
+            this.scrollToTopObserver({
+                target: document.querySelector('#back-to-top'),
+                display: 'flex'
+            });
+        }, false);
     }
 
     componentWillUnmount() {
         // Event Trigger on unmount
         window.removeEventListener('scroll', this.handleScroll)
     }
+
+    scrollToTopObserver = ({target, display}) => {
+        
+        if ((target && typeof target !== 'object') || (display && typeof display !== 'string')) {
+            return console.error({
+                status:'error',
+                message: 'Instance of scrollToTopObserver error.',
+                description: 'target parameters must be an HTML object. display must be a string and a valid CSS display value'
+            })
+        }
+
+        if (!target && !display) {
+            return console.error({
+                status:'error',
+                message: 'Instance of scrollToTopObserver error.',
+                description: 'no valid parameters provided'
+            })
+        }
+        
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            target.style.display = display;
+        } else {
+            target.style.display = 'none';
+        }
+        
+    }    
 
     hidePageLink = () => {
         const header_links = document.querySelectorAll('#navbar-links a')
@@ -122,9 +158,14 @@ export default class Layout extends React.Component {
         
         scroll_selectors.forEach(selector => {
             selector.addEventListener('click', function(e) {
-                e.preventDefault();
-                const href = this.getAttribute("href");
-                const offset_top = document.querySelector(href).offsetTop;                
+                e.preventDefault();                
+                let offset_top;
+                if (this.id !== 'back-to-top') {
+                    const href = this.getAttribute("href");
+                    offset_top = document.querySelector(href).offsetTop;
+                } else {
+                    offset_top = 0;
+                }                
                 scroll({
                     top: offset_top,
                     behavior: "smooth"
@@ -222,7 +263,11 @@ export default class Layout extends React.Component {
                     {this.props.children}
 
                 <Footer />
-                    
+
+                <span id="back-to-top" className="scroll-selector cursor-pointer hidden fixed justify-center items-center right-12 bottom-8 rounded-full bg-green-400 text-white p-8 text-3xl w-20 h-20">
+                    <i className="fa fa-arrow-up"></i>
+                </span>
+
                 <div id="overlay" onClick={this.closeAll} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
                 
                 <div id="alert" className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-100 text-green-500 p-4 w-3/5 flex justify-between items-center">

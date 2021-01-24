@@ -11,7 +11,7 @@ export default class Intro extends React.Component {
 
         return (
 
-            <div className="relative w-full h-auto xl:h-126 dark:bg-black bg-intro-index bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
+            <div id="intro-index" className="relative w-full h-auto xl:h-126 dark:bg-black bg-intro-index bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 
                 <div className="relative px-4 flex flex-wrap xl:flex-nowrap justify-around xl:justify-start items-center w-full bg-gradient-to-b from-white bg-opacity-30">
                     
