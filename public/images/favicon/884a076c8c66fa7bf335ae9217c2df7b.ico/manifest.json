@@ -1,12 +1,7 @@
 {
     "name": "Algrith LLC",
     "short_name": "Algrith",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "orientation": "portrait",
-    "scope": "/",
-    "start_url": "/",    
+    "description": "AlgrithLLC church website",
     "icons": [
         {
             "src": "\/images/favicon/android-icon-36x36.png",
@@ -44,5 +39,11 @@
             "type": "image\/png",
             "density": "4.0"
         }
-    ]
+    ],    
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
 }
