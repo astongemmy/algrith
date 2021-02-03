@@ -16,6 +16,7 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props
 
         return (
+<>
 <Html lang="en-US">
                 
                 <Head>
@@ -47,9 +48,10 @@ export default class MyApp extends App {
                     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
                         
                     <link rel="shortcut icon" href="images/favicon/algrith.png" />
-                    <script type="text/javascript" src="/js/aos.js"></script>
+                    <script type="text/javascript" src="/js/aos.js" />
                 </Head>
             <Component {...pageProps} />
+</>
         )
 
     }
