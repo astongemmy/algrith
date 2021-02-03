@@ -16,7 +16,7 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props
 
         return (
-<>
+<div>
 <Html lang="en-US">
                 
                 <Head>
@@ -51,7 +51,7 @@ export default class MyApp extends App {
                     <script type="text/javascript" src="/js/aos.js"></script>
                 </Head>
             <Component {...pageProps} />
-</>
+</div>
         )
 
     }
