@@ -27,7 +27,7 @@ export default class Layout extends React.Component {
         })
         this.hidePageLink()
         // this.backToTop()
-        // Selector used in multiple methods
+        // Selectors used in multiple methods
         this.nav_menu = document.querySelector('#nav-menu')
         this.overlay = document.querySelector('#overlay')
         this.header = document.querySelector('header');
@@ -107,6 +107,11 @@ export default class Layout extends React.Component {
                 
                 if (counter !== intro_string.length - 1) {
                     document.querySelector('.intro-lead .cursor').remove()
+                }
+
+                if (counter == intro_string.length - 1) {
+                    document.querySelector('.intro-lead .cursor').remove()
+                    return
                 }
             
             }
@@ -238,7 +243,7 @@ export default class Layout extends React.Component {
         }          
     }
 
-    closeNavBar = () => {            
+    closeNavBar = () => {
         if (this.nav_menu.className.includes('right-0')) {
             this.nav_menu.classList.remove('right-0')
             this.nav_menu.classList.add('-right-full')

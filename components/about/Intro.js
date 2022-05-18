@@ -18,7 +18,9 @@ export default class Intro extends React.Component {
                         Who we really are!
                     </h1>
                     <p data-aos="fade-up" className="w-full text-left text-gray-600 text-2xl lg:text-5xl">
-                        Algrith is a software company dedicated to delivering elegant, efficient, secure, accessible etc, web applications and websites  for use by clients both in the public and private sector.
+                        Algrith is a software company dedicated to delivering elegant, 
+                        efficient, secure, accessible etc, web applications and websites  
+                        for use by clients both in the public and private sector.
                     </p>                    
                     <aside data-aos="fade-right" className="mt-4 text-navyblue text-xl font-bold lg:text-3xl">
                         We make happy clients
