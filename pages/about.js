@@ -45,7 +45,7 @@ export default class About extends React.Component {
         
         return (
         
-            <Layout>
+            <Layout intro_string="Who we really are!">
                 
                 <Head>
                     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />

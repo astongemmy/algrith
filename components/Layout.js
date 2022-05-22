@@ -8,7 +8,7 @@ export default class Layout extends React.Component {
     constructor() {
         super()
         // Method binding
-        this.handleScroll = this.handleScroll.bind(this)
+        this.resizeHeaderOnScroll = this.resizeHeaderOnScroll.bind(this)
         this.deviceView = this.deviceView.bind(this)
         this.sectionScroll = this.sectionScroll.bind(this)
         this.rippleEffect = this.rippleEffect.bind(this)
@@ -22,9 +22,7 @@ export default class Layout extends React.Component {
     }
 
     componentDidMount() {
-        AOS.init({
-            easing: 'ease-in-out-sine'
-        })
+        AOS.init({ easing: 'ease-in-out-sine' })
         this.hidePageLink()
         // this.backToTop()
         // Selectors used in multiple methods
@@ -37,12 +35,9 @@ export default class Layout extends React.Component {
         // Event trigger on mount
         this.sectionScroll();
         this.rippleEffect();
-        if (this.props.intro_string && typeof this.props.intro_string == 'string') {
-            // alert(typeof this.props.intro_string)
-            this.typing(-1)
-        }
+        this.props.intro_string && typeof this.props.intro_string == 'string' ? this.typing(-1) : ''
         window.addEventListener('scroll', () => {
-            this.handleScroll
+            this.resizeHeaderOnScroll()
             this.scrollToTopObserver({
                 target: document.querySelector('#back-to-top'),
                 display: 'flex'
@@ -52,11 +47,10 @@ export default class Layout extends React.Component {
 
     componentWillUnmount() {
         // Event Trigger on unmount
-        window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener('scroll', this.resizeHeaderOnScroll())
     }
 
-    scrollToTopObserver = ({target, display}) => {
-        
+    scrollToTopObserver = ({target, display}) => {        
         if ((target && typeof target !== 'object') || (display && typeof display !== 'string')) {
             return console.error({
                 status:'error',
@@ -64,29 +58,25 @@ export default class Layout extends React.Component {
                 description: 'target parameters must be an HTML object. display must be a string and a valid CSS display value'
             })
         }
-
         if (!target && !display) {
             return console.error({
                 status:'error',
                 message: 'Instance of scrollToTopObserver error.',
                 description: 'no valid parameters provided'
             })
-        }
-        
+        }        
         // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             target.style.display = display;
         } else {
             target.style.display = 'none';
-        }
-        
+        }        
     }    
 
     hidePageLink = () => {
         const header_links = document.querySelectorAll('#navbar-links a')
         const path = window.location.pathname
         const page_name = path.split('/').pop()
-
         header_links.forEach(link => {
             const link_href = link.href.split('/').pop()
             if (link_href == page_name) {
@@ -97,32 +87,27 @@ export default class Layout extends React.Component {
 
     // Custom Methods
     typing = (counter) => {
-        
-        const intro_string = this.props.intro_string
-
-        let count, typing_timeout;
-        
+        this.props.intro_string !== this.prev_intro_string ? clearTimeout(window.typing_timeout) : ''
+        let count
+        window.typing_timeout;        
         if (document.querySelector('.intro-lead')) {
-            if (document.querySelector('.intro-lead .cursor')) {
-                
-                if (counter !== intro_string.length - 1) {
+            if (document.querySelector('.intro-lead .cursor')) {                
+                if (counter !== this.props.intro_string.length - 1) {
                     document.querySelector('.intro-lead .cursor').remove()
                 }
-
-                if (counter == intro_string.length - 1) {
+                if (counter == this.props.intro_string.length - 1) {
                     document.querySelector('.intro-lead .cursor').remove()
                     return
-                }
-            
+                }            
             }
             
-            if (counter >= intro_string.length) {
-                clearTimeout(typing_timeout)
-                count = 0            
+            if (counter >= this.props.intro_string.length) {
+                clearTimeout(window.typing_timeout)
+                count = 0
                 return
             }
             
-            if (counter <= intro_string.length) {
+            if (counter <= this.props.intro_string.length) {
                 count = counter + 1
             }
             
@@ -130,18 +115,19 @@ export default class Layout extends React.Component {
             cursor_elem.className = "cursor"
             
             let element = document.createElement("span")
-            element.textContent = intro_string[count];
+            element.textContent = this.props.intro_string[count];
             
-            if (intro_string[count] == " ") {
+            if (this.props.intro_string[count] == " ") {
                 element.style.marginLeft = "5px"
             }
             
             document.querySelector('.intro-lead').append(element)
             document.querySelector('.intro-lead').append(cursor_elem)
-            
-            typing_timeout = setTimeout(() => {
+
+            window.typing_timeout = setTimeout(() => {
                 this.typing(count)
             }, 100)
+            this.prev_intro_string = this.props.intro_string
         }
         
     }
@@ -213,21 +199,20 @@ export default class Layout extends React.Component {
 
 	}
     
-    handleScroll = () => {
-        // When the user scrolls down 200px from the top of the document, resize the navbar's padding and the logo's font size    
+    resizeHeaderOnScroll = () => {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             this.header.style.transform = 'scale(1, 0.7)'
             this.header.style.transformOrigin = 'top'
             this.brand.style.transform = 'scale(0.7, 1)'
             this.brand.style.transformOrigin = 'left top'
-            this.header.classList.add('shadow')
+            this.header.classList.add('shadow-lg')
             if (this.deviceView() == 'desktop') {
                 this.nav_menu.style.top = '0.52rem'
             }
         } else {
             this.header.style.transform = 'scale(1)'
             this.brand.style.transform = 'scale(1)'
-            this.header.classList.remove('shadow')
+            this.header.classList.remove('shadow-lg')
             if (this.deviceView() == 'desktop') {
                 this.nav_menu.style.top = '1.5rem'
             }
