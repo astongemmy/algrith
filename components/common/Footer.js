@@ -130,16 +130,16 @@ export default class Footer extends React.Component {
                                         Uyo, Nigeria.
                                     </aside> */}
                                     <aside className="my-4">
-                                        <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
+                                        {/* <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
                                             <i className="fa fa-phone-alt"></i>
-                                        </span>
+                                        </span> */}
                                         <a className="mr-2 text-lg" href="tel:+2348103561805">+2348103561805</a>
                                         <a className="mr-0 text-lg" href="tel:+2348104848901">+2348104848901</a>
                                     </aside>
                                     <aside className="my-4">
-                                        <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
+                                        {/* <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
                                             <i className="fa fa-envelope"></i>
-                                        </span>
+                                        </span> */}
                                         <a href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
                                     </aside>
                                 </div>

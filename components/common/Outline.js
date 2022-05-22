@@ -14,7 +14,7 @@ export default class Outline extends React.Component {
         const outlines = items.map((outline) => {
             return (
                 <div key={outline.title} data-aos="fade-up" className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4 md:p-10 lg:p-8">
-                    <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-lg md:text-xl leading-9 rounded-xl text-center shadow">
+                    <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-xl md:leading-9 rounded-xl text-center shadow">
                         <h2 className="uppercase text-xl md:text-2xl text-navyblue font-semibold mb-4">
                             {outline.title}
                         </h2>
