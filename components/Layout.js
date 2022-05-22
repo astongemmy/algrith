@@ -254,7 +254,7 @@ export default class Layout extends React.Component {
 
                 <Footer />
 
-                <span id="back-to-top" className="scroll-selector cursor-pointer hidden fixed justify-center items-center right-8 md:right-12 bottom-8 rounded-full bg-green-400 text-white p-8 text-3xl w-16 h-16 md:w-20 md:h-20">
+                <span id="back-to-top" className="scroll-selector cursor-pointer hidden fixed justify-center items-center right-8 md:right-12 bottom-8 rounded-full bg-green-400 text-white p-8 text-3xl w-16 h-16 md:w-18 md:h-18">
                     <i className="fa fa-arrow-up"></i>
                 </span>
 

@@ -13,46 +13,52 @@ export default class Footer extends React.Component {
 
             <footer className="relative bg-gray-100">
                 
-                <div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-32">
+                <div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-32 pb-12">
                         
                     <div className="w-full md:w-1/3 pt-4">
 
-                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Featured</h1>
+                        <h1 className="p-4 m-4 text-navyblue uppercase text-xl font-bold">
+                            <i className="far fa-heart text-green-300 mr-4"></i> Featured
+                        </h1>
                         
-                        <div className="relative mx-4">
+                        <div className="relative mx-4 text-xl">
                                 
-                            <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                            <details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+                                <summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for scientists</span>
+                                    <i className="fa fa-bug mr-4"></i>
                                 </summary>
-                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 pt-2 pb-6 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data scientists
                                 </p>
                             </details>
 
-                            <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                            <details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+                                <summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for Web</span>
+                                    <i className="fa fa-desktop mr-4"></i>
                                 </summary>
-                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 pt-2 pb-6 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data web
                                 </p>
                             </details>
 
-                            <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                            <details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+                                <summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for UI/UX</span>
+                                    <i className="fab fa-uikit mr-4"></i>
                                 </summary>
-                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 pt-2 pb-6 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data UI/UX
                                 </p>
                             </details>
 
-                            <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                            <details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+                                <summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for Interns</span>
+                                    <i className="fa fa-satellite-dish mr-4"></i>
                                 </summary>
-                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 pt-2 pb-6 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data Interns
                                 </p>
                             </details>
@@ -63,9 +69,11 @@ export default class Footer extends React.Component {
 
                     <div className="w-full md:w-1/3 pt-4">
 
-                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Links</h1>
+                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold text-xl">
+                            <i className="fa fa-link text-green-300 mr-4"></i> Links
+                        </h1>
 
-                        <div className="relative mx-4">                       
+                        <div className="relative mx-4 text-xl">
 
                             <ul className="pl-0">
                                 <li className="p-4">
@@ -101,49 +109,51 @@ export default class Footer extends React.Component {
 
                     <div className="w-full md:w-1/3 pt-4">
 
-                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Contact Us</h1>
+                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold text-xl">
+                            <i className="fa fa-at text-green-300 mr-4"></i> Contact Us
+                        </h1>
 
-                        <div className="relative mx-4">                       
+                        <div className="relative mx-4 text-xl">                       
 
                             <div className="relative">
                                 <div className="px-4">
-                                    <address className="font-bold">
+                                    {/* <address className="font-bold">
                                         <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
                                             <i className="fa fa-home"></i>
                                         </span>
                                         39 Algrith Avenue
-                                    </address>
-                                    <aside className="my-4">
+                                    </address> */}
+                                    {/* <aside className="my-4">
                                         <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
                                             <i className="fa fa-map-marker-alt"></i>
                                         </span>
                                         Uyo, Nigeria.
-                                    </aside>
+                                    </aside> */}
                                     <aside className="my-4">
-                                        <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
+                                        <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
                                             <i className="fa fa-phone-alt"></i>
                                         </span>
-                                        <a className="mr-2 text-sm" href="tel:+2348103561805">+2348103561805</a>
-                                        <a className="mr-0 text-sm" href="tel:+2348104848901">+2348104848901</a>
+                                        <a className="mr-2 text-lg" href="tel:+2348103561805">+2348103561805</a>
+                                        <a className="mr-0 text-lg" href="tel:+2348104848901">+2348104848901</a>
                                     </aside>
                                     <aside className="my-4">
-                                        <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
+                                        <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
                                             <i className="fa fa-envelope"></i>
                                         </span>
-                                        <a href="mailto:algrithLLC@gmail.com">algrithLLC@gmail.com</a>
+                                        <a href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
                                     </aside>
                                 </div>
 
-                                <div className="px-4 flex justify-start items-center">
-                                    <span data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                                <div className="mt-8 px-4 flex justify-start items-center">
+                                    <a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
                                         <i className="fab fa-facebook"></i>
-                                    </span>
-                                    <span data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                                    </a>
+                                    <a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
                                         <i className="fab fa-twitter"></i>
-                                    </span>
-                                    <span data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">
+                                    </a>
+                                    <a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
                                         <i className="fab fa-linkedin"></i>
-                                    </span>
+                                    </a>
                                 </div>
 
                             </div>
@@ -154,9 +164,9 @@ export default class Footer extends React.Component {
 
                 </div>
 
-                <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-6 py-8 text-xl">
-                    © Copyright <span className="ml-1 text-navyblue"> Algrith { new Date().getFullYear() } </span>
-                    <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" />
+                <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-0 py-8 text-xl bg-gray-800 text-white">
+                    © Copyright <span className="ml-1 text-green-400"> Algrith { new Date().getFullYear() } </span>
+                    {/* <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" /> */}
                 </a>
                 
             </footer>

@@ -28,6 +28,9 @@ export default class MyDocument extends Document {
                     <meta property="og:image" name="image" content="/images/logo/algrith.png" />
                     <link rel="manifest" href="/manifest.json" />
 
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
                     <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
                     <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
                     <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />

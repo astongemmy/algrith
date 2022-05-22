@@ -3,7 +3,6 @@ import '../public/styles/Icons.css'
 import '../public/styles/aos.css'
 import '../public/styles/animate.css'
 import App from 'next/app'
-import Head from 'next/head'
 
 export default class MyApp extends App {
 
