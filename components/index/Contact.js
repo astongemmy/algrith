@@ -109,7 +109,7 @@ export default class Contact extends React.Component {
 
         return (
 
-            <div className="relative pt-16 pb-0 px-0 lg:px-32 w-full dark:bg-black">
+            <div className="relative pt-16 pb-0 px-0 md:mx-16 xl:px-32 w-full dark:bg-black">
                 
                 <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-96 lg:-left-32 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
@@ -119,11 +119,11 @@ export default class Contact extends React.Component {
                     Contact us
                 </h1>
 
-                <div className="relative flex flex-wrap lg:flex-nowrap justify-around items-start p-0 md:p-16 w-full">
+                <div className="relative flex flex-wrap lg:flex-nowrap justify-around items-start p-0 md:p-4 w-full">
 
                     <div className="relative w-full md:w-2/4 m-0 p-4">
 
-                        <form onSubmit={this.contactUs} id="contact-us" method="post" className="relative flex flex-wrap w-full m-0 py-2 px-8 lg:p-12">
+                        <form onSubmit={this.contactUs} id="contact-us" method="post" className="relative flex flex-wrap w-full m-0 px-2 lg:px-8 xl:px-0 py-2 lg:py-12">
                             
                             <div data-aos="fade-right" className="w-full lg:w-2/4 p-4">
                                 <label className="text-purple-600 text-xl py-2" htmlFor="contact-us-email">Email</label>
@@ -158,7 +158,7 @@ export default class Contact extends React.Component {
 
                     </div>
 
-                    <div className="relative w-full md:w-2/4 m-0 p-0 md:p-4">
+                    <div className="relative w-full md:w-2/4 m-0 p-0 md:pr-10 lg:pr-2 md:pl-4 md:py-4">
 
                         <div className="relative overflow-hidden w-full m-0 py-2 px-0 lg:p-12">
                             

@@ -9,6 +9,8 @@ module.exports = {
       }),
       scale: {
         '65': '.65',
+        '35': '.35',
+        '45': '.45',
       },
       textColor: {
         'navyblue': '#0B214A',

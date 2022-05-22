@@ -19,9 +19,10 @@ export default class Header extends React.Component {
 
         return (
 
-            <header id="header" className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 py-1 px-4 md:px-4 md:py-6 w-full dark:bg-black">
+            <header id="header" className="flex sticky top-0 z-20 justify-between items-center bg-white bg-geen-300 px-6 md:px-12 xl:px-24 py-1 md:py-6 w-full dark:bg-black">
                 
-                <div id="brand" className="flex justify-start items-center ml-2 lg:ml-20 transition-all ease-in-out duration-500">
+                {/* <div id="brand" className="flex justify-start items-center ml-2 lg:ml-20 transition-all ease-in-out duration-500"></div> */}
+                <div id="brand" className="flex justify-start items-center transition-all ease-in-out duration-500">
                     
                     <Link href="/">
                         <a id="brand-title" className="transform origin-left scale-65 lg:scale-100 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000">

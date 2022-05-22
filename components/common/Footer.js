@@ -13,46 +13,46 @@ export default class Footer extends React.Component {
 
             <footer className="relative bg-gray-100">
                 
-                <div className="flex flex-col lg:flex-row justify-between mx-8 lg:mx-56">
+                <div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-32">
                         
-                    <div className="w-full lg:w-1/3 pt-4">
+                    <div className="w-full md:w-1/3 pt-4">
 
                         <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Featured</h1>
                         
                         <div className="relative mx-4">
                                 
                             <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for scientists</span>
                                 </summary>
-                                <p className="px-4 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data scientists
                                 </p>
                             </details>
 
                             <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for Web</span>
                                 </summary>
-                                <p className="px-4 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data web
                                 </p>
                             </details>
 
                             <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for UI/UX</span>
                                 </summary>
-                                <p className="px-4 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data UI/UX
                                 </p>
                             </details>
 
                             <details className="my-4 mx-4 rounded-xl border-gray-200 border-2 border-solid cursor-pointer">
-                                <summary className="flex justify-start items-center p-4 text-gray-800 focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
+                                <summary className="flex justify-start items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for Interns</span>
                                 </summary>
-                                <p className="px-4 py-2 text-gray-600 transition-all ease-in-out duration-700">
+                                <p className="px-8 py-2 text-gray-600 transition-all ease-in-out duration-700">
                                     More Content for data Interns
                                 </p>
                             </details>
@@ -61,37 +61,47 @@ export default class Footer extends React.Component {
 
                     </div>
 
-                    <div className="w-full lg:w-1/3 pt-4">
+                    <div className="w-full md:w-1/3 pt-4">
 
-                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Sitemap</h1>
+                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Links</h1>
 
                         <div className="relative mx-4">                       
 
-                            <div className="flex justify-between flex-wrap">
-                                <Link href="/">
-                                    <a className="w-2/4 lg:w-full p-4 text-gray-600">Home</a>
-                                </Link>
-                                <Link href="/about">
-                                    <a className="w-2/4 lg:w-full p-4 text-gray-600">About</a>
-                                </Link>
-                                <Link href="/">
-                                    <a className="w-2/4 lg:w-full p-4 text-gray-600">Contact Us</a>
-                                </Link>
-                                <Link href="/">
-                                    <a className="w-2/4 lg:w-full p-4 text-gray-600">Support Us</a>
-                                </Link>
-                                <Link href="/">
-                                    <a className="w-2/4 lg:w-full p-4 text-gray-600">FAQ</a>
-                                </Link>
-                            </div>
+                            <ul className="pl-0">
+                                <li className="p-4">
+                                    <Link href="/">
+                                        <a className="text-gray-600">Home</a>
+                                    </Link>
+                                </li>
+                                <li className="p-4">
+                                    <Link href="/about">
+                                        <a className="text-gray-600">About</a>
+                                    </Link>
+                                </li>
+                                <li className="p-4">
+                                    <Link href="/">
+                                        <a className="text-gray-600">Contact Us</a>
+                                    </Link>
+                                </li>
+                                <li className="p-4">
+                                    <Link href="/">
+                                        <a className="text-gray-600">Support Us</a>
+                                    </Link>
+                                </li>
+                                <li className="p-4">
+                                    <Link href="/">
+                                        <a className="text-gray-600">FAQ</a>
+                                    </Link>
+                                </li>
+                            </ul>
                             
                         </div>
 
                     </div>
 
-                    <div className="w-full lg:w-1/3 pt-4">
+                    <div className="w-full md:w-1/3 pt-4">
 
-                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Meet Us</h1>
+                        <h1 className="p-4 m-4 text-navyblue uppercase font-bold">Contact Us</h1>
 
                         <div className="relative mx-4">                       
 
@@ -145,7 +155,7 @@ export default class Footer extends React.Component {
                 </div>
 
                 <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-6 py-8 text-xl">
-                    Powered by <span className="ml-1 text-navyblue"> Algrith</span>
+                    © Copyright <span className="ml-1 text-navyblue"> Algrith { new Date().getFullYear() } </span>
                     <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" />
                 </a>
                 

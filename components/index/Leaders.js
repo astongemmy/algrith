@@ -11,9 +11,9 @@ export default class About extends React.Component {
 
         return (
 
-            <div className="relative overflow-x-hidde py-16 px-2 lg:px-32 w-full bg-green-400 dark:bg-black">
+            <div className="relative overflow-x-hidde py-16 px-2 lg:px-4 xl:px-32 w-full bg-green-400 dark:bg-black">
                 
-                <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-80 shadow-xl lg:-right-36 rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
+                <div className="relative flex justify-center items-center w-3/4 md:w-auto mb-8 lg:mb-0 mx-auto md:absolute md:-top-96 lg:-top-80 shadow-xl md:-right-72 lg:-right-36 rounded-full overflow-hidden p-8 transform md:scale-45 lg:scale-65 animation-all duration-1000 ease-in-out">
                     <img className="rounded-full" src="./images/illustrations/setup-team.jpeg" alt="team setup illustration" />
                 </div>
 
@@ -21,43 +21,9 @@ export default class About extends React.Component {
                     The company
                 </h1>
 
-                <div className="relative z-10 flex flex-wrap justify-around items-center mt-12 lg:mt-0 px-2 xl:px-64 py-0 lg:py-16 w-full">
+                <div className="relative z-10 flex flex-wrap md:flex-wrap-reverse justify-around items-center mt-12 lg:mt-0 px-2 md:px-10 xl:px-24 py-0 lg:py-16 w-full">
 
-                    <div data-aos="fade-up" className="relative w-full shadow-2xl lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
-
-                        <div className="relative w-full m-0 rounded-xl">
-
-                            <div className="flex relative mx-auto my-8 w-52 h-52 rounded-full ring-8 ring-green-500 shadow-2xl ring-offset-4 ring-offset-gray-100">
-                                <div className="relative flex justify-center items-center w-full h-full rounded-full overflow-hidden">
-                                    <img className="relative rounded-full" src="./images/board/cto.png" width={200} height={200} alt="cto image" />
-                                </div>
-                            </div>
-
-                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-green-900 p-4">
-                                Co Founder
-                            </div>
-
-                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-700 font-bold py-2 px-4 rounded-xl">
-                                Ilori, OluJide
-                            </div>
-
-                            <div className="flex justify-center items-center">
-                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
-                                    <i className="fab fa-facebook-f"></i>
-                                </span>
-                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
-                                    <i className="fab fa-twitter"></i>
-                                </span>
-                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
-                                    <i className="fab fa-linkedin"></i>
-                                </span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div data-aos="fade-up" className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-400 via-transparent to-green-500 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
+                    <div data-aos="fade-up" className="md:order-3 lg:order-1 relative shadow-2xl w-full md:w-80 bg-gradient-to-b from-green-400 via-transparent to-green-500 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
                                                     
@@ -91,7 +57,41 @@ export default class About extends React.Component {
 
                     </div>
                     
-                    <div data-aos="fade-up" className="relative shadow-2xl w-full lg:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
+                    <div data-aos="fade-up" className="relative w-full shadow-2xl md:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
+
+                        <div className="relative w-full m-0 rounded-xl">
+
+                            <div className="flex relative mx-auto my-8 w-52 h-52 rounded-full ring-8 ring-green-500 shadow-2xl ring-offset-4 ring-offset-gray-100">
+                                <div className="relative flex justify-center items-center w-full h-full rounded-full overflow-hidden">
+                                    <img className="relative rounded-full" src="./images/board/cto.png" width={200} height={200} alt="cto image" />
+                                </div>
+                            </div>
+
+                            <div className="relative my-2 uppercase text-center shadow-2xl bg-green-300 text-green-900 p-4">
+                                Co Founder
+                            </div>
+
+                            <div className="relative my-2 uppercase text-center shadow-2xl text-green-700 font-bold py-2 px-4 rounded-xl">
+                                Ilori, OluJide
+                            </div>
+
+                            <div className="flex justify-center items-center">
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-facebook-f"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-twitter"></i>
+                                </span>
+                                <span className="flex justify-center mx-1 items-center rounded-xl text-green-100 shadow-2xl text-xl h-8 w-8 bg-green-400">
+                                    <i className="fab fa-linkedin"></i>
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div data-aos="fade-up" className="lg:order-3 relative shadow-2xl w-full md:w-80 bg-gradient-to-b from-green-500 via-transparent to-green-200 rounded-xl my-4 mx-8 md:mx-0 px-0 py-4 md:p-4">
 
                         <div className="relative w-full m-0 rounded-xl">
                         
@@ -123,7 +123,7 @@ export default class About extends React.Component {
 
                         </div>
 
-                    </div>                 
+                    </div>
                     
                 </div>
 

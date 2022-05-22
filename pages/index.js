@@ -28,14 +28,14 @@ export default class Index extends React.Component {
             title: 'Why choose us',
             items: [
                 {
-                    title: 'Competence',
-                    icon: 'fa fa-handshake',
-                    content: 'We posses sufficiency of skills to drive your web presence and experience to the next level'
-                },
-                {
                     title: 'Fast',
                     icon: 'fa fa-plane',
                     content: 'Time is a valuable currency of business and we give our clients value in time'
+                },
+                {
+                    title: 'Competence',
+                    icon: 'fa fa-handshake',
+                    content: 'We posses sufficiency of skills to drive your web presence and experience to the next level'
                 },
                 {
                     title: 'Trusted',
