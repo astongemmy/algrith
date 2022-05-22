@@ -13,7 +13,7 @@ export default class Header extends React.Component {
 
             <nav id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow md:shadow-none md:bg-transparent bg-white fixed top-0 md:top-4 lg:top-6 -right-full md:right-12 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-10/12 md:w-auto h-screen md:h-16 text-gray-600 lg:p-4">
                                 
-                <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl p-4">
+                <div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-8 py-4">
                     
                     <h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
                         <img src="./images/logo/algrith-brand.jpg" alt="brand-logo" />
