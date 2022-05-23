@@ -24,6 +24,11 @@ export default class About extends React.Component {
 
         const outlines = {
             title: 'What we really do',
+            illustration: {
+                align: { x: 'left', y: 'top' },
+                dimension: { x: 52, y: 72, scale: 45 },
+                src: './images/illustrations/girl_3.gif'
+            },
             items: [
                 {
                     title: 'Web Application',

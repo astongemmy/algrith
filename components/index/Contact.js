@@ -112,7 +112,7 @@ export default class Contact extends React.Component {
             <div className="relative pt-16 pb-0 px-0 md:mx-16 xl:px-32 w-full dark:bg-black">
                 
                 <div className="relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-96 lg:-left-32 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out">
-                    <img className="rounded-full" src="./images/illustrations/contact-us.png" alt="contact us illustration image" />
+                    <img className="rounded-full" src="./images/illustrations/images.png" alt="contact us illustration image" />
                 </div>
 
                 <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-purple-600 mx-auto w-full text-center font-bold">
@@ -163,7 +163,7 @@ export default class Contact extends React.Component {
                         <div className="relative overflow-hidden w-full m-0 py-2 px-0 lg:p-12">
                             
                             <div className="absolute left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 overflow-hidden flex justify-start lg:justify-center w-full m-0 py-2 lg:p-12">
-                                <img src="./images/illustrations/man-on-laptop.png" alt="contact us section image" />
+                                <img src="./images/illustrations/images.png" alt="contact us section image" />
                             </div>
                             
                             <div className="relative bg-gradient-to-b from-transparent to-purple-200">

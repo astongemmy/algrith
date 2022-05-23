@@ -86,17 +86,16 @@ navbar {
     font-size: 1.5rem;
 }
 
-.grid {
+/* .grid {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     max-width: 800px;
     margin-top: 3rem;
-}
+} */
 
-.card {
+/* .card {
     margin: 1rem;
     flex-basis: 45%;
     padding: 1.5rem;
@@ -106,9 +105,9 @@ navbar {
     border: 1px solid #eaeaea;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
-}
+} */
 
-.card:hover,
+/* .card:hover,
 .card:focus,
 .card:active {
     color: #0070f3;
@@ -124,7 +123,7 @@ navbar {
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.5;
-}
+} */
 
 .logo {
     height: 1.5em;
