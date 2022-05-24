@@ -7,10 +7,10 @@ export default class TestimonialCard extends React.Component {
     const { testimonials } = this.props;
     const TestimononyCard = testimonials.map((testimonial) => {
       return (
-        <div key={ testimonial.name } data-aos="fade-up" className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 md:p-10 lg:p-8">
-          <figure className="overflow-hidden md:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+        <div key={ testimonial.name } data-aos="fade-up" className="w-full md:w-1/3 m-4 md:m-0 md:p-4 lg:p-4 xl:p-8">
+          <figure className="overflow-hidden xl:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
             <img className="w-24 h-24 rounded-full mx-auto" src={ testimonial.avatar } alt="" width="384" height="512" />
-            <div className="py-6 md:pl-6 text-center md:text-left space-y-4">
+            <div className="py-6 xl:pl-6 text-center xl:text-left space-y-4">
               <blockquote>
                 <p className="text-lg font-medium">
                   “{ testimonial.text }”
@@ -33,3 +33,5 @@ export default class TestimonialCard extends React.Component {
     return (<>{ TestimononyCard }</>)
   }
 }
+
+{/* <div key={ testimonial.name } data-aos="fade-up" className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 md:p-10 lg:p-8"></div> */}

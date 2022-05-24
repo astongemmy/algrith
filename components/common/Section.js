@@ -8,8 +8,21 @@ export default class Section extends React.Component {
     const { title, items, illustration } = this.props.payload;
     
     return (
-      <div id={ title } className="relative py-16 px-1 xxl:px-32 w-full dark:bg-black">
-        <div className={`relative flex justify-center items-center w-3/4 lg:w-auto mb-8 lg:mb-0 mx-auto lg:absolute lg:-top-64 lg:-${ illustration.align }-28 shadow-xl rounded-full overflow-hidden p-8 transform lg:scale-65 animation-all duration-1000 ease-in-out`}>
+      <div id={ title } className="relative py-8 md:py-16 px-1 xxl:px-32 w-full dark:bg-black">
+        <div 
+          className={`
+            relative flex 
+            justify-center items-center 
+            w-3/4 md:2/4 lg:w-auto mb-8 lg:mb-0 mx-auto md:absolute 
+            md:-${illustration.align.y}-${illustration.dimension.md.y} 
+            md:-${illustration.align.x}-${illustration.dimension.md.x} 
+            lg:-${illustration.align.y}-${illustration.dimension.lg.y} 
+            lg:-${illustration.align.x}-${illustration.dimension.lg.x} 
+            shadow-xl rounded-full overflow-hidden p-8 transform 
+            md:scale-${ illustration.dimension.md.scale } 
+            lg:scale-${ illustration.dimension.lg.scale } 
+            animation-all duration-1000 ease-in-out`
+          }>
           <img className="rounded-full" src={ illustration.src } alt={ `${ title }-illustration` } />
         </div>
         <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full text-center font-bold">

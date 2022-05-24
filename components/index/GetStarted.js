@@ -6,11 +6,13 @@ export default class GetStarted extends React.Component {
 
   render() {
     return (
-      <div className="relative pb-24 px-1 xl:px-32 w-full dark:bg-black">
+      <div className="relative pb-10 md:pb-24 px-8 md:px-10 lg:px-14 xl:px-32 w-full dark:bg-black">
         <div className="w-full mx-auto rounded-xl shadow-lg relative bg-white overflow-hidden">
-          <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
-              <div className="sm:max-w-lg">
+          <div className="pt-8 pb-10 sm:pt-24 sm:pb-40 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24 xl:pt-40 xl:pb-48">
+            
+            <div className="md:flex justify-between relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
+              
+              <div className="sm:max-w-lg px-2 md:px-auto">
                 <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
                   Responsive designs are finally here
                 </h1>
@@ -18,81 +20,16 @@ export default class GetStarted extends React.Component {
                   This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                   if you live or die.
                 </p>
-              </div>
-              <div>
-                <div className="mt-10">
-                  {/* Decorative image grid */}
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full"
-                  >
-                    <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                      <div className="flex items-center space-x-6 lg:space-x-8">
-                        <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                          <div className="w-44 h-64 rounded-lg overflow-hidden">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                        </div>
-                        <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="w-44 h-64 rounded-lg overflow-hidden">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                          <div className="w-44 h-64 rounded-lg overflow-hidden">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                          <div className="w-44 h-64 rounded-lg overflow-hidden">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                        </div>
-                        <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div className="w-44 h-64 rounded-lg overflow-hidden">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                          <div className="w-44 h-64 rounded-lg overflow-hidden">
-                            <img
-                              src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
-                              alt=""
-                              className="w-full h-full object-center object-cover"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <a
-                    href="#"
-                    className="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 text-xl font-medium text-white hover:bg-indigo-700"
-                  >
+                <Link href="#">
+                  <a className="mt-6 md:mt-8 lg:mt-10 ml-2 md:ml-auto inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 text-xl font-medium text-white hover:bg-indigo-700">
                     Shop Collection
                   </a>
+                </Link>
+              </div>
+
+              <div className="sm:max-w-lg mt-8 md:mt-auto px-2 md:px-auto">
+                <div className="rounded-lg overflow-hidden">
+                  <img src="./images/illustrations/responsive.gif" alt="" className="w-full h-full object-center object-cover" />
                 </div>
               </div>
             </div>

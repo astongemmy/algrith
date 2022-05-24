@@ -26,7 +26,10 @@ export default class About extends React.Component {
             title: 'What we really do',
             illustration: {
                 align: { x: 'left', y: 'top' },
-                dimension: { x: 52, y: 72, scale: 45 },
+                dimension: {
+                    md: { x: 20, y: 32, scale: 65 },
+                    lg: { x: 52, y: 72, scale: 45 }
+                },
                 src: './images/illustrations/girl_3.gif'
             },
             items: [

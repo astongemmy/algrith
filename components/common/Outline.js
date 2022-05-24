@@ -29,9 +29,24 @@ export default class Outline extends React.Component {
 
         return (
 
-            <div id="outline" className="relative py-16 px-1 xxl:px-32 w-full dark:bg-black">
-                <span className="md:-top-56 md:-left-32 lg:scale-35"></span>
-                <div className={`relative flex justify-center items-center w-3/4 md:w-2/4 lg:w-auto mb-8 lg:mb-0 mx-auto md:absolute md:-${illustration.align.y}-${illustration.dimension.y} md:-${illustration.align.x}-${illustration.dimension.x} shadow-xl rounded-full overflow-hidden p-8 transform md:scale-${ illustration.dimension.scale } animation-all duration-1000 ease-in-out`}>
+            <div id="outline" className="relative pt-16 px-1 xxl:px-32 w-full dark:bg-black">
+                <span className="md:-top-32 md:-left-24 md:-right-40 md:scale-65"></span>
+                <div
+                    className={`
+                        relative flex 
+                        justify-center 
+                        items-center w-3/4 
+                        md:w-2/4 lg:w-auto 
+                        mb-8 lg:mb-0 mx-auto md:absolute 
+                        md:-${illustration.align.y}-${illustration.dimension.md.y} 
+                        md:-${illustration.align.x}-${illustration.dimension.md.x} 
+                        lg:-${illustration.align.y}-${illustration.dimension.lg.y} 
+                        lg:-${illustration.align.x}-${illustration.dimension.lg.x} 
+                        shadow-xl rounded-full overflow-hidden p-8 transform 
+                        md:scale-${ illustration.dimension.md.scale } 
+                        lg:scale-${ illustration.dimension.lg.scale } 
+                        animation-all duration-1000 ease-in-out
+                    `}>
                     <img className="rounded-full" src={ illustration.src } alt={ `${ title }-illustration` } />
                 </div>
 

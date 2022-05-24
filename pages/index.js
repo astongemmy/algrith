@@ -16,7 +16,10 @@ export default class Index extends React.Component {
       title: 'Why choose us',
       illustration: {
         align: { x: 'left', y: 'top' },
-        dimension: { x: 32, y: 56, scale: 65 },
+        dimension: {
+          md: { x: 20, y: 32, scale: 65 },
+          lg: { x: 32, y: 56, scale: 45 }
+        },
         src: './images/illustrations/team.png'
       },
       items: [
@@ -41,7 +44,14 @@ export default class Index extends React.Component {
     const sections = {
       testimonial: {
         title: "Testimonials",
-        illustration: { align: "right", src: "./images/illustrations/testimonial.gif" },
+        illustration: {
+          align: { x: 'right', y: 'top' },
+          dimension: {
+            md: { x: 32, y: 52, scale: 65 },
+            lg: { x: 28, y: 64, scale: 65 }
+          },
+          src: "./images/illustrations/testimonial.gif"
+        },
         items: [
           {
             name: "Sarah Dayan",
@@ -80,7 +90,7 @@ export default class Index extends React.Component {
           <Hero />
           <Outline outline={outlines} />
           <MissionStatement />
-          <Leaders />
+          {/* <Leaders /> */}
           <Section payload={ sections.testimonial } />
           <GetStarted />
         </main>
