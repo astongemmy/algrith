@@ -77,16 +77,32 @@ export default class Index extends React.Component {
           },
         ]
       }
-    }    
+    }
+    const intro = {
+      title: {
+        text: "The best software algorithm solution",
+        align: "",
+        case: ""
+      },
+      subtitle: {
+        text: "We make happy clients",
+        align: "",
+        case: ""
+      },
+      action: {
+        text: "Get Started"
+      },
+      scroll_to: "product-intro"
+    }
     return (
-      <Layout intro_string="The best software algorithm solution">
+      <Layout>
         <Head>
           <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
           <title> Home | Algrith </title>
         </Head>
         
         <main>
-          <Intro />
+          <Intro payload={ intro } />
           <Hero />
           <Outline outline={outlines} />
           <MissionStatement />
