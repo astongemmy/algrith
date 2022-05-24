@@ -23,7 +23,7 @@ export default class ContactForm extends React.Component {
                         type="text"
                         name="full_name"
                         id="full_name"
-                        className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-lg border-gray-300"
+                        className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md text-lg border-gray-300"
                         placeholder="e.g. John Doe"
                       />
                     </div>
@@ -40,7 +40,7 @@ export default class ContactForm extends React.Component {
                         type="email"
                         name="email"
                         id="email"
-                        className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-lg border-gray-300"
+                        className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md text-lg border-gray-300"
                         placeholder="e.g. johndoe@email.com"
                       />
                     </div>
@@ -49,7 +49,7 @@ export default class ContactForm extends React.Component {
                     <label htmlFor="location" className="block text-lg font-medium text-gray-700">
                       Location
                     </label>
-                    <CountryInput className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-lg border-gray-300" />
+                    <CountryInput className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md text-lg border-gray-300" />
                   </div>
                   <div className="col-span-4 sm:col-span-2">
                     <label htmlFor="phone" className="block text-lg font-medium text-gray-700">
@@ -63,7 +63,7 @@ export default class ContactForm extends React.Component {
                         type="tel"
                         name="phone"
                         id="phone"
-                        className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-lg border-gray-300"
+                        className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md text-lg border-gray-300"
                         placeholder="e.g. +88 9209 635"
                       />
                     </div>
@@ -79,7 +79,7 @@ export default class ContactForm extends React.Component {
                       id="about"
                       name="about"
                       rows={7}
-                      className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-lg border border-gray-300 rounded-md"
+                      className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
                       placeholder="I need a corporate website for my business"
                       defaultValue={''}
                     />
