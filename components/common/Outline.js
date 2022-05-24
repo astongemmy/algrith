@@ -1,16 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 
-export default class Outline extends React.Component {
-    
-    constructor() {
-        super()
-    }
-
+export default class Outline extends React.Component {    
+    constructor() { super() }
     render() {
-
-        const { title, items, illustration } = this.props.outline;
-        
+        const { title, items, illustration } = this.props.outline;        
         const outlines = items.map((outline) => {
             return (
                 <div key={outline.title} data-aos="fade-up" className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4 md:p-10 lg:p-8">
@@ -28,9 +21,7 @@ export default class Outline extends React.Component {
         });
 
         return (
-
             <div id="outline" className="relative pt-16 px-1 xxl:px-32 w-full dark:bg-black">
-                <span className="md:-top-32 md:-left-24 md:-right-40 md:scale-65"></span>
                 <div
                     className={`
                         relative flex 
@@ -49,17 +40,13 @@ export default class Outline extends React.Component {
                     `}>
                     <img className="rounded-full" src={ illustration.src } alt={ `${ title }-illustration` } />
                 </div>
-
                 <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full text-center font-bold">
                     {title}
                 </h1>
-
                 <div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 lg:px-32 w-full dark:bg-black">
                     {outlines}
                 </div>
-
             </div>
-
         )
     }
 }

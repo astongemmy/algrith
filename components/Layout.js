@@ -99,31 +99,24 @@ export default class Layout extends React.Component {
                     document.querySelector('.intro-lead .cursor').remove()
                     return
                 }            
-            }
-            
+            }           
             if (counter >= this.props.intro_string.length) {
                 clearTimeout(window.typing_timeout)
                 count = 0
                 return
-            }
-            
+            }            
             if (counter <= this.props.intro_string.length) {
                 count = counter + 1
-            }
-            
+            }            
             let cursor_elem = document.createElement("span")
-            cursor_elem.className = "cursor"
-            
+            cursor_elem.className = "cursor"            
             let element = document.createElement("span")
-            element.textContent = this.props.intro_string[count];
-            
+            element.textContent = this.props.intro_string[count];            
             if (this.props.intro_string[count] == " ") {
                 element.style.marginLeft = "5px"
-            }
-            
+            }            
             document.querySelector('.intro-lead').append(element)
             document.querySelector('.intro-lead').append(cursor_elem)
-
             window.typing_timeout = setTimeout(() => {
                 this.typing(count)
             }, 100)
@@ -144,9 +137,7 @@ export default class Layout extends React.Component {
     }
 
     sectionScroll = () => {
-
-        const scroll_selectors = document.querySelectorAll(".scroll-selector");
-        
+        const scroll_selectors = document.querySelectorAll(".scroll-selector");        
         scroll_selectors.forEach(selector => {
             selector.addEventListener('click', function(e) {
                 e.preventDefault();                
@@ -163,36 +154,24 @@ export default class Layout extends React.Component {
                 });
             });
         });
-
     }
 
     rippleEffect = () => {
-
-		document.querySelectorAll('.ripple-node').forEach(button => {
-			
-			button.addEventListener('mousedown', function(e) {
-				
+		document.querySelectorAll('.ripple-node').forEach(button => {			
+			button.addEventListener('mousedown', function(e) {				
 				const target = e.target;
 				const rect = target.getBoundingClientRect();
-				let ripple = target.querySelector('.ripple');
-				
-				if (ripple) {
-					ripple.remove();
-				}
-				
+				let ripple = target.querySelector('.ripple');				
+				if (ripple) ripple.remove();	
 				ripple = document.createElement('span');
 				ripple.className = 'ripple';
-
 				ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
 				target.appendChild(ripple);
 				const top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.documentElement.scrollTop;
 				const left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.documentElement.scrollLeft;
-
 				ripple.style.top = top + 'px';
 				ripple.style.left = left + 'px';
-
-				return false;
-				
+				return false;				
 			});
 
 		});
@@ -206,16 +185,12 @@ export default class Layout extends React.Component {
             this.brand.style.transform = 'scale(0.7, 1)'
             this.brand.style.transformOrigin = 'left top'
             this.header.classList.add('shadow-lg')
-            if (this.deviceView() == 'desktop') {
-                this.nav_menu.style.top = '0.52rem'
-            }
+            if (this.deviceView() == 'desktop') this.nav_menu.style.top = '0.52rem'
         } else {
             this.header.style.transform = 'scale(1)'
             this.brand.style.transform = 'scale(1)'
             this.header.classList.remove('shadow-lg')
-            if (this.deviceView() == 'desktop') {
-                this.nav_menu.style.top = '1.5rem'
-            }
+            if (this.deviceView() == 'desktop') this.nav_menu.style.top = '1.5rem'
         }
     }
 
@@ -237,38 +212,24 @@ export default class Layout extends React.Component {
         }
     }
 
-    closeAll = () => {
-        this.closeNavBar()
-    }
+    closeAll = () => { this.closeNavBar() }
 
-    render() {        
-
-        return (
-            
-            <div>
-                
+    render() {
+        return (            
+            <div>                
                 <Header open_nav_bar={this.openNavBar} />
                 <Navbar close_nav_bar={this.closeNavBar} />
-
-                    {this.props.children}
-
+                { this.props.children }
                 <Footer />
-
                 <span id="back-to-top" className="scroll-selector cursor-pointer hidden fixed justify-center items-center right-8 md:right-12 bottom-8 rounded-full bg-green-400 text-white p-8 text-3xl w-16 h-16 md:w-18 md:h-18">
                     <i className="fa fa-arrow-up"></i>
                 </span>
-
-                <div id="overlay" onClick={this.closeAll} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
-                
+                <div id="overlay" onClick={this.closeAll} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>                
                 <div id="alert" className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-100 text-green-500 p-4 w-3/5 flex justify-between items-center">
                     <span id="message">Message</span>
                     <i className="fa fa-times" id="close"></i>
-                </div>        
-
+                </div>
             </div>
-
-        )
-      
+        )      
     }
-
 }

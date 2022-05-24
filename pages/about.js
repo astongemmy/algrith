@@ -1,27 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from '../components/Layout'
-import Styles from '../components/styles/about/about.module.css'
 import Intro from '../components/about/Intro'
 import Outline from '../components/common/Outline'
 
-export default class About extends React.Component {
-  
-    constructor() {
-        super()
-    }
-
-    componentDidMount() {
-        
-    }
-
-    componentWillUnmount() {
-        
-    }
-
+export default class About extends React.Component {  
+    constructor() { super() }
     render() {
-
         const outlines = {
             title: 'What we really do',
             illustration: {
@@ -51,27 +36,17 @@ export default class About extends React.Component {
             ]
         }
         
-        return (
-        
-            <Layout intro_string="Who we really are!">
-                
+        return (        
+            <Layout intro_string="Who we really are!">                
                 <Head>
                     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
                     <title> About | Algrith </title>
                 </Head>
-
                 <main>
-
-                    <Intro />
-                    
-                    <Outline outline={outlines}/>             
-                
+                    <Intro />                    
+                    <Outline outline={ outlines } />                
                 </main>
-
-            </Layout>
-    
-        )
-    
+            </Layout>    
+        )    
     }
-
 }

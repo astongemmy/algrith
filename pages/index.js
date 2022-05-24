@@ -18,7 +18,7 @@ export default class Index extends React.Component {
         align: { x: 'left', y: 'top' },
         dimension: {
           md: { x: 20, y: 32, scale: 65 },
-          lg: { x: 32, y: 56, scale: 45 }
+          lg: { x: 32, y: 52, scale: 65 }
         },
         src: './images/illustrations/team.png'
       },

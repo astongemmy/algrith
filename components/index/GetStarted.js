@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 export default class GetStarted extends React.Component {  
   constructor() { super() }
-
   render() {
     return (
       <div className="relative pb-10 md:pb-24 px-8 md:px-10 lg:px-14 xl:px-32 w-full dark:bg-black">
