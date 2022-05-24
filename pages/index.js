@@ -8,6 +8,8 @@ import Section from '../components/common/Section'
 import GetStarted from '../components/index/GetStarted'
 import MissionStatement from '../components/index/MissionStatement'
 import Hero from '../components/index/Hero'
+import Pricing from '../components/common/Pricing'
+// import Contact from '../components/index/Contact'
 
 export default class Index extends React.Component {  
   constructor() { super() }
@@ -39,8 +41,7 @@ export default class Index extends React.Component {
           content: 'Integrity defines business life span and we are determined to live long with you'
         }
       ]
-    }
-    
+    }    
     const sections = {
       testimonial: {
         title: "Testimonials",
@@ -76,8 +77,7 @@ export default class Index extends React.Component {
           },
         ]
       }
-    }
-    
+    }    
     return (
       <Layout intro_string="The best software algorithm solution">
         <Head>
@@ -90,6 +90,8 @@ export default class Index extends React.Component {
           <Hero />
           <Outline outline={outlines} />
           <MissionStatement />
+          <Pricing />
+          {/* <Contact /> */}
           {/* <Leaders /> */}
           <Section payload={ sections.testimonial } />
           <GetStarted />

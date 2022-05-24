@@ -3,8 +3,7 @@ import Header from './common/Header'
 import Navbar from './common/Navbar'
 import Footer from './common/Footer'
 
-export default class Layout extends React.Component {
-    
+export default class Layout extends React.Component {    
     constructor() {
         super()
         // Method binding
@@ -15,12 +14,10 @@ export default class Layout extends React.Component {
         this.openNavBar = this.openNavBar.bind(this)
         this.closeNavBar = this.closeNavBar.bind(this)
         this.closeAll = this.closeAll.bind(this)
-        this.typing = this.typing.bind(this)
         this.hidePageLink = this.hidePageLink.bind(this)
         // this.backToTop = this.backToTop.bind(this)
         this.scrollToTopObserver = this.scrollToTopObserver.bind(this)
     }
-
     componentDidMount() {
         AOS.init({ easing: 'ease-in-out-sine' })
         this.hidePageLink()
@@ -35,7 +32,6 @@ export default class Layout extends React.Component {
         // Event trigger on mount
         this.sectionScroll();
         this.rippleEffect();
-        this.props.intro_string && typeof this.props.intro_string == 'string' ? this.typing(-1) : ''
         window.addEventListener('scroll', () => {
             this.resizeHeaderOnScroll()
             this.scrollToTopObserver({
@@ -44,12 +40,10 @@ export default class Layout extends React.Component {
             });
         }, false);
     }
-
     componentWillUnmount() {
         // Event Trigger on unmount
         window.removeEventListener('scroll', this.resizeHeaderOnScroll())
     }
-
     scrollToTopObserver = ({target, display}) => {        
         if ((target && typeof target !== 'object') || (display && typeof display !== 'string')) {
             return console.error({
@@ -71,8 +65,7 @@ export default class Layout extends React.Component {
         } else {
             target.style.display = 'none';
         }        
-    }    
-
+    }
     hidePageLink = () => {
         const header_links = document.querySelectorAll('#navbar-links a')
         const path = window.location.pathname
@@ -84,47 +77,6 @@ export default class Layout extends React.Component {
             }
         })
     }
-
-    // Custom Methods
-    typing = (counter) => {
-        this.props.intro_string !== this.prev_intro_string ? clearTimeout(window.typing_timeout) : ''
-        let count
-        window.typing_timeout;        
-        if (document.querySelector('.intro-lead')) {
-            if (document.querySelector('.intro-lead .cursor')) {                
-                if (counter !== this.props.intro_string.length - 1) {
-                    document.querySelector('.intro-lead .cursor').remove()
-                }
-                if (counter == this.props.intro_string.length - 1) {
-                    document.querySelector('.intro-lead .cursor').remove()
-                    return
-                }            
-            }           
-            if (counter >= this.props.intro_string.length) {
-                clearTimeout(window.typing_timeout)
-                count = 0
-                return
-            }            
-            if (counter <= this.props.intro_string.length) {
-                count = counter + 1
-            }            
-            let cursor_elem = document.createElement("span")
-            cursor_elem.className = "cursor"            
-            let element = document.createElement("span")
-            element.textContent = this.props.intro_string[count];            
-            if (this.props.intro_string[count] == " ") {
-                element.style.marginLeft = "5px"
-            }            
-            document.querySelector('.intro-lead').append(element)
-            document.querySelector('.intro-lead').append(cursor_elem)
-            window.typing_timeout = setTimeout(() => {
-                this.typing(count)
-            }, 100)
-            this.prev_intro_string = this.props.intro_string
-        }
-        
-    }
-    
     //	Viewport observer
 	//	Checks if viewport is mobile
 	deviceView = () => {
@@ -135,7 +87,6 @@ export default class Layout extends React.Component {
 			return "desktop";
 		}
     }
-
     sectionScroll = () => {
         const scroll_selectors = document.querySelectorAll(".scroll-selector");        
         scroll_selectors.forEach(selector => {
@@ -155,7 +106,6 @@ export default class Layout extends React.Component {
             });
         });
     }
-
     rippleEffect = () => {
 		document.querySelectorAll('.ripple-node').forEach(button => {			
 			button.addEventListener('mousedown', function(e) {				
@@ -176,8 +126,7 @@ export default class Layout extends React.Component {
 
 		});
 
-	}
-    
+	}    
     resizeHeaderOnScroll = () => {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             this.header.style.transform = 'scale(1, 0.7)'
@@ -193,7 +142,6 @@ export default class Layout extends React.Component {
             if (this.deviceView() == 'desktop') this.nav_menu.style.top = '1.5rem'
         }
     }
-
     openNavBar = () => {            
         if (this.nav_menu.className.includes('-right-full')) {
             this.nav_menu.classList.remove('-right-full')
@@ -202,7 +150,6 @@ export default class Layout extends React.Component {
             this.overlay.classList.add('block')
         }          
     }
-
     closeNavBar = () => {
         if (this.nav_menu.className.includes('right-0')) {
             this.nav_menu.classList.remove('right-0')
@@ -211,7 +158,6 @@ export default class Layout extends React.Component {
             this.overlay.classList.add('hidden')
         }
     }
-
     closeAll = () => { this.closeNavBar() }
 
     render() {

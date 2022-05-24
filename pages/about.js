@@ -1,12 +1,26 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import Intro from '../components/about/Intro'
+import Intro from '../components/Intro'
 import Outline from '../components/common/Outline'
 
 export default class About extends React.Component {  
     constructor() { super() }
     render() {
+        const intro = {
+            title: {
+                text: "Who we really are!",
+                align: "",
+                case: ""
+            },
+            description: {
+                text: "Algrith is a software company dedicated to delivering elegant, efficient,\n secure, accessible etc, web applications and websites for use by\n clients both in the public and private sector.",
+                align: "",
+                case: ""
+            },
+            slogan: "We make happy clients",
+            scroll_to: "outline"
+        }
         const outlines = {
             title: 'What we really do',
             illustration: {
@@ -37,16 +51,16 @@ export default class About extends React.Component {
         }
         
         return (        
-            <Layout intro_string="Who we really are!">                
+            <Layout>
                 <Head>
                     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
                     <title> About | Algrith </title>
                 </Head>
                 <main>
-                    <Intro />                    
-                    <Outline outline={ outlines } />                
+                    <Intro payload={ intro } />
+                    <Outline outline={ outlines } />
                 </main>
-            </Layout>    
-        )    
+            </Layout>
+        )
     }
 }
