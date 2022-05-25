@@ -9,6 +9,7 @@ import GetStarted from '../components/index/GetStarted'
 import MissionStatement from '../components/index/MissionStatement'
 import Hero from '../components/index/Hero'
 import Pricing from '../components/common/Pricing'
+import LogoCloud from '../components/LogoCloud'
 
 export default class Index extends React.Component {  
   constructor() { super() }
@@ -105,6 +106,7 @@ export default class Index extends React.Component {
         
         <main>
           <Intro payload={ intro } />
+          <LogoCloud />
           <Hero />
           <Outline outline={outlines} />
           <MissionStatement />

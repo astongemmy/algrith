@@ -87,7 +87,7 @@ export default class Footer extends React.Component {
                                     </Link>
                                 </li>
                                 <li className="p-4">
-                                    <Link href="/">
+                                    <Link href="/contact-us">
                                         <a className="text-gray-600">Contact Us</a>
                                     </Link>
                                 </li>

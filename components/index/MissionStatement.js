@@ -6,7 +6,7 @@ export default class MissionStatement extends React.Component {
 
   render() {
     return (
-      <div className="relative bg-white py-10 md:py-20 px-2 md:px-6 lg:px-14 xl:px-32 w-full dark:bg-black">
+      <div className="relative bg-white py-16 md:py-20 px-2 md:px-6 lg:px-14 xl:px-32 w-full dark:bg-black">
         <div className="relative overflow-hidden">
           <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-0 sm:static">
             <div className="lg:pr-28 xl:pr-32 px-2 md:px-auto">
