@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export default class Hero extends React.Component {  
   constructor() { super() }
@@ -76,10 +78,29 @@ export default class Hero extends React.Component {
         category: 'Web server',
       }
     ]
-    
+
+    const responsive = {
+      superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 4
+      },
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 4
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
+      },
+      mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+      }
+    };
     
     return (
-      <div id="product-intro" className="w-full pt-10 pb-16 lg:pt-28 lg:pb-20 bg-white">
+      <div id="product-intro" className="w-full pt-10 lg:pb-16 lg:pt-28 lg:pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-8 sm:px-6 md:px-12 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-lg text-indigo-600 font-semibold tracking-wide uppercase">Pick a product and get started!</h2>
@@ -94,30 +115,32 @@ export default class Hero extends React.Component {
           </div>
         </div>
 
-        <div className="w-full max-w-2xl mx-auto py-6 sm:py-10 px-8 sm:px-6 md:px-14 xl:px-0 md:max-w-screen-lg xxl:max-w-screen-xl">
-          <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-4 xl:gap-x-8">
-            { products.map((product) => (
-              <div key={ product.id } className="rounded-lg overflow-hidden shadow-lg group relative">
-                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                  <img src={ product.imageSrc } alt={ product.imageAlt } className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
-                </div>
-                <div className="mt-4 flex justify-between px-4 pb-4">
-                  <div>
-                    <h3 className="text-lg text-gray-700 font-bold">
-                      <Link href={ product.href }>
-                        <a>
-                          <span aria-hidden="true" className="absolute inset-0" />
-                          { product.name }
-                        </a>
-                      </Link>
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-500"> { product.category } </p>
+        <div className="w-full max-w-2xl mx-auto py-6 sm:py-10 px-4 md:px-8 sm:px-6 md:px-14 xl:px-0 md:max-w-screen-lg xxl:max-w-screen-xl">
+          {/* <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-4 xl:gap-x-8"> */}            
+            <Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={ responsive }>
+              { products.map((product) => (
+                <div key={ product.id } className="rounded-lg overflow-hidden shadow-lg group relative">
+                  <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 xl:aspect-none">
+                    <img src={ product.imageSrc } alt={ product.imageAlt } className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
                   </div>
-                  <p className="text-md font-bold text-black"> { product.price } </p>
+                  <div className="mt-4 flex justify-between px-4 pb-4">
+                    <div>
+                      <h3 className="text-lg text-gray-700 font-bold">
+                        <Link href={ product.href }>
+                          <a>
+                            <span aria-hidden="true" className="absolute inset-0" />
+                            { product.name }
+                          </a>
+                        </Link>
+                      </h3>
+                      <p className="mt-1 text-sm text-gray-500"> { product.category } </p>
+                    </div>
+                    <p className="text-md font-bold text-black"> { product.price } </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </Carousel>
+          {/* </div> */}
         </div>
       </div>
     )

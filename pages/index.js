@@ -9,7 +9,6 @@ import GetStarted from '../components/index/GetStarted'
 import MissionStatement from '../components/index/MissionStatement'
 import Hero from '../components/index/Hero'
 import Pricing from '../components/common/Pricing'
-// import Contact from '../components/index/Contact'
 
 export default class Index extends React.Component {  
   constructor() { super() }
@@ -44,7 +43,10 @@ export default class Index extends React.Component {
     }    
     const sections = {
       testimonial: {
-        title: "Testimonials",
+        title: {
+          text: "Testimonials",
+          align: "left"
+        },
         illustration: {
           align: { x: 'right', y: 'top' },
           dimension: {
@@ -107,7 +109,6 @@ export default class Index extends React.Component {
           <Outline outline={outlines} />
           <MissionStatement />
           <Pricing />
-          {/* <Contact /> */}
           {/* <Leaders /> */}
           <Section payload={ sections.testimonial } />
           <GetStarted />

@@ -6,8 +6,8 @@ export default class Outline extends React.Component {
         const { title, items, illustration } = this.props.outline;        
         const outlines = items.map((outline) => {
             return (
-                <div key={outline.title} data-aos="fade-up" className="w-full lg:w-2/4 xl:w-1/3 m-4 md:m-0 p-4 md:p-10 lg:p-8">
-                    <div className="w-full p-8 lg:p-16 bg-gray-100 text-gray-600 text-xl md:leading-9 rounded-xl text-center shadow">
+                <div key={outline.title} data-aos="fade-up" className="w-full md:w-1/3 m-4 md:m-0 p-2 md:py-10 md:px-3 lg:p-4 xl:px-8">
+                    <div className="w-full p-8 md:px-4 lg:p-16 bg-gray-100 text-gray-600 text-xl md:leading-9 rounded-xl text-center shadow">
                         <h2 className="uppercase text-xl md:text-2xl text-navyblue font-semibold mb-4">
                             {outline.title}
                         </h2>
@@ -43,7 +43,7 @@ export default class Outline extends React.Component {
                 <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full text-center font-bold">
                     {title}
                 </h1>
-                <div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 lg:px-32 w-full dark:bg-black">
+                <div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 md:px-8 lg:px-12 xl:px-32 w-full dark:bg-black">
                     {outlines}
                 </div>
             </div>

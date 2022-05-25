@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
-import Contact from '../components/common/Contact'
+import Contact from '../components/Contact'
 
 export default class ContactUs extends React.Component {  
     constructor() { super() }
