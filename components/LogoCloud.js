@@ -36,7 +36,7 @@ export default class LogoCloud extends React.Component {
     ]
     
     return (
-      <div className="bg-slate-100 w-full px-8 md:px-16 xl:px-28 pt-4 md:pt-8 pb-4 md:pb-10 lg:pb-12">
+      <div className="bg-slate-100 w-full px-8 md:px-16 xl:px-28 pt-4 md:pt-8 pb-8 md:pb-10 lg:pb-12">
         <div className="w-full md:w-3/3 mx-auto sm:mb-6">
           <h1 className="xl:text-5xl md:text-3xl text-xl text-center md:text-left text-gray-800 font-extrabold mb-5 pt-4">
             Partnerships with Coveted Brands
