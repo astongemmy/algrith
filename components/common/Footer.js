@@ -90,6 +90,11 @@ export default class Footer extends React.Component {
                                     </Link>
                                 </li>
                                 <li className="p-4">
+                                    <Link href="/view-product">
+                                        <a className="text-gray-600">Products</a>
+                                    </Link>                                    
+                                </li>
+                                <li className="p-4">
                                     <Link href="/contact-us">
                                         <a className="text-gray-600">Contact Us</a>
                                     </Link>
