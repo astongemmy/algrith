@@ -3,6 +3,7 @@ import '../public/styles/Icons.css'
 import '../public/styles/aos.css'
 import '../public/styles/animate.css'
 import App from 'next/app'
+import "react-image-gallery/styles/css/image-gallery.css";
 
 export default class MyApp extends App {
 

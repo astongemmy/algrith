@@ -1,14 +1,110 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import BreadCrumbs from '../components/BreadCrumbs'
+import ButtonGroup from '../components/ButtonGroup'
+import ProductFeatureCard from '../components/ProductFeatureCard'
+import ImageGallery from 'react-image-gallery';
+import LeftNav from '../components/LeftNav'
+import RightNav from '../components/RightNav'
 
 export default function PackageView() {
+  const [active_product, setActiveProduct] = useState('landing_page')
+  
   const breadcrumbs = [
     { text: 'Products', url: '/products' },
-    { text: 'Apple iPhone 12 PRO', url: '/products/Apple-iPhone-12-PRO' }
+    { text: 'Landing Page', url: '/landing-page' }
   ];
-
+  const buttons = [
+    { id: 'landing_page', text: 'Landing Page', active: true },
+    { id: 'corporate_website', text: 'Corporate Website', active: false },
+    { id: 'e_commerce_website', text: 'e-Commerce Website', active: false },
+  ]
+  const products = {
+    landing_page: {
+      id: 1,
+      title: 'Landing Page',
+      price: 124.99,
+      currency: { name: 'dollars', symbol: '$' },
+      features: [
+        { 'complete_files': 'Complete files' },
+        { 'cloud_storage': '50GB cloud storage' },
+        { 'team_members': '20 team members' },
+        { 'board_editors': '3 anonymous board editors' },
+        { 'uptime': '99.9% uptime' },
+      ],
+      gallery: [
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+      ]
+    },
+    corporate_website: {
+      id: 2,
+      title: 'Corporate Website',
+      price: 650.99,
+      currency: { name: 'dollars', symbol: '$' },
+      features: [
+        { 'complete_files': 'Complete files' },
+        { 'cloud_storage': '100GB cloud storage' },
+        { 'team_members': '40 team members' },
+        { 'board_editors': '6 anonymous board editors' },
+        { 'uptime': '99.9% uptime' },
+      ],
+      gallery: [
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+      ]
+    },
+    e_commerce_website: {
+      id: 3,
+      title: 'e-Commerce_Website',
+      price: 2400.99,
+      currency: { name: 'dollars', symbol: '$' },
+      features: [
+        { 'complete_files': 'Complete files' },
+        { 'cloud_storage': '200GB cloud storage' },
+        { 'team_members': '100 team members' },
+        { 'board_editors': 'Unlimited anonymous board editors' },
+        { 'uptime': '99.9% uptime' },
+      ],
+      gallery: [
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+        "./images/products/ph-photo1.png",
+      ]
+    }
+  }
+  const images = [
+    {
+      original: "./images/products/ph-photo1.png",
+      thumbnail: "./images/products/ph-photo1.png",
+      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
+      thumbnailClass: "rounded-lg border-0 border-transparent ml-0",
+    },{
+      original: "./images/products/ph-photo1.png",
+      thumbnail: "./images/products/ph-photo1.png",
+      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
+      thumbnailClass: "rounded-lg border-0 border-transparent",
+    },
+    {
+      original: "./images/products/ph-photo1.png",
+      thumbnail: "./images/products/ph-photo1.png",
+      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
+      thumbnailClass: "rounded-lg border-0 border-transparent",
+    },
+    {
+      original: "./images/products/ph-photo1.png",
+      thumbnail: "./images/products/ph-photo1.png",
+      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
+      thumbnailClass: "rounded-lg border-0 border-transparent",
+    },
+  ]
+  
   return (
     <Layout>
       <Head>
@@ -16,108 +112,42 @@ export default function PackageView() {
         <title> Product | Algrith </title>
       </Head>        
       <main>
-        <section className="pt-12 pb-24 px-4 md:px-10 lg:px-12 xl:px-24 bg-blueGray-100 rounded-b-10xl overflow-hidden">
-          <div className="container px-4 mx-auto">
+        <section className="w-full pt-12 pb-24 px-4 md:px-10 lg:px-12 xl:px-28 rounded-b-10xl overflow-hidden">
+          <div className="containe px-4 mx-auto">
             <div className="flex flex-wrap -mx-4">
               <BreadCrumbs breadcrumbs={ breadcrumbs } />
               <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
-                <div className="flex -mx-4 flex-wrap items-center justify-between lg:justify-start lg:items-start xl:items-center">
-                  <div className="w-full sm:w-auto min-w-max px-4 text-center flex sm:flex-col items-center justify-center">
-                    <a className="inline-block sm:mb-12 mr-4 sm:mr-0 transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" href="#">
-                      <svg width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.54064 7.21015C1.18719 7.59662 0.615928 7.59662 0.265087 7.21015C-0.087058 6.82369 -0.0896663 6.19929 0.265087 5.81282L5.36206 0.289847C5.71421 -0.0966173 6.28416 -0.0966172 6.63892 0.289847L11.7359 5.81282C12.088 6.19785 12.088 6.82369 11.7359 7.21015C11.3824 7.59662 10.8112 7.59662 10.4603 7.21015L5.99853 2.68073L1.54064 7.21015Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                    <a className="h-30 block mb-4 mr-2 sm:mr-0" href="#">
-                      <img className="h-full w-full" src="./images/products/placeholder1.png" alt="" />
-                    </a>
-                    <a className="hidden sm:block h-30 mb-4 mr-2 sm:mr-0" href="#">
-                      <img className="h-full w-full" src="./images/products/placeholder2.png" alt="" />
-                    </a>
-                    <a className="hidden sm:block h-30 mb-4 mr-2 sm:mr-0 rounded-xl border-2 border-blueGray-500" href="#">
-                      <img className="h-full w-full" src="./images/products/placeholder4.png" alt="" />
-                    </a>
-                    <a className="h-30 block mb-4 sm:mb-12 mr-4 sm:mr-0" href="#">
-                      <img className="h-full w-full" src="./images/products/placeholder3.png" alt="" />
-                    </a>
-                    <a className="inline-block transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" href="#">
-                      <svg width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.4594 0.289849C10.8128 -0.0966154 11.3841 -0.0966154 11.7349 0.289849C12.0871 0.676313 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880364 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.0966159 1.53966 0.289848L6.00147 4.81927L10.4594 0.289849Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                  </div>
-                  <div className="w-full sm:w-9/12 px-4">
-                    <img className="mb-5" src="./images/products/ph-photo1.png" alt="" />
+                <div className="rounded-lg bg-white p-2 border flex -mx-4 flex-wrap items-center justify-between lg:justify-start lg:items-start">
+                  <div className="rounded-lg w-full overflow-hidden">
+                    <ImageGallery 
+                      showFullscreenButton={ false } 
+                      showPlayButton={ false } 
+                      items={ images } 
+                      thumbnailPosition="left"
+                      renderLeftNav={(onClick, disabled) => LeftNav(onClick, disabled)}
+                      renderRightNav={(onClick, disabled) => RightNav(onClick, disabled)}
+                    />
                     <p className="text-sm text-gray-300">Roll over image to zoom in</p>
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 px-4">
-                <div className="max-w-md mb-6">
-                  <span className="text-sm text-gray-400 tracking-wider">APPLE #3299803</span>
-                  <h2 className="mt-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
-                    Apple iPhone 12 Pro (128GB) - Silver
-                  </h2>
-                  <p className="flex items-center mb-6">
-                    <span className="mr-2 text-sm text-blue-500 font-medium">$</span>
-                    <span className="text-3xl text-blue-500 font-medium">44.90</span>
-                  </p>
-                  <div className="w-full px-3 md:px-0 mb-8 lg:mb-0">
-                    <div className="px-8 md:px-6 py-6 md:py-8 bg-blue-500 rounded-3xl">
-                      <div className="pb-4 mb-4 border-b border-blueGray-300">
-                        <div className="flex justify-between items-center px-3">
-                          <h3 className="text-xl text-white font-bold font-heading">Features</h3>
-                          <p className="text-lg text-white font-bold">$9,99</p>
-                        </div>
-                      </div>
-                      <ul className="text-lg text-white mb-6">
-                        <li className="flex items-center mb-2">
-                          <span className="mr-6">
-                            <svg width="18" height="14" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="white"></path>
-                            </svg>
-                          </span>
-                          <span>Complete files</span>
-                        </li>
-                        <li className="flex items-center mb-2">
-                          <span className="mr-6">
-                            <svg width="18" height="14" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="white"></path>
-                            </svg>
-                          </span>
-                          <span>100GB cloud storage</span>
-                        </li>
-                        <li className="flex items-center mb-2">
-                          <span className="mr-6">
-                            <svg width="18" height="14" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="white"></path>
-                            </svg>
-                          </span>
-                          <span>20 team members</span>
-                        </li>
-                        <li className="flex items-center mb-2">
-                          <span className="mr-6">
-                            <svg width="18" height="14" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="white"></path>
-                            </svg>
-                          </span>
-                          <span>Unlimited anonymous board editors</span>
-                        </li>
-                        <li className="flex items-center">
-                          <span className="mr-6">
-                            <svg width="18" height="14" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="white"></path>
-                            </svg>
-                          </span>
-                          <span>10GB cloud storage</span>
-                        </li>
-                      </ul>
-                      <div className="text-center"><a className="inline-block px-10 py-4 border border-blueGray-300 hover:border-blueGray-100 rounded-full font-bold text-white" href="#">Buy now</a></div>
-                    </div>
+              <div className="w-full lg:w-1/2 px-4 md:px-24">
+                <div className="mb-6">
+                  <ButtonGroup getSelected={ (selected) => setActiveProduct(selected) } defaultSelected={ active_product } buttons={ buttons } />
+                  <div className="px-3">
+                    <span className="text-sm text-gray-400 tracking-wider">APPLE #3299803</span>
+                    <h2 className="mt-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
+                      Landing Page
+                    </h2>
+                    <p className="flex items-center mb-6">
+                      <span className="mr-2 text-sm text-blue-500 font-medium">$</span>
+                      <span className="text-3xl text-blue-500 font-medium">44.90</span>
+                    </p>
+                    <ProductFeatureCard product={ products[active_product] }/>
+                    <p className="text-lg text-gray-400 mt-8">
+                      The nulla commodo, commodo eros a lor, tristique lectus. Lorem sad 128 GB silver.
+                    </p>
                   </div>
-                  <p className="text-lg text-gray-400 mt-8">
-                    The nulla commodo, commodo eros a lor, tristique lectus. Lorem sad 128 GB silver.
-                  </p>
                 </div>
                 <div className="flex mb-6 items-center">
                   <div className="inline-flex mr-4">
