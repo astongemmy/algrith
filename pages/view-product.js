@@ -85,21 +85,21 @@ export default function PackageView() {
     {
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
+      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
     },{
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
+      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
     },
     {
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
+      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
     },
     {
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
+      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
     },
   ]
   
