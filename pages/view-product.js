@@ -24,7 +24,7 @@ export default function PackageView() {
   ]
   const products = {
     landing_page: {
-      id: 1,
+      id: 'Landing #3299803',
       title: 'Landing Page',
       price: 124.99,
       currency: { name: 'dollars', symbol: '$' },
@@ -43,7 +43,7 @@ export default function PackageView() {
       ]
     },
     corporate_website: {
-      id: 2,
+      id: 'Corporate #1029832',
       title: 'Corporate Website',
       price: 650.99,
       currency: { name: 'dollars', symbol: '$' },
@@ -62,7 +62,7 @@ export default function PackageView() {
       ]
     },
     e_commerce_website: {
-      id: 3,
+      id: 'e-commerce #4302564',
       title: 'e-Commerce Website',
       price: 2400.99,
       currency: { name: 'dollars', symbol: '$' },
@@ -135,13 +135,13 @@ export default function PackageView() {
                 <div className="mb-6">
                   <ButtonGroup getSelected={ (selected) => setActiveProduct(selected) } defaultSelected={ active_product } buttons={ buttons } />
                   <div className="px-3">
-                    <span className="text-sm text-gray-400 tracking-wider">APPLE #3299803</span>
+                    <span className="text-sm text-gray-400 tracking-wider uppercase"> { products[active_product].id } </span>
                     <h2 className="mt-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
                       { products[active_product].title }
                     </h2>
                     <p className="flex items-center mb-6">
-                      <span className="mr-2 text-sm text-blue-500 font-medium">$</span>
-                      <span className="text-3xl text-blue-500 font-medium">44.90</span>
+                      <span className="mr-2 text-sm text-blue-500 font-medium">{ products[active_product].currency.symbol }</span>
+                      <span className="text-3xl text-blue-500 font-medium"> { products[active_product].price } </span>
                     </p>
                     <ProductFeatureCard product={ products[active_product] }/>
                     <p className="text-lg text-gray-400 mt-8">
