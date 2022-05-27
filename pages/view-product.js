@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
+import useViewport from '../hooks/useViewport'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import BreadCrumbs from '../components/BreadCrumbs'
@@ -7,10 +8,11 @@ import ProductFeatureCard from '../components/ProductFeatureCard'
 import ImageGallery from 'react-image-gallery';
 import LeftNav from '../components/LeftNav'
 import RightNav from '../components/RightNav'
+import ThumbInner from '../components/ThumbInner'
 
 export default function PackageView() {
   const [active_product, setActiveProduct] = useState('landing_page')
-  
+  const { viewport } = useViewport();
   const breadcrumbs = [
     { text: 'Products', url: '/products' },
     { text: 'Landing Page', url: '/landing-page' }
@@ -61,7 +63,7 @@ export default function PackageView() {
     },
     e_commerce_website: {
       id: 3,
-      title: 'e-Commerce_Website',
+      title: 'e-Commerce Website',
       price: 2400.99,
       currency: { name: 'dollars', symbol: '$' },
       features: [
@@ -83,25 +85,21 @@ export default function PackageView() {
     {
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
-      thumbnailClass: "rounded-lg border-0 border-transparent ml-0",
+      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
     },{
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
-      thumbnailClass: "rounded-lg border-0 border-transparent",
+      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
     },
     {
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
-      thumbnailClass: "rounded-lg border-0 border-transparent",
+      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
     },
     {
       original: "./images/products/ph-photo1.png",
       thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "mb-5 w-full h-144 rounded-lg object-center object-cover",
-      thumbnailClass: "rounded-lg border-0 border-transparent",
+      originalClass: "overflow-hidden w-full h-144 rounded-lg object-center object-cover",
     },
   ]
   
@@ -116,28 +114,30 @@ export default function PackageView() {
           <div className="containe px-4 mx-auto">
             <div className="flex flex-wrap -mx-4">
               <BreadCrumbs breadcrumbs={ breadcrumbs } />
-              <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
-                <div className="rounded-lg bg-white p-2 border flex -mx-4 flex-wrap items-center justify-between lg:justify-start lg:items-start">
+              <div className="w-full md:w-1/2 px-6 md:px-8 lg:px-4 mb-2 lg:mb-0">
+                <div className="rounded-lg bg-white p-2 md:pl-0 border flex -mx-4 flex-wrap items-center justify-between lg:justify-start lg:items-start">
                   <div className="rounded-lg w-full overflow-hidden">
                     <ImageGallery 
+                      lazyLoad
                       showFullscreenButton={ false } 
                       showPlayButton={ false } 
                       items={ images } 
-                      thumbnailPosition="left"
+                      thumbnailPosition={ !['sm'].includes(viewport) ? 'left' : 'bottom' }
                       renderLeftNav={(onClick, disabled) => LeftNav(onClick, disabled)}
                       renderRightNav={(onClick, disabled) => RightNav(onClick, disabled)}
+                      renderThumbInner={(item) => ThumbInner(item)}
                     />
-                    <p className="text-sm text-gray-300">Roll over image to zoom in</p>
+                    {/* <p className="text-sm text-gray-300">Roll over image to zoom in</p> */}
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 px-4 md:px-24">
+              <div className="w-full md:w-1/2 px-2 md:px-4 xl:px-24">
                 <div className="mb-6">
                   <ButtonGroup getSelected={ (selected) => setActiveProduct(selected) } defaultSelected={ active_product } buttons={ buttons } />
                   <div className="px-3">
                     <span className="text-sm text-gray-400 tracking-wider">APPLE #3299803</span>
                     <h2 className="mt-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
-                      Landing Page
+                      { products[active_product].title }
                     </h2>
                     <p className="flex items-center mb-6">
                       <span className="mr-2 text-sm text-blue-500 font-medium">$</span>

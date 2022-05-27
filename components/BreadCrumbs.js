@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function BreadCrumbs({ breadcrumbs }) {
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-2 md:px-4">
       <ul className="flex flex-wrap items-center mb-8">
         <li className="mr-6">
           <a className="flex items-center text-lg font-medium text-gray-400 hover:text-gray-500" href="#">

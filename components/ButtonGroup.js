@@ -4,7 +4,7 @@ export default function ButtonGroup({ buttons, defaultSelected, getSelected }) {
   const [selected, setSelected] = useState(defaultSelected)
   const toggleSelected = (val) => { getSelected(val); setSelected(val) }
   return (
-    <div className="mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-center p-1">
+    <div className="mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-center p-0">
       <div className="flex items-start mt-4 sm:mt-0">
         <div className="border flex shadow rounded">
           <button onClick={() => toggleSelected(buttons[0].id)} className={`${ selected == buttons[0].id ? 'bg-blue-400 text-white' : 'text-gray-500 bg-white' } py-3 px-5 flex items-center justify-center text-lg focus:outline-none`}>
