@@ -14,7 +14,7 @@ import colors from '../../lib/colors';
 
 export default function Product({ data }) {
   const { viewport } = useViewport();
-  const [domain_state, setDomainState] = useState('existing')
+  const [domain_state, setDomainState] = useState('new')
   const products = JSON.parse(data.products)
   const defaultActive = Object.values(products).filter((product) => product.active)[0]
   const [active_product, setActiveProduct] = useState(defaultActive.id)
@@ -201,11 +201,11 @@ export default function Product({ data }) {
                         <span className="mr-4">Already existing </span>
                         <span className="flex space-x-4">
                           <label htmlFor="existing_domain">
-                            <input type="radio" onChange={(e)=>setDomainState(e.value)} value="existing" name="domain_name_state" id="existing_domain" className="w-6 h-6" defaultChecked />
+                            <input type="radio" onChange={(e)=>setDomainState(e.target.value)} value="existing" name="domain_name_state" id="existing_domain" className="w-6 h-6" />
                             <span className="ml-3">Yes</span>
                           </label>
                           <label htmlFor="new_domain">
-                            <input type="radio" onChange={(e)=>setDomainState(e.value)} value="new" name="domain_name_state" id="new_domain" className="w-6 h-6" />
+                            <input type="radio" onChange={(e)=>setDomainState(e.target.value)} value="new" name="domain_name_state" id="new_domain" className="w-6 h-6" defaultChecked />
                             <span className="ml-3">No</span>
                           </label>
                         </span>
