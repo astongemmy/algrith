@@ -32,7 +32,7 @@ export default function Product({ data }) {
         <title> Products | Algrith </title>
       </Head>        
       <main>
-        <section className="w-full pt-12 pb-24 px-4 md:px-10 lg:px-12 xl:px-28 rounded-b-10xl overflow-hidden">
+        <section className="w-full pt-4 md:pt-12 pb-24 px-4 md:px-10 lg:px-12 xl:px-28 rounded-b-10xl overflow-hidden">
           <div className="px-4 mx-auto">
             <div className="flex flex-wrap -mx-4">
               <BreadCrumbs page={`products.${data.id}`} />

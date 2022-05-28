@@ -19,7 +19,7 @@ export default function BreadCrumbs({ page }) {
 
   return (
     <div className="w-full px-2 md:px-4">
-      <ul className="flex flex-wrap items-center mb-3 md:mb-8">
+      <ul className="flex flex-wrap items-center mb-4 md:mb-8">
         <li className="mr-6">
           <Link href="/">
             <a className="flex items-center text-lg font-medium text-gray-400 hover:text-gray-500">
