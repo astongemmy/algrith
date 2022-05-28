@@ -61,7 +61,7 @@ export default function Product({ data }) {
                       <div className="overflow-hidden bg-white border rounded-2xl pb-8 my-8 md:mt-0">
                         <ButtonGroup getSelected={ (selected) => setActiveProduct(selected) } defaultSelected={ active_product } type={`products.${data.id}`} />
                         <div className="px-6">
-                          <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { products[active_product].id } </span>
+                          <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { products[active_product].tag } </span>
                           <h2 className="my-2 text-3xl md:text-4xl font-heading font-medium">
                             { products[active_product].title }
                           </h2>
