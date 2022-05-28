@@ -31,7 +31,8 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
-    "active": false
+    "active": false,
+    "ordered": 395
   },
   "crypto": {
     "id": "crypto",
@@ -65,7 +66,8 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
-    "active": false
+    "active": false,
+    "ordered": 809
   },
   "todo": {
     "id": "todo",
@@ -99,6 +101,7 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
-    "active": true
+    "active": true,
+    "ordered": 1715
   }
 }

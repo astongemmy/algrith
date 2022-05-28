@@ -1,13 +1,32 @@
 import React from "react"
 
 export default function ProductFeatureCard({ product }) {
+  const formatUnit = (unit) => {
+    if (unit >= 1000) {
+      return Math.round(unit / 1000) + 'k'
+    } else if (unit >= 1000000) {
+      return Math.round(unit / 1000000) + 'M'
+    } else {
+      return unit
+    }
+  }
+  const getProperFormat = (text) => {
+    if (text !== null) {
+      text = text.split('-');
+      text = text.map(word => { 
+        return word[0].toUpperCase() + word.slice(1);
+      }).join(" ");
+      return text
+    }
+  }
+
   return (
     <div className="w-full px-3 md:px-0 mb-8 lg:mb-0">
       <div className="bg-white">
         <div className="pb-4 mb-4 border-b">
           <div className="flex justify-between items-center">
             <h3 className="text-xl text-black font-bold font-heading">Features</h3>
-            <p className="text-lg text-green-500 font-bold"> { `${product.currency.symbol} ${product.price}` } </p>
+            <p className="text-lg text-red-500 font-bold"> { (formatUnit(product.ordered)) } <span className="text-gray-600"> orders</span> </p>
           </div>
         </div>
         <ul className="text-lg text-green-500 mb-6">

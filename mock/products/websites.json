@@ -31,7 +31,8 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
-    "active": true
+    "active": true,
+    "ordered": 524
   },
   "corporate": {
     "id": "corporate",
@@ -65,7 +66,8 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
-    "active": false
+    "active": false,
+    "ordered": 3700
   },
   "business": {
     "id": "business",
@@ -99,6 +101,7 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
-    "active": false
+    "active": false,
+    "ordered": 2505
   }
 }
