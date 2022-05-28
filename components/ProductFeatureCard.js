@@ -15,7 +15,7 @@ export default function ProductFeatureCard({ product }) {
             return (
               <li key={ Object.keys(feature)[0] } className="flex items-center mb-2">
                 <span className="mr-6">
-                  <svg width="18" height="14" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="white"></path>
                   </svg>
                   {/* {!feature.available && (<svg width="18" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" stroke="currentColor" stroke-width="2">

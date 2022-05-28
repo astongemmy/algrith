@@ -1,0 +1,104 @@
+{
+  "homepage": {
+    "id": "homepage",
+    "tag": "homepage #3299803",
+    "title": "Landing Page",
+    "price": 124.99,
+    "currency": {
+      "name": "dollars",
+      "symbol": "$"
+    },
+    "features": [
+      {
+        "complete_files": "Complete files"
+      },
+      {
+        "cloud_storage": "50GB cloud storage"
+      },
+      {
+        "team_members": "20 team members"
+      },
+      {
+        "board_editors": "3 anonymous board editors"
+      },
+      {
+        "uptime": "99.9% uptime"
+      }
+    ],
+    "gallery": [
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png"
+    ],
+    "active": true
+  },
+  "corporate": {
+    "id": "corporate",
+    "tag": "corporate #1029832",
+    "title": "Corporate Website",
+    "price": 650.99,
+    "currency": {
+      "name": "dollars",
+      "symbol": "$"
+    },
+    "features": [
+      {
+        "complete_files": "Complete files"
+      },
+      {
+        "cloud_storage": "100GB cloud storage"
+      },
+      {
+        "team_members": "40 team members"
+      },
+      {
+        "board_editors": "6 anonymous board editors"
+      },
+      {
+        "uptime": "99.9% uptime"
+      }
+    ],
+    "gallery": [
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png"
+    ],
+    "active": false
+  },
+  "business": {
+    "id": "business",
+    "tag": "business #4302564",
+    "title": "Business Website",
+    "price": 2400.99,
+    "currency": {
+      "name": "dollars",
+      "symbol": "$"
+    },
+    "features": [
+      {
+        "complete_files": "Complete files"
+      },
+      {
+        "cloud_storage": "200GB cloud storage"
+      },
+      {
+        "team_members": "100 team members"
+      },
+      {
+        "board_editors": "Unlimited anonymous board editors"
+      },
+      {
+        "uptime": "99.9% uptime"
+      }
+    ],
+    "gallery": [
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png",
+      "../images/products/ph-photo1.png"
+    ],
+    "active": false
+  }
+}
