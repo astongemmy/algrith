@@ -118,7 +118,7 @@ export default function Product({ data }) {
                     </div>
                   </div>
 
-                  <div className="xl:my-10 px-4 py-5 sm:p-12 sm:pt-6 bg-white space-y-6 rounded-lg">
+                  <div className="mb-8 xl:my-10 px-4 py-5 sm:p-12 sm:pt-6 bg-white space-y-6 rounded-lg">
                     <h2 className="mb-4 text-3xl md:text-4xl font-heading font-medium">
                       Order requirements
                     </h2>
@@ -149,7 +149,7 @@ export default function Product({ data }) {
                           </svg>
                           Select theme colors
                         </label>
-                        <div className="mt-1 flex flex-wrap rounded-md pt-10">
+                        <div className="mt-1 flex flex-wrap rounded-md pt-3 lg:pt-10">
                           {colors.map((color) => {
                             return (
                               <>
