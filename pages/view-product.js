@@ -11,7 +11,7 @@ import RightNav from '../components/RightNav'
 import ThumbInner from '../components/ThumbInner'
 
 export default function PackageView() {
-  const [active_product, setActiveProduct] = useState('landing_page')
+  const [active_product, setActiveProduct] = useState('homepage')
   const { viewport } = useViewport();
   const breadcrumbs = [
     { text: 'Products', url: '/products' },
