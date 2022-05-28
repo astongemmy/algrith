@@ -3,7 +3,7 @@ import React from "react"
 export default function ProductFeatureCard({ product }) {
   return (
     <div className="w-full px-3 md:px-0 mb-8 lg:mb-0">
-      <div className="px-8 md:px-6 py-6 md:py-8 bg-blue-500 rounded-3xl">
+      <div className="px-8 md:px-6 py-6 md:py-8 bg-green-500 rounded-3xl">
         <div className="pb-4 mb-4 border-b border-blueGray-300">
           <div className="flex justify-between items-center px-3">
             <h3 className="text-xl text-white font-bold font-heading">Features</h3>

@@ -26,7 +26,7 @@ export default class Header extends React.Component {
                     
                     <Link href="/">
                         <a id="brand-title" className="transform origin-left scale-65 lg:scale-100 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000">
-                            <img src="./images/logo/algrith-logo-dark-transparent.png" alt="brand-logo" />                            
+                            <img src="../images/logo/algrith-logo-dark-transparent.png" alt="brand-logo" />                            
                         </a>
                     </Link>
 

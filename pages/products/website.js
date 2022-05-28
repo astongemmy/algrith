@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
-import useViewport from '../hooks/useViewport'
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import BreadCrumbs from '../components/BreadCrumbs'
-import ButtonGroup from '../components/ButtonGroup'
-import ProductFeatureCard from '../components/ProductFeatureCard'
 import ImageGallery from 'react-image-gallery';
-import LeftNav from '../components/LeftNav'
-import RightNav from '../components/RightNav'
-import ThumbInner from '../components/ThumbInner'
+import useViewport from '../../hooks/useViewport'
+import Layout from '../../components/Layout'
+import BreadCrumbs from '../../components/BreadCrumbs'
+import ButtonGroup from '../../components/ButtonGroup'
+import ProductFeatureCard from '../../components/ProductFeatureCard'
+import LeftNav from '../../components/LeftNav'
+import RightNav from '../../components/RightNav'
+import ThumbInner from '../../components/ThumbInner'
 
 export default function PackageView() {
   const [active_product, setActiveProduct] = useState('homepage')
   const { viewport } = useViewport();
   const breadcrumbs = [
     { text: 'Products', url: '/products' },
-    { text: 'Website', url: '/website' }
+    { text: 'Website', url: '/products/website' }
   ];
   const buttons = [
     { id: 'homepage', text: 'Homepage', active: true },
@@ -37,10 +37,10 @@ export default function PackageView() {
         { 'uptime': '99.9% uptime' },
       ],
       gallery: [
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
       ]
     },
     corporate: {
@@ -57,10 +57,10 @@ export default function PackageView() {
         { 'uptime': '99.9% uptime' },
       ],
       gallery: [
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
       ]
     },
     business: {
@@ -77,10 +77,10 @@ export default function PackageView() {
         { 'uptime': '99.9% uptime' },
       ],
       gallery: [
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
-        "./images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
       ]
     }
   }
@@ -95,7 +95,7 @@ export default function PackageView() {
     <Layout>
       <Head>
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
-        <title> Product | Algrith </title>
+        <title> Products | Algrith </title>
       </Head>        
       <main>
         <section className="w-full pt-12 pb-24 px-4 md:px-10 lg:px-12 xl:px-28 rounded-b-10xl overflow-hidden">
@@ -135,8 +135,8 @@ export default function PackageView() {
                           { products[active_product].title }
                         </h2>
                         <p className="flex items-center mb-6">
-                          <span className="mr-2 text-sm text-blue-500 font-medium">{ products[active_product].currency.symbol }</span>
-                          <span className="text-3xl text-blue-500 font-medium"> { products[active_product].price } </span>
+                          <span className="mr-2 text-sm text-green-500 font-medium">{ products[active_product].currency.symbol }</span>
+                          <span className="text-3xl text-green-500 font-medium"> { products[active_product].price } </span>
                         </p>
                         <ProductFeatureCard product={ products[active_product] }/>
                       </div>
@@ -309,7 +309,7 @@ export default function PackageView() {
                   
                   <div className="flex flex-wrap -mx-2 mb-12">
                     <div className="w-full md:w-2/3 px-2 mb-2 md:mb-0">
-                      <a className="block py-4 px-2 leading-8 font-heading font-medium tracking-tighter text-xl text-white text-center bg-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-blue-600 rounded-xl" href="#">
+                      <a className="block py-4 px-2 leading-8 font-heading font-medium tracking-tighter text-xl text-white text-center bg-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 hover:bg-green-600 rounded-xl" href="#">
                         Checkout ($750.87)
                       </a>
                     </div>
