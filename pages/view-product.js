@@ -15,16 +15,17 @@ export default function PackageView() {
   const { viewport } = useViewport();
   const breadcrumbs = [
     { text: 'Products', url: '/products' },
-    { text: 'Landing Page', url: '/landing-page' }
+    { text: 'Website', url: '/website' }
   ];
   const buttons = [
-    { id: 'Homepage', text: 'Homepage', active: true },
-    { id: 'corporate_website', text: 'Corporate', active: false },
-    { id: 'business_website', text: 'Business', active: false },
+    { id: 'homepage', text: 'Homepage', active: true },
+    { id: 'corporate', text: 'Corporate', active: false },
+    { id: 'business', text: 'Business', active: false },
   ]
   const products = {
-    landing_page: {
-      id: 'Landing #3299803',
+    homepage: {
+      id: 'homepage',
+      tag: 'homepage #3299803',
       title: 'Landing Page',
       price: 124.99,
       currency: { name: 'dollars', symbol: '$' },
@@ -42,8 +43,9 @@ export default function PackageView() {
         "./images/products/ph-photo1.png",
       ]
     },
-    corporate_website: {
-      id: 'Corporate #1029832',
+    corporate: {
+      id: 'corporate',
+      tag: 'corporate #1029832',
       title: 'Corporate Website',
       price: 650.99,
       currency: { name: 'dollars', symbol: '$' },
@@ -61,8 +63,9 @@ export default function PackageView() {
         "./images/products/ph-photo1.png",
       ]
     },
-    business_website: {
-      id: 'business #4302564',
+    business: {
+      id: 'business',
+      tag: 'business #4302564',
       title: 'Business Website',
       price: 2400.99,
       currency: { name: 'dollars', symbol: '$' },
@@ -81,27 +84,12 @@ export default function PackageView() {
       ]
     }
   }
-  const images = [
-    {
-      original: "./images/products/ph-photo1.png",
-      thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
-    },{
-      original: "./images/products/ph-photo1.png",
-      thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
-    },
-    {
-      original: "./images/products/ph-photo1.png",
-      thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
-    },
-    {
-      original: "./images/products/ph-photo1.png",
-      thumbnail: "./images/products/ph-photo1.png",
-      originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover",
-    },
-  ]
+  const product_gallery = products[active_product].gallery.map((image) => {
+    const sample = { originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover"}
+    sample.original = image
+    sample.thumbnail = image
+    return sample
+  })
   
   return (
     <Layout>
@@ -117,11 +105,12 @@ export default function PackageView() {
               <div className="w-full md:w-1/2 px-6 md:px-8 lg:px-4 mb-2 lg:mb-0">
                 <div className="rounded-lg bg-white p-2 md:pl-0 border flex -mx-4 flex-wrap items-center justify-between lg:justify-start lg:items-start">
                   <div className="rounded-lg w-full overflow-hidden">
-                    <ImageGallery 
+                    <ImageGallery
+                      autoPlay
                       lazyLoad
                       showFullscreenButton={ false } 
                       showPlayButton={ false } 
-                      items={ images } 
+                      items={ product_gallery } 
                       thumbnailPosition={ !['sm'].includes(viewport) ? 'left' : 'bottom' }
                       renderLeftNav={(onClick, disabled) => LeftNav(onClick, disabled)}
                       renderRightNav={(onClick, disabled) => RightNav(onClick, disabled)}
