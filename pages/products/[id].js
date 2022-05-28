@@ -19,7 +19,7 @@ export default function Product({ data }) {
   const defaultActive = Object.values(products).filter((product) => product.active)[0]
   const [active_product, setActiveProduct] = useState(defaultActive.id)
   const product_gallery = products[active_product].gallery.map((image) => {
-    const sample = { originalClass: "overflow-hidden w-full h-96 md:h-144 rounded-lg object-center object-cover"}
+    const sample = { originalClass: "overflow-hidden w-full h-96 lg:h-144 rounded-lg object-center object-cover"}
     sample.original = image
     sample.thumbnail = image
     return sample
@@ -288,7 +288,7 @@ export default function Product({ data }) {
                   <div className="flex flex-wrap -mx-2 mb-12">
                     <div className="w-full md:w-2/3 px-2 mb-2 md:mb-0">
                       <a className="block py-4 px-2 leading-8 font-heading font-medium tracking-tighter text-xl text-white text-center bg-green-500 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 hover:bg-green-600 rounded-xl" href="#">
-                        Checkout ($750.87)
+                        Checkout ({`${products[active_product].currency.symbol} ${products[active_product].price}` })
                       </a>
                     </div>
                     <div className="w-full md:w-1/3 px-2">
