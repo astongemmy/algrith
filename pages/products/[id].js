@@ -58,17 +58,19 @@ export default function Product({ data }) {
                 <div className="w-full">
                   <div className="w-full flex flex-col xl:flex-row mb-6">
                     <div className="w-full xl:w-3/5 md:pl-4">
-                      <ButtonGroup getSelected={ (selected) => setActiveProduct(selected) } defaultSelected={ active_product } type={`products.${data.id}`} />
-                      <div className="">
-                        <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { products[active_product].id } </span>
-                        <h2 className="mt-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
-                          { products[active_product].title }
-                        </h2>
-                        <p className="flex items-center mb-6">
-                          <span className="mr-2 text-sm text-green-500 font-medium">{ products[active_product].currency.symbol }</span>
-                          <span className="text-3xl text-green-500 font-medium"> { products[active_product].price } </span>
-                        </p>
-                        <ProductFeatureCard product={ products[active_product] }/>
+                      <div className="overflow-hidden bg-white border rounded-2xl pb-8 my-8 md:mt-0">
+                        <ButtonGroup getSelected={ (selected) => setActiveProduct(selected) } defaultSelected={ active_product } type={`products.${data.id}`} />
+                        <div className="px-6">
+                          <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { products[active_product].id } </span>
+                          <h2 className="my-2 text-3xl md:text-4xl font-heading font-medium">
+                            { products[active_product].title }
+                          </h2>
+                          <p className="flex items-center mb-4">
+                            <span className="mr-2 text-sm text-green-500 font-medium">{ products[active_product].currency.symbol }</span>
+                            <span className="text-3xl text-green-500 font-medium"> { products[active_product].price } </span>
+                          </p>
+                          <ProductFeatureCard product={ products[active_product] }/>
+                        </div>
                       </div>
                     </div>
 
