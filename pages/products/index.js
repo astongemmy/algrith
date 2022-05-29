@@ -25,8 +25,8 @@ export default function Products({ Products }) {
                 {Products.map((product) => {
                   return (
                     <div>
-                      <h2 className="capitalize my-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
-                        { product.slug } products
+                      <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
+                        <span className="capitalize">{ product.slug.slice(0,-1) }</span> products
                       </h2>                      
                       <div className="flex flex-wrap overflow-hidden rounded-2xl md:py-8 md:my-8 md:mt-0">
                         {Object.values(product.packages).map((item) => <ProductPackageCard item={ item }/>)}
