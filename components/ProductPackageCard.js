@@ -1,7 +1,8 @@
+import Link from "next/link"
 import React from "react"
 import ProductRating from "./ProductRating"
 
-export default function ProductPackageCard({ item }) {
+export default function ProductPackageCard({ item, slug }) {
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -64,9 +65,11 @@ export default function ProductPackageCard({ item }) {
           })}
         </ul>
         <div className="text-center mt-8">
-          <a className="text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white" href="#">
-            Buy now
-          </a>
+          <Link href={`/products/${slug}/?package_name=${item.id}`}>
+            <a className="text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white">
+              Buy now
+            </a>
+          </Link>
         </div>
       </div>
     </div>

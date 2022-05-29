@@ -29,7 +29,7 @@ export default function Products({ Products }) {
                         <span className="capitalize">{ product.slug.slice(0,-1) }</span> products
                       </h2>                      
                       <div className="flex flex-wrap overflow-hidden rounded-2xl md:py-8 md:my-8 md:mt-0">
-                        {Object.values(product.packages).map((item) => <ProductPackageCard item={ item }/>)}
+                        {Object.values(product.packages).map((item) => <ProductPackageCard item={ item } slug={product.slug} />)}
                       </div>
                     </div>
                   )

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import ImageGallery from 'react-image-gallery';
 import useViewport from '../../hooks/useViewport'
 // Mock database for getting initial props
@@ -20,9 +21,13 @@ import CheckoutButton from '../../components/CheckoutButton';
 
 export default function Product({ Product }) {
   const { viewport } = useViewport();
-  const [selectedPackage, setSelectedPackage] = useState(Product.selected)
+  const router = useRouter()
+  const activePackage = router.query.package_name ? Object.values(Product.packages).filter((product) => {
+    return product.id == router.query.package_name
+  })[0] : Product.selected
+  const [selectedPackage, setSelectedPackage] = useState(activePackage)
   useEffect(() => {
-    setSelectedPackage(Product.selected)
+    setSelectedPackage(activePackage)
   },[Product])
   const setPakageGallery = (gallery) => {
     return gallery.map((image) => {
