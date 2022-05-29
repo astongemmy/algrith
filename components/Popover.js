@@ -1,14 +1,16 @@
-import React from "react";
+import Link from "next/link";
 
-function Popover() {
+function Popover({ items, toggle }) {
   return (
     <>
-      <div id="popover" className="transition duration-150 ease-in-out -mt-20 absolute top-0 left-0 ml-20 w-full sm:w-1/2">
+      {/* <div id="popover" className="transition duration-150 ease-in-out -mt-20 absolute top-0 left-0 ml-20 w-full sm:w-1/2"> */}
+      {toggle == true && <div id="popover" className="transition duration-150 ease-in-out absolute top-6 left-0 w-full sm:w-auto">
         <div className="w-full bg-white rounded shadow-2xl">
-          <div className="relative bg-gray-200 rounded-t py-4 px-4 xl:px-8">
-            <svg className="absolute -ml-5 -mb-10 left-0 bottom-0" width="30px" height="30px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+          <div className="mt-8 relative bg-gray-200 rounded-t py-4 px-4 xl:px-8">
+          {/* <svg className="absolute -ml-5 -mb-10 left-0 bottom-0" width="30px" height="30px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"> */}
+            <svg className="text-gray-200 absolute rotate-90 -translate-x-2/4 left-2/4 -top-6" width="30px" height="30px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
               <g id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-                <g id="Tooltips-" transform="translate(-874.000000, -1029.000000)" fill="#FFFFFF">
+                <g id="Tooltips-" transform="translate(-874.000000, -1029.000000)" fill="currentColor">
                   <g id="Group-3-Copy-16" transform="translate(850.000000, 975.000000)">
                     <g id="Group-2" transform="translate(24.000000, 0.000000)">
                       <polygon id="Triangle" transform="translate(4.500000, 62.000000) rotate(-90.000000) translate(-4.500000, -62.000000) " points="4.5 57.5 12.5 66.5 -3.5 66.5" />
@@ -17,10 +19,36 @@ function Popover() {
                 </g>
               </g>
             </svg>
-            <p className="text-base text-gray-800 font-normal leading-normal tracking-normal opacity-50">Add person by name or title</p>
+            <Link href="/products">
+              <a className="text-lg text-gray-800 font-normal leading-normal tracking-normal opacity-50">
+                All products
+              </a>
+            </Link>
+            {/* <p className="text-base text-gray-800 font-normal leading-normal tracking-normal opacity-50">Add person by name or title</p> */}
           </div>
           <div className="w-full h-full px-4 xl:px-8 pt-3 pb-5">
-            <div className="flex justify-between items-center">
+            <ul className="w-full">
+              {items.map((anchor) => {
+                return (
+                  <li key={ anchor.href } className="flex items-center py-4">
+                    {anchor.icon && <i className={ anchor.icon }></i>}
+                    <Link href={ anchor.href }>
+                      <a className="ml-4 w-full text-gray-600 font-normal text-lg leading-3">
+                        { anchor.text }
+                      </a>
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+
+
+
+
+
+
+
+            {/* <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <div className="mr-4 w-12 h-12 rounded shadow">
                   <img className="w-full h-full overflow-hidden object-cover object-center rounded" src="https://tuk-cdn.s3.amazonaws.com/assets/components/popovers/p_1_0.png" alt="avatar" />
@@ -40,8 +68,8 @@ function Popover() {
                   <polyline points="6 9 12 15 18 9" />
                 </svg>
               </div>
-            </div>
-            <div className="py-6 flex justify-between items-center">
+            </div> */}
+            {/* <div className="py-6 flex justify-between items-center">
               <div className="flex items-center">
                 <div className="mr-4 w-12 h-12 rounded shadow">
                   <img className="w-full h-full overflow-hidden object-cover object-center rounded" src="https://tuk-cdn.s3.amazonaws.com/assets/components/popovers/p_1_1.png" alt="avatar" />
@@ -99,10 +127,10 @@ function Popover() {
                 <input id="link" className="pr-24 text-gray-600 bg-gray-100 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-12 text-sm border-gray-300 rounded border" defaultValue="https://alphad.co/Q4XY3HWXN95" />
                 <button className="absolute right-0 top-0 transition duration-150 ease-in-out hover:bg-indigo-600 focus:outline-none bg-indigo-700 rounded-r text-white px-5 h-10 text-sm">Copy</button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 }

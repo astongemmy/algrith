@@ -3,26 +3,22 @@ import Link from 'next/link'
 
 export default class Footer extends React.Component {
 
-    constructor() {
-        super()
-    }
-
     render() {
 
         return (
 
             <footer className="relative bg-gray-100">
-                
+
                 <div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-32 pb-12">
-                        
+
                     <div className="w-full md:w-1/3 pt-4">
 
                         <h1 className="p-4 m-4 text-navyblue uppercase text-xl font-bold">
                             <i className="far fa-heart text-green-300 mr-4"></i> Featured
                         </h1>
-                        
+
                         <div className="relative mx-4 text-xl">
-                                
+
                             <details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
                                 <summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
                                     <span className="ml-4">Data for scientists</span>
@@ -90,9 +86,9 @@ export default class Footer extends React.Component {
                                     </Link>
                                 </li>
                                 <li className="p-4">
-                                    <Link href="/products/websites">
+                                    <Link href="/products">
                                         <a className="text-gray-600">Products</a>
-                                    </Link>                                    
+                                    </Link>
                                 </li>
                                 <li className="p-4">
                                     <Link href="/contact-us">
@@ -101,16 +97,11 @@ export default class Footer extends React.Component {
                                 </li>
                                 <li className="p-4">
                                     <Link href="/">
-                                        <a className="text-gray-600">Support Us</a>
-                                    </Link>
-                                </li>
-                                <li className="p-4">
-                                    <Link href="/">
                                         <a className="text-gray-600">FAQ</a>
                                     </Link>
                                 </li>
                             </ul>
-                            
+
                         </div>
 
                     </div>
@@ -118,12 +109,12 @@ export default class Footer extends React.Component {
                     <div className="w-full md:w-1/3 pt-4">
 
                         <h1 className="p-4 m-4 text-navyblue uppercase font-bold text-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="mr-4 inline text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                        </svg> Contact Us
+                            <svg xmlns="http://www.w3.org/2000/svg" className="mr-4 inline text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                            </svg> Contact Us
                         </h1>
 
-                        <div className="relative mx-4 text-xl">                       
+                        <div className="relative mx-4 text-xl">
 
                             <div className="relative">
                                 <div className="px-4">
@@ -167,7 +158,7 @@ export default class Footer extends React.Component {
                                 </div>
 
                             </div>
-                            
+
                         </div>
 
                     </div>
@@ -175,13 +166,13 @@ export default class Footer extends React.Component {
                 </div>
 
                 <a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-0 py-8 text-xl bg-gray-800 text-white">
-                    © Copyright <span className="ml-1 text-green-400"> Algrith { new Date().getFullYear() } </span>
+                    © Copyright <span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
                     {/* <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" /> */}
                 </a>
-                
+
             </footer>
-            
+
         )
     }
-    
+
 }

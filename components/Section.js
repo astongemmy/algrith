@@ -1,5 +1,5 @@
 import React from 'react'
-import TestimonialCard from '../TestimonialCard';
+import TestimonialCard from './TestimonialCard';
 
 export default class Section extends React.Component {    
   constructor() { super() }

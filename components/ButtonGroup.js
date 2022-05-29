@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ButtonGroup({ defaultSelected, getSelected, type }) {
   const [selected, setSelected] = useState(defaultSelected)
+  useEffect(() => {
+    setSelected(defaultSelected)
+  },[defaultSelected])
   const toggleSelected = (val) => { getSelected(val); setSelected(val) }
   const types = {
     products: {

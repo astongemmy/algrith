@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductSearch from '../common/ProductSearch'
+import ProductSearch from '../ProductSearch'
 
 export default class Intro extends React.Component {
     constructor() {

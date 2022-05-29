@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Header from './common/Header'
-import Navbar from './common/Navbar'
-import Footer from './common/Footer'
+import Header from './Header'
+import Navbar from './Navbar'
+import Footer from './Footer'
 import DynamicCssGenerator from './DynamicCssGenerator'
 
 export default class Layout extends React.Component {    

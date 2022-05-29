@@ -1,6 +1,7 @@
 import React from "react"
+import ProductRating from "./ProductRating"
 
-export default function ProductFeatureCard({ product }) {
+export default function ProductPackageCard({ item }) {
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -21,16 +22,32 @@ export default function ProductFeatureCard({ product }) {
   }
 
   return (
-    <div className="w-full px-3 md:px-0 mb-8 lg:mb-0">
-      <div className="bg-white">
+    <div className="w-full md:w-1/3 px-0 md:px-2 xl:px-10 mb-8 lg:mb-0">
+      <div className="bg-white p-6 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border">
+        <div className="mb-2">
+          <div className="flex flex-wrap justify-between">
+            <h1 className="text-2xl text-green-500 font-bold font-heading">
+              { item.title }
+              <span className="block text-sm md:text-xs lg:text-sm mt-2">
+                <ProductRating />
+              </span>
+            </h1>
+            <p className="text-2xl md:text-sm lg:text-2xl text-red-500 font-bold">
+              {` ${item.currency.symbol} ${item.price} `}
+            </p>
+          </div>
+        </div>
         <div className="pb-4 mb-4 border-b">
           <div className="flex justify-between items-center">
             <h3 className="text-xl text-black font-bold font-heading">Features</h3>
-            <p className="text-lg text-red-500 font-bold"> { (formatUnit(product.ordered)) } <span className="text-gray-600"> orders</span> </p>
+            <p className="text-lg text-gray-600 font-bold">
+              { (formatUnit(item.ordered)) }
+              <span className="text-gray-600"> orders</span>
+            </p>
           </div>
         </div>
         <ul className="text-lg text-green-500 mb-6">
-          {product.features.map((feature) => {
+          {item.features.map((feature) => {
             return (
               <li key={ Object.keys(feature)[0] } className="flex items-center mb-2">
                 <span className="mr-6">
@@ -46,7 +63,7 @@ export default function ProductFeatureCard({ product }) {
             )
           })}
         </ul>
-        <div className="text-center">
+        <div className="text-center mt-8">
           <a className="text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white" href="#">
             Buy now
           </a>

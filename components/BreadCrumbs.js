@@ -4,6 +4,7 @@ import React from 'react'
 export default function BreadCrumbs({ page }) {
   const breadcrumbs = {
     products: {
+      index: [ { text: 'Products', url: '/products'} ],
       websites: [
         { text: 'Products', url: '/products' },
         { text: 'Websites', url: '/products/websites' }

@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
-import Outline from '../components/common/Outline'
+import Outline from '../components/Outline'
 
 export default class About extends React.Component {  
     constructor() { super() }
