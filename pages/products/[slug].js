@@ -28,7 +28,7 @@ export default function Product({ Product }) {
   const [selectedPackage, setSelectedPackage] = useState(activePackage)
   useEffect(() => {
     setSelectedPackage(activePackage)
-  },[Product])
+  },[Product, router])
   const setPakageGallery = (gallery) => {
     return gallery.map((image) => {
       const sample = { originalClass: "overflow-hidden w-full h-96 lg:h-144 rounded-lg object-center object-cover" }
