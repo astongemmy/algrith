@@ -23,7 +23,7 @@ export default function ProductPackageCard({ item }) {
 
   return (
     <div className="w-full md:w-1/3 px-0 md:px-2 xl:px-10 mb-8 lg:mb-0">
-      <div className="bg-white p-6 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border">
+      <div className="bg-white px-6 py-8 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border">
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
