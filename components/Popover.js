@@ -4,7 +4,7 @@ function Popover({ items, toggle }) {
   return (
     <>
       {/* <div id="popover" className="transition duration-150 ease-in-out -mt-20 absolute top-0 left-0 ml-20 w-full sm:w-1/2"> */}
-      {toggle == true && <div id="popover" className="transition duration-150 ease-in-out absolute top-6 left-0 w-full sm:w-auto">
+      {toggle == true && <div id="popover" className="transition duration-150 ease-in-out absolute top-8 left-0 w-full sm:w-auto z-10">
         <div className="w-full bg-white rounded shadow-2xl">
           <div className="mt-8 relative bg-gray-200 rounded-t py-4 px-4 xl:px-8">
           {/* <svg className="absolute -ml-5 -mb-10 left-0 bottom-0" width="30px" height="30px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"> */}
