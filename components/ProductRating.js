@@ -2,7 +2,7 @@ import React from "react"
 
 export default function ProductRating({ }) {
   return (
-    <div className="flex mb-6 items-center">
+    <div className="flex items-center">
       <div className="inline-flex mr-4 items-center">
         <button className="mr-1">
           <svg className="text-yellow-300" width="11" height="11" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

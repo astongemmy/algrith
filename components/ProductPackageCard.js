@@ -29,7 +29,7 @@ export default function ProductPackageCard({ item, slug }) {
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
               { item.title }
-              <span className="block text-sm md:text-xs lg:text-sm mt-2">
+              <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
                 <ProductRating />
               </span>
             </h1>

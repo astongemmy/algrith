@@ -18,6 +18,7 @@ import ProductDescription from '../../components/ProductDescription';
 import OrderRequirements from '../../components/OrderRequirements';
 import Link from 'next/link';
 import CheckoutButton from '../../components/CheckoutButton';
+import ReviewCard from '../../components/ReviewCard';
 
 export default function Product({ Product }) {
   const { viewport } = useViewport();
@@ -71,6 +72,7 @@ export default function Product({ Product }) {
                     {/* <p className="text-sm text-gray-300">Roll over image to zoom in</p> */}
                   </div>
                 </div>
+                <ReviewCard />
               </div>
               <div className="w-full md:w-1/2 px-2 md:px-4 xl:px-4">
                 <div className="w-full">
@@ -98,7 +100,9 @@ export default function Product({ Product }) {
                         <h2 className="capitalize mb-4 text-3xl md:text-4xl font-heading font-medium">
                           { Product.type } Products
                         </h2>
-                        <ProductRating />
+                        <span className="inline-block mb-4">
+                          <ProductRating />
+                        </span>
                         <ProductDescription />
                       </div>                  
                     </div>
