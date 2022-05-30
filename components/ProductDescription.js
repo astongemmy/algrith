@@ -5,7 +5,7 @@ export default function ProductDescription({ product }) {
   return (
     <div className="hidden lg:block my-8 xl:mt-0 xl:w-2/5 pl-2 xl:pl-8">
       <h2 className="capitalize mb-2 text-3xl md:text-4xl font-heading font-medium">
-        { product.type } Products
+        { product.name } Products
       </h2>
       <span className="inline-block mb-4">
         <ProductRating />
