@@ -51,20 +51,11 @@ export default function Product({ Product }) {
         <title> {Product.type[0].toUpperCase().concat(Product.type.slice(1))} Products | Algrith </title>
       </Head>        
       <main>
-        <section className="w-full pt-4 md:pt-12 pb-24 px-4 md:px-10 lg:px-12 xl:px-28 rounded-b-10xl overflow-hidden">
+        <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-4 md:px-10 lg:px-12 xl:px-28 overflow-hidden">
           <div className="px-4 mx-auto">
             <div className="flex flex-wrap">
               <BreadCrumbs page={`products.${Product.type}`} />
-
-
-
-
-
-
-
-
-              <div className="w-full md:w-1/2 bg-red-100 lg:pr-0 xl:pr-10">
-                
+              <div className="w-full md:w-1/2 bg-red-100 lg:pr-0 xl:pr-10">                
                 <div className="overflow-hidden rounded-lg bg-white p-2 mb-8 md:pl-0 border">
                   <ImageGallery
                     autoPlay
@@ -78,8 +69,6 @@ export default function Product({ Product }) {
                     renderThumbInner={(item) => ThumbInner(item)}
                   />
                 </div>
-
-
                 <div className="md:hidden overflow-hidden bg-white border rounded-2xl pb-8 my-8">
                   <ButtonGroup getSelected={ (selected) => toggleSelectedPackage(selected) } defaultSelected={ selectedPackage.id } type={`products.${Product.type}`} />
                   <div className="px-6">
@@ -94,21 +83,11 @@ export default function Product({ Product }) {
                     <PackageFeaturesCard item={ selectedPackage }/>
                   </div>
                 </div>
-
                 <PackageDescription item={ selectedPackage } />
                 <Reviews reviews={ selectedPackage.reviews } />
               </div>
 
-
-
-
-
-
-
-
               <div className="md:w-1/2 bg-blue-100 md:pl-10 xl:pl-0">
-                
-                
                 <div className="flex flex-col xl:flex-row mb-8">
                   <div className="hidden md:block xl:w-3/5 overflow-hidden bg-white border rounded-2xl pb-8">
                     <ButtonGroup getSelected={ (selected) => toggleSelectedPackage(selected) } defaultSelected={ selectedPackage.id } type={`products.${Product.type}`} />
@@ -136,9 +115,7 @@ export default function Product({ Product }) {
                     <ProductDescription />  
                   </div>
                 </div>
-
-                <OrderRequirements />
-                  
+                <OrderRequirements />                  
                 <div className="flex flex-wrap -mx-2 mb-12">
                   <CheckoutButton item={ selectedPackage } />
                   <div className="w-full md:w-1/3 px-2">
@@ -169,8 +146,8 @@ export default function Product({ Product }) {
                     </span>
                   </button>
                 </div>
-
               </div>
+
             </div>
           </div>
         </section>
