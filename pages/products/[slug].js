@@ -16,9 +16,9 @@ import ThumbInner from '../../components/ThumbInner'
 import ProductRating from '../../components/ProductRating';
 import ProductDescription from '../../components/ProductDescription';
 import OrderRequirements from '../../components/OrderRequirements';
-import Link from 'next/link';
 import CheckoutButton from '../../components/CheckoutButton';
-import ReviewCard from '../../components/ReviewCard';
+import Reviews from '../../components/Reviews';
+import PackageDescription from '../../components/PackageDescription';
 
 export default function Product({ Product }) {
   const { viewport } = useViewport();
@@ -72,7 +72,8 @@ export default function Product({ Product }) {
                     {/* <p className="text-sm text-gray-300">Roll over image to zoom in</p> */}
                   </div>
                 </div>
-                <ReviewCard />
+                <PackageDescription item={ selectedPackage } />
+                <Reviews reviews={ selectedPackage.reviews } />
               </div>
               <div className="w-full md:w-1/2 px-2 md:px-4 xl:px-4">
                 <div className="w-full">
@@ -95,7 +96,7 @@ export default function Product({ Product }) {
                     </div>
 
                     
-                    <div className="mt-0 lg:mt-8 xl:mt-0 w-full xl:w-2/5 pl-8">
+                    <div className="mt-0 lg:mt-8 xl:mt-0 w-full xl:w-2/5 pl-2 md:pl-8">
                       <div className="mb-6">
                         <h2 className="capitalize mb-4 text-3xl md:text-4xl font-heading font-medium">
                           { Product.type } Products

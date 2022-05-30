@@ -3,6 +3,7 @@
     "id": "homepage",
     "tag": "homepage #3299803",
     "title": "Landing Page",
+    "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
     "price": 124.99,
     "currency": {
       "name": "dollars",
@@ -31,6 +32,18 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
+    "reviews": {
+      "rating": 5,
+      "count": 1259,
+      "date": "Added 2 months ago",
+      "reviews": [
+        {
+          "name": "Faustina H. Fawn",
+          "avatar": "/images/reviews/user.png",
+          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris."
+        }
+      ]
+    },
     "active": true,
     "ordered": 524
   },
@@ -38,6 +51,7 @@
     "id": "corporate",
     "tag": "corporate #1029832",
     "title": "Corporate Website",
+    "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
     "price": 650.99,
     "currency": {
       "name": "dollars",
@@ -66,6 +80,18 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
+    "reviews": {
+      "rating": 5,
+      "count": 1259,
+      "date": "Added 2 months ago",
+      "reviews": [
+        {
+          "name": "Faustina H. Fawn",
+          "avatar": "/images/reviews/user.png",
+          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris."
+        }
+      ]
+    },
     "active": false,
     "ordered": 3700
   },
@@ -73,6 +99,7 @@
     "id": "business",
     "tag": "business #4302564",
     "title": "Business Website",
+    "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
     "price": 2400.99,
     "currency": {
       "name": "dollars",
@@ -101,6 +128,18 @@
       "../images/products/ph-photo1.png",
       "../images/products/ph-photo1.png"
     ],
+    "reviews": {
+      "rating": 5,
+      "count": 1259,
+      "date": "Added 2 months ago",
+      "reviews": [
+        {
+          "name": "Faustina H. Fawn",
+          "avatar": "/images/reviews/user.png",
+          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris."
+        }
+      ]
+    },
     "active": false,
     "ordered": 2505
   }
