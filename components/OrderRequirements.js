@@ -1,16 +1,16 @@
 import React, { useState } from "react"
+import CheckoutButton from "./CheckoutButton"
 import Color from "./Color"
+import WishlistButton from "./WishlistButton"
 
-export default function OrderRequirements({ }) {
+export default function OrderRequirements({ selectedPackage }) {
   const [domain_state, setDomainState] = useState('new')
-  
+
   return (
     <div className="bg-white border rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
-      
       <h2 className="text-3xl md:text-4xl font-heading font-medium">
         Order requirements
       </h2>
-      
       <div className="grid grid-cols-4 gap-6 pt-4">
         <div className="col-span-4 xl:col-span-2">
           <label htmlFor="company_name" className="block text-lg font-medium text-gray-700">
@@ -119,7 +119,6 @@ export default function OrderRequirements({ }) {
         </div>}
       </div>
 
-
       <div className="py-4">
         <label htmlFor="description" className="block text-lg font-medium text-gray-700">
           Describe your company/business
@@ -137,6 +136,31 @@ export default function OrderRequirements({ }) {
         <p className="mt-2 text-lg text-gray-500">
           Include other usefull information that will help us work better.
         </p>
+      </div>
+
+      <div className="flex flex-wrap mt-2 lg:mt-8 mb-8 lg:mb-12">
+        <CheckoutButton item={selectedPackage} />
+        <WishlistButton />
+      </div>
+
+      <div className="mb-8">
+        <h4 className="mb-6 font-heading font-medium">More information</h4>
+        <button className="flex w-full pl-6 lg:pl-12 pr-6 py-4 mb-4 justify-between items-center leading-7 rounded-2xl border-2 border-blueGray-200 hover:border-blueGray-300">
+          <h3 className="text-lg font-heading font-medium">Shipping &amp; returns</h3>
+          <span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4594 0.289848C10.8128 -0.096616 11.3841 -0.096616 11.7349 0.289848C12.0871 0.676312 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880363 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.096616 1.53966 0.289848L6.00147 4.81927L10.4594 0.289848Z" fill="black"></path>
+            </svg>
+          </span>
+        </button>
+        <button className="flex w-full pl-6 lg:pl-12 pr-6 py-4 justify-between items-center leading-7 rounded-2xl border-2 border-blueGray-200 hover:border-blueGray-300">
+          <h3 className="text-lg font-heading font-medium">Product details</h3>
+          <span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.4594 0.289848C10.8128 -0.096616 11.3841 -0.096616 11.7349 0.289848C12.0871 0.676312 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880363 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.096616 1.53966 0.289848L6.00147 4.81927L10.4594 0.289848Z" fill="black"></path>
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   )

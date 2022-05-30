@@ -3,7 +3,7 @@ import ProductRating from "./ProductRating"
 
 export default function PackageDescription({ item }) {
   return (
-    <section className="border px-6 md:px-6 lg:px-8 mb-8 bg-white rounded-xl overflow-hidden">
+    <section className="border px-6 md:px-6 lg:px-8 md:mb-8 bg-white rounded-xl overflow-hidden">
       <h1 className="capitalize my-5 text-3xl md:text-4xl font-heading font-medium">Description</h1>
       <div className="">
         <div className="bg-white border rounded-2xl p-4 mb-7">
