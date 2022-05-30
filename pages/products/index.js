@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { getAllProducts } from '../../lib/products';
-// Components! Starting with master layout component
 import Layout from '../../components/Layout'
 import BreadCrumbs from '../../components/BreadCrumbs'
-import ProductRating from '../../components/ProductRating';
-import Link from 'next/link';
 import ProductPackageCard from '../../components/ProductPackageCard';
 
 export default function Products({ Products }) {
-  console.log(Products)
   return (
     <Layout>
       <Head>
@@ -29,7 +25,7 @@ export default function Products({ Products }) {
                         <span className="capitalize">{ product.slug.slice(0,-1) }</span> products
                       </h2>                      
                       <div className="flex flex-wrap overflow-hidden rounded-2xl md:py-8 md:my-8 md:mt-0">
-                        {Object.values(product.packages).map((item) => <ProductPackageCard item={ item } slug={product.slug} />)}
+                        {product.packages.map((item) => <ProductPackageCard item={ item } slug={product.slug} />)}
                       </div>
                     </div>
                   )
@@ -44,12 +40,9 @@ export default function Products({ Products }) {
 }
 
 export async function getStaticProps({ params }) {
-  const Products = getAllProducts()
-  // const { slug, packages, selected } = getProductBySlug(params.slug)
-  // const Product = { type: slug, packages, selected }
   return {
     props: {
-      Products
+      Products: getAllProducts()
     }
   }
 }

@@ -1,167 +1,214 @@
 {
-  "fintech": {
-    "id": "fintech",
-    "tag": "fintech #3299803",
-    "title": "FinTech App",
-    "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
-    "price": 4000.00,
-    "currency": {
-      "name": "dollars",
-      "symbol": "$"
-    },
-    "features": [
-      {
-        "complete_files": "Complete files"
+  "id": "PDT826354",
+  "name": "Application",
+  "slug": "applications",
+  "category": "application",
+  "description": "The nulla commodo, commodo eros a lor, tristique lectus. Lorem sad 128 GB silver. This package gives you enormous benefits a nulla commodo, commodo eros a lor, tristique lectus. Lorem sad 128 GB silver. This package gives you enormous benefits a nulla commodo, commodo eros a lor, tristique lectus. Lorem sad 128 GB silver. This package gives you enormous benefits a nulla commodo, commodo eros a lor, tristique lectus. Lorem sad 128 GB silver.",
+  "packages": [
+    {
+      "id": "fintech",
+      "tag": "fintech #3299803",
+      "title": "FinTech App",
+      "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
+      "price": 4000.00,
+      "currency": {
+        "name": "dollars",
+        "symbol": "$"
       },
-      {
-        "cloud_storage": "50GB cloud storage"
-      },
-      {
-        "team_members": "20 team members"
-      },
-      {
-        "board_editors": "3 anonymous board editors"
-      },
-      {
-        "uptime": "99.9% uptime"
-      }
-    ],
-    "gallery": [
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png"
-    ],
-    "reviews": {
-      "rating": 5,
-      "count": 1259,
-      "date": "Added 2 months ago",
-      "reviews": [
+      "features": [
         {
-          "name": "Faustina H. Fawn",
-          "avatar": "/images/reviews/user.png",
-          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris."
-        }
-      ]
-    },
-    "active": false,
-    "ordered": 395
-  },
-  "crypto": {
-    "id": "crypto",
-    "tag": "crypto #1029832",
-    "title": "Crypto Website",
-    "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
-    "price": 6500.00,
-    "currency": {
-      "name": "dollars",
-      "symbol": "$"
-    },
-    "features": [
-      {
-        "complete_files": "Complete files"
-      },
-      {
-        "cloud_storage": "100GB cloud storage"
-      },
-      {
-        "team_members": "40 team members"
-      },
-      {
-        "board_editors": "6 anonymous board editors"
-      },
-      {
-        "uptime": "99.9% uptime"
-      }
-    ],
-    "gallery": [
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png"
-    ],
-    "reviews": {
-      "rating": 5,
-      "count": 1259,
-      "date": "Added 2 months ago",
-      "reviews": [
-        {
-          "name": "Faustina H. Fawn",
-          "avatar": "/images/reviews/user.png",
-          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris."
-        }
-      ]
-    },
-    "active": false,
-    "ordered": 809
-  },
-  "todo": {
-    "id": "todo",
-    "tag": "todo #4302564",
-    "title": "Todo App",
-    "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
-    "price": 2400.99,
-    "currency": {
-      "name": "dollars",
-      "symbol": "$"
-    },
-    "features": [
-      {
-        "complete_files": "Complete files"
-      },
-      {
-        "cloud_storage": "200GB cloud storage"
-      },
-      {
-        "team_members": "100 team members"
-      },
-      {
-        "board_editors": "Unlimited anonymous board editors"
-      },
-      {
-        "uptime": "99.9% uptime"
-      }
-    ],
-    "gallery": [
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png",
-      "../images/products/ph-photo1.png"
-    ],
-    "reviews": {
-      "count": 1259,
-      "reviews": [
-        {
-          "name": "Faustina H. Fawn",
-          "avatar": "/images/reviews/user.png",
-          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris and there should be more content here at least to about this size.",
-          "date": "Added 2 months ago",
-          "rating": 4
+          "complete_files": "Complete files"
         },
         {
-          "name": "Billy Morgan",
-          "avatar": "/images/reviews/user.png",
-          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
-          "date": "Added 8 months ago",
-          "rating": 5
+          "cloud_storage": "50GB cloud storage"
         },
         {
-          "name": "Donnie Cheng",
-          "avatar": "/images/reviews/user.png",
-          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
-          "date": "Added 7 months ago",
-          "rating": 2
+          "team_members": "20 team members"
         },
         {
-          "name": "Wyatt Audrey",
-          "avatar": "/images/reviews/user.png",
-          "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
-          "date": "Added 5 months ago",
-          "rating": 3
+          "board_editors": "3 anonymous board editors"
+        },
+        {
+          "uptime": "99.9% uptime"
         }
-      ]
-    },
-    "active": true,
-    "ordered": 1715
-  }
+      ],
+      "gallery": [
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png"
+      ],
+      "reviews": {
+        "count": 1259,
+        "reviews": [
+          {
+            "name": "Faustina H. Fawn",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris and there should be more content here at least to about this size.",
+            "date": "Added 2 months ago",
+            "rating": 4
+          },
+          {
+            "name": "Billy Morgan",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 8 months ago",
+            "rating": 5
+          },
+          {
+            "name": "Donnie Cheng",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 7 months ago",
+            "rating": 2
+          },
+          {
+            "name": "Wyatt Audrey",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 5 months ago",
+            "rating": 3
+          }
+        ]
+      },
+      "active": false,
+      "ordered": 395
+    },{
+      "id": "crypto",
+      "tag": "crypto #1029832",
+      "title": "Crypto Website",
+      "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
+      "price": 6500.00,
+      "currency": {
+        "name": "dollars",
+        "symbol": "$"
+      },
+      "features": [
+        {
+          "complete_files": "Complete files"
+        },
+        {
+          "cloud_storage": "100GB cloud storage"
+        },
+        {
+          "team_members": "40 team members"
+        },
+        {
+          "board_editors": "6 anonymous board editors"
+        },
+        {
+          "uptime": "99.9% uptime"
+        }
+      ],
+      "gallery": [
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png"
+      ],
+      "reviews": {
+        "count": 1259,
+        "reviews": [
+          {
+            "name": "Faustina H. Fawn",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris and there should be more content here at least to about this size.",
+            "date": "Added 2 months ago",
+            "rating": 4
+          },
+          {
+            "name": "Billy Morgan",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 8 months ago",
+            "rating": 5
+          },
+          {
+            "name": "Donnie Cheng",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 7 months ago",
+            "rating": 2
+          },
+          {
+            "name": "Wyatt Audrey",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 5 months ago",
+            "rating": 3
+          }
+        ]
+      },
+      "active": false,
+      "ordered": 809
+    },{
+      "id": "todo",
+      "tag": "todo #4302564",
+      "title": "Todo App",
+      "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
+      "price": 2400.99,
+      "currency": {
+        "name": "dollars",
+        "symbol": "$"
+      },
+      "features": [
+        {
+          "complete_files": "Complete files"
+        },
+        {
+          "cloud_storage": "200GB cloud storage"
+        },
+        {
+          "team_members": "100 team members"
+        },
+        {
+          "board_editors": "Unlimited anonymous board editors"
+        },
+        {
+          "uptime": "99.9% uptime"
+        }
+      ],
+      "gallery": [
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png",
+        "../images/products/ph-photo1.png"
+      ],
+      "reviews": {
+        "count": 1259,
+        "reviews": [
+          {
+            "name": "Faustina H. Fawn",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris and there should be more content here at least to about this size.",
+            "date": "Added 2 months ago",
+            "rating": 4
+          },
+          {
+            "name": "Billy Morgan",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 8 months ago",
+            "rating": 5
+          },
+          {
+            "name": "Donnie Cheng",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 7 months ago",
+            "rating": 2
+          },
+          {
+            "name": "Wyatt Audrey",
+            "avatar": "/images/reviews/user.png",
+            "review": "I haretra neque non mi aliquam, finibus hart bibendum molestie. Vestibulum suscipit sagittis dignissim mauris.",
+            "date": "Added 5 months ago",
+            "rating": 3
+          }
+        ]
+      },
+      "active": true,
+      "ordered": 1715
+    }
+  ]
 }

@@ -8,28 +8,26 @@ import { getAllProducts, getProductBySlug } from '../../lib/products';
 // Components! Starting with master layout component
 import Layout from '../../components/Layout'
 import BreadCrumbs from '../../components/BreadCrumbs'
-import ButtonGroup from '../../components/ButtonGroup'
-import PackageFeaturesCard from '../../components/PackageFeaturesCard'
 import LeftNav from '../../components/LeftNav'
 import RightNav from '../../components/RightNav'
 import ThumbInner from '../../components/ThumbInner'
-import ProductRating from '../../components/ProductRating';
 import ProductDescription from '../../components/ProductDescription';
 import OrderRequirements from '../../components/OrderRequirements';
 import CheckoutButton from '../../components/CheckoutButton';
 import Reviews from '../../components/Reviews';
 import PackageDescription from '../../components/PackageDescription';
+import PackageSelector from '../../components/PackageSelector';
 
 export default function Product({ Product }) {
   const { viewport } = useViewport();
   const router = useRouter()
-  const activePackage = router.query.package_name ? Object.values(Product.packages).filter((product) => {
+  const activePackage = router.query.package_name ? Product.packages.filter((product) => {
     return product.id == router.query.package_name
-  })[0] : Product.selected
+  })[0] : Product.packages.filter((product) => product.active)[0]
   const [selectedPackage, setSelectedPackage] = useState(activePackage)
   useEffect(() => {
     setSelectedPackage(activePackage)
-  },[Product, router])
+  }, [Product, router])
   const setPakageGallery = (gallery) => {
     return gallery.map((image) => {
       const sample = { originalClass: "overflow-hidden w-full h-96 lg:h-144 rounded-lg object-center object-cover" }
@@ -39,84 +37,55 @@ export default function Product({ Product }) {
     })
   }
   const toggleSelectedPackage = (id) => {
-    setSelectedPackage(Object.values(Product.packages).filter((pack) => {
-      return pack.id == id
-    })[0])
+    setSelectedPackage(Product.packages.filter((pack) => pack.id == id)[0])
   }
 
   return (
     <Layout>
       <Head>
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
-        <title> {Product.type[0].toUpperCase().concat(Product.type.slice(1))} Products | Algrith </title>
-      </Head>        
+        <title> {Product.name} Products | Algrith </title>
+      </Head>
       <main>
         <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-6 md:px-12 xl:px-28 overflow-hidden">
           <div className="flex flex-wrap">
-            <BreadCrumbs page={`products.${Product.type}`} />
-            <div className="w-full md:w-1/2 bg-red-100 lg:pr-0 xl:pr-10">                
+            <BreadCrumbs page={`products.${Product.slug}`} />
+            <div className="w-full md:w-1/2 lg:pr-0 xl:pr-10">
               <div className="overflow-hidden rounded-lg bg-white p-2 mb-8 md:pl-0 border">
                 <ImageGallery
                   autoPlay
                   lazyLoad
-                  showFullscreenButton={ false } 
-                  showPlayButton={ false } 
-                  items={ setPakageGallery(selectedPackage.gallery) } 
-                  thumbnailPosition={ !['sm'].includes(viewport) ? 'left' : 'bottom' }
+                  showFullscreenButton={false}
+                  showPlayButton={false}
+                  items={setPakageGallery(selectedPackage.gallery)}
+                  thumbnailPosition={!['sm'].includes(viewport) ? 'left' : 'bottom'}
                   renderLeftNav={(onClick, disabled) => LeftNav(onClick, disabled)}
                   renderRightNav={(onClick, disabled) => RightNav(onClick, disabled)}
                   renderThumbInner={(item) => ThumbInner(item)}
                 />
               </div>
-              <div className="md:hidden overflow-hidden bg-white border rounded-2xl pb-8 my-8">
-                <ButtonGroup getSelected={ (selected) => toggleSelectedPackage(selected) } defaultSelected={ selectedPackage.id } type={`products.${Product.type}`} />
-                <div className="px-6">
-                  <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { selectedPackage.tag } </span>
-                  <h2 className="my-2 text-3xl md:text-4xl font-heading font-medium">
-                    { selectedPackage.title }
-                  </h2>
-                  <p className="flex items-center mb-4">
-                    <span className="mr-2 text-sm text-green-500 font-medium">{ selectedPackage.currency.symbol }</span>
-                    <span className="text-3xl text-green-500 font-medium"> { selectedPackage.price } </span>
-                  </p>
-                  <PackageFeaturesCard item={ selectedPackage }/>
-                </div>
-              </div>
-              <PackageDescription item={ selectedPackage } />
-              <Reviews reviews={ selectedPackage.reviews } />
+              <PackageSelector
+                mobile
+                getSelected={(selected) => toggleSelectedPackage(selected)}
+                type={Product.slug}
+                selectedPackage={selectedPackage}
+              />
+              <PackageDescription item={selectedPackage} />
+              <Reviews reviews={selectedPackage.reviews} />
             </div>
 
-            <div className="md:w-1/2 bg-blue-100 md:pl-10 xl:pl-0">
+            <div className="md:w-1/2 md:pl-10 xl:pl-0">
               <div className="flex flex-col xl:flex-row mb-8">
-                <div className="hidden md:block xl:w-3/5 overflow-hidden bg-white border rounded-2xl pb-8">
-                  <ButtonGroup getSelected={ (selected) => toggleSelectedPackage(selected) } defaultSelected={ selectedPackage.id } type={`products.${Product.type}`} />
-                  <div className="px-6">
-                    <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { selectedPackage.tag } </span>
-                    <h2 className="my-2 text-3xl md:text-4xl font-heading font-medium">
-                      { selectedPackage.title }
-                    </h2>
-                    <p className="flex items-center mb-4">
-                      <span className="mr-2 text-sm text-green-500 font-medium">{ selectedPackage.currency.symbol }</span>
-                      <span className="text-3xl text-green-500 font-medium"> { selectedPackage.price } </span>
-                    </p>
-                    <PackageFeaturesCard item={ selectedPackage }/>
-                  </div>
-                </div>
-
-                
-                <div className="hidden lg:block my-8 xl:mt-0 xl:w-2/5 pl-2 xl:pl-8">
-                  <h2 className="capitalize mb-2 text-3xl md:text-4xl font-heading font-medium">
-                    { Product.type } Products
-                  </h2>
-                  <span className="inline-block mb-4">
-                    <ProductRating />
-                  </span>
-                  <ProductDescription />  
-                </div>
+                <PackageSelector
+                  getSelected={(selected) => toggleSelectedPackage(selected)}
+                  type={Product.slug}
+                  selectedPackage={selectedPackage}
+                />
+                <ProductDescription product={Product} />
               </div>
-              <OrderRequirements />                  
+              <OrderRequirements />
               <div className="flex flex-wrap -mx-2 mb-12">
-                <CheckoutButton item={ selectedPackage } />
+                <CheckoutButton item={selectedPackage} />
                 <div className="w-full md:w-1/3 px-2">
                   <a className="flex w-full py-4 px-2 items-center justify-center leading-8 font-heading font-medium tracking-tighter text-xl text-center bg-white focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50 hover:bg-opacity-60 rounded-xl" href="#">
                     <span className="mr-2">Wishlist</span>
@@ -146,11 +115,10 @@ export default function Product({ Product }) {
                 </button>
               </div>
             </div>
-
           </div>
         </section>
       </main>
-    </Layout>    
+    </Layout>
   )
 }
 
@@ -162,17 +130,15 @@ export async function getStaticPaths() {
         params: {
           slug: product.slug
         }
-      }    
+      }
     }),
     fallback: false
   }
 }
 export async function getStaticProps({ params }) {
-  const { slug, packages, selected } = getProductBySlug(params.slug)
-  const Product = { type: slug, packages, selected }
   return {
     props: {
-      Product
+      Product: getProductBySlug(params.slug)
     }
   }
 }
