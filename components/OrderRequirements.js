@@ -5,7 +5,7 @@ export default function OrderRequirements({ }) {
   const [domain_state, setDomainState] = useState('new')
   
   return (
-    <div className="bg-white rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
+    <div className="bg-white border rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
       
       <h2 className="text-3xl md:text-4xl font-heading font-medium">
         Order requirements
