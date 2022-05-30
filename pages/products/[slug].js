@@ -71,7 +71,7 @@ export default function Product({ Product }) {
                 selectedPackage={selectedPackage}
               />
               <PackageDescription item={selectedPackage} />
-              <Reviews reviews={selectedPackage.reviews} />
+              {!['sm'].includes(viewport) && <Reviews reviews={selectedPackage.reviews} />}
             </div>
 
             <div className="md:w-1/2 md:pl-10 xl:pl-0">
@@ -84,6 +84,7 @@ export default function Product({ Product }) {
                 <ProductDescription product={Product} />
               </div>
               <OrderRequirements />
+              {['md'].includes(viewport) && <Reviews reviews={selectedPackage.reviews} />}
               <div className="flex flex-wrap -mx-2 mb-12">
                 <CheckoutButton item={selectedPackage} />
                 <div className="w-full md:w-1/3 px-2">
