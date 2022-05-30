@@ -5,16 +5,18 @@ export default function OrderRequirements({ }) {
   const [domain_state, setDomainState] = useState('new')
   
   return (
-    <div className="mb-8 xl:my-10 px-4 py-5 sm:p-12 sm:pt-6 bg-white space-y-6 rounded-lg">
-      <h2 className="mb-4 text-3xl md:text-4xl font-heading font-medium">
+    <div className="bg-white rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
+      
+      <h2 className="text-3xl md:text-4xl font-heading font-medium">
         Order requirements
       </h2>
-      <div className="grid grid-cols-4 gap-6">
+      
+      <div className="grid grid-cols-4 gap-6 pt-4">
         <div className="col-span-4 xl:col-span-2">
           <label htmlFor="company_name" className="block text-lg font-medium text-gray-700">
             What is your company/business name?
           </label>
-          <div className="mt-1 flex rounded-md shadow-sm">
+          <div className="flex rounded-md shadow-sm mt-3">
             <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -36,16 +38,19 @@ export default function OrderRequirements({ }) {
             </svg>
             Select theme colors
           </label>
-          <div className="mt-1 flex flex-wrap rounded-md pt-3 lg:pt-10">
+          <div className="flex flex-wrap rounded-md mt-3">
             <Color />
           </div>
         </div>
       </div>
-      <div className="">
+
+
+
+      <div className="py-4">
         <label htmlFor="domain_name" className="block text-lg font-medium text-gray-700">
           Domain name
         </label>
-        <span className="mb-4 ml-4 flex items-center">
+        <span className="mt-2 mb-4 ml-4 flex items-center">
           <span className="mr-4">Already existing </span>
           <span className="flex space-x-4">
             <label htmlFor="existing_domain">
@@ -58,7 +63,7 @@ export default function OrderRequirements({ }) {
             </label>
           </span>
         </span>
-        <div className="mt-1 flex rounded-md shadow-sm">
+        <div className="flex rounded-md shadow-sm mt-3">
           <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -77,7 +82,7 @@ export default function OrderRequirements({ }) {
             <label htmlFor="domain_username" className="block text-lg font-medium text-gray-700">
               Domain account username
             </label>
-            <div className="mt-1 flex rounded-md shadow-sm">
+            <div className="flex rounded-md shadow-sm mt-3">
               <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -96,7 +101,7 @@ export default function OrderRequirements({ }) {
             <label htmlFor="domain_password" className="block text-lg font-medium text-gray-700">
               Domain account password
             </label>
-            <div className="mt-1 flex rounded-md shadow-sm">
+            <div className="flex rounded-md shadow-sm mt-3">
               <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -113,11 +118,13 @@ export default function OrderRequirements({ }) {
           </div>
         </div>}
       </div>
-      <div className="">
+
+
+      <div className="py-4">
         <label htmlFor="description" className="block text-lg font-medium text-gray-700">
           Describe your company/business
         </label>
-        <div className="mt-1">
+        <div className="mt-3">
           <textarea
             id="description"
             name="description"

@@ -3,7 +3,7 @@ import ReviewCard from "./ReviewCard"
 
 export default function Reviews({ reviews }) {
   return (
-    <section className="mt-8 lg:my-16 px-4 lg:px-6 xl:px-8 border -mx-4 bg-white rounded-xl overflow-hidden">
+    <section className="px-4 lg:px-6 xl:px-8 border bg-white rounded-xl overflow-hidden">
       <div className="flex flew-wrap justify-between my-4">
         <h1 className="text-3xl md:text-4xl font-heading font-medium">Package reviews</h1>
         <span className="">{ reviews.count } reviews</span>
