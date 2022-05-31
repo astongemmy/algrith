@@ -9,13 +9,13 @@ export default function PackageSelector({ type, selectedPackage, getSelected, mo
       <div className="px-6">
         <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { selectedPackage.tag } </span>
         <h2 className="my-2 text-3xl md:text-4xl font-heading font-medium">
-          { selectedPackage.title }
+          { selectedPackage.name }
         </h2>
         <p className="flex items-center mb-4">
           <span className="mr-2 text-sm text-green-500 font-medium">{ selectedPackage.currency.symbol }</span>
           <span className="text-3xl text-green-500 font-medium"> { selectedPackage.price } </span>
         </p>
-        <PackageFeaturesCard item={ selectedPackage }/>
+        <PackageFeaturesCard slug={ type } item={ selectedPackage }/>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ export default function Reviews({ reviews }) {
         <h1 className="text-3xl md:text-4xl font-heading font-medium">Package reviews</h1>
         <span className="">{ reviews.count } reviews</span>
       </div>      
-      {reviews.reviews.slice(0, display).map((review) => <ReviewCard review={ review }/>)}      
+      {reviews.reviews.slice(0, display).map((review) => <ReviewCard key={ review.name } review={ review }/>)}
       <div className="text-center my-4 py-4">
         <button
           onClick={() => display !== 2 ? setDisplay(2) : setDisplay(reviews.reviews.length)}

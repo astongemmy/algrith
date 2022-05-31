@@ -8,7 +8,7 @@
     {
       "id": "fintech",
       "tag": "fintech #3299803",
-      "title": "FinTech App",
+      "name": "FinTech App",
       "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
       "price": 4000.00,
       "currency": {
@@ -33,10 +33,10 @@
         }
       ],
       "gallery": [
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png"
+        "../images/products/application/fintech/fintech-1.webp",
+        "../images/products/application/fintech/fintech-2.webp",
+        "../images/products/application/fintech/fintech-3.png",
+        "../images/products/application/fintech/fintech-1.webp"
       ],
       "reviews": {
         "count": 1259,
@@ -76,7 +76,7 @@
     },{
       "id": "crypto",
       "tag": "crypto #1029832",
-      "title": "Crypto Website",
+      "name": "Crypto Website",
       "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
       "price": 6500.00,
       "currency": {
@@ -101,10 +101,10 @@
         }
       ],
       "gallery": [
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png"
+        "../images/products/application/crypto/crypto-1.jpeg",
+        "../images/products/application/crypto/crypto-2.png",
+        "../images/products/application/crypto/crypto-3.webp",
+        "../images/products/application/crypto/crypto-1.jpeg"
       ],
       "reviews": {
         "count": 1259,
@@ -144,7 +144,7 @@
     },{
       "id": "todo",
       "tag": "todo #4302564",
-      "title": "Todo App",
+      "name": "Todo App",
       "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
       "price": 2400.99,
       "currency": {
@@ -169,10 +169,11 @@
         }
       ],
       "gallery": [
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png",
-        "../images/products/ph-photo1.png"
+        "../images/products/application/todo/todo-1.avif",
+        "../images/products/application/todo/todo-2.gif",
+        "../images/products/application/todo/todo-3.webp",
+        "../images/products/application/todo/todo-1.avif"
+
       ],
       "reviews": {
         "count": 1259,

@@ -5,7 +5,7 @@ export default function ReviewCard({ review }) {
   return (
     <div className="mt-8 border border-green-100 rounded-3xl overflow-hidden">
       <div className="bg-green-200 bg-opacity-40 py-2 lg:py-3 px-8 relative flex flex-wrap justify-between">
-        <img className="absolute top-3 md:top-3 lg:top-3 left-5 lg:left-8 w-12 h-12 bg-red-300 rounded-2xl overflow-hidden" src={ review.avatar } alt={ review.name } />
+        <img className="absolute top-3 md:top-3 lg:top-3 left-5 lg:left-8 w-12 h-12 rounded-2xl overflow-hidden" src={ review.avatar } alt={ review.name } />
         <h4 className="pl-12 lg:pl-16 text-lg font-heading font-medium"> { review.name } </h4>
         <span className="pl-12 lg:pl-16 lg:pl-auto"><ProductRating /></span>
       </div>

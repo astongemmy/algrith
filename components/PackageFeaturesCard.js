@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function ProductFeatureCard({ item }) {
+export default function ProductFeatureCard({ item, slug }) {
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -41,14 +41,14 @@ export default function ProductFeatureCard({ item }) {
                     <path d="M18 12H6" fill="white" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>)} */}
                 </span>
-                <span className="text-gray-600"> { feature[Object.keys(feature)[0]] } </span>
+                <span className="text-gray-600"> { Object.values(feature)[0] } </span>
               </li>
             )
           })}
         </ul>
         <div className="text-center">
-          <a className="text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white" href="#">
-            Buy now
+          <a href="#order-requirements" className="scroll-selector text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white">
+            Checkout
           </a>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function ProductPackageCard({ item, slug }) {
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
-              { item.title }
+              { item.name }
               <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
                 <ProductRating />
               </span>
@@ -59,7 +59,7 @@ export default function ProductPackageCard({ item, slug }) {
                     <path d="M18 12H6" fill="white" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>)} */}
                 </span>
-                <span className="text-gray-600"> { feature[Object.keys(feature)[0]] } </span>
+                <span className="text-gray-600"> { Object.values(feature)[0] } </span>
               </li>
             )
           })}

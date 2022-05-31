@@ -20,12 +20,14 @@ export default function Products({ Products }) {
               <div className="w-full px-0 md:px-0 lg:px-4 xl:px-4">
                 {Products.map((product) => {
                   return (
-                    <div>
+                    <div key={ product.name }>
                       <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-medium">
-                        <span className="capitalize">{ product.slug.slice(0,-1) }</span> products
+                        <span className="capitalize">{ product.name }</span> products
                       </h2>                      
                       <div className="flex flex-wrap overflow-hidden rounded-2xl md:py-8 md:my-8 md:mt-0">
-                        {product.packages.map((item) => <ProductPackageCard item={ item } slug={product.slug} />)}
+                        {product.packages.map((item) => {
+                          return <ProductPackageCard key={ item.id } item={ item } slug={product.slug} />
+                        })}
                       </div>
                     </div>
                   )

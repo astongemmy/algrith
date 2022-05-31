@@ -47,13 +47,7 @@ export default class LogoCloud extends React.Component {
         </div>
         
         <Carousel autoPlay={ true } itemClass="flex items-center px-4 md:scale-65 justify-center" infinite={ true } arrows={ false } responsive={ responsive }>
-          {logo_cloud.map((logo) => {
-            return (
-              <div className="fle">
-                <img src={ logo } alt="" />
-              </div>
-            )
-          })}
+          {logo_cloud.map((logo) => <div key={ logo }><img src={ logo } alt="" /></div>)}
         </Carousel>
       </div>
     )

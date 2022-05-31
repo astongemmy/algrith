@@ -1,8 +1,8 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function useViewport() {
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateLayout() {
       setDimension({ width: window.innerWidth, height: window.innerHeight });
     }

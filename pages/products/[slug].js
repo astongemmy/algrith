@@ -13,7 +13,6 @@ import RightNav from '../../components/RightNav'
 import ThumbInner from '../../components/ThumbInner'
 import ProductDescription from '../../components/ProductDescription';
 import OrderRequirements from '../../components/OrderRequirements';
-import CheckoutButton from '../../components/CheckoutButton';
 import Reviews from '../../components/Reviews';
 import PackageDescription from '../../components/PackageDescription';
 import PackageSelector from '../../components/PackageSelector';
