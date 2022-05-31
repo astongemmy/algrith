@@ -10,8 +10,9 @@ import Hero from '../components/Hero'
 import Pricing from '../components/Pricing'
 import LogoCloud from '../components/LogoCloud'
 import { getAllProducts } from '../lib/products'
+import { getAllTestimonials } from '../lib/testimonials'
 
-export default function Index({ Products }) {
+export default function Index({ Products, Testimonials }) {
 
   const outlines = {
     title: 'Why choose us',
@@ -55,29 +56,7 @@ export default function Index({ Products }) {
         },
         src: "./images/illustrations/testimonial.gif"
       },
-      items: [
-        {
-          name: "Sarah Dayan",
-          designation: "Staff Engineer",
-          location: "Algolia",
-          avatar: "./images/testimonials/sarah-dayan.jpg",
-          text: "Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny."
-        },
-        {
-          name: "Flinch Booth",
-          designation: "Systems Operator",
-          location: "United States",
-          avatar: "./images/testimonials/flinch-booth.jpg",
-          text: "Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny."
-        },
-        {
-          name: "Maddy Paddignton",
-          designation: "Architect/Designer",
-          location: "India",
-          avatar: "./images/testimonials/maddy-paddington.jpeg",
-          text: "Tailwind CSS is the only framework that I've seen scale on large teams. It’s easy to customize, adapts to any design, and the build size is tiny."
-        },
-      ]
+      items: Testimonials
     }
   }
   const intro = {
@@ -96,6 +75,14 @@ export default function Index({ Products }) {
     },
     scroll_to: "product-intro"
   }
+  // Selecting random packages to display
+  const products = [
+    {slug: Products[0].slug, package: Products[0].packages[0] },
+    {slug: Products[1].slug, package: Products[1].packages[1] },
+    {slug: Products[0].slug, package: Products[0].packages[1] },
+    {slug: Products[1].slug, package: Products[1].packages[0] }
+  ]
+  
   return (
     <Layout>
       <Head>
@@ -106,7 +93,7 @@ export default function Index({ Products }) {
       <main>
         <WelcomeIntro payload={intro} />
         <LogoCloud />
-        <Hero />
+        <Hero products={ products } />
         <Outline outline={outlines} />
         <MissionStatement />
         <Pricing packages={ Products[1].packages } slug={ Products[1].slug } />
@@ -120,7 +107,8 @@ export default function Index({ Products }) {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      Products: getAllProducts()
+      Products: getAllProducts(),
+      Testimonials: getAllTestimonials()
     }
   }
 }

@@ -16,7 +16,7 @@ export default function Pricing({ packages, slug }) {
           <div className="flex flex-wrap items-center -mx-3 px-4">
             {packages.map((item) => {
               return (
-                <div key={ item.id } className="w-full md:w-1/3 px-3 mb-8 lg:mb-0">
+                <div key={ item.id } className="relative w-full md:w-1/3 px-3 mb-8 lg:mb-0">
                   <div className={`${item.active ? 'bg-orange-500' : 'bg-navyBlue-500 border'} px-12 md:px-4 lg:px-12 py-16 md:py-6 lg:py-16 rounded-3xl`}>
                     <div className={`${item.active ? 'border-blue-300' : 'border-gray-400'} pb-8 mb-12 border-b`}>
                       <div className="flex flex-wrap justify-between items-center px-3">

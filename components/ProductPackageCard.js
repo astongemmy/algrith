@@ -24,12 +24,15 @@ export default function ProductPackageCard({ item, slug }) {
 
   return (
     <div className="w-full md:w-1/3 px-0 md:px-2 xl:px-10 mb-8 lg:mb-0">
-      <div className="bg-white px-6 py-8 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border">
+      <div className="relative bg-white px-6 py-8 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border">
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
               <Link href={`/products/${slug}/?package_name=${item.id}`}>
-                <a className="">{ item.name }</a>
+                <a className="">
+                  <span aria-hidden="true" className="absolute inset-0" />
+                  { item.name }
+                </a>
               </Link>
               <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
                 <ProductRating />
