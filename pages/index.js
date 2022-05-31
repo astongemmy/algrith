@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import Intro from '../components/WelcomeIntro'
+import WelcomeIntro from '../components/WelcomeIntro'
 import Outline from '../components/Outline'
 import Section from '../components/Section'
 import GetStarted from '../components/GetStarted'
@@ -104,7 +104,7 @@ export default function Index({ Products }) {
       </Head>
 
       <main>
-        <Intro payload={intro} />
+        <WelcomeIntro payload={intro} />
         <LogoCloud />
         <Hero />
         <Outline outline={outlines} />

@@ -28,7 +28,9 @@ export default function ProductPackageCard({ item, slug }) {
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
-              { item.name }
+              <Link href={`/products/${slug}/?package_name=${item.id}`}>
+                <a className="">{ item.name }</a>
+              </Link>
               <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
                 <ProductRating />
               </span>

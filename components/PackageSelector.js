@@ -4,7 +4,7 @@ import PackageFeaturesCard from "./PackageFeaturesCard"
 
 export default function PackageSelector({ type, selectedPackage, getSelected, mobile }) {
   return (
-    <div className={`${mobile && 'md:hidden my-8'} ${!mobile && 'hidden md:block xl:w-3/5'} overflow-hidden bg-white border rounded-2xl pb-8`}>
+    <div className={`${mobile && 'md:hidden my-8'} ${!mobile && 'hidden md:block xl:w-3/6'} overflow-hidden bg-white border rounded-2xl pb-8`}>
       <ButtonGroup getSelected={ (selected) => getSelected(selected) } defaultSelected={ selectedPackage.id } type={`products.${type}`} />
       <div className="px-6">
         <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { selectedPackage.tag } </span>
