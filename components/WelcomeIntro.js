@@ -10,7 +10,7 @@ export default function WelcomeIntro({ payload }) {
 		<div id="intro-index" className="relative w-full h-auto xl:h-126 dark:bg-black bg-intro-index bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 			<div className="relative px-4 flex flex-wrap xl:flex-nowrap justify-around xl:justify-start items-center w-full bg-gradient-to-b from-white bg-opacity-30">
 				<div data-aos="fade" className="relative upercase w-full xl:w-3/5 text-green-500 m-0 px-4 md:px-10 py-8 lg:pr-0 lg:p-10 xl:p-20">
-					<span className="w-full text-5xl font-bold md:text-5xl lg:text-8xl intro-lead"></span>
+					<span className="w-full text-4xl font-bold md:text-5xl lg:text-8xl intro-lead"></span>
 					{subtitle.text && <span className="block mt-4 text-gray-600 text-2xl font-medium lg:text-5xl"> {subtitle.text} </span>}
 				</div>
 				<div className="relative xl:absolute xl:right-12 xl:top-0 w-full xl:w-4/12 m-0 px-4 md:px-10 pt-8 pb-16 md:pb-20 lg:py-20">

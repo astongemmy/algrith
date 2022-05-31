@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 export default function useTyping(text) {  
   let old_text, typing_timeout;
 	useEffect(() => {
+    clearTimeout(typing_timeout)
     const typing = (counter) => {
       text !== old_text ? clearTimeout(typing_timeout) : ''
       let count
@@ -27,11 +28,13 @@ export default function useTyping(text) {
         let cursor_elem = document.createElement("span")
         cursor_elem.className = "cursor"
         let element = document.createElement("span")
-        element.textContent = text[count];
-        if (text[count] == " ") {
-          element.style.marginLeft = "5px"
-        }
-        document.querySelector('.intro-lead').append(element)
+        // element.textContent = text[count];
+        // if (text[count] == " ") {
+          // element.style.marginLeft = "0px"
+        // }
+        const getTextFromContainer = document.querySelector('.intro-lead').textContent
+        document.querySelector('.intro-lead').textContent = getTextFromContainer + text[count]
+        // document.querySelector('.intro-lead').append(element)
         document.querySelector('.intro-lead').append(cursor_elem)
         typing_timeout = setTimeout(() => {
           typing(count)
