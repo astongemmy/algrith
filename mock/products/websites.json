@@ -17,21 +17,11 @@
         "symbol": "$"
       },
       "features": [
-        {
-          "complete_files": "Complete files"
-        },
-        {
-          "cloud_storage": "100GB cloud storage"
-        },
-        {
-          "team_members": "40 team members"
-        },
-        {
-          "board_editors": "6 anonymous board editors"
-        },
-        {
-          "uptime": "99.9% uptime"
-        }
+        {"complete_files": "Complete files"},
+        {"cloud_storage": "100GB cloud storage"},
+        {"team_members": "40 team members"},
+        {"board_editors": "6 anonymous board editors"},
+        {"uptime": "99.9% uptime"}
       ],
       "gallery": [
         "../images/products/website/corporate/corporate-1.jpg",
@@ -86,26 +76,16 @@
         "symbol": "$"
       },
       "features": [
-        {
-          "complete_files": "Complete files"
-        },
-        {
-          "cloud_storage": "50GB cloud storage"
-        },
-        {
-          "team_members": "20 team members"
-        },
-        {
-          "board_editors": "3 anonymous board editors"
-        },
-        {
-          "uptime": "99.9% uptime"
-        }
+        {"complete_files": "Complete files"},
+        {"cloud_storage": "50GB cloud storage"},
+        {"team_members": "20 team members"},
+        {"board_editors": "3 anonymous board editors"},
+        {"uptime": "99.9% uptime"}
       ],
       "gallery": [
         "../images/products/website/homepage/homepage-1.jpg",
         "../images/products/website/homepage/homepage-2.gif",
-        "../images/products/website/homepage/homepage-3.jpeg",
+        "../images/products/website/homepage/homepage-3.png",
         "../images/products/website/homepage/homepage-1.jpg"
       ],
       "reviews": {
@@ -155,21 +135,11 @@
         "symbol": "$"
       },
       "features": [
-        {
-          "complete_files": "Complete files"
-        },
-        {
-          "cloud_storage": "200GB cloud storage"
-        },
-        {
-          "team_members": "100 team members"
-        },
-        {
-          "board_editors": "Unlimited anonymous board editors"
-        },
-        {
-          "uptime": "99.9% uptime"
-        }
+        {"complete_files": "Complete files"},
+        {"cloud_storage": "200GB cloud storage"},
+        {"team_members": "100 team members"},
+        {"board_editors": "Unlimited anonymous board editors"},
+        {"uptime": "99.9% uptime"}
       ],
       "gallery": [
         "../images/products/website/business/business-1.webp",
