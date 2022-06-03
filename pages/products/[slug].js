@@ -29,7 +29,7 @@ export default function Product({ Product }) {
   }, [Product, router])
   const setPakageGallery = (gallery) => {
     return gallery.map((image) => {
-      const sample = { originalClass: "overflow-hidden w-full h-72 md:h-auto lg:h-112 rounded-lg object-center object-cover" }
+      const sample = { originalClass: "overflow-hidden w-full h-72 md:h-auto lg:h-112 2xl:h-144 rounded-lg object-center object-cover" }
       sample.original = image
       sample.thumbnail = image
       return sample
