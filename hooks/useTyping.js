@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 
-export default function useTyping(text) {  
-  let old_text, typing_timeout;
-	useEffect(() => {
-    clearTimeout(typing_timeout)
+export default function useTyping(text) {
+  useEffect(() => {
     const typing = (counter) => {
-      text !== old_text ? clearTimeout(typing_timeout) : ''
       let count
       if (document.querySelector('.intro-lead')) {
         if (document.querySelector('.intro-lead .cursor')) {
@@ -18,30 +15,27 @@ export default function useTyping(text) {
           }
         }
         if (counter >= text.length) {
-          clearTimeout(typing_timeout)
+          clearTimeout(window.typing_timeout)
           count = 0
           return
-        }
-        if (counter <= text.length) {
+        } else {
           count = counter + 1
         }
         let cursor_elem = document.createElement("span")
         cursor_elem.className = "cursor"
         let element = document.createElement("span")
-        // element.textContent = text[count];
-        // if (text[count] == " ") {
-          // element.style.marginLeft = "0px"
-        // }
         const getTextFromContainer = document.querySelector('.intro-lead').textContent
         document.querySelector('.intro-lead').textContent = getTextFromContainer + text[count]
-        // document.querySelector('.intro-lead').append(element)
         document.querySelector('.intro-lead').append(cursor_elem)
-        typing_timeout = setTimeout(() => {
+        window.typing_timeout = setTimeout(() => {
           typing(count)
         }, 100)
-        old_text = text
       }
     }
-    text && typeof text == 'string' ? typing(-1) : ''
+    if (text && typeof text == 'string') {
+      clearTimeout(window.typing_timeout)
+      document.querySelector('.intro-lead').textContent = ''
+      typing(-1)
+    }
 	}, [text])
 }

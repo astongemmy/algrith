@@ -6,7 +6,7 @@ function Popover({ items, toggle }) {
       {/* <div id="popover" className="transition duration-150 ease-in-out -mt-20 absolute top-0 left-0 ml-20 w-full sm:w-1/2"> */}
       {toggle == true && <div id="popover" className="transition duration-150 ease-in-out absolute top-8 left-0 w-full sm:w-auto z-10">
         <div className="w-full bg-white rounded shadow-2xl">
-          <div className="mt-8 relative bg-gray-200 rounded-t py-4 px-4 xl:px-8">
+          <div className="mt-8 relative bg-gray-200 rounded-t py-4 px-8">
           {/* <svg className="absolute -ml-5 -mb-10 left-0 bottom-0" width="30px" height="30px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"> */}
             <svg className="text-gray-200 absolute rotate-90 -translate-x-2/4 left-2/4 -top-6" width="30px" height="30px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
               <g id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
@@ -20,20 +20,21 @@ function Popover({ items, toggle }) {
               </g>
             </svg>
             <Link href="/products">
-              <a className="text-lg text-gray-800 font-normal leading-normal tracking-normal opacity-50">
+              <a className="text-lg text-gray-800 font-normal leading-normal tracking-normal">
+                <i className="fa fa-list mr-6"></i>
                 All products
               </a>
             </Link>
             {/* <p className="text-base text-gray-800 font-normal leading-normal tracking-normal opacity-50">Add person by name or title</p> */}
           </div>
-          <div className="w-full h-full px-4 xl:px-8 pt-3 pb-5">
+          <div className="w-full h-full px-8 pt-3 pb-5">
             <ul className="w-full">
               {items.map((anchor) => {
                 return (
-                  <li key={ anchor.href } className="flex items-center py-4">
-                    {anchor.icon && <i className={ anchor.icon }></i>}
+                  <li key={ anchor.href }>                    
                     <Link href={ anchor.href }>
-                      <a className="ml-4 w-full text-gray-600 font-normal text-lg leading-3">
+                      <a className="flex items-center py-4 w-full text-gray-600 font-normal text-lg leading-3">
+                        {anchor.icon && <i className={ `${anchor.icon} mr-6`}></i>}
                         { anchor.text }
                       </a>
                     </Link>
