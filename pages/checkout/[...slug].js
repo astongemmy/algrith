@@ -72,8 +72,8 @@ export default function Checkout({ Package, Requirements }) {
                   <h3 className="border-b text-gray-0 px-4 py-3 mb-2 text-xl md:text-2xl font-heading font-medium">
                     Order requirements
                   </h3>
-                  <div className="p-4 pb-8">
-                    <ul className="w-full mb-8 text-lg">
+                  <div className="p-4 px-6 pb-8">
+                    <ul className="w-full text-lg">
                       {Object.entries(Requirements).map((requirement) => {
                         return (
                           <React.Fragment key={ requirement[0] }>
@@ -86,9 +86,9 @@ export default function Checkout({ Package, Requirements }) {
                                 </span>
                                 { keyToProperFormat(requirement[0]) }
                               </span>
-                              {requirement[0] !== 'domain_password' && <span> { requirement[1] } </span>}
+                              {requirement[0] !== 'domain_password' && <span className="pl-12"> { requirement[1] } </span>}
                               {requirement[0] == 'domain_password' && (
-                                <span className="flex justify-between items-center">
+                                <span className="flex justify-between items-center pl-12">
                                   <input readOnly type={passwordVisibility ? 'text' : 'password'} className="border-0 focus:ring-0 outline-none ring-0 w-24" value={ requirement[1] } />
                                   <i onClick={()=>togglePasswordVisibility(!passwordVisibility)} className="fa fa-eye ml-3 text-green-300 cursor-pointer"></i>
                                 </span>
@@ -103,7 +103,7 @@ export default function Checkout({ Package, Requirements }) {
                                 </span>
                                 { keyToProperFormat(requirement[0]) }
                               </span>
-                              <span className="">
+                              <span className="pl-12">
                                 <DisplayColors colors={ requirement[1] } />
                               </span>
                             </li>}
@@ -116,7 +116,7 @@ export default function Checkout({ Package, Requirements }) {
                                 </span>
                                 { keyToProperFormat(requirement[0]) }
                               </span>
-                              <span className="w-full block md:pl-12"> { requirement[1] } </span>
+                              <span className="w-full block pl-12"> { requirement[1] } </span>
                             </li>}
                           </React.Fragment>
                         )
