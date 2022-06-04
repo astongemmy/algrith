@@ -77,8 +77,8 @@ export default function Checkout({ Package, Requirements }) {
                       {Object.entries(Requirements).map((requirement) => {
                         return (
                           <React.Fragment key={ requirement[0] }>
-                            {requirement[0] !== 'description' && requirement[0] !== 'theme_color' && <li className="mb-3 flex flex-wrap justify-between items-center">
-                              <span className="flex items-center text-lg text-gray-600 mb-2">
+                            {requirement[0] !== 'description' && requirement[0] !== 'theme_color' && <li className="mb-3 flex flex-wrap justify-between md:items-center">
+                              <span className="flex items-center text-lg text-gray-600 mb-2 mr-4">
                                 <span className="mr-6 text-green-500">
                                   <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
@@ -88,14 +88,14 @@ export default function Checkout({ Package, Requirements }) {
                               </span>
                               {requirement[0] !== 'domain_password' && <span> { requirement[1] } </span>}
                               {requirement[0] == 'domain_password' && (
-                                <span className="flex items-center">
-                                  <input readOnly type={passwordVisibility ? 'text' : 'password'} className="border-0 focus:ring-0 outline-none ring-0 text-right w-auto" value={ requirement[1] } />
+                                <span className="flex justify-between items-center">
+                                  <input readOnly type={passwordVisibility ? 'text' : 'password'} className="border-0 focus:ring-0 outline-none ring-0 w-24" value={ requirement[1] } />
                                   <i onClick={()=>togglePasswordVisibility(!passwordVisibility)} className="fa fa-eye ml-3 text-green-300 cursor-pointer"></i>
                                 </span>
                               )}
                             </li>}
-                            {requirement[0] == 'theme_color' && <li className="flex flex-col md:flex-row flex-wrap justify-between items-cente mb-4">
-                              <span className="flex items-center text-lg text-gray-600 mb-4">
+                            {requirement[0] == 'theme_color' && <li className="flex flex-wrap justify-between md:items-center mb-4">
+                              <span className="flex items-center text-lg text-gray-600 mb-4 mr-4">
                                 <span className="mr-6 text-green-500">
                                   <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
