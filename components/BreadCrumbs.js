@@ -3,6 +3,12 @@ import React from 'react'
 
 export default function BreadCrumbs({ page }) {
   const breadcrumbs = {
+    checkout: {
+      index: [
+        { text: 'Products', url: '/products' },
+        { text: 'Checkout', url: '/checkout' }
+      ]
+    },
     products: {
       index: [ { text: 'Products', url: '/products'} ],
       websites: [

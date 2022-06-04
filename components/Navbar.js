@@ -16,7 +16,7 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 		<nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow md:shadow-none md:bg-transparent bg-white fixed top-0 md:top-4 lg:top-6 -right-full md:right-12 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-10/12 md:w-auto h-screen md:h-16 text-gray-600 lg:p-4">
 			<div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 md:px-8 py-4">
 				<h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
-					<img src="../images/logo/algrith-brand.jpg" alt="brand-logo" />
+					<img src="/images/logo/algrith-brand.jpg" alt="brand-logo" />
 				</h1>
 				<div ref={ closeMenuRef } id="close-menu" className="flex justify-center h-12 w-12 bg-gray-300 rounded-xl text-xl items-center text-black">
 					<i className="fa fa-times"></i>
@@ -49,7 +49,7 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 			<div className="md:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full bg-gray-200 mt-2">
 				<div id="navbar-footer-brand" data-aos="fade-right" className="inline-flex items-center h-full">
 					© Copyright <span className="mx-1 text-navyblue"> Algrith {new Date().getFullYear()} </span>
-					<img src="../images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
+					<img src="/images/logo/algrith.png" alt="brand logo" className="logo inline-flex" />
 				</div>
 				<div id="navbar-footer-socials" className="flex justify-center items-center h-full">
 					<span data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-gray-600 text-xl h-8 w-8 bg-gray-300">

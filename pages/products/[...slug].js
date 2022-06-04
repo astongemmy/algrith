@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { Router, useRouter } from 'next/router'
 import ImageGallery from 'react-image-gallery';
 import useViewport from '../../hooks/useViewport'
 // Mock database for getting initial props
-import { getAllProducts, getProductBySlug } from '../../lib/products';
+import { getProductBySlug } from '../../lib/products';
 // Components! Starting with master layout component
 import Layout from '../../components/Layout'
 import BreadCrumbs from '../../components/BreadCrumbs'
@@ -20,9 +20,10 @@ import PackageSelector from '../../components/PackageSelector';
 export default function Product({ Product }) {
   const { viewport } = useViewport();
   const router = useRouter()
-  const activePackage = router.query.package_name ? Product.packages.filter((product) => {
-    return product.id == router.query.package_name
-  })[0] : Product.packages.filter((product) => product.active)[0]
+  // const activePackage = router.query.package_name ? Product.packages.filter((product) => {
+  //   return product.id == router.query.package_name
+  // })[0] : Product.packages.filter((product) => product.active)[0]
+  const activePackage = Product.packages.filter((product) => product.active)[0]
   const [selectedPackage, setSelectedPackage] = useState(activePackage)
   useEffect(() => {
     setSelectedPackage(activePackage)
@@ -38,7 +39,6 @@ export default function Product({ Product }) {
   const toggleSelectedPackage = (id) => {
     setSelectedPackage(Product.packages.filter((pack) => pack.id == id)[0])
   }
-
   return (
     <Layout>
       <Head>
@@ -82,7 +82,7 @@ export default function Product({ Product }) {
                 />
                 <ProductDescription product={Product} />
               </div>
-              <OrderRequirements selectedPackage={ selectedPackage } />
+              <OrderRequirements product_slug={ Product.slug } selectedPackage={ selectedPackage } />
               {['sm'].includes(viewport) && <Reviews reviews={selectedPackage.reviews} />}
             </div>
           </div>
@@ -92,23 +92,52 @@ export default function Product({ Product }) {
   )
 }
 
-export async function getStaticPaths() {
-  const products = getAllProducts()
-  return {
-    paths: products.map((product) => {
-      return {
-        params: {
-          slug: product.slug
-        }
+export async function getServerSideProps({ params }) {
+  const requested_product = params.slug[0]
+  const requested_package = params.slug[1]
+  const product = getProductBySlug(requested_product)
+  let packages;
+  if (requested_package && typeof requested_package == 'string' && requested_package !== '') {
+    packages = product.packages.map((_package) => {
+      if (_package.active && _package.id !== requested_package) {
+        _package.active = false
       }
-    }),
-    fallback: false
+      if (_package.id == requested_package) {
+        _package.active = true
+      }
+      return _package
+    })
+    product.packages = [ ...packages ]
   }
-}
-export async function getStaticProps({ params }) {
   return {
     props: {
-      Product: getProductBySlug(params.slug)
+      Product: product
+
     }
   }
 }
+// export async function getStaticPaths() {
+  // const products = getAllProducts()
+  // return {
+    // paths: products.map((product) => {
+    //   return {
+    //     params: {
+    //       slug: [ product.slug, product.packages.id ]
+    //       // slug: [ product.slug, 'b']
+    //     }
+    //   }
+    // }),
+//     paths: [],
+//     fallback: false
+//   }
+// }
+// export async function getStaticProps(params) {
+//   // const slugs = params.slug
+//   console.log(params)
+//   return {
+//     props: {
+//       // Product: getProductBySlug(slugs[0]),
+//       // Product: getProductBySlug(params.params.slug),
+//     }
+//   }
+// }

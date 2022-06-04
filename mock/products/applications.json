@@ -24,10 +24,10 @@
         {"uptime": "99.9% uptime"}
       ],
       "gallery": [
-        "../images/products/application/fintech/fintech-1.webp",
-        "../images/products/application/fintech/fintech-2.webp",
-        "../images/products/application/fintech/fintech-3.png",
-        "../images/products/application/fintech/fintech-1.webp"
+        "/images/products/application/fintech/fintech-1.webp",
+        "/images/products/application/fintech/fintech-2.webp",
+        "/images/products/application/fintech/fintech-3.png",
+        "/images/products/application/fintech/fintech-1.webp"
       ],
       "reviews": {
         "count": 1259,
@@ -83,10 +83,10 @@
         {"uptime": "99.9% uptime"}
       ],
       "gallery": [
-        "../images/products/application/crypto/crypto-1.webp",
-        "../images/products/application/crypto/crypto-2.png",
-        "../images/products/application/crypto/crypto-3.webp",
-        "../images/products/application/crypto/crypto-1.webp"
+        "/images/products/application/crypto/crypto-1.webp",
+        "/images/products/application/crypto/crypto-2.png",
+        "/images/products/application/crypto/crypto-3.webp",
+        "/images/products/application/crypto/crypto-1.webp"
       ],
       "reviews": {
         "count": 1259,
@@ -144,10 +144,10 @@
         }
       ],
       "gallery": [
-        "../images/products/application/todo/todo-1.webp",
-        "../images/products/application/todo/todo-2.gif",
-        "../images/products/application/todo/todo-3.webp",
-        "../images/products/application/todo/todo-1.webp"
+        "/images/products/application/todo/todo-1.webp",
+        "/images/products/application/todo/todo-2.gif",
+        "/images/products/application/todo/todo-3.webp",
+        "/images/products/application/todo/todo-1.webp"
 
       ],
       "reviews": {

@@ -3,8 +3,25 @@ import CheckoutButton from "./CheckoutButton"
 import Color from "./Color"
 import WishlistButton from "./WishlistButton"
 
-export default function OrderRequirements({ selectedPackage }) {
-  const [domain_state, setDomainState] = useState('new')
+export default function OrderRequirements({ product_slug, selectedPackage }) {
+  const [requirements, setRequirements] = useState({
+    company_name: "",
+    domain_name: "",
+    domain_type: "new",
+    domain_username: "",
+    domain_password: "",
+    theme_color: [],
+    description: ""
+
+  })
+  const handleInputChange = (e) => {
+    const value = e.target.value
+    const key = e.target.name
+    setRequirements(prevState => { return { ...prevState, [key]: value }})
+  }
+  const handleColorsChange = (color) => {
+    setRequirements(prevState => { return { ...prevState, theme_color: color }})
+  }
 
   return (
     <div id="order-requirements" className="bg-white border rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
@@ -26,6 +43,7 @@ export default function OrderRequirements({ selectedPackage }) {
               type="text"
               name="company_name"
               id="company_name"
+              onChange={handleInputChange}
               className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
               placeholder="e.g. Apple Gear"
             />
@@ -39,12 +57,10 @@ export default function OrderRequirements({ selectedPackage }) {
             Select theme colors
           </label>
           <div className="flex flex-wrap rounded-md mt-3">
-            <Color />
+            <Color getColor={(color) => handleColorsChange(color)} />
           </div>
         </div>
       </div>
-
-
 
       <div className="py-4">
         <label htmlFor="domain_name" className="block text-lg font-medium text-gray-700">
@@ -54,11 +70,11 @@ export default function OrderRequirements({ selectedPackage }) {
           <span className="mr-4">Already existing </span>
           <span className="flex space-x-4">
             <label htmlFor="existing_domain">
-              <input type="radio" onChange={(e) => setDomainState(e.target.value)} value="existing" name="domain_name_state" id="existing_domain" className="w-6 h-6" />
+              <input type="radio" onChange={handleInputChange} value="existing" name="domain_type" id="existing_domain" className="w-6 h-6" />
               <span className="ml-3">Yes</span>
             </label>
             <label htmlFor="new_domain">
-              <input type="radio" onChange={(e) => setDomainState(e.target.value)} value="new" name="domain_name_state" id="new_domain" className="w-6 h-6" defaultChecked />
+              <input type="radio" onChange={handleInputChange} value="new" name="domain_type" id="new_domain" className="w-6 h-6" defaultChecked />
               <span className="ml-3">No</span>
             </label>
           </span>
@@ -73,11 +89,12 @@ export default function OrderRequirements({ selectedPackage }) {
             type="text"
             name="domain_name"
             id="domain_name"
+            onChange={handleInputChange}
             className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
             placeholder="e.g. https://algrithllc.com"
           />
         </div>
-        {domain_state == 'existing' && <div className="pl-4 py-6 grid grid-cols-4 gap-6">
+        {requirements.domain_type == 'existing' && <div className="pl-4 py-6 grid grid-cols-4 gap-6">
           <div className="col-span-4 xl:col-span-2">
             <label htmlFor="domain_username" className="block text-lg font-medium text-gray-700">
               Domain account username
@@ -92,6 +109,7 @@ export default function OrderRequirements({ selectedPackage }) {
                 type="text"
                 name="domain_username"
                 id="domain_username"
+                onChange={handleInputChange}
                 className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                 placeholder="e.g. johndoe"
               />
@@ -108,9 +126,10 @@ export default function OrderRequirements({ selectedPackage }) {
                 </svg>
               </span>
               <input
-                type="text"
+                type="password"
                 name="domain_password"
                 id="domain_password"
+                onChange={handleInputChange}
                 className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                 placeholder="e.g. *********"
               />
@@ -128,9 +147,9 @@ export default function OrderRequirements({ selectedPackage }) {
             id="description"
             name="description"
             rows={7}
+            onChange={handleInputChange}
             className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
             placeholder="e.g. Apple works is a giagantic company that handles heavy duty exportation or crude oil and gas in the United States"
-            defaultValue={''}
           />
         </div>
         <p className="mt-2 text-lg text-gray-500">
@@ -139,7 +158,7 @@ export default function OrderRequirements({ selectedPackage }) {
       </div>
 
       <div className="flex flex-wrap mt-2 lg:mt-8 mb-8 lg:mb-12">
-        <CheckoutButton item={selectedPackage} />
+        <CheckoutButton product_slug={ product_slug } item={selectedPackage} requirements={ requirements } />
         <WishlistButton />
       </div>
 

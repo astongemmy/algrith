@@ -1,27 +1,13 @@
-import React, { Fragment, useEffect, useState } from "react"
-import colors from "../lib/colors"
+import React, { Fragment, useState } from "react"
 
-export default function Color({ getColor }) {
-  const [selected, setSelected] = useState([])
-  useEffect(() => { getColor([ ...selected ]) },[selected])
-  const setColor = (e) => {
-    let new_colors;
-    if (e.target.checked && !selected.includes(e.target.value)) {
-      new_colors = [ ...selected, e.target.value ]
-      setSelected([ ...new_colors ])
-    }
-    if (!e.target.checked && selected.includes(e.target.value)) {
-      new_colors = [ ...selected.filter((color) => color !== e.target.value) ]
-      setSelected([ ...new_colors ])
-    }
-  }
+export default function DisplayColors({ colors }) {
   return (
     <React.Fragment>
       {colors.map((color) => {
         return (
           <React.Fragment key={color}>
             {color !== 'white' ? 
-              <input type="checkbox" name={color} id={color} title={color} value={color} onChange={setColor}
+              <input type="checkbox" checked name={color} id={color} title={color} value={color} readOnly
                 className={`mr-4 mb-4 w-8 h-8 bg-${color}-500 bg-${color}
                   text-${color}-500 text-${color}
                   active:bg-${color}-500 active:bg-${color}
@@ -32,7 +18,7 @@ export default function Color({ getColor }) {
                 `}
               />
               : 
-              <input type="checkbox" name={color} id={color} title={color} value={color} onChange={setColor}
+              <input type="checkbox" checked name={color} id={color} title={color} value={color} readOnly
                 className={`
                   mr-4 mb-4 w-8 h-8
                   bg-${color}

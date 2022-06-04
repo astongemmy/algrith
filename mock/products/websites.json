@@ -24,10 +24,10 @@
         {"uptime": "99.9% uptime"}
       ],
       "gallery": [
-        "../images/products/website/corporate/corporate-1.jpg",
-        "../images/products/website/corporate/corporate-2.jpg",
-        "../images/products/website/corporate/corporate-3.webp",
-        "../images/products/website/corporate/corporate-1.jpg"
+        "/images/products/website/corporate/corporate-1.jpg",
+        "/images/products/website/corporate/corporate-2.jpg",
+        "/images/products/website/corporate/corporate-3.webp",
+        "/images/products/website/corporate/corporate-1.jpg"
       ],
       "reviews": {
         "count": 1259,
@@ -83,10 +83,10 @@
         {"uptime": "99.9% uptime"}
       ],
       "gallery": [
-        "../images/products/website/homepage/homepage-1.jpg",
-        "../images/products/website/homepage/homepage-2.gif",
-        "../images/products/website/homepage/homepage-3.png",
-        "../images/products/website/homepage/homepage-1.jpg"
+        "/images/products/website/homepage/homepage-1.jpg",
+        "/images/products/website/homepage/homepage-2.gif",
+        "/images/products/website/homepage/homepage-3.png",
+        "/images/products/website/homepage/homepage-1.jpg"
       ],
       "reviews": {
         "count": 1259,
@@ -142,10 +142,10 @@
         {"uptime": "99.9% uptime"}
       ],
       "gallery": [
-        "../images/products/website/business/business-1.webp",
-        "../images/products/website/business/business-2.webp",
-        "../images/products/website/business/business-3.jpg",
-        "../images/products/website/business/business-1.webp"
+        "/images/products/website/business/business-1.webp",
+        "/images/products/website/business/business-2.webp",
+        "/images/products/website/business/business-3.jpg",
+        "/images/products/website/business/business-1.webp"
       ],
       "reviews": {
         "count": 1259,
