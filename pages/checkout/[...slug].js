@@ -69,7 +69,7 @@ export default function Checkout({ Package, Requirements }) {
             <div className="flex flex-wrap justify-between w-full lg:w-2/3 lg:pl-10 xl:pl-0">
               <div className="md:w-1/2 pr-0 md:pr-4 mb-8">
                 <div className="bg-white rounded-lg border overflow-hidden">
-                  <h3 className="border-b text-gray-0 px-4 py-3 mb-2 text-xl md:text-2xl font-heading font-medium">
+                  <h3 className="border-b text-gray-0 px-4 py-3 mb-2 text-2xl font-heading font-medium">
                     Order requirements
                   </h3>
                   <div className="p-4 px-6 pb-8">
@@ -105,7 +105,7 @@ export default function Checkout({ Package, Requirements }) {
                                 </span>
                                 { keyToProperFormat(requirement[0]) }
                               </span>
-                              <span className="pl-12">
+                              <span className="pl-12 -mr-4">
                                 <DisplayColors colors={ requirement[1] } />
                               </span>
                             </li>}
