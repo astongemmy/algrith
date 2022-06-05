@@ -18,6 +18,62 @@ export default function Checkout({ Package, Requirements }) {
       return text[0].toUpperCase()+text.slice(1)
     }
   }
+  useEffect(() => {
+    const paymentForm = document.getElementById('paymentForm');
+    paymentForm.addEventListener("submit", payWithPaystack, false);
+    function payWithPaystack(e) {
+      e.preventDefault();
+      let handler = PaystackPop.setup({
+        key: 'pk_test_3851bb68ea57c1da0fea7acffa71c1e3fbcbe477', // Replace with your public key
+        email: document.getElementById("email-address").value,
+        amount: document.getElementById("amount").value * 100,
+        ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+        // label: "Optional string that replaces customer email"
+        onClose: function(){
+          alert('Window closed.');
+        },
+        callback: function(response){
+          let message = 'Payment complete! Reference: ' + response.reference;
+          alert(message);
+        }
+      });
+      handler.openIframe();
+    }
+  }, [])
+
+  const formatUnit = (unit) => {
+    if (unit >= 1000) {
+      return unit / 1000 + 'k'
+    } else if (unit >= 1000000) {
+      return unit / 1000000 + 'M'
+    } else {
+      return unit
+    }
+  }
+
+  const currency = () => {
+    return {
+      usd: (value) => {
+        const { amount, unit} = currency().prepareUnit(value);
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD'
+        }).format(amount).concat(unit);
+      },
+      prepareUnit: (amount) => {
+        const formatted_amount = formatUnit(amount);
+        let formatted_amount_unit;
+        const formatted_amount_is_integer_or_decimal = /^\d+\.\d+$|^\d+$/.test(formatted_amount);
+        if (typeof formatted_amount == 'string' && !formatted_amount_is_integer_or_decimal) {
+          formatted_amount_unit = formatted_amount.slice(-1)
+        } else {
+          formatted_amount_unit = ''
+        }
+        const formatted_float_amount = parseFloat(formatted_amount);
+        return { amount: formatted_float_amount, unit: formatted_amount_unit };
+      }
+    }
+  }
 
   return (
     <Layout>
@@ -32,7 +88,6 @@ export default function Checkout({ Package, Requirements }) {
             <div className="w-full lg:w-1/3 lg:pr-0 xl:pr-10">
               <div className="flex flex-col md:flex-row lg:flex-col overflow-hidden rounded-lg bg-white p-2 mb-8 border">
                 <img src={ Package.gallery[0] } className="overflow-hidden" alt={ Package.name } />
-
                 <div className="w-full px-3 my-4">
                   <div className="bg-white">
                     <div className="pb-4 mb-4 border-b">
@@ -60,9 +115,7 @@ export default function Checkout({ Package, Requirements }) {
                       })}
                     </ul>
                   </div>
-                </div>
-
-                
+                </div>                
               </div>
             </div>
 
@@ -77,6 +130,7 @@ export default function Checkout({ Package, Requirements }) {
                       {Object.entries(Requirements).map((requirement) => {
                         return (
                           <React.Fragment key={ requirement[0] }>
+                            
                             {requirement[0] !== 'description' && requirement[0] !== 'theme_color' && <li className="w-full mb-3 flex flex-wra justify-between items-center overflow-x-auto">
                               <span className="w-1/2 flex items-center text-lg text-gray-600">
                                 <span className="mr-6 text-green-500">
@@ -87,7 +141,7 @@ export default function Checkout({ Package, Requirements }) {
                                 <span className="no-scrollbar overflow-x-auto whitespace-nowrap"> { keyToProperFormat(requirement[0]) } </span>
                               </span>
                               {requirement[0] !== 'domain_password' && (
-                                <input className="border-0 focus:ring-0 outline-none ring-0 w-1/2 whitespace-nowrap text-right" value={ requirement[1] } />
+                                <span className="border-0 focus:ring-0 outline-none ring-0 w-1/2 whitespace-nowrap text-right"> { requirement[1] } </span>
                               )}
                               {requirement[0] == 'domain_password' && (
                                 <span className="w-1/2 whitespace-nowrap flex justify-between items-center">
@@ -96,6 +150,7 @@ export default function Checkout({ Package, Requirements }) {
                                 </span>
                               )}
                             </li>}
+                            
                             {requirement[0] == 'theme_color' && <li className="flex flex-wrap justify-between md:items-center">
                               <span className="flex items-center text-lg text-gray-600 mb-4">
                                 <span className="mr-6 text-green-500">
@@ -109,6 +164,7 @@ export default function Checkout({ Package, Requirements }) {
                                 <DisplayColors colors={ requirement[1] } />
                               </span>
                             </li>}
+                            
                             {requirement[0] == 'description' && <li className="mb-3 flex flex-col">
                               <span className="flex items-center w-full block text-lg text-gray-600 mb-2">
                                 <span className="mr-6 text-green-500">
@@ -120,6 +176,7 @@ export default function Checkout({ Package, Requirements }) {
                               </span>
                               <span className="w-full block pl-12"> { requirement[1] } </span>
                             </li>}
+
                           </React.Fragment>
                         )
                       })}
@@ -127,8 +184,33 @@ export default function Checkout({ Package, Requirements }) {
                   </div>
                 </div>
               </div>
-              <div className="md:w-1/2 mb-8 pl-0 md:pl-4">
-                { Package.name }
+              <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
+                <form className="bg-white rounded-lg border overflow-hidden" id="paymentForm">
+                  <h3 className="border-b text-gray-0 px-4 py-3 text-2xl font-heading font-medium">
+                    Payment details
+                  </h3>
+                  <div className="p-6">
+                    <div className="mb-4">
+                      <label htmlFor="email" className="w-full text-lg block mb-2">Email Address</label>
+                      <input type="email" id="email-address" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
+                    </div>
+                    <input className="hidden" type="tel" id="amount" readOnly value={ Package.price } required />
+                    <div className="mb-4">
+                      <label htmlFor="first-name" className="w-full text-lg block mb-2">First Name</label>
+                      <input type="text" id="first-name" className="w-full rounded-lg border border-gray-300" placeholder="e.g. John" />
+                    </div>
+                    <div className="mb-4">
+                      <label htmlFor="last-name" className="w-full text-lg block mb-2">Last Name</label>
+                      <input type="text" id="last-name" className="w-full rounded-lg border border-gray-300" placeholder="e.g. Doe" />
+                    </div>
+                    <div className="form-submit mt-6">
+                      <button type="submit" className="w-full py-3 rounded-lg text-2xl text-white bg-green-500">
+                        Pay Now { Package.currency.symbol + Package.price }
+                      </button>
+                    </div>
+                  </div>
+                  <script src="https://js.paystack.co/v1/inline.js"></script>
+                </form>
               </div>
             </div>
           </div>

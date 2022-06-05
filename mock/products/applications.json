@@ -128,7 +128,7 @@
       "tag": "todo #4302564",
       "name": "Todo App",
       "description": "This is the description section for product package and this section will provide a brief description of what the product package is all about. It should be really brief...just like this. And maybe a little more just to make it exactly this. Seems there should be more because it seems inconplete, just about this now. Looks good now! Hello World.",
-      "price": 2400.99,
+      "price": 2400,
       "category": "Software development",
       "currency": {
         "name": "dollars",
