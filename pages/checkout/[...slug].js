@@ -9,6 +9,30 @@ import DisplayColors from '../../components/DisplayColors';
 
 export default function Checkout({ Package, Requirements }) {
   const [ passwordVisibility, togglePasswordVisibility ] = useState(false)
+  const [ loginForm, toggleLoginForm ] = useState(false)
+  const [ auth, setAuth ] = useState({ user: {}, status: false })
+  const [ login, setLogin ] = useState({ email: "", password: "" })
+  const [ register, setRegister ] = useState({ email: "", firstame: "", lastname: "", password: "" })
+  
+  const handleLoginInputChange = (e) => {
+    const value = e.target.value
+    const key = e.target.name
+    setLogin(prevState => { return { ...prevState, [key]: value }})
+  }
+  const handleRegisterInputChange = (e) => {
+    const value = e.target.value
+    const key = e.target.name
+    setRegister(prevState => { return { ...prevState, [key]: value }})
+  }
+  const Login = (e) => {
+    e.preventDefault()
+    setAuth(prevAuth => { return { user: login, status: true } })
+  }
+  const Register = (e) => {
+    e.preventDefault()
+    setAuth(prevAuth => { return { user: register, status: true } })
+  }
+
   const keyToProperFormat = (text) => {
     if (text !== null) {
       text = text.split('_');
@@ -19,61 +43,28 @@ export default function Checkout({ Package, Requirements }) {
     }
   }
   useEffect(() => {
-    const paymentForm = document.getElementById('paymentForm');
-    paymentForm.addEventListener("submit", payWithPaystack, false);
-    function payWithPaystack(e) {
-      e.preventDefault();
+    function payWithPaystack() {
       let handler = PaystackPop.setup({
         key: 'pk_test_3851bb68ea57c1da0fea7acffa71c1e3fbcbe477', // Replace with your public key
-        email: document.getElementById("email-address").value,
-        amount: document.getElementById("amount").value * 100,
+        email: auth.user.email,
+        amount: Package.price * 100,
         ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
         // label: "Optional string that replaces customer email"
-        onClose: function(){
+        onClose: function() {
+          setAuth(prevAuth => { return { ...prevAuth, status: false }})
           alert('Window closed.');
         },
-        callback: function(response){
+        callback: function(response) {
+          setLogin({ email: "", password: "" })
+          setRegister({ email: "", firstame: "", lastname: "", password: "" })
           let message = 'Payment complete! Reference: ' + response.reference;
           alert(message);
         }
       });
       handler.openIframe();
     }
-  }, [])
-
-  const formatUnit = (unit) => {
-    if (unit >= 1000) {
-      return unit / 1000 + 'k'
-    } else if (unit >= 1000000) {
-      return unit / 1000000 + 'M'
-    } else {
-      return unit
-    }
-  }
-
-  const currency = () => {
-    return {
-      usd: (value) => {
-        const { amount, unit} = currency().prepareUnit(value);
-        return new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD'
-        }).format(amount).concat(unit);
-      },
-      prepareUnit: (amount) => {
-        const formatted_amount = formatUnit(amount);
-        let formatted_amount_unit;
-        const formatted_amount_is_integer_or_decimal = /^\d+\.\d+$|^\d+$/.test(formatted_amount);
-        if (typeof formatted_amount == 'string' && !formatted_amount_is_integer_or_decimal) {
-          formatted_amount_unit = formatted_amount.slice(-1)
-        } else {
-          formatted_amount_unit = ''
-        }
-        const formatted_float_amount = parseFloat(formatted_amount);
-        return { amount: formatted_float_amount, unit: formatted_amount_unit };
-      }
-    }
-  }
+    if (auth.status) payWithPaystack()
+  }, [ auth ])
 
   return (
     <Layout>
@@ -185,38 +176,73 @@ export default function Checkout({ Package, Requirements }) {
                 </div>
               </div>
               <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
-                <form className="bg-white rounded-lg border overflow-hidden" id="paymentForm">
-                  <h3 className="border-b text-gray-0 px-4 py-3 text-2xl font-heading font-medium">
-                    Payment details
+                <div className="relative bg-white rounded-lg border">
+                  <h3 className="relative px-4 py-3 border-b text-2xl font-heading font-medium">
+                    Billing details
                   </h3>
-                  <div className="p-6">
-                    <h3 className="text-lg mb-4 font-heading font-medium">
-                      Login and proceed to payment
-                    </h3>
-                    <div className="mb-4">
-                      <label htmlFor="email" className="w-full text-lg block mb-2">Email Address</label>
-                      <input type="email" id="email-address" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
-                    </div>
-                    <input className="hidden" type="tel" id="amount" readOnly value={ Package.price } required />
-                    <div className="mb-4">
-                      <label htmlFor="first-name" className="w-full text-lg block mb-2">First Name</label>
-                      <input type="text" id="first-name" className="w-full rounded-lg border border-gray-300" placeholder="e.g. John" />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="last-name" className="w-full text-lg block mb-2">Last Name</label>
-                      <input type="text" id="last-name" className="w-full rounded-lg border border-gray-300" placeholder="e.g. Doe" />
-                    </div>
-                    <div className="flex items-center text-xl mt-6">
-                      <button type="submit" className="w-full py-3 rounded-l-lg border-r border-white text-white bg-green-500">
-                        Login & Pay
+                  <div className="relative overflow-hidden pt-6 w-full">
+                    <form onSubmit={Register} className={`${!loginForm ? '' : 'hidden' } transition-left duration-700 w-full px-6 `}>
+                      <div className="mb-4">
+                        <label htmlFor="register-email" className="w-full text-lg block mb-2">Email Address</label>
+                        <input type="email" name="email" onChange={handleRegisterInputChange} defaultValue={register.email} id="register-email" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="register-firstname" className="w-full text-lg block mb-2">First Name</label>
+                        <input type="text" name="firstname" onChange={handleRegisterInputChange} defaultValue={register.firstame} id="register-firstname" className="w-full rounded-lg border border-gray-300" placeholder="e.g. John" required />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="register-lastname" className="w-full text-lg block mb-2">Last Name</label>
+                        <input type="text" name="lastname" onChange={handleRegisterInputChange} defaultValue={register.lastname} id="register-lastname" className="w-full rounded-lg border border-gray-300" placeholder="e.g. Doe" required />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="register-password" className="w-full text-lg block mb-2">Password</label>
+                        <input type="password" name="password" onChange={handleRegisterInputChange} defaultValue={register.password} id="register-password" className="w-full rounded-lg border border-gray-300" placeholder="*********" required />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="setAsPaymentDetails" className="w-full text-lg block mb-2">
+                        <input type="checkbox" disabled readOnly checked id="setAsPaymentDetails" className="w-6 h-6 rounded-lg mr-4" />
+                        These details will be used for payment</label>
+                      </div>
+                      <div className="relative text-xl">
+                        <button type="submit" className="w-full py-3 rounded-full text-white bg-red-500">
+                          Sign Up & Pay
+                        </button>
+                      </div>
+                    </form>
+                    <form onSubmit={Login} className={`${!loginForm ? 'hidden' : '' } transition-left duration-700 w-full px-6 `}>
+                      <div className="mb-4">
+                        <label htmlFor="login-email" className="w-full text-lg block mb-2">Email Address</label>
+                        <input type="email" name="email" onChange={handleLoginInputChange} defaultValue={login.email} id="login-email" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="login-password" className="w-full text-lg block mb-2">Password</label>
+                        <input type="password" name="password" onChange={handleLoginInputChange} defaultValue={login.password} id="login-password" className="w-full rounded-lg border border-gray-300" placeholder="*********" required />
+                      </div>
+                      <div className="mb-4">
+                        <label htmlFor="setAsPaymentDetails" className="w-full text-lg block mb-2">
+                        <input type="checkbox" disabled readOnly checked id="setAsPaymentDetails" className="w-6 h-6 rounded-lg mr-4" />
+                        These details will be used for payment</label>
+                      </div>
+                      <div className="relative text-xl">
+                        <button type="submit" className="w-full py-3 rounded-full text-white bg-green-500">
+                          Login & Pay
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div className="h-full p-4 pb-6 text-center w-full">
+                    <p>After sign up / login, payment process will begin automatically.</p>
+                    <span className="block text-lg">
+                      <span className="text-lg font-bold">
+                      { !loginForm ? "Already have an account?" : "Don't have an account?" }
+                      </span>
+                      <button onClick={(e)=>{e.preventDefault();toggleLoginForm(!loginForm)}} className={` ${ !loginForm ? 'bg-green-500' : 'bg-red-500' } mt-3 w-full py-3 rounded-full text-white`}>
+                        { !loginForm ? 'Login & Pay' : 'Sign & Pay' }
                       </button>
-                      <button type="submit" className="bg-opacity-50 w-full py-3 rounded-r-lg border-l border-white text-white bg-blue-500">
-                        Sign Up & Pay
-                      </button>
-                    </div>
+                    </span>
                   </div>
                   <script src="https://js.paystack.co/v1/inline.js"></script>
-                </form>
+                </div>
               </div>
             </div>
           </div>
