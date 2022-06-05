@@ -103,6 +103,10 @@ navbar {
     border: 3px solid rgba(16, 185, 129, .8)!important;
     border-radius: 1rem;
 }
+/* Custom styles for react-multiple-carousel */
+.react-multiple-carousel__arrow {
+    z-index: unset!important;
+}
 
 /* .grid {
     display: flex;
