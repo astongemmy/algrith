@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 // Mock database for getting initial props
 import { getProductBySlug } from '../../lib/products';
 // Components! Starting with master layout component
@@ -198,16 +199,17 @@ export default function Checkout({ Package, Requirements }) {
                         <label htmlFor="register-password" className="w-full text-lg block mb-2">Password</label>
                         <input type="password" name="password" onChange={handleRegisterInputChange} defaultValue={register.password} id="register-password" className="w-full rounded-lg border border-gray-300" placeholder="*********" required />
                       </div>
-                      <div className="mb-4">
+                      {/* <div className="mb-4">
                         <label htmlFor="setAsPaymentDetails" className="w-full text-lg block mb-2">
                         <input type="checkbox" disabled readOnly checked id="setAsPaymentDetails" className="w-6 h-6 rounded-lg mr-4" />
                         These details will be used for payment</label>
-                      </div>
+                      </div> */}
                       <div className="relative text-xl">
                         <button type="submit" className="w-full py-3 rounded-full text-white bg-red-500">
                           Sign Up & Pay
                         </button>
                       </div>
+                      <script src="https://js.paystack.co/v1/inline.js"></script>
                     </form>
                     <form onSubmit={Login} className={`${!loginForm ? 'hidden' : '' } transition-left duration-700 w-full px-6 `}>
                       <div className="mb-4">
@@ -218,16 +220,17 @@ export default function Checkout({ Package, Requirements }) {
                         <label htmlFor="login-password" className="w-full text-lg block mb-2">Password</label>
                         <input type="password" name="password" onChange={handleLoginInputChange} defaultValue={login.password} id="login-password" className="w-full rounded-lg border border-gray-300" placeholder="*********" required />
                       </div>
-                      <div className="mb-4">
+                      {/* <div className="mb-4">
                         <label htmlFor="setAsPaymentDetails" className="w-full text-lg block mb-2">
                         <input type="checkbox" disabled readOnly checked id="setAsPaymentDetails" className="w-6 h-6 rounded-lg mr-4" />
                         These details will be used for payment</label>
-                      </div>
+                      </div> */}
                       <div className="relative text-xl">
                         <button type="submit" className="w-full py-3 rounded-full text-white bg-green-500">
                           Login & Pay
                         </button>
                       </div>
+                      <script src="https://js.paystack.co/v1/inline.js"></script>
                     </form>
                   </div>
                   <div className="h-full p-4 pb-6 text-center w-full">
@@ -241,13 +244,13 @@ export default function Checkout({ Package, Requirements }) {
                       </button>
                     </span>
                   </div>
-                  <script src="https://js.paystack.co/v1/inline.js"></script>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
+      {/* <Script src="https://js.paystack.co/v1/inline.js"/> */}
     </Layout>
   )
 }
