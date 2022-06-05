@@ -190,6 +190,9 @@ export default function Checkout({ Package, Requirements }) {
                     Payment details
                   </h3>
                   <div className="p-6">
+                    <h3 className="text-lg mb-4 font-heading font-medium">
+                      Login and proceed to payment
+                    </h3>
                     <div className="mb-4">
                       <label htmlFor="email" className="w-full text-lg block mb-2">Email Address</label>
                       <input type="email" id="email-address" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
@@ -203,9 +206,12 @@ export default function Checkout({ Package, Requirements }) {
                       <label htmlFor="last-name" className="w-full text-lg block mb-2">Last Name</label>
                       <input type="text" id="last-name" className="w-full rounded-lg border border-gray-300" placeholder="e.g. Doe" />
                     </div>
-                    <div className="form-submit mt-6">
-                      <button type="submit" className="w-full py-3 rounded-lg text-2xl text-white bg-green-500">
-                        Pay Now { Package.currency.symbol + Package.price }
+                    <div className="flex items-center text-xl mt-6">
+                      <button type="submit" className="w-full py-3 rounded-l-lg border-r border-white text-white bg-green-500">
+                        Login & Pay
+                      </button>
+                      <button type="submit" className="bg-opacity-50 w-full py-3 rounded-r-lg border-l border-white text-white bg-blue-500">
+                        Sign Up & Pay
                       </button>
                     </div>
                   </div>
