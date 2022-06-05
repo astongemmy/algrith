@@ -177,7 +177,7 @@ export default function Checkout({ Package, Requirements }) {
                 </div>
               </div>
               <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
-                <div className="relative bg-white rounded-lg border">
+                <div className="relative bg-white rounded-lg border pb-4">
                   <h3 className="relative px-4 py-3 border-b text-2xl font-heading font-medium">
                     Billing details
                   </h3>
@@ -185,19 +185,19 @@ export default function Checkout({ Package, Requirements }) {
                     <form onSubmit={Register} className={`${!loginForm ? '' : 'hidden' } transition-left duration-700 w-full px-6 `}>
                       <div className="mb-4">
                         <label htmlFor="register-email" className="w-full text-lg block mb-2">Email Address</label>
-                        <input type="email" name="email" onChange={handleRegisterInputChange} defaultValue={register.email} id="register-email" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
+                        <input type="email" name="email" onChange={handleRegisterInputChange} defaultValue={register.email} id="register-email" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />
                       </div>
                       <div className="mb-4">
                         <label htmlFor="register-firstname" className="w-full text-lg block mb-2">First Name</label>
-                        <input type="text" name="firstname" onChange={handleRegisterInputChange} defaultValue={register.firstame} id="register-firstname" className="w-full rounded-lg border border-gray-300" placeholder="e.g. John" required />
+                        <input type="text" name="firstname" onChange={handleRegisterInputChange} defaultValue={register.firstame} id="register-firstname" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. John" required />
                       </div>
                       <div className="mb-4">
                         <label htmlFor="register-lastname" className="w-full text-lg block mb-2">Last Name</label>
-                        <input type="text" name="lastname" onChange={handleRegisterInputChange} defaultValue={register.lastname} id="register-lastname" className="w-full rounded-lg border border-gray-300" placeholder="e.g. Doe" required />
+                        <input type="text" name="lastname" onChange={handleRegisterInputChange} defaultValue={register.lastname} id="register-lastname" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. Doe" required />
                       </div>
                       <div className="mb-4">
                         <label htmlFor="register-password" className="w-full text-lg block mb-2">Password</label>
-                        <input type="password" name="password" onChange={handleRegisterInputChange} defaultValue={register.password} id="register-password" className="w-full rounded-lg border border-gray-300" placeholder="*********" required />
+                        <input type="password" name="password" onChange={handleRegisterInputChange} defaultValue={register.password} id="register-password" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="*********" required />
                       </div>
                       {/* <div className="mb-4">
                         <label htmlFor="setAsPaymentDetails" className="w-full text-lg block mb-2">
@@ -214,11 +214,11 @@ export default function Checkout({ Package, Requirements }) {
                     <form onSubmit={Login} className={`${!loginForm ? 'hidden' : '' } transition-left duration-700 w-full px-6 `}>
                       <div className="mb-4">
                         <label htmlFor="login-email" className="w-full text-lg block mb-2">Email Address</label>
-                        <input type="email" name="email" onChange={handleLoginInputChange} defaultValue={login.email} id="login-email" className="w-full rounded-lg border border-gray-300" placeholder="e.g. johndoe@email.com" required />
+                        <input type="email" name="email" onChange={handleLoginInputChange} defaultValue={login.email} id="login-email" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />
                       </div>
                       <div className="mb-4">
                         <label htmlFor="login-password" className="w-full text-lg block mb-2">Password</label>
-                        <input type="password" name="password" onChange={handleLoginInputChange} defaultValue={login.password} id="login-password" className="w-full rounded-lg border border-gray-300" placeholder="*********" required />
+                        <input type="password" name="password" onChange={handleLoginInputChange} defaultValue={login.password} id="login-password" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="*********" required />
                       </div>
                       {/* <div className="mb-4">
                         <label htmlFor="setAsPaymentDetails" className="w-full text-lg block mb-2">
@@ -233,7 +233,7 @@ export default function Checkout({ Package, Requirements }) {
                       <script src="https://js.paystack.co/v1/inline.js"></script>
                     </form>
                   </div>
-                  <div className="h-full p-4 pb-6 text-center w-full">
+                  <div className="h-full p-6 pb-6 text-center w-full">
                     <p>After sign up / login, payment process will begin automatically.</p>
                     <span className="block text-lg">
                       <span className="text-lg font-bold">
