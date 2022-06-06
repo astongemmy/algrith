@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function CheckoutLoginForm({ getAuth }) {
   const [auth, setAuth] = useState({})
   const [login, setLogin] = useState({ email: "", password: "" })
+  useEffect(() => { getAuth(auth) }, [auth])
 
   const handleInputChange = (e) => {
     const value = e.target.value
@@ -12,7 +13,6 @@ export default function CheckoutLoginForm({ getAuth }) {
   const Login = (e) => {
     e.preventDefault()
     setAuth(prevAuth => { return { user: login, status: true } })
-    getAuth(auth)
   }
 
   return (

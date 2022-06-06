@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function CheckoutSignUpForm({ getAuth }) {
   const [auth, setAuth] = useState({})
   const [register, setRegister] = useState({ email: "", firstame: "", lastname: "", password: "" })
-
+  useEffect(() => { getAuth(auth) }, [auth])
   const handleInputChange = (e) => {
     const value = e.target.value
     const key = e.target.name
@@ -12,7 +12,6 @@ export default function CheckoutSignUpForm({ getAuth }) {
   const Register = (e) => {
     e.preventDefault()
     setAuth(prevAuth => { return { user: register, status: true } })
-    getAuth(auth)
   }
 
   return (
