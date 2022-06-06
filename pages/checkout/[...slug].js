@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
+// import Script from 'next/script'
 // Mock database for getting initial props
 import { getProductBySlug } from '../../lib/products';
 // Components! Starting with master layout component
@@ -28,6 +29,7 @@ export default function Checkout({ Package, Requirements }) {
           </div>
         </section>
       </main>
+      {/* <Script src="https://js.paystack.co/v1/inline.js" /> */}
     </Layout>
   )
 }

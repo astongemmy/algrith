@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Script from 'next/script'
 
 export default function CheckoutSignUpForm({ getAuth }) {
   const [auth, setAuth] = useState({})
@@ -37,6 +38,7 @@ export default function CheckoutSignUpForm({ getAuth }) {
           Sign Up & Pay
         </button>
       </div>
+      <Script src="https://js.paystack.co/v1/inline.js" />
     </form>
   )
 }

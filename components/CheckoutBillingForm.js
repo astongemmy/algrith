@@ -18,8 +18,6 @@ export default function CheckoutBillingForm({ Package }) {
           alert('Window closed.');
         },
         callback: function(response) {
-          // setLogin({ email: "", password: "" })
-          // setRegister({ email: "", firstame: "", lastname: "", password: "" })
           let message = 'Payment complete! Reference: ' + response.reference;
           alert(message);
         }
@@ -39,7 +37,6 @@ export default function CheckoutBillingForm({ Package }) {
         <div className="relative overflow-hidden pt-6 w-full">
           { !loginForm && <CheckoutSignUpForm getAuth={(auth) => setAuth(auth)} /> }
           { loginForm && <CheckoutLoginForm getAuth={(auth) => setAuth(auth)} /> }
-          <script src="https://js.paystack.co/v1/inline.js"></script>
         </div>
 
         <div className="h-full p-6 pb-6 text-center w-full">
