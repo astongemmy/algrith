@@ -17,7 +17,7 @@ export default function CheckoutLoginForm({ getAuth }) {
   }
 
   return (
-    <form onSubmit={Login} className="transition-left duration-700 w-full px-6">
+    <form id="paymentForm" onSubmit={Login} className="transition-left duration-700 w-full px-6">
       <div className="mb-4">
         <label htmlFor="login-email" className="w-full text-lg block mb-2">Email Address</label>
         <input type="email" name="email" onChange={handleInputChange} defaultValue={login.email} id="login-email" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />

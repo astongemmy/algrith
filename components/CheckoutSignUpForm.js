@@ -16,7 +16,7 @@ export default function CheckoutSignUpForm({ getAuth }) {
   }
 
   return (
-    <form onSubmit={Register} className="transition-left duration-700 w-full px-6">
+    <form id="paymentForm" onSubmit={Register} className="transition-left duration-700 w-full px-6">
       <div className="mb-4">
         <label htmlFor="register-email" className="w-full text-lg block mb-2">Email Address</label>
         <input type="email" name="email" onChange={handleInputChange} defaultValue={register.email} id="register-email" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />
