@@ -21,7 +21,7 @@ export default class Outline extends React.Component {
         });
 
         return (
-            <div id="outline" className="relative pt-16 px-1 xxl:px-32 w-full dark:bg-black">
+            <div id="outline" className="relative pt-16 pb-4 px-1 2xl:px-32 w-full dark:bg-black">
                 <div
                     className={`
                         relative flex 
@@ -43,7 +43,7 @@ export default class Outline extends React.Component {
                 <h1 className="relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full text-center font-bold">
                     {title}
                 </h1>
-                <div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 md:px-8 lg:px-12 xl:px-32 w-full dark:bg-black">
+                <div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 md:px-10 lg:px-14 xl:px-32 w-full dark:bg-black">
                     {outlines}
                 </div>
             </div>

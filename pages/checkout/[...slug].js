@@ -17,8 +17,8 @@ export default function Checkout({ Package, Requirements }) {
         <title> Checkout | Algrith </title>
       </Head>
       <main>
-        <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-6 md:px-12 xl:px-28 overflow-hidden">
-          <div className="flex flex-wrap">
+        <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-6 md:px-12 lg:px-20 xl:px-28 overflow-hidden">
+          <div className="px-2 lg:px-0 flex flex-wrap">
             <BreadCrumbs page={`checkout.index`} />
             <CheckoutOrderSummary Package={ Package } />
             <div className="flex flex-wrap justify-between w-full lg:w-2/3 lg:pl-10 xl:pl-0">

@@ -4,7 +4,7 @@ export default class ContactDetails extends React.Component {
   constructor() { super() }
   render() {
     return (
-      <div className="lg:order-3 w-full lg:w-3/12 px-4 mt-10 md:mt-16 lg:mt-0">
+      <div className="lg:order-3 w-full md:w-2/4 lg:w-3/12 md:px-4 mt-10 md:mt-16">
         <div className="py-6 px-8 mb-4 bg-blue-500 rounded-lg shadow">
           <div className="flex items-center">
             <span className="flex items-center justify-center w-12 h-12 mr-8 bg-blue-400 rounded-lg">
@@ -25,7 +25,7 @@ export default class ContactDetails extends React.Component {
             <p className="text-lg font-bold text-white">support@shuffle.dev</p>
           </div>
         </div>
-        <div className="py-0 md:py-6 px-8">
+        <div className="py-0 md:py-6 md:px-8">
           <div className="flex">
             <span className="flex-shrink-0 flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ffffff" strokeWidth={2}>

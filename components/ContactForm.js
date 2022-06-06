@@ -77,11 +77,11 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="lg:order-2 lg:w-6/12 -mt-24 md:-mt-32 lg:-mt-52 sm:px-12">
+      <div className="lg:order-2 lg:w-6/12 -mt-24 md:-mt-32 lg:-mt-24 sm:px-12 lg:px-4 xl:px-12">
         <div className="mt-5 md:mt-0">
           <form onSubmit={ this.sendMail } id="contact-form" method="POST">
             <div className="shadow rounded-md overflow-hidden">
-              <div className="px-4 py-5 sm:p-12 bg-white space-y-6">
+              <div className="px-6 py-5 sm:p-12 lg:px-6 xl:px-12 bg-white space-y-6">
                 <div className="grid grid-cols-4 gap-6">
                   <div className="col-span-4 sm:col-span-2">
                     <label htmlFor="name" className="block text-lg font-medium text-gray-700">

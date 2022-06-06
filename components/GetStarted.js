@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 export default function GetStarted() {
   return (
-    <div className="relative pb-10 md:pb-24 px-8 md:px-10 lg:px-14 xl:px-32 w-full dark:bg-black">
-      <div className="w-full mx-auto rounded-xl shadow-lg relative bg-white overflow-hidden">
-        <div className="pt-8 pb-10 sm:pt-24 sm:pb-40 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24 xl:pt-40 xl:pb-48">
+    <div className="relative pb-10 md:pb-24 px-8 md:px-12 lg:px-20 xl:px-32 w-full dark:bg-black">
+      <div className="w-full mx-auto rounded-3xl shadow-lg relative bg-white overflow-hidden">
+        <div className="pt-8 pb-10 sm:pt-24 sm:pb-40 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24 xl:pt-12 xl:pb-12">
           
-          <div className="md:flex justify-between relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
+          <div className="md:flex justify-between relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
-            <div className="sm:max-w-lg px-2 md:px-auto">
+            <div className="sm:max-w-2xl px-2 md:px-auto">
               <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
                 Responsive designs are finally here
               </h1>
@@ -27,7 +27,7 @@ export default function GetStarted() {
               </Link>
             </div>
 
-            <div className="sm:max-w-lg mt-8 md:mt-auto px-2 md:px-auto">
+            <div className="sm:max-w-2xl mt-8 md:mt-auto px-2 md:px-auto">
               <div className="rounded-lg overflow-hidden">
                 <img src="./images/illustrations/responsive.gif" alt="" className="w-full h-full object-center object-cover" />
               </div>

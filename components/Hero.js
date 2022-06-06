@@ -16,7 +16,7 @@ export default function Hero({ products }) {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 3
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -25,7 +25,7 @@ export default function Hero({ products }) {
   };
 
   return (
-    <div id="product-intro" className="w-full pt-10 lg:pb-16 lg:pt-28 lg:pb-20 bg-white">
+    <div id="product-intro" className="w-full pt-10 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-8 sm:px-6 md:px-12 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-lg text-indigo-600 font-semibold tracking-wide uppercase">Pick a product and get started!</h2>
@@ -40,7 +40,7 @@ export default function Hero({ products }) {
         </div>
       </div>
 
-      <div className="w-full max-w-2xl mx-auto py-6 sm:py-10 px-4 md:px-8 sm:px-6 md:px-14 xl:px-0 md:max-w-screen-lg xxl:max-w-screen-xl">
+      <div className="w-full mx-auto py-6 sm:py-10 px-4 md:px-8 sm:px-6 md:px-10 lg:px-14 xl:px-28">
         <Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
           {products.map((product) => (
             <div key={product.package.id} className="rounded-lg overflow-hidden shadow-lg group relative">

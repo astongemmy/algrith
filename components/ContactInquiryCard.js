@@ -4,7 +4,7 @@ export default class ContactInquiryCard extends React.Component {
   constructor() { super() }
   render() {
     return (
-      <div className="lg:order-1 w-full lg:w-3/12 px-2 md:px-4 mb-4 lg:mb-0 mt-10 lg:mt-0">
+      <div className="lg:order-1 w-full md:w-2/4 lg:w-3/12 md:px-4 mt-10 md:mt-16">
         <div className="bg-white rounded-b-lg shadow">
           <img className="h-64 w-full rounded-lg object-cover" src="https://image.freepik.com/free-photo/contacting-with-friends-via-computer_329181-14587.jpg" alt="" />
           <div className="px-8 py-8">

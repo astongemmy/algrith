@@ -8,7 +8,7 @@ export default class Section extends React.Component {
     const { title, items, illustration } = this.props.payload;
     
     return (
-      <div id={ title.text } className="relative py-8 md:py-16 px-1 xxl:px-32 w-full dark:bg-black">
+      <div id={ title.text } className="relative py-8 md:py-16 px-1 xxl:px-24 w-full dark:bg-black">
         <div 
           className={`
             relative flex 
@@ -25,10 +25,10 @@ export default class Section extends React.Component {
           }>
           <img className="rounded-full" src={ illustration.src } alt={ `${ title.text }-illustration` } />
         </div>
-        <h1 className={`text-center md:text-${ title.align } relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full md:w-10/12 font-bold`}>
+        <h1 className={`text-center md:text-${ title.align } relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full md:w-11/12 lg:px-3 xl:px-10 font-bold`}>
           { title.text }
         </h1>
-        <div className="relative flex flex-wrap xl:flex-nowrap justify-start lg:justify-between items-center bg-grey-900 py-4 lg:py-16 px-2 lg:px-32 w-full dark:bg-black">
+        <div className="relative flex flex-wrap xl:flex-nowrap justify-start lg:justify-between items-center bg-grey-900 py-4 lg:py-16 px-1 md:px-9 lg:px-16 xl:px-28 w-full dark:bg-black xl:space-x-8">
           {(title.text.toLowerCase() == "testimonials" && <TestimonialCard testimonials={ items } /> )}
         </div>
       </div>

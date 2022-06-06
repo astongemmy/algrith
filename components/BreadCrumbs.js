@@ -25,7 +25,7 @@ export default function BreadCrumbs({ page }) {
   const breadcrumbsToRender = breadcrumbs[pageArray[0]][pageArray[1]]
 
   return (
-    <div className="w-full px-2 md:px-4">
+    <div className="w-full">
       <ul className="flex flex-wrap items-center mb-4 md:mb-8">
         <li className="mr-6">
           <Link href="/">

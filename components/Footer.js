@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
 
             <footer className="relative bg-gray-100">
 
-                <div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-32 pb-12">
+                <div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-24 pb-12">
 
                     <div className="w-full md:w-1/3 pt-4">
 
