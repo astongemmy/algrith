@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import { Router, useRouter } from 'next/router'
 import ImageGallery from 'react-image-gallery';
 import useViewport from '../../hooks/useViewport'
 // Mock database for getting initial props
@@ -19,15 +18,9 @@ import PackageSelector from '../../components/PackageSelector';
 
 export default function Product({ Product }) {
   const { viewport } = useViewport();
-  const router = useRouter()
-  // const activePackage = router.query.package_name ? Product.packages.filter((product) => {
-  //   return product.id == router.query.package_name
-  // })[0] : Product.packages.filter((product) => product.active)[0]
   const activePackage = Product.packages.filter((product) => product.active)[0]
   const [selectedPackage, setSelectedPackage] = useState(activePackage)
-  useEffect(() => {
-    setSelectedPackage(activePackage)
-  }, [Product, router])
+  // useEffect(() => { setSelectedPackage(activePackage) }, [Product])
   const setPakageGallery = (gallery) => {
     return gallery.map((image) => {
       const sample = { originalClass: "overflow-hidden w-full h-72 md:h-auto lg:h-112 2xl:h-144 rounded-lg object-center object-cover" }
@@ -95,10 +88,10 @@ export default function Product({ Product }) {
 export async function getServerSideProps({ params }) {
   const requested_product = params.slug[0]
   const requested_package = params.slug[1]
-  const product = getProductBySlug(requested_product)
-  let packages;
-  if (requested_package && typeof requested_package == 'string' && requested_package !== '') {
-    packages = product.packages.map((_package) => {
+  const Product = getProductBySlug(requested_product)
+  const AllPackages = Product.packages.map((_package) => _package.id)
+  if (AllPackages.includes(requested_package)) {
+    const Packages = Product.packages.map((_package) => {
       if (_package.active && _package.id !== requested_package) {
         _package.active = false
       }
@@ -107,37 +100,12 @@ export async function getServerSideProps({ params }) {
       }
       return _package
     })
-    product.packages = [ ...packages ]
+    Product.packages = [ ...Packages ]
   }
   return {
     props: {
-      Product: product
+      Product: Product
 
     }
   }
 }
-// export async function getStaticPaths() {
-  // const products = getAllProducts()
-  // return {
-    // paths: products.map((product) => {
-    //   return {
-    //     params: {
-    //       slug: [ product.slug, product.packages.id ]
-    //       // slug: [ product.slug, 'b']
-    //     }
-    //   }
-    // }),
-//     paths: [],
-//     fallback: false
-//   }
-// }
-// export async function getStaticProps(params) {
-//   // const slugs = params.slug
-//   console.log(params)
-//   return {
-//     props: {
-//       // Product: getProductBySlug(slugs[0]),
-//       // Product: getProductBySlug(params.params.slug),
-//     }
-//   }
-// }
