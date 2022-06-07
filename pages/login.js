@@ -32,7 +32,7 @@ export default function Login () {
                     <img src="/images/logo/algrith-brand.png" className="h-16" alt="Algrith logo" />
                   </a>
                 </Link>
-                <h1 className="text-xl font-medium text-heading -mt-2 px-4 py-2 text-green-700 bg-green-200 shadow-sm rounded-full">Login</h1>
+                <h1 className="text-xl font-medium text-heading -mt-2 px-4 py-2 text-white bg-green-500 shadow-sm rounded-full">Login</h1>
               </div>
               <form onSubmit={Login} className="w-full px-1 mt-4">
                 <div className="mb-4">
