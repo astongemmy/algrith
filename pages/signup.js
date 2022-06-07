@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-// Components! Starting with master layout component
-import Layout from '../components/Layout'
 import Link from 'next/link'
 
-export default function Login () {
+export default function SignUp () {
   const [auth, setAuth] = useState({})
   const [signup, setSignUp] = useState({ email: "", firstname: "", lastname: "", password: "" })
   const [passwordVisibility, setPasswordVisibility] = useState(false)
@@ -13,7 +11,7 @@ export default function Login () {
     const key = e.target.name
     setSignUp(prevState => { return { ...prevState, [key]: value } })
   }
-  const SignUp = (e) => {
+  const Signup = (e) => {
     e.preventDefault()
     setAuth(prevAuth => { return { user: signup, status: true } })
   }
@@ -32,7 +30,7 @@ export default function Login () {
                 <img src="/images/logo/algrith-brand.png" className="h-16" alt="Algrith logo" />
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-green-700 bg-green-200 shadow-sm rounded-full">Sign up</h1>
               </div>
-              <form onSubmit={SignUp} className="w-full px-1 mt-4">
+              <form onSubmit={Signup} className="w-full px-1 mt-4">
                 <div className="mb-4">
                   <label htmlFor="email" className="w-full text-lg block mb-2">Email address</label>
                   <div className="flex rounded-md shadow-sm mt-3">
