@@ -27,7 +27,11 @@ export default function Login () {
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
             <div className="shadow rounded-2xl bg-white w-full pt-4 pb-12 px-6">
               <div className="flex justify-between items-center">
-                <img src="/images/logo/algrith-brand.png" className="h-16" alt="Algrith logo" />
+                <Link href={'/'}>
+                  <a>
+                    <img src="/images/logo/algrith-brand.png" className="h-16" alt="Algrith logo" />
+                  </a>
+                </Link>
                 <h1 className="text-xl font-medium text-heading -mt-2 px-4 py-2 text-green-700 bg-green-200 shadow-sm rounded-full">Login</h1>
               </div>
               <form onSubmit={Login} className="w-full px-1 mt-4">
