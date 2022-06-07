@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import Script from 'next/script'
 
 export default function CheckoutSignUpForm({ getAuth }) {
   const [auth, setAuth] = useState({})
@@ -16,7 +15,7 @@ export default function CheckoutSignUpForm({ getAuth }) {
   }
 
   return (
-    <form id="paymentForm" onSubmit={Register} className="transition-left duration-700 w-full px-6">
+    <form onSubmit={Register} className="transition-left duration-700 w-full px-6">
       <div className="mb-4">
         <label htmlFor="register-email" className="w-full text-lg block mb-2">Email Address</label>
         <input type="email" name="email" onChange={handleInputChange} defaultValue={register.email} id="register-email" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />
@@ -38,7 +37,6 @@ export default function CheckoutSignUpForm({ getAuth }) {
           Sign Up & Pay
         </button>
       </div>
-      <Script src="https://js.paystack.co/v1/inline.js" />
     </form>
   )
 }

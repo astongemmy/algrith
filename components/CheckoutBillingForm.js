@@ -1,31 +1,21 @@
 import { useEffect, useState } from "react"
+import { usePaystackPayment } from 'react-paystack'
 import CheckoutLoginForm from "./CheckoutLoginForm";
 import CheckoutSignUpForm from "./CheckoutSignUpForm";
 
 export default function CheckoutBillingForm({ Package }) {
   const [ loginForm, toggleLoginForm ] = useState(false)
   const [auth, setAuth] = useState({})
-  useEffect(() => {
-    function payWithPaystack() {
-      let handler = PaystackPop.setup({
-        key: 'pk_test_3851bb68ea57c1da0fea7acffa71c1e3fbcbe477', // Replace with your public key
-        email: auth.user.email,
-        amount: Package.price * 100,
-        ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-        // label: "Optional string that replaces customer email"
-        onClose: function() {
-          setAuth(prevAuth => { return { ...prevAuth, status: false }})
-          alert('Window closed.');
-        },
-        callback: function(response) {
-          let message = 'Payment complete! Reference: ' + response.reference;
-          alert(message);
-        }
-      });
-      handler.openIframe();
-    }
-    if (auth.status) payWithPaystack()
-  }, [ auth ])
+  const config = {
+    reference: (new Date()).getTime().toString(),
+    email: auth.status ? auth.user.email : '',
+    amount: Package.price * 100,
+    publicKey: "pk_test_3851bb68ea57c1da0fea7acffa71c1e3fbcbe477"
+  }
+  const initializePayment = usePaystackPayment(config);
+  const onSuccess = (reference) => console.log(reference)
+  const onClose = () => console.log('closed')
+  useEffect(() => { auth.status ? initializePayment(onSuccess, onClose) : '' }, [auth])
   
   return (
     <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
