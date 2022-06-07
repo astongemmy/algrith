@@ -7,7 +7,7 @@ export default function Intro({ payload }) {
 	return (
 		<div id="intro-about" className="relative w-full dark:bg-black bg-intro-about bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 			<div className="w-full bg-gradient-to-b from-white pt-0 lg:pt-12 pb-12 lg:pb-20 px-8 md:px-12 lg:px-18 xl:px-24">
-				{title.text && <h1 data-aos="fade-down" className={`intro-lead relative ${title.case ? title.case : ''} text-3xl md:text-5xl lg:text-8xl text-green-500 py-8 m-0 w-full text-${title.align ? title.align : 'center'} font-bold`}></h1>}
+				{title.text && <h1 data-aos="fade-down" className={`intro-lead relative ${title.case ? title.case : ''} text-4xl md:text-5xl lg:text-8xl text-green-500 py-8 m-0 w-full text-${title.align ? title.align : 'center'} font-bold`}></h1>}
 				{description.text && <p data-aos="fade-up" className={`w-full md:whitespace-pre ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} text-gray-600 text-2xl lg:text-3xl`}>
 					{description.text}
 				</p>}
