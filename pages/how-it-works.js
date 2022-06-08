@@ -28,9 +28,11 @@ export default function HowItWorks() {
               <div className="xl:w-3/5 text-xl xl:pr-10 md:py-6">
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
-                    <div className="h-8 w-8 absolute top-0 bg-green-200 rounded-full pointer-events-none" />
-                    <div className="h-full w-1 bg-gray-200 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    <div className="h-8 w-8 absolute top-0 bg-red-500 rounded-full pointer-events-none">
+                      <div className="h-full w-full animate-ping bg-red-500 rounded-full" />
+                    </div>
+                    <div className="h-full w-1 bg-red-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-red-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-red-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 md:w-24 h-8 md:h-24" viewBox="0 0 24 24">
@@ -39,19 +41,19 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 1</h2>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 1</h2>
                       <p className="leading-relaxed text-lx md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-gray-200 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                    <div className="mt-40 h-full w-1 bg-yellow-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-yellow-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 2</h2>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 2</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
@@ -63,8 +65,8 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-gray-200 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    <div className="mt-40 h-full w-1 bg-green-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-green-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
@@ -74,19 +76,19 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 3</h2>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 3</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-gray-200 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                    <div className="mt-40 h-full w-1 bg-blue-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-blue-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 4</h2>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 4</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
@@ -99,7 +101,7 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute flex items-center justify-center">
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-slate-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-slate-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
@@ -109,7 +111,7 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 5</h2>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 5</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
