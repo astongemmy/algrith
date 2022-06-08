@@ -28,8 +28,8 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-4xl text-gray-900 mb-4 tracking-wider">STEP 1</h2>
-                      <p className="leading-relaxed text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 1</h2>
+                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
@@ -40,8 +40,8 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-4xl text-gray-900 mb-4 tracking-wider">STEP 2</h2>
-                      <p className="leading-relaxed text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-medium title-font text-2xl text-4xl text-gray-900 mb-4 tracking-wider">STEP 2</h2>
+                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
@@ -98,8 +98,8 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-medium title-font text-4xl text-gray-900 mb-4 tracking-wider">STEP 5</h2>
-                      <p className="leading-relaxed text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 5</h2>
+                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
