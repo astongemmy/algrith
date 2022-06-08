@@ -40,7 +40,7 @@ export default function HowItWorks() {
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
                       <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 1</h2>
-                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <p className="leading-relaxed text-lx md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ export default function HowItWorks() {
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
                       <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 2</h2>
-                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-yellow-500 inline-flex items-center justify-center text-white relative z-10">
@@ -75,7 +75,7 @@ export default function HowItWorks() {
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
                       <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 3</h2>
-                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function HowItWorks() {
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
                       <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 4</h2>
-                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
@@ -110,7 +110,7 @@ export default function HowItWorks() {
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
                       <h2 className="font-medium title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">STEP 5</h2>
-                      <p className="leading-relaxed text-lg md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
                     </div>
                   </div>
                 </div>
@@ -118,11 +118,11 @@ export default function HowItWorks() {
                   <h2 className="mb-4 text-xl md:text-3xl font-heading font-bold">
                     Congratulations! You can now get started with a product
                   </h2>
-                  <p className="text-lg md:text-2xl mb-12">
+                  <p className="text-xl md:text-2xl mb-12">
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link href={'/products'}>
-                    <a className="bg-white border-2 border-green-500 rounded-xl px-12 py-6 text-green-500 text-2xl">
+                    <a className="bg-white border-2 border-green-500 rounded-xl px-12 py-4 md:py-6 text-green-500 text-2xl">
                       Get Started
                     </a>
                   </Link>
@@ -130,10 +130,10 @@ export default function HowItWorks() {
               </div>
               <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8">
                 <div className="pt-6">
-                  <h2 className="mb-4 text-xl md:text-3xl font-heading font-bold">
+                  <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
                     Our Aim
                   </h2>
-                  <p className="text-lg md:text-2xl mb-8">
+                  <p className="text-xl md:text-2xl mb-8">
                     No matter what your ideas are, no matter the imaginations and desires you hold inside,
                     once you initiate this process with us, we will ensure to polish your ideas into
                     satisfactory output that will project your brand steps ahead of the competition.
@@ -141,10 +141,10 @@ export default function HowItWorks() {
                   <img className="object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
                 </div>
                 <div className="pt-12">
-                  <h2 className="mb-4 text-xl md:text-3xl font-heading font-bold">
+                  <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
                     Excellent Pricing
                   </h2>
-                  <p className="text-lg md:text-2xl mb-8">
+                  <p className="text-xl md:text-2xl mb-8">
                     We believe that quality and satisfactory product delivery which meets the needs
                     of our client could be possible even with the cheapest of budget.
                     Our plans are easy to afford and our delivery is more than commensurate.
