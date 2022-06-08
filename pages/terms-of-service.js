@@ -13,7 +13,7 @@ export default function TermsOfService() {
 
       <main>
         <section className="text-gray-600">
-          <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
+          <div className="px-8 md:px-16 lg:px-28 pt-8 md:pt-12 pb-24 mx-auto">
             <div className="py-2">
               <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl font-heading font-bold">
                 <span className="text-pink-500 text-lg flex mb-2">Updated on 5th June, 2022</span>
