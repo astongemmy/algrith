@@ -27,7 +27,7 @@ export default function TermsOfService() {
             </div>
             <div className="flex flex-wrap w-full">
               <div className="bg-white shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
-                <div className="relative pb-16">
+                <div className="relative pb-4 md:pb-16">
                   <p className="mb-12">
                     These Terms and Conditions ("Terms", "Terms and Conditions") govern your
                     relationship with/activities on https://algrith.com (the "Service") website operated by
