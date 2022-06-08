@@ -118,19 +118,19 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-green-500 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-green-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    <div className="mt-40 h-full w-1 bg-pink-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-pink-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
                   </div>
-                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-pink-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
                       <circle cx={12} cy={5} r={3} />
                       <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3" />
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-pink-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 5</h2>
-                      <h2 className="font-bold title-font text-2xl text-green-500 mb-4 tracking-wider">Product design and Creation</h2>
+                      <h2 className="font-bold title-font text-2xl text-pink-500 mb-4 tracking-wider">Product design and Creation</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">
                         This is the part where you head back to focus on your business while
                         we transform your request into a perfect result with reference to your requirements.
@@ -140,20 +140,20 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-blue-500 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-blue-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                    <div className="mt-40 h-full w-1 bg-teal-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-teal-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-teal-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 6</h2>
-                      <h2 className="font-bold title-font text-2xl text-blue-500 mb-4 tracking-wider">Delivery and Completion</h2>
+                      <h2 className="font-bold title-font text-2xl text-teal-500 mb-4 tracking-wider">Delivery and Completion</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">
                         By now you would have received a delivery of your package and can indicate satisfaction
                         by acknowledging the order as completed.
                       </p>
                     </div>
                   </div>
-                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
+                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-teal-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
                       <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                       <circle cx={12} cy={7} r={4} />
@@ -162,18 +162,18 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute flex items-center justify-center">
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-slate-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-rose-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
                   </div>
-                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-slate-500 inline-flex items-center justify-center text-white relative z-10">
+                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-rose-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
                       <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
                       <path d="M22 4L12 14.01l-3-3" />
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-rose-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 7</h2>
-                      <h2 className="font-bold title-font text-2xl text-slate-500 mb-4 tracking-wider">Support Us with a Review</h2>
+                      <h2 className="font-bold title-font text-2xl text-rose-500 mb-4 tracking-wider">Support Us with a Review</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">
                         On order delivery, we would like you to give us a feedback on how the whole process
                         happened. This helps spread the new about our competence and character as a business.
@@ -189,7 +189,7 @@ export default function HowItWorks() {
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link href={'/products'}>
-                    <a className="bg-white border-2 border-green-500 rounded-xl px-6 md:px-12 py-4 md:py-6 text-green-500 text-2xl">
+                    <a className="bg-white border-2 border-teal-500 rounded-xl px-6 md:px-12 py-4 md:py-6 bg-teal-500 text-white text-2xl">
                       Get Started
                     </a>
                   </Link>
