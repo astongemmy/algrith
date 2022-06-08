@@ -16,17 +16,17 @@ export default function HowItWorks() {
             <div className="flex flex-wrap w-full">
               <div className="xl:w-3/5 text-xl xl:pr-10 md:py-6">
                 <div className="flex relative pb-16">
-                  <div className="h-full w-32 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
                     <div className="h-8 w-8 absolute top-0 bg-green-200 rounded-full pointer-events-none" />
                     <div className="h-full w-1 bg-gray-200 pointer-events-none" />
-                    <div className="h-16 w-24 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-16 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
                   </div>
-                  <div className="mt-20 flex-shrink-0 w-32 h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-24 h-24" viewBox="0 0 24 24">
+                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 md:w-24 h-8 md:h-24" viewBox="0 0 24 24">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
                   </div>
-                  <div className="flex-grow pl-8">
+                  <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
                       <h2 className="font-medium title-font text-4xl text-gray-900 mb-4 tracking-wider">STEP 1</h2>
                       <p className="leading-relaxed text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
