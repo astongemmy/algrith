@@ -15,11 +15,11 @@ export default function TermsOfService() {
         <section className="text-gray-600">
           <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
             <div className="py-2">
-              <h1 className="mb-8 text-3xl md:text-5xl font-heading font-bold">
+              <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl font-heading font-bold">
                 <span className="text-pink-500 text-lg flex mb-2">Updated on 5th June, 2022</span>
                 Terms of Service
               </h1>
-              <p className="text-xl md:text-2xl mb-12">
+              <p className="text-xl md:text-2xl mb-4 md:mb-12">
                 Howdy! You are at the right place. <br />
                 In order to have a comprehensive overview of how we get things done, please follow
                 the steps outlined below to know better.
@@ -30,7 +30,7 @@ export default function TermsOfService() {
                 <div className="relative pb-16">
                   <p className="mb-12">
                     These Terms and Conditions ("Terms", "Terms and Conditions") govern your
-                    relationship with / activities on https://algrith.com (the "Service") website operated by
+                    relationship with/activities on https://algrith.com (the "Service") website operated by
                     Algrith LLC ("us", "we", or "our").
                     Please read these Terms and Conditions carefully before using the Service.
                     Your access to and use of the Service is conditioned on your acceptance of and compliance
@@ -285,7 +285,7 @@ export default function TermsOfService() {
                 </div>
               </div>
               <div className="xl:w-3/12 md:mt-0 mt-12 xl:pl-8">
-                <div className="pt-6">
+                <div className="">
                   <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
                     Table of Content
                   </h2>
