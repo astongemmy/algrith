@@ -56,7 +56,7 @@ export default function TermsOfService() {
                       card, your billing address, and your shipping information.
                       You represent and warrant that:
                     </p>
-                    <ul className="pl-8 my-8">
+                    <ul className="pl-4 md:pl-8 my-8">
                       <li>
                         (i) you have the legal right to use any credit card(s) or
                         other payment method(s) in connection with any Purchase; and that
@@ -101,7 +101,7 @@ export default function TermsOfService() {
                       through the Service and you are responsible for protecting those rights.
                       You represent and warrant that:
                     </p>
-                    <ul className="pl-8 my-8">
+                    <ul className="pl-4 md:pl-8 my-8">
                       <li>
                         (i) the Content is yours (you own it) or you have the right
                         to use it and grant us the rights and license as provided in these Terms, and
@@ -161,7 +161,7 @@ export default function TermsOfService() {
                       particular purpose, non-infringement or course of performance.
                       Algrith LLC subsidiaries, affiliates, and its licensors do not warrant that;
                     </p>
-                    <ul className="pl-8 my-8">
+                    <ul className="pl-4 md:pl-8 my-8">
                       <li>
                         a) the Service will function uninterrupted, secure or available at any
                         particular time or location;
@@ -221,7 +221,7 @@ export default function TermsOfService() {
 
                   <div className="mb-12">
                     <h1 className="mb-8 text-3xl font-heading font-bold">Web application/design</h1>
-                    <ul className="pl-8 my-8">
+                    <ul className="pl-4 md:pl-8 my-8">
                       <li>
                         The Customer is solely responsible for preparing and sending detailed answers
                         to our web application/design service requirement ("through the Order requirement Form").
