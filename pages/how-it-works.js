@@ -41,8 +41,13 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 1</h2>
-                      <p className="leading-relaxed text-lx md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 1</h2>
+                      <h2 className="font-bold title-font text-2xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
+                      <p className="leading-relaxed text-lx md:text-2xl">
+                        Visit our <Link href={'/products'}><a className="text-blue-500">products</a></Link> 
+                        store and select a product that fits your demand exactly.
+                        We have products covering website alongside its underlying web applications to power business demands.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -53,8 +58,12 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 2</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 2</h2>
+                      <h2 className="font-bold title-font text-2xl text-yellow-500 mb-4 tracking-wider">Choose a Package</h2>
+                      <p className="leading-relaxed text-xl md:text-2xl">
+                        Our product display shelf is rich with amazing packages and 
+                        you can choose from a minimum of three packages from any of our product shelves.
+                      </p>
                     </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-yellow-500 inline-flex items-center justify-center text-white relative z-10">
@@ -76,8 +85,12 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 3</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 3</h2>
+                      <h2 className="font-bold title-font text-2xl text-green-500 mb-4 tracking-wider">Fill in your Requirements</h2>
+                      <p className="leading-relaxed text-xl md:text-2xl">
+                        For any package selected, there are a list of requirements with which you can specify how
+                        you want your package delivered. Utilize this feature to get exactly what you desire.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -88,8 +101,56 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 4</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 4</h2>
+                      <h2 className="font-bold title-font text-2xl text-blue-500 mb-4 tracking-wider">Proceed to Checkout</h2>
+                      <p className="leading-relaxed text-xl md:text-2xl">
+                        Once you are satisfied with selecting and filling in requirements for a package, proceed to 
+                        checkout in order to make payment.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                      <circle cx={12} cy={7} r={4} />
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex relative pb-16">
+                  <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
+                    <div className="mt-40 h-full w-1 bg-green-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-green-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                  </div>
+                  <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-8 h-8 md:w-24 md:h-24" viewBox="0 0 24 24">
+                      <circle cx={12} cy={5} r={3} />
+                      <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3" />
+                    </svg>
+                  </div>
+                  <div className="flex-grow pl-6 md:pl-8">
+                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 5</h2>
+                      <h2 className="font-bold title-font text-2xl text-green-500 mb-4 tracking-wider">Product design and Creation</h2>
+                      <p className="leading-relaxed text-xl md:text-2xl">
+                        This is the part where you head back to focus on your business while
+                        we transform your request into a perfect result with reference to your requirements.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex relative pb-16">
+                  <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
+                    <div className="mt-40 h-full w-1 bg-blue-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 md:w-24 border-blue-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                  </div>
+                  <div className="flex-grow pr-6 md:pr-8 text-right">
+                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 6</h2>
+                      <h2 className="font-bold title-font text-2xl text-blue-500 mb-4 tracking-wider">Delivery and Completion</h2>
+                      <p className="leading-relaxed text-xl md:text-2xl">
+                        By now you would have received a delivery of your package and can indicate satisfaction
+                        by acknowledging the order as completed.
+                      </p>
                     </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10">
@@ -111,8 +172,12 @@ export default function HowItWorks() {
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="bg-white shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-4 tracking-wider">Step 5</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 7</h2>
+                      <h2 className="font-bold title-font text-2xl text-slate-500 mb-4 tracking-wider">Support Us with a Review</h2>
+                      <p className="leading-relaxed text-xl md:text-2xl">
+                        On order delivery, we would like you to give us a feedback on how the whole process
+                        happened. This helps spread the new about our competence and character as a business.
+                      </p>
                     </div>
                   </div>
                 </div>
