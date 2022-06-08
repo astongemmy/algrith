@@ -18,7 +18,7 @@ export default function HowItWorks() {
               <h1 className="mb-8 text-3xl md:text-5xl font-heading font-bold">
                 How it Works
               </h1>
-              <p className="text-lg md:text-2xl mb-12">
+              <p className="text-xl md:text-2xl mb-12">
                 Howdy! You are at the right place. <br/>
                 In order to have a comprehensive overview of how we get things done, please follow
                 the steps outlined below to know better.
@@ -122,7 +122,7 @@ export default function HowItWorks() {
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link href={'/products'}>
-                    <a className="bg-white border-2 border-green-500 rounded-xl px-12 py-4 md:py-6 text-green-500 text-2xl">
+                    <a className="bg-white border-2 border-green-500 rounded-xl px-6 md:px-12 py-4 md:py-6 text-green-500 text-2xl">
                       Get Started
                     </a>
                   </Link>
