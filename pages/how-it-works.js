@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import Breadcrumbs from '../components/BreadCrumbs'
 import Link from 'next/link'
 
 export default function HowItWorks() {
@@ -14,9 +13,6 @@ export default function HowItWorks() {
 
       <main>
         <section className="text-gray-600">
-          <div className="px-8 md:px-16 lg:px-28 pt-8">
-            <Breadcrumbs page={'how_it_works'} />
-          </div>
           <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
             <div className="text-center py-2">
               <h1 className="mb-8 text-3xl md:text-5xl font-heading font-bold">
