@@ -26,7 +26,7 @@ export default function TermsOfService() {
               </p>
             </div>
             <div className="flex flex-wrap w-full">
-              <div className="bg-white xl:w-9/12 text-xl p-8 md:p-10 text-justify">
+              <div className="bg-white xl:w-9/12 text-xl p-4 md:p-10 text-justify">
                 <div className="relative pb-16">
                   <p className="mb-12">
                     These Terms and Conditions ("Terms", "Terms and Conditions") govern your
