@@ -5,7 +5,6 @@ export default function BreadCrumbs({ page }) {
   const breadcrumbs = {
     checkout: {
       index: [
-        { text: 'Products', url: '/products' },
         { text: 'Checkout', url: '/checkout' }
       ]
     },

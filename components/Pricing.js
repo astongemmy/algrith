@@ -39,7 +39,7 @@ export default function Pricing({ packages, slug }) {
                       })}
                     </ul>
                     <div className="text-center">
-                      <Link href={ `/products/${slug}?package_name=${item.id}` }>
+                      <Link href={ `/products/${slug}/${item.id}` }>
                         <a className={`
                           ${item.active ? 'border-white hover:border-white text-white' : 'border-orange-500 hover:border-orange-100 text-orange-500'} rounded-full font-bold text-orange-500'}
                           stretched inline-block

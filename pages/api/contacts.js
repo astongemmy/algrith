@@ -1,71 +1,71 @@
+const path = require('path')
 const nodemailer = require("nodemailer");
-// import dbConnect from '../../utils/dbConnect';
-// import Contacts from '../../models/Contacts';
-
-// dbConnect();
+const hbs = require('nodemailer-express-handlebars');
 
 export default async (req, res) => {
-    const { method } = req;
-
-    switch (method) {
-
-        case 'POST':
-            try {
-
-                const { name, email, message, phone, location } = req.body;
-                
-                // create reusable transporter object using the default SMTP transport
-                let transporter = nodemailer.createTransport({
-                    host: "mail.privateemail.com",
-                    port: 587,
-                    secure: false, // true for 465, false for other ports
-                    auth: {
-                        user: process.env.CONTACT_EMAIL_ADDRESS, // generated ethereal user
-                        pass: process.env.CONTACT_EMAIL_PASSWORD, // generated ethereal password
-                    },
-                    // tls: {
-                    //     rejectUnauthorized: true
-                    // }
-                });
-
-                const HTML_body = `
-                    <div>
-                        <h1>New Contact Email</h1>
-                        <h2>Details</h2>
-                        <ul>
-                            <li>From: ${name}</li>
-                            <li>Email: ${email}</li>
-                            <li>Phone: ${phone}</li>
-                            <li>Location: ${location}</li>
-                        </ul>                        
-                        <h2>Message</h2>
-                        <p>${message}</p>
-                    </div>    
-                `;
-
-                const mailOption = {
-                    from: `Algrith <contact@algrith.com>`, // sender address
-                    to: `algrithllc@gmail.com, AlgrithLLC@gmail.com`, // list of receivers
-                    subject: "New Contact Mail", // Subject line
-                    text: `${message}`, // plain text body
-                    html: HTML_body, // html body
-                }
-                
-                await transporter.sendMail(mailOption, (err, data) => {
-                    if (err) {
-                        return res.status(400).json({ success: false, data: {message: 'An error occured!'} });
-                    } else {
-                        res.status(201).json({ success: true, data: {message: 'Mail sent!'} })
-                    }
-                });                
-
-            } catch (error) {
-                res.status(400).json({ success: false, data: {message: 'An error occurred!'}});
-            }
-            break;
-
-        default:
-            res.status(400).json({ success: false, data: {message: 'An error occured!'}});
-            break;
-    }
+	switch (req.method) {
+		case 'POST':
+			try {
+				const { name, email, message, phone, country } = req.body;
+				let transporter = nodemailer.createTransport({
+					host: process.env.CONTACT_MAIL_AUTH_HOST,
+					port: process.env.CONTACT_MAIL_AUTH_PORT,
+					secure: true, // true for 465, false for other ports
+					auth: {
+						user: process.env.CONTACT_MAIL_AUTH_USERNAME, // generated ethereal user
+						pass: process.env.CONTACT_MAIL_AUTH_PASSWORD, // generated ethereal password
+					}
+				});
+				const handlebarOptions = {
+					viewEngine: {
+						extName: ".handlebars",
+						partialsDir: path.resolve('./templates'),
+						defaultLayout: false,
+					},
+					viewPath: path.resolve('./templates'),
+					extName: ".handlebars",
+				}				
+				transporter.use('compile', hbs(handlebarOptions));				
+				const mailOption = {
+					from: process.env.CONTACT_MAIL_SENDER, // sender address
+					to: process.env.CONTACT_MAIL_RECEIVER, // list of receivers
+					subject: process.env.CONTACT_MAIL_SUBJECT, // Subject line
+					text: message, // plain text body
+					template: 'contact-email',
+					context: {
+						name: name,
+						email: email,
+						phone: phone,
+						country: country,
+						message: message
+					}
+				}
+				transporter.sendMail(mailOption, (err, data) => {
+					if (err) return res.status(400).json({
+						success: false,
+						message: 'Could not send mail!',
+						data: {},
+					});
+					return res.status(200).json({
+						success: true,
+						data: data,
+						message: 'Mail sent!'
+					})
+				});
+			} catch (error) {
+				return res.status(500).json({
+					success: false,
+					data: {},
+					message: 'Server error!'
+				});
+			}
+			break;
+		default:
+			return res.status(405).json({
+				success: false,
+				data: {},
+				message: 'Unallowed request method!'
+			});
+			break;
+	}
 }

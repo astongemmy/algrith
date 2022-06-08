@@ -50,7 +50,7 @@ export default function Hero({ products }) {
               <div className="mt-4 flex justify-between px-4 pb-4">
                 <div>
                   <h3 className="text-lg text-gray-700 font-bold">
-                    <Link href={`/products/${product.slug}?package_name=${product.package.id}`}>
+                    <Link href={`/products/${product.slug}/${product.package.id}`}>
                       <a>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.package.name}

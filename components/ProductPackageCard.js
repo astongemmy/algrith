@@ -28,7 +28,7 @@ export default function ProductPackageCard({ item, slug }) {
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
-              <Link href={`/products/${slug}/?package_name=${item.id}`}>
+              <Link href={`/products/${slug}/${item.id}`}>
                 <a className="">
                   <span aria-hidden="true" className="absolute inset-0" />
                   { item.name }
@@ -60,9 +60,6 @@ export default function ProductPackageCard({ item, slug }) {
                   <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
                   </svg>
-                  {/* {!feature.available && (<svg width="18" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" stroke="currentColor" stroke-width="2">
-                    <path d="M18 12H6" fill="white" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>)} */}
                 </span>
                 <span className="text-gray-600"> { Object.values(feature)[0] } </span>
               </li>
@@ -70,7 +67,7 @@ export default function ProductPackageCard({ item, slug }) {
           })}
         </ul>
         <div className="text-center mt-8">
-          <Link href={`/products/${slug}/?package_name=${item.id}`}>
+          <Link href={`/products/${slug}/${item.id}`}>
             <a className="text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white">
               Buy now
             </a>

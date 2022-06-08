@@ -33,6 +33,11 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 						About
 					</a>
 				</Link>
+				<Link href="/how-it-works">
+					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">
+						How It Works
+					</a>
+				</Link>
 				<span ref={ dropDownContainerRef } onClick={() => setDropdown(!dropdown)} className="flex items-center justify-between cursor-pointer ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl font-bold text-gray-600">
 					Products
 					<svg className="inline ml-4" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
