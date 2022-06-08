@@ -28,8 +28,9 @@ export default function HowItWorks() {
               <div className="xl:w-3/5 text-xl xl:pr-10 md:py-6">
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
+                    <div className="h-6 w-6 absolute top-1 z-10 bg-white rounded-full" />
                     <div className="h-8 w-8 absolute top-0 bg-red-500 rounded-full pointer-events-none">
-                      <div className="h-full w-full animate-ping bg-red-500 rounded-full" />
+                      <div className="h-full w-full animate-ping border border-red-500 bg-white rounded-full" />
                     </div>
                     <div className="h-full w-1 bg-red-500 pointer-events-none" />
                     <div className="w-12 h-12 md:h-16 md:w-24 border-red-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
