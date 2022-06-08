@@ -3,11 +3,8 @@ import React from 'react'
 
 export default function BreadCrumbs({ page }) {
   const breadcrumbs = {
-    checkout: {
-      index: [
-        { text: 'Checkout', url: '/checkout' }
-      ]
-    },
+    checkout: [{ text: 'Checkout', url: '/checkout' }],
+    how_it_works: [{ text: 'How it Works', url: '/how-it-works' }],
     products: {
       index: [ { text: 'Products', url: '/products'} ],
       websites: [
@@ -21,7 +18,7 @@ export default function BreadCrumbs({ page }) {
     }
   };
   const pageArray = page.split('.')
-  const breadcrumbsToRender = breadcrumbs[pageArray[0]][pageArray[1]]
+  const breadcrumbsToRender = pageArray.length > 1 ? breadcrumbs[pageArray[0]][pageArray[1]] : breadcrumbs[pageArray[0]]
 
   return (
     <div className="w-full">
