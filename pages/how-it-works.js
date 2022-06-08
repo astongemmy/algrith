@@ -189,7 +189,12 @@ export default function HowItWorks() {
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link href={'/products'}>
-                    <a className="border-2 border-teal-500 rounded-xl px-6 md:px-12 py-4 md:py-6 bg-teal-500 text-white text-2xl">
+                    <a
+                      className="rounded-xl px-6 md:px-12 py-4 md:py-6 text-white text-2xl
+                        bg-teal-500 hover:bg-teal-700 focus:bg-teal-400
+                        border-teal-500 hover:border-teal-700 focus:border-teal-400
+                      "
+                    >
                       Get Started
                     </a>
                   </Link>
