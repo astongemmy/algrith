@@ -40,7 +40,7 @@ export default function HowItWorks() {
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-red-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 1</h2>
                       <h2 className="font-bold title-font text-2xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
                       <p className="leading-relaxed text-lx md:text-2xl">
@@ -57,7 +57,7 @@ export default function HowItWorks() {
                     <div className="w-12 h-12 md:h-16 md:w-24 border-yellow-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-yellow-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 2</h2>
                       <h2 className="font-bold title-font text-2xl text-yellow-500 mb-4 tracking-wider">Choose a Package</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">
@@ -84,7 +84,7 @@ export default function HowItWorks() {
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-green-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 3</h2>
                       <h2 className="font-bold title-font text-2xl text-green-500 mb-4 tracking-wider">Fill in your Requirements</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">
@@ -100,7 +100,7 @@ export default function HowItWorks() {
                     <div className="w-12 h-12 md:h-16 md:w-24 border-blue-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
-                    <div className="bg-white shadow-sm p-8 rounded-3xl">
+                    <div className="bg-blue-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 4</h2>
                       <h2 className="font-bold title-font text-2xl text-blue-500 mb-4 tracking-wider">Proceed to Checkout</h2>
                       <p className="leading-relaxed text-xl md:text-2xl">
