@@ -32,8 +32,8 @@ export default function Hero({ products }) {
           <p className="mt-2 text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight text-gray-900 sm:text-5xl">
             Order for a landing page design, corporate website design or even an e-commerce website.
           </p>
-          <p className="mt-4 max-w-4xl leading-9 text-xl text-gray-500 lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
+          <p className="font-raleway text- mt-4 max-w-4xl leading-9 text-xl text-gray-600 lg:mx-auto">
+            WLorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
             accusamus quisquam. lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
             accusamus quisquam.
           </p>
@@ -49,7 +49,7 @@ export default function Hero({ products }) {
               </div>
               <div className="mt-4 flex justify-between px-4 pb-4">
                 <div>
-                  <h3 className="text-lg text-gray-700 font-bold">
+                  <h3 className="text-lg text-gray-800 font-bold">
                     <Link href={`/products/${product.slug}/${product.package.id}`}>
                       <a>
                         <span aria-hidden="true" className="absolute inset-0" />
@@ -57,7 +57,7 @@ export default function Hero({ products }) {
                       </a>
                     </Link>
                   </h3>
-                  <p className="mt-1 text-lg text-gray-500"> {product.package.category} </p>
+                  <p className="mt-1 text-lg font-raleway text-gray-600"> {product.package.category} </p>
                 </div>
                 <p className="text-md font-bold text-black"> {product.package.currency.symbol + product.package.price} </p>
               </div>
