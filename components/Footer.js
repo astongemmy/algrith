@@ -129,7 +129,7 @@ export default function Footer() {
 						</div>
 					</div>
 					<div className="w-1/2 lg:w-1/4 pt-4">
-						<h1 className="p-4 font-bold text-xl">
+						<h1 className="p-4 text-navyblue font-bold text-xl">
 							<svg xmlns="http://www.w3.org/2000/svg" className="hidden md:inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
 								<path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
 							</svg> Contact Us
