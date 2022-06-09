@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
 					<script type="text/javascript" src="/js/aos.js"></script>
 				</Head>
 
-				<body className="font-gilroy">
+				<body>
 					<Main />
 					<NextScript />
 				</body>
