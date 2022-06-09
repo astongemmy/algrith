@@ -9,10 +9,18 @@ export default class ContactDetails extends React.Component {
           <div className="flex items-center">
             <span className="flex items-center justify-center w-12 h-12 mr-8 bg-blue-400 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ffffff" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16 3h5m0 0v5m0-5l-6 6M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
               </svg>
             </span>
-            <p className="text-lg font-bold text-white">+44 20457523 00 01</p>
+            <a href="#" data-aos="fade-in" className="text-blue-600 flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-white shadow-lg">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="#" data-aos="fade-in" className="text-blue-500 flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-white shadow-lg">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" data-aos="fade-in" className="text-blue-700 flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-white shadow-lg">
+              <i className="fab fa-linkedin"></i>
+            </a>
           </div>
         </div>
         <div className="py-6 px-8 mb-10 bg-gray-400 rounded-lg shadow">

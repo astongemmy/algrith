@@ -10,10 +10,10 @@ export default function GetStarted() {
           <div className="md:flex justify-between relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="leading-relaxed text-4xl font font-extrabold tracking-tight text-gray-900 sm:leading-relaxed sm:text-6xl">
                 Responsive designs are finally here
               </h1>
-              <p className="mt-4 text-xl text-gray-500">
+              <p className="mt-4 text-xl leading-relaxed text-gray-500">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>
