@@ -16,7 +16,7 @@ export default function CheckoutOrderRequirement({ Requirements }) {
   return (
     <div className="md:w-1/2 pr-0 md:pr-4 mb-8">
       <div className="bg-white rounded-lg border overflow-hidden">
-        <h3 className="border-b text-gray-0 px-4 py-3 mb-2 text-2xl font-heading font-medium">
+        <h3 className="border-b text-gray-800 px-4 py-3 mb-2 text-2xl font-heading font-semibold">
           Order requirements
         </h3>
         <div className="p-4 px-6 pb-8">

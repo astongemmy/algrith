@@ -20,7 +20,7 @@ export default function CheckoutBillingForm({ Package }) {
   return (
     <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
       <div className="relative bg-white rounded-lg border pb-4">
-        <h3 className="relative px-4 py-3 border-b text-2xl font-heading font-medium">
+        <h3 className="relative px-4 py-3 border-b text-2xl font-heading text-gray-800 font-semibold">
           Billing details
         </h3>
         
@@ -29,7 +29,7 @@ export default function CheckoutBillingForm({ Package }) {
           { loginForm && <CheckoutLoginForm getAuth={(auth) => setAuth(auth)} /> }
         </div>
 
-        <div className="h-full p-6 pb-6 text-center w-full">
+        <div className="h-full p-6 text-gray-800 pb-6 text-center w-full">
           <p>After sign up / login, payment process will begin automatically.</p>
           <span className="block text-lg">
             <span className="text-lg font-bold">
