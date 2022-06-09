@@ -63,22 +63,22 @@ export default function Footer() {
 							<ul className="pl-0">
 								<li className="px-4 py-2">
 									<Link href="/how-it-works">
-										<a className="text-gray-600">How it Works</a>
+										<a className="text-gray-500">How it Works</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/contact-us">
-										<a className="text-gray-600">Contact Us</a>
+										<a className="text-gray-500">Contact Us</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/about">
-										<a className="text-gray-600">About Us</a>
+										<a className="text-gray-500">About Us</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/">
-										<a className="text-gray-600">FAQ</a>
+										<a className="text-gray-500">FAQ</a>
 									</Link>
 								</li>
 							</ul>
@@ -95,17 +95,17 @@ export default function Footer() {
 							<ul className="pl-0">
 								<li className="px-4 py-2">
 									<Link href="/products/applications">
-										<a className="text-gray-600">Application Development</a>
+										<a className="text-gray-500">Application Development</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/products/websites">
-										<a className="text-gray-600">Web Development</a>
+										<a className="text-gray-500">Web Development</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/products">
-										<a className="text-gray-600">All Products</a>
+										<a className="text-gray-500">All Products</a>
 									</Link>
 								</li>
 							</ul>
@@ -122,17 +122,17 @@ export default function Footer() {
 							<ul className="pl-0">
 								<li className="px-4 py-2">
 									<Link href="/terms-of-service">
-										<a className="text-gray-600">Terms of Service</a>
+										<a className="text-gray-500">Terms of Service</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/privacy-policy">
-										<a className="text-gray-600">Privacy Policy</a>
+										<a className="text-gray-500">Privacy Policy</a>
 									</Link>
 								</li>
 								<li className="px-4 py-2">
 									<Link href="/refund-policy">
-										<a className="text-gray-600">Refund Policy</a>
+										<a className="text-gray-500">Refund Policy</a>
 									</Link>
 								</li>
 							</ul>
@@ -144,11 +144,11 @@ export default function Footer() {
 								<path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
 							</svg> Contact
 						</h1>
-						<div className="relative text-xl">
+						<div className="relative text-lg">
 							<div className="relative">
 								<div className="px-4">
 									<aside className="mb-4">
-										<a className="text-gray-600" href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
+										<a className="text-gray-500" href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
 									</aside>
 								</div>
 								<div className="text-navyblue mt-4 px-2 flex justify-start items-center">
@@ -167,7 +167,7 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-0 py-8 text-xl bg-gray-800 text-white">
+			<a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-0 py-8 text-lg bg-gray-800 text-white">
 				© Copyright <span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
 			</a>
 		</footer>

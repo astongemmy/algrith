@@ -12,7 +12,7 @@ export default class TestimonialCard extends React.Component {
             <img className="w-24 h-24 rounded-full mx-auto" src={ testimonial.avatar } alt="" width="384" height="512" />
             <div className="py-6 xl:pl-6 text-center xl:text-left space-y-4">
               <blockquote>
-                <p className="text-lg text-gray-900 font-raleway">
+                <p className="text-lg text-gray-500">
                   “{ testimonial.text }”
                 </p>
               </blockquote>

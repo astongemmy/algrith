@@ -28,7 +28,7 @@ export default class Section extends React.Component {
         <h1 className={`text-center md:text-${ title.align } relative uppercase py-4 text-3xl md:text-4xl text-gray-600 mx-auto w-full md:w-11/12 lg:px-3 xl:px-10 font-bold`}>
           { title.text }
         </h1>
-        <div className="relative flex flex-wrap xl:flex-nowrap justify-start lg:justify-between items-center bg-grey-900 py-4 lg:py-16 px-1 md:px-9 lg:px-16 xl:px-28 w-full dark:bg-black xl:space-x-8">
+        <div className="relative flex flex-wrap xl:flex-nowrap justify-start lg:justify-between items-center bg-grey-900 py-4 lg:py-16 px-1 md:px-9 lg:px-16 xl:px-28 w-full dark:bg-black xl:space-x-4">
           {(title.text.toLowerCase() == "testimonials" && <TestimonialCard testimonials={ items } /> )}
         </div>
       </div>

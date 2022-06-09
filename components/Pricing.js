@@ -17,7 +17,7 @@ export default function Pricing({ packages, slug }) {
             {packages.map((item) => {
               return (
                 <div key={ item.id } className="relative w-full md:w-1/3 px-3 mb-8 lg:mb-0 group">
-                  <div className={`${item.active ? 'bg-orange-500' : 'bg-navyBlue-500 border'} group-hover:opacity-75 px-12 md:px-4 lg:px-8 xl:px-12 py-16 md:py-6 lg:py-16 rounded-3xl`}>
+                  <div className={`${item.active ? 'bg-orange-500' : 'bg-navyBlue-500 border'} px-8 md:px-4 lg:px-8 xl:px-12 py-12 md:py-6 lg:py-16 rounded-3xl`}>
                     <div className={`${item.active ? 'border-blue-300' : 'border-gray-400'} pb-8 mb-12 border-b`}>
                       <div className="flex flex-wrap justify-between items-center px-3">
                         <h3 className="text-4xl text-white font-bold font-heading mb-3"> { item.name } </h3>

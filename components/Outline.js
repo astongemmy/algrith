@@ -9,7 +9,7 @@ export default function Outline({ outline }) {
 					<h2 className="text-2xl md:text-3xl text-navyblue font-bold mb-4">
 						{outline.title}
 					</h2>
-					<span className="flex justify-center items-center my-8 mx-auto p-1 text-5xl text-green-400 bg-teal-200 w-20 h-20 rounded-full">
+					<span className="flex justify-center items-center my-8 mx-auto p-1 text-5xl text-green-300 bg-teal-100 w-20 h-20 rounded-full">
 						<i className={outline.icon}></i>
 					</span>
 					{outline.content}
