@@ -13,7 +13,7 @@ export default function GetStarted() {
               <h1 className="leading-relaxed text-4xl font font-extrabold tracking-tight text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs are finally here
               </h1>
-              <p className="mt-4 text-xl leading-relaxed text-gray-500">
+              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed md:text-2xl text-gray-500">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>
