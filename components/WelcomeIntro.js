@@ -18,9 +18,9 @@ export default function WelcomeIntro({ payload }) {
 						<ProductSearch />
 						{action.text && <a href={`#${scroll_to}`} className="xl:hidden scroll-selector bg-green-600 relative rounded-full text-2xl font-bold capitalize text-white ml-2 mr-4 mt-0 mb-8 md:my-4 px-8 lg:px-16 py-4 lg:py-6 transform hover:scale-65 select-none hover:select-none">
 							<div className="w-8 w-8 absolute bg-green-600 -top-2 -left-2 md:-left-1 flex items-center justify-center">
-								<div className="h-4 w-4 absolute top-2 z-10 bg-white rounded-full" />
+								<div className="h-6 w-6 absolute top-1 z-10 bg-white rounded-full" />
 								<div className="h-8 w-8 absolute top-0 bg-yellow-500 rounded-full pointer-events-none">
-									<div className="h-full w-full animate-ping border border-red-500 bg-white rounded-full" />
+									<div className="h-full w-full animate-ping border border-yellow-500 bg-white rounded-full" />
 								</div>
 							</div>
 							{action.text}
