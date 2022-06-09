@@ -57,7 +57,7 @@ export default function Hero({ products }) {
                       </a>
                     </Link>
                   </h3>
-                  <p className="mt-1 text-lg font-raleway text-gray-600"> {product.package.category} </p>
+                  <p className="mt-1 text-md font-raleway text-gray-600"> {product.package.category} </p>
                 </div>
                 <p className="text-md font-bold text-black"> {product.package.currency.symbol + product.package.price} </p>
               </div>
