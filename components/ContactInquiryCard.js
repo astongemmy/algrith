@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default class ContactInquiryCard extends React.Component {
   constructor() { super() }
@@ -12,9 +13,11 @@ export default class ContactInquiryCard extends React.Component {
               Do you need understanding on how our system works?
             </h3>
             <div className="md:text-right">
-              <a className="inline-block text-lg px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-semibold text-gray-600">
-                Learn Now
-              </a>
+              <Link href="/how-it-works">
+                <a className="inline-block text-lg px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-semibold text-gray-600">
+                  Learn Now
+                </a>
+              </Link>
             </div>
           </div>
         </div>
