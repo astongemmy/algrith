@@ -10,7 +10,7 @@ export default function MissionStatement() {
             <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-7xl">
               Focus on your business. let us handle your online presence and visibillity.
             </h1>
-            <p className="mt-4 text-xl text-gray-500">
+            <p className="mt-4 leading-relaxed text-xl md:leading-relaxed md:text-2xl text-gray-500">
               This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
               if you live or die.
             </p>
