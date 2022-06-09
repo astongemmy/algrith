@@ -191,7 +191,7 @@ export default function HowItWorks() {
                   <Link href={'/products'}>
                     <a
                       className="rounded-xl px-6 md:px-12 py-4 md:py-6 text-white text-2xl
-                        bg-teal-500 hover:bg-teal-700 focus:bg-teal-400
+                        bg-teal-500 hover:bg-teal-700 focus:bg-teal-400 font-semibold
                         border-teal-500 hover:border-teal-700 focus:border-teal-400
                       "
                     >
