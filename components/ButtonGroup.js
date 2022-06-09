@@ -31,7 +31,7 @@ export default function ButtonGroup({ defaultSelected, getSelected, type }) {
           {buttonToRender.length > 1 && (
             buttonToRender.slice(1,).map((button) => {
               return (
-                <button key={ button.id } onClick={() => toggleSelected(button.id)} className={`${ selected == button.id ? 'bg-green-500 text-white' : 'text-gray-500 bg-white' } py-3 px-5 flex items-center justify-center text-lg focus:outline-none border border-l border-r-0 border-b-0 border-t-0 border-indigo-100 w-1/${buttonToRender.length}`}>
+                <button key={ button.id } onClick={() => toggleSelected(button.id)} className={`${ selected == button.id ? 'bg-green-500 text-white font-semibold' : 'text-gray-700 bg-white' } py-3 px-5 flex items-center justify-center text-lg focus:outline-none border border-l border-r-0 border-b-0 border-t-0 border-indigo-100 w-1/${buttonToRender.length}`}>
                   { button.text }
                 </button>
               )

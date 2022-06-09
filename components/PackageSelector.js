@@ -7,7 +7,7 @@ export default function PackageSelector({ type, selectedPackage, getSelected, mo
       <ButtonGroup getSelected={ (selected) => getSelected(selected) } defaultSelected={ selectedPackage.id } type={`products.${type}`} />
       <div className="px-6">
         <span className="mt-3 block text-sm text-gray-400 tracking-wider uppercase"> { selectedPackage.tag } </span>
-        <h2 className="my-2 text-3xl md:text-4xl font-heading font-medium">
+        <h2 className="my-2 text-3xl md:text-3xl text-gray-600 font-heading font-medium">
           { selectedPackage.name }
         </h2>
         <p className="flex items-center mb-4">
