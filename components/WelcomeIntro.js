@@ -4,7 +4,7 @@ import ProductSearch from './ProductSearch'
 
 export default function WelcomeIntro({ payload }) {
 	const { title, subtitle, accomodate, action, scroll_to } = payload
-	const typing = useTyping(title.text)
+	useTyping(title.text)
 
 	return (
 		<div id="intro-index" className="relative w-full h-auto xl:h-126 dark:bg-black bg-intro-index bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
