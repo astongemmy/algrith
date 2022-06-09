@@ -23,8 +23,8 @@ export default class MyDocument extends Document {
 					<meta property="og:image" name="image" content="/images/logo/algrith.png" />
 					<link rel="manifest" href="/manifest.json" />
 
-					<link rel="preconnect" href="https://fonts.gstatic.com" />
-					<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+					{/* <link rel="preconnect" href="https://fonts.gstatic.com" />
+					<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}
 
 					<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png" />
 					<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-chrome-192x192.png" />
@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
 					<script type="text/javascript" src="/js/aos.js"></script>
 				</Head>
 
-				<body>
+				<body className="font-gilroy">
 					<Main />
 					<NextScript />
 				</body>

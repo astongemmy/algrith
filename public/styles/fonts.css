@@ -53,3 +53,11 @@
 	src: url("./webfonts/Montserrat/Montserrat-Medium.ttf");
 	src: url("./webfonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
 }
+
+@font-face {
+	font-family: 'gilroy-font';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/gilroy/Radomir\ Tinkov\ -\ Gilroy-Light.otf");
+	src: url("./webfonts/gilroy/Radomir\ Tinkov\ -\ Gilroy-Light.otf") format("truetype");
+}

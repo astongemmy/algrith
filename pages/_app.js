@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import '../public/styles/fonts.css'
 import '../public/styles/App.css'
 import '../public/styles/Icons.css'
 import '../public/styles/aos.css'
