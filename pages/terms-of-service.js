@@ -13,42 +13,36 @@ export default function TermsOfService() {
 
       <main>
         <section className="text-gray-600">
-          <div className="px-8 md:px-16 lg:px-28 pt-8 md:pt-12 pb-8 mb:pb-24 mx-auto">
+          <div className="px-8 md:px-14 lg:px-20 xl:px-28 pt-8 md:pt-12 pb-8 mb:pb-24 mx-auto">
             <div className="py-2">
               <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl font-heading font-bold">
                 <span className="text-pink-500 text-lg flex mb-2">Updated on 5th June, 2022</span>
                 Terms of Service
               </h1>
-              <p className="text-xl md:text-2xl mb-4 md:mb-12">
-                Howdy! You are at the right place. <br />
-                In order to have a comprehensive overview of how we get things done, please follow
-                the steps outlined below to know better.
+              <p className="text-xl leading-relaxed text-justify mb-4 md:mb-12">
+                These Terms and Conditions ("Terms", "Terms and Conditions") govern your
+                relationship with/activities on https://algrith.com (the "Service") website operated by
+                Algrith LLC ("us", "we", or "our").
+                Please read these Terms and Conditions carefully before using the Service.
+                Your access to and use of the Service is conditioned on your acceptance of and compliance
+                with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
+                By accessing or using the Service you agree to be bound by these Terms. If you disagree
+                with any part of the terms then you may not access the Service.
+                Algrith.com may revise these Terms and Conditions at any time by updating
+                the content of this page. You should visit this page periodically to review the
+                Terms and Conditions, because they are binding on you. In these Terms and Conditions,
+                Algrith.com, the 'Algrith' service, all services related to it, and all text,
+                images, photographs, user interface, "look" and "feel", data and other content
+                included in it from time to time (including, without limitation, the selection,
+                coordination and arrangement of such content) are
+                referred to as the "Web Site" or "Service".
               </p>
             </div>
-            <div className="flex flex-wrap w-full">
-              <div className="bg-white shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
-                <div className="relative md:pb-16">
-                  <p className="mb-12">
-                    These Terms and Conditions ("Terms", "Terms and Conditions") govern your
-                    relationship with/activities on https://algrith.com (the "Service") website operated by
-                    Algrith LLC ("us", "we", or "our").
-                    Please read these Terms and Conditions carefully before using the Service.
-                    Your access to and use of the Service is conditioned on your acceptance of and compliance
-                    with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
-                    By accessing or using the Service you agree to be bound by these Terms. If you disagree
-                    with any part of the terms then you may not access the Service.
-                    Algrith.com may revise these Terms and Conditions at any time by updating
-                    the content of this page. You should visit this page periodically to review the
-                    Terms and Conditions, because they are binding on you. In these Terms and Conditions,
-                    Algrith.com, the 'Algrith' service, all services related to it, and all text,
-                    images, photographs, user interface, "look" and "feel", data and other content
-                    included in it from time to time (including, without limitation, the selection,
-                    coordination and arrangement of such content) are
-                    referred to as the "Web Site" or "Service".
-                  </p>
-
+            <div className="flex flex-wrap w-full pb-6 md:pb-12">
+              <div className="bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
+                <div className="relative">
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Purchase</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Purchase</h1>
                     <p>
                       If you wish to purchase any product or service made available through the Service
                       ("Purchase"), you may be asked to supply certain information relevant to your Purchase
@@ -77,7 +71,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Availability, Errors and Inaccuracies</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Availability, Errors and Inaccuracies</h1>
                     <p>
                       We are constantly updating our offerings of products and services on the Service. The
                       products or services available on our Service may be mispriced, described inaccurately, or
@@ -91,7 +85,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Content</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Content</h1>
                     <p>
                       Our Service allows you to post, link, store, share and otherwise make available certain
                       information, text, graphics, videos, or other material ("Content"). You are responsible for
@@ -115,7 +109,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Accounts</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Accounts</h1>
                     <p>
                       When you create an account with us, you must provide us information that is accurate,
                       complete, and current at all times. Failure to do so constitutes a breach of the Terms, which
@@ -129,7 +123,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Links To Other Web Sites</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Links To Other Web Sites</h1>
                     <p>
                       Our Service may contain links to third-party web sites or services that are not owned or
                       controlled by Algrith LLC.
@@ -143,7 +137,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Termination</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Termination</h1>
                     <p>
                       We may terminate or suspend your account immediately, without prior notice or liability,
                       for any reason whatsoever, including without limitation if you breach the Terms.
@@ -153,7 +147,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Disclaimer</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Disclaimer</h1>
                     <p>
                       Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS
                       AVAILABLE" basis. The Service is provided without warranties of any kind, whether express
@@ -179,7 +173,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Changes</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Changes</h1>
                     <p>
                       We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If
                       a revision is material we will try to provide at least 30 days notice prior to any new terms
@@ -191,7 +185,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Cookies</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Cookies</h1>
                     <p>
                       We employ the use of cookies. By accessing Algrith LLC, you agreed to use cookies in
                       agreement with the Algrith LLC's Privacy Policy.Most interactive websites use cookies
@@ -201,7 +195,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">License</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">License</h1>
                     <p>
                       Unless otherwise stated, Algrith LLC and/or its licensors own the intellectual
                       property rights for all material on Algrith LLC. All intellectual property rights
@@ -211,7 +205,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">iFrames</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">iFrames</h1>
                     <p>
                       Without prior approval and written permission, you may not create frames
                       around our Webpages that alter in any way the visual presentation or
@@ -220,7 +214,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Web application/design</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Web application/design</h1>
                     <ul className="pl-4 md:pl-8 my-8">
                       <li>
                         The Customer is solely responsible for preparing and sending detailed answers
@@ -243,42 +237,42 @@ export default function TermsOfService() {
                         additional criteria requested by the Customer.
                       </li>
                       <li>
-                        Revisions generally consist of additional compositions 
-                        that incorporate changes requested by the Customer in the 
-                        Revision Brief. The purpose of the revision process is to create 
-                        designs that move forward in a specific direction as determined 
+                        Revisions generally consist of additional compositions
+                        that incorporate changes requested by the Customer in the
+                        Revision Brief. The purpose of the revision process is to create
+                        designs that move forward in a specific direction as determined
                         by the Customer. Algrith LLC.com offers Unlimited Revisions to a choosen package.
                       </li>
                       <li>
-                        Upon expiration of the 1 year website free maintenance, hosting and domain 
-                        included in some packages, an email notification of expiration will be sent 
+                        Upon expiration of the 1 year website free maintenance, hosting and domain
+                        included in some packages, an email notification of expiration will be sent
                         to you in respect to a subscription renewal and an invoice sent.
-                        After purchase of domain, change of domain name will demand an extra fee and 
+                        After purchase of domain, change of domain name will demand an extra fee and
                         an invoice for payment will be sent.
                       </li>
                     </ul>
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-3xl font-heading font-bold">Miscellaneous</h1>
+                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Miscellaneous</h1>
                     <p>
-                      Project duration: The Customer agrees to provide timely responses to 'Algrith.com' 
-                      after receiving status notifications from 'Algrith.com'. The Customer shall have 
-                      30 days to respond to each set of deliveries sent to the Customer for review. 
-                      If after 30 days the Customer has failed to respond, 'Algrith.com' will assume the 
-                      Project complete and the Project shall be deemed to be completed and final files 
-                      uploaded. At such time, 'Algrith.com' will have no further obligation to the Customer. 
-                      In rare cases, if the customer feels that it may take him more than 30 days to respond 
-                      then he is requested to inform 'Algrith.com' accordingly either by email or live chat, 
+                      Project duration: The Customer agrees to provide timely responses to 'Algrith.com'
+                      after receiving status notifications from 'Algrith.com'. The Customer shall have
+                      30 days to respond to each set of deliveries sent to the Customer for review.
+                      If after 30 days the Customer has failed to respond, 'Algrith.com' will assume the
+                      Project complete and the Project shall be deemed to be completed and final files
+                      uploaded. At such time, 'Algrith.com' will have no further obligation to the Customer.
+                      In rare cases, if the customer feels that it may take him more than 30 days to respond
+                      then he is requested to inform 'Algrith.com' accordingly either by email or live chat,
                       so that 'Algrith.com' keeps the project in active state.
-                      Eligibility Requirements: By asking for our services, you represent and warrant that 
-                      you meet our requirements, that the information you include as part of the ordering 
-                      process is complete and accurate and, if you are ordering services on behalf of an 
-                      entity, that you are authorise to bind that entity to these Terms and Conditions. 
+                      Eligibility Requirements: By asking for our services, you represent and warrant that
+                      you meet our requirements, that the information you include as part of the ordering
+                      process is complete and accurate and, if you are ordering services on behalf of an
+                      entity, that you are authorise to bind that entity to these Terms and Conditions.
                       'Algrith.com' may accept or reject your order in its sole discretion.
-                      Authorisation to Use: Permitted Uses. You may access and use the Service solely 
-                      in accordance with the Terms and Conditions and any posted policies and procedures 
-                      that appear on the Web Site. You may provide Creative Briefs and obtain Responses 
+                      Authorisation to Use: Permitted Uses. You may access and use the Service solely
+                      in accordance with the Terms and Conditions and any posted policies and procedures
+                      that appear on the Web Site. You may provide Creative Briefs and obtain Responses
                       only if you register as a Customer.
                     </p>
                   </div>
