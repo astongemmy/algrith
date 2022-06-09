@@ -7,7 +7,7 @@ export default class ContactInquiryCard extends React.Component {
     return (
       <div className="lg:order-1 w-full md:w-2/4 lg:w-3/12 md:px-4 mt-10 md:mt-16">
         <div className="bg-white rounded-b-lg shadow">
-          <img className="h-64 w-full rounded-t-lg object-cover" src="/images/contact-us/response-culture.gif" alt="" />
+          <img className="h-64 w-full rounded-t-lg object-cover" src="/images/contact-us/how-it-works.gif" alt="" />
           <div className="px-8 py-8">
             <h3 className="mb-8 lg:mb-4 text-xl text-gray-600 font-semibol">
               Do you need understanding on how our system works?

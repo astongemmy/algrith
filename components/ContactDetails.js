@@ -12,13 +12,13 @@ export default class ContactDetails extends React.Component {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
               </svg>
             </span>
-            <a href="#" data-aos="fade-in" className="text-blue-600 flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-white shadow-lg">
+            <a href="#" data-aos="fade-in" className="text-white flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-blue-400 shadow-lg">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#" data-aos="fade-in" className="text-blue-500 flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-white shadow-lg">
+            <a href="#" data-aos="fade-in" className="text-white flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-blue-400 shadow-lg">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" data-aos="fade-in" className="text-blue-700 flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-white shadow-lg">
+            <a href="#" data-aos="fade-in" className="text-white flex justify-center mx-1 items-center rounded-xl text-3xl h-12 w-12 bg-blue-400 shadow-lg">
               <i className="fab fa-linkedin"></i>
             </a>
           </div>
