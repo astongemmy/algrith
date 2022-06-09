@@ -12,7 +12,7 @@ export default function Footer() {
 						</svg>
 						Featured
 					</h1>
-					<div className="relative px-4 text-xl">
+					<div className="relative px-4 text-lg">
 						<details className="my-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
 							<summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
 								<span className="ml-4">Data for scientists</span>
@@ -142,13 +142,13 @@ export default function Footer() {
 									</aside>
 								</div>
 								<div className="text-navyblue mt-4 px-2 flex justify-start items-center">
-									<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
+									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
 										<i className="fab fa-facebook"></i>
 									</a>
-									<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
+									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
 										<i className="fab fa-twitter"></i>
 									</a>
-									<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
+									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
 										<i className="fab fa-linkedin"></i>
 									</a>
 								</div>

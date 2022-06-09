@@ -29,7 +29,7 @@ export default function Hero({ products }) {
       <div className="max-w-7xl mx-auto px-8 sm:px-6 md:px-12 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-lg text-indigo-600 font-semibold tracking-wide uppercase">Pick a product and get started!</h2>
-          <p className="mt-2 text-5xl leading-lg font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+          <p className="mt-2 text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight text-gray-900 sm:text-5xl">
             Order for a landing page design, corporate website design or even an e-commerce website.
           </p>
           <p className="mt-4 max-w-4xl leading-9 text-xl text-gray-500 lg:mx-auto">
@@ -57,7 +57,7 @@ export default function Hero({ products }) {
                       </a>
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500"> {product.package.category} </p>
+                  <p className="mt-1 text-lg text-gray-500"> {product.package.category} </p>
                 </div>
                 <p className="text-md font-bold text-black"> {product.package.currency.symbol + product.package.price} </p>
               </div>

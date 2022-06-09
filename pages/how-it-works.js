@@ -18,7 +18,7 @@ export default function HowItWorks() {
               <h1 className="mb-8 text-3xl md:text-5xl font-heading font-bold">
                 How it Works
               </h1>
-              <p className="text-xl md:text-2xl mb-12">
+              <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-12">
                 Howdy! You are at the right place. <br/>
                 In order to have a comprehensive overview of how we get things done, please follow
                 the steps outlined below to know better.
@@ -44,7 +44,7 @@ export default function HowItWorks() {
                     <div className="bg-red-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 1</h2>
                       <h2 className="font-bold title-font text-2xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
-                      <p className="leading-relaxed text-lx md:text-2xl">
+                      <p className="leading-relaxed text-lx md:leading-relaxed md:text-2xl">
                         Visit our <Link href={'/products'}><a className="text-blue-500">products</a></Link> 
                         store and select a product that fits your demand exactly.
                         We have products covering website alongside its underlying web applications to power business demands.
@@ -61,7 +61,7 @@ export default function HowItWorks() {
                     <div className="bg-yellow-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 2</h2>
                       <h2 className="font-bold title-font text-2xl text-yellow-500 mb-4 tracking-wider">Choose a Package</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
                         Our product display shelf is rich with amazing packages and 
                         you can choose from a minimum of three packages from any of our product shelves.
                       </p>
@@ -87,7 +87,7 @@ export default function HowItWorks() {
                     <div className="bg-green-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 3</h2>
                       <h2 className="font-bold title-font text-2xl text-green-500 mb-4 tracking-wider">Fill in your Requirements</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
                         For any package selected, there are a list of requirements with which you can specify how
                         you want your package delivered. Utilize this feature to get exactly what you desire.
                       </p>
@@ -103,7 +103,7 @@ export default function HowItWorks() {
                     <div className="bg-blue-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 4</h2>
                       <h2 className="font-bold title-font text-2xl text-blue-500 mb-4 tracking-wider">Proceed to Checkout</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
                         Once you are satisfied with selecting and filling in requirements for a package, proceed to 
                         checkout in order to make payment.
                       </p>
@@ -129,7 +129,7 @@ export default function HowItWorks() {
                     <div className="bg-pink-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 5</h2>
                       <h2 className="font-bold title-font text-2xl text-pink-500 mb-4 tracking-wider">Product design and Creation</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
                         This is the part where you head back to focus on your business while
                         we transform your request into a perfect result with reference to your requirements.
                       </p>
@@ -145,7 +145,7 @@ export default function HowItWorks() {
                     <div className="bg-teal-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 6</h2>
                       <h2 className="font-bold title-font text-2xl text-teal-500 mb-4 tracking-wider">Delivery and Completion</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
                         By now you would have received a delivery of your package and can indicate satisfaction
                         by acknowledging the order as completed.
                       </p>
@@ -174,7 +174,7 @@ export default function HowItWorks() {
                     <div className="bg-rose-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 7</h2>
                       <h2 className="font-bold title-font text-2xl text-rose-500 mb-4 tracking-wider">Support Us with a Review</h2>
-                      <p className="leading-relaxed text-xl md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
                         On order delivery, we would like you to give us a feedback on how the whole process
                         happened. This helps spread the new about our competence and character as a business.
                       </p>
@@ -185,7 +185,7 @@ export default function HowItWorks() {
                   <h2 className="mb-4 text-xl md:text-3xl font-heading font-bold">
                     Congratulations! You can now get started with a product
                   </h2>
-                  <p className="text-xl md:text-2xl mb-12">
+                  <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-12">
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link href={'/products'}>
@@ -205,7 +205,7 @@ export default function HowItWorks() {
                   <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
                     Our Aim
                   </h2>
-                  <p className="text-xl md:text-2xl mb-8">
+                  <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-8">
                     No matter what your ideas are, no matter the imaginations and desires you hold inside,
                     once you initiate this process with us, we will ensure to polish your ideas into
                     satisfactory output that will project your brand steps ahead of the competition.
@@ -216,7 +216,7 @@ export default function HowItWorks() {
                   <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
                     Excellent Pricing
                   </h2>
-                  <p className="text-xl md:text-2xl mb-8">
+                  <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-8">
                     We believe that quality and satisfactory product delivery which meets the needs
                     of our client could be possible even with the cheapest of budget.
                     Our plans are easy to afford and our delivery is more than commensurate.
