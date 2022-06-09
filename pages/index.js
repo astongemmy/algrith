@@ -26,17 +26,20 @@ export default function Index({ Products, Testimonials }) {
     },
     items: [
       {
-        title: 'Fast',
-        icon: 'fa fa-plane',
+        title: 'Swift and Accurate',
+        subtitle: '6days delivery',
+        icon: 'fa fa-rocket',
         content: 'Time is a valuable currency of business and we give our clients value in time'
       },
       {
         title: 'Competence',
-        icon: 'fa fa-handshake',
+        subtitle: 'Tool mastery',
+        icon: 'fa fa-cog',
         content: 'We posses sufficiency of skills to drive your web presence and experience to the next level'
       },
       {
         title: 'Trusted',
+        subtitle: 'High reputation',
         icon: 'fa fa-shield-alt',
         content: 'Integrity defines business life span and we are determined to live long with you'
       }

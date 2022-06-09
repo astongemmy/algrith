@@ -5,13 +5,21 @@ export default function Outline({ outline }) {
 	const outlines = items.map((outline) => {
 		return (
 			<div key={outline.title} data-aos="fade-up" className="w-full md:w-1/3 m-4 md:m-0 p-2 md:py-10 md:px-3 lg:p-4 xl:px-8">
-				<div className="w-full p-8 md:px-4 lg:p-16 bg-gray-100 text-gray-500 text-xl md:leading-9 rounded-xl text-center shadow">
-					<h2 className="text-2xl md:text-3xl text-navyblue font-bold mb-4">
+				<div className="relative overflow-hidden w-full py-16 px-8 md:px-4 lg:p-16 bg-gray-50 text-gray-500 text-xl md:leading-9 rounded-xl text-center shadow">
+					<span className="bg-white absolute left-0 top-0 w-full py-2 px-6 flex justify-between items-center">
+						<span className="flex justify-center items-center p-2 text-md text-white bg-green-500 w-10 h-10 rounded-full">
+							<i className={outline.icon}></i>
+						</span>
+						<h2 className="text-md text-gray-900">
+							{outline.subtitle}
+						</h2>
+					</span>
+					<h2 className="text-2xl text-green-500 font-bold my-4">
 						{outline.title}
 					</h2>
-					<span className="flex justify-center items-center my-8 mx-auto p-1 text-5xl text-green-300 bg-teal-100 w-20 h-20 rounded-full">
+					{/* <span className="flex justify-center items-center my-8 mx-auto p-1 text-4xl text-white bg-green-500 w-20 h-20 rounded-full">
 						<i className={outline.icon}></i>
-					</span>
+					</span> */}
 					{outline.content}
 				</div>
 			</div>

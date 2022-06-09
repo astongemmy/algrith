@@ -47,7 +47,7 @@ export default function ProductFeatureCard({ item, slug }) {
           })}
         </ul>
         <div className="text-center">
-          <a href="#order-requirements" className="scroll-selector text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-bold text-white">
+          <a href="#order-requirements" className="tracking-wider scroll-selector text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-medium text-white">
             Checkout
           </a>
         </div>

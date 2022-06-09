@@ -15,8 +15,8 @@ export default function Reviews({ reviews }) {
           onClick={() => display !== 2 ? setDisplay(2) : setDisplay(reviews.reviews.length)}
           className="inline-block w-full
             md:w-auto py-3 px-10
-            leading-8 font-heading font-semibold
-            tracking-tighter text-xl text-white
+            leading-8 font-heading font-medium
+            tracking-wider text-xl text-white
             bg-green-500 hover:bg-green-600 rounded-xl
           ">
           { display !== 2 ? 'See less' : 'See all' }
