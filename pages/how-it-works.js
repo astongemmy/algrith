@@ -45,7 +45,7 @@ export default function HowItWorks() {
                       <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 1</h2>
                       <h2 className="font-bold title-font text-2xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
                       <p className="leading-relaxed text-lx md:leading-relaxed md:text-2xl">
-                        Visit our <Link href={'/products'}><a className="text-blue-500">products </a></Link> 
+                        Visit our <Link href={'/products'}><a className="text-red-500">products </a></Link> 
                         store and select a product that fits your demand exactly.
                         We have products covering website alongside its underlying web applications to power business demands.
                       </p>
