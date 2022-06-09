@@ -10,7 +10,7 @@ export default function GetStarted() {
           <div className="md:flex justify-between relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="leading-relaxed text-4xl font font-extrabold tracking-tight text-gray-900 sm:leading-tight sm:text-6xl">
+              <h1 className="leading-tight text-4xl font-extrabold tracking-tight text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs are finally here
               </h1>
               <p className="mt-4 text-xl leading-relaxed md:leading-relaxed md:text-2xl text-gray-500">

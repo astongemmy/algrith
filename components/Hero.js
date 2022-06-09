@@ -44,7 +44,7 @@ export default function Hero({ products }) {
         <Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
           {products.map((product) => (
             <div key={product.package.id} className="rounded-lg overflow-hidden shadow-lg group relative">
-              <div className="w-full min-h-40 md:min-h-64 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 xl:aspect-none">
+              <div className="w-full min-h-64 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 xl:aspect-none">
                 <img src={product.package.gallery[0]} alt={product.package.name} className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
               </div>
               <div className="mt-4 flex justify-between px-4 pb-4">
