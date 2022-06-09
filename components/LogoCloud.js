@@ -21,7 +21,7 @@ export default class LogoCloud extends React.Component {
       },
       mobile: {
         breakpoint: { max: 464, min: 0 },
-        items: 5
+        items: 6
       }
     };
     const logo_cloud = [
@@ -43,7 +43,7 @@ export default class LogoCloud extends React.Component {
           </h1>
         </div>
         
-        <Carousel autoPlay={ true } itemClass="flex items-center mr-4 md:mr-auto px-4 md:scale-65 justify-center" infinite={ true } arrows={ false } responsive={ responsive }>
+        <Carousel autoPlay={ true } itemClass="flex items-center px-4 md:scale-65 justify-center" infinite={ true } arrows={ false } responsive={ responsive }>
           {logo_cloud.map((logo) => <div key={ logo }><img src={ logo } alt="" /></div>)}
         </Carousel>
       </div>
