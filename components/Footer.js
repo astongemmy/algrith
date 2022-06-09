@@ -4,13 +4,16 @@ import Link from 'next/link'
 export default function Footer() {
 	return (
 		<footer className="relative bg-gray-100">
-			<div className="flex flex-col md:flex-row justify-between mx-0 md:mx-4 lg:mx-12 xl:mx-24 pb-12">
-				<div className="w-full md:w-1/3 pt-4">
-					<h1 className="p-4 m-4 text-navyblue uppercase text-xl font-bold">
-						<i className="far fa-heart text-green-300 mr-4"></i> Featured
+			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12">
+				<div className="w-full md:w-2/5 lg:w-3/12 pt-4">
+					<h1 className="p-4 text-navyblue text-xl font-bold">
+						<svg xmlns="http://www.w3.org/2000/svg" className="hidden md:inline mr-4 text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+							<path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+						</svg>
+						Featured
 					</h1>
-					<div className="relative mx-4 text-xl">
-						<details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+					<div className="relative px-4 text-xl">
+						<details className="my-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
 							<summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
 								<span className="ml-4">Data for scientists</span>
 								<i className="fa fa-bug mr-4"></i>
@@ -19,7 +22,7 @@ export default function Footer() {
 								More Content for data scientists
 							</p>
 						</details>
-						<details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+						<details className="my-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
 							<summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
 								<span className="ml-4">Data for Web</span>
 								<i className="fa fa-desktop mr-4"></i>
@@ -28,7 +31,7 @@ export default function Footer() {
 								More Content for data web
 							</p>
 						</details>
-						<details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+						<details className="my-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
 							<summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
 								<span className="ml-4">Data for UI/UX</span>
 								<i className="fab fa-uikit mr-4"></i>
@@ -37,7 +40,7 @@ export default function Footer() {
 								More Content for data UI/UX
 							</p>
 						</details>
-						<details className="my-4 mx-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
+						<details className="my-4 rounded-xl bg-white shadow-lg border-gray-200 cursor-pointer">
 							<summary className="flex justify-between items-center p-4 text-black focus:outline-none hover:outline-none outline-none transition-all ease-in-out duration-700">
 								<span className="ml-4">Data for Interns</span>
 								<i className="fa fa-satellite-dish mr-4"></i>
@@ -48,98 +51,112 @@ export default function Footer() {
 						</details>
 					</div>
 				</div>
-				<div className="w-full md:w-1/3 pt-4">
-					<h1 className="p-4 m-4 text-navyblue uppercase font-bold text-xl">
-						<svg xmlns="http://www.w3.org/2000/svg" className="mr-4 inline text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-							<path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-						</svg>
-						Links
-					</h1>
-					<div className="relative mx-4 text-lg">
-						<ul className="pl-0">
-							<li className="px-4 py-2">
-								<Link href="/">
-									<a className="text-gray-600">Home</a>
-								</Link>
-							</li>
-							<li className="px-4 py-2">
-								<Link href="/about">
-									<a className="text-gray-600">About</a>
-								</Link>
-							</li>
-							<li className="px-4 py-2">
-								<Link href="/products">
-									<a className="text-gray-600">Products</a>
-								</Link>
-							</li>
-							<li className="px-4 py-2">
-								<Link href="/contact-us">
-									<a className="text-gray-600">Contact Us</a>
-								</Link>
-							</li>
-							<li className="px-4 py-2">
-								<Link href="/">
-									<a className="text-gray-600">FAQ</a>
-								</Link>
-							</li>
-							<li className="px-4 py-2">
-								<Link href="/how-it-works">
-									<a className="text-gray-600">How it Works</a>
-								</Link>
-							</li>
-							<li className="px-4 py-2">
-								<Link href="/terms-of-service">
-									<a className="text-gray-600">Terms of Service</a>
-								</Link>
-							</li>
-						</ul>
+				<div className="flex flex-wrap justify-between w-full md:w-3/5 lg:w-9/12 pt-4 md:pl-4">
+					<div className="w-1/2 lg:w-1/4 pt-4">
+						<h1 className="p-4 text-navyblue font-bold text-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" className="hidden md:inline mr-4 text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+								<path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+							</svg>
+							Company
+						</h1>
+						<div className="relative text-lg">
+							<ul className="pl-0">
+								<li className="px-4 py-2">
+									<Link href="/about">
+										<a className="text-gray-600">About Us</a>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/products">
+										<a className="text-gray-600">Products</a>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/contact-us">
+										<a className="text-gray-600">Contact Us</a>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/">
+										<a className="text-gray-600">FAQ</a>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/how-it-works">
+										<a className="text-gray-600">How it Works</a>
+									</Link>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div className="w-full md:w-1/3 pt-4">
-					<h1 className="p-4 m-4 text-navyblue uppercase font-bold text-xl">
-						<svg xmlns="http://www.w3.org/2000/svg" className="mr-4 inline text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-							<path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-						</svg> Contact Us
-					</h1>
-					<div className="relative mx-4 text-xl">
-						<div className="relative">
-							<div className="px-4">
-								{/* <address className="font-bold">
-                                        <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
-                                            <i className="fa fa-home"></i>
-                                        </span>
-                                        39 Algrith Avenue
-                                    </address> */}
-								{/* <aside className="my-4">
-                                        <span className="inline-flex text-lg justify-center items-center w-10 h-10 bg-gray-200 mr-4 rounded-full text-gray-700">
-                                            <i className="fa fa-map-marker-alt"></i>
-                                        </span>
-                                        Uyo, Nigeria.
-                                    </aside> */}
-								{/* <aside className="my-4"> */}
-									{/* <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
-                                            <i className="fa fa-phone-alt"></i>
-                                        </span> */}
-									{/* <a className="mr-2 text-lg" href="tel:+2348103561805">+2348103561805</a>
-										<a className="mr-0 text-lg" href="tel:+2348104848901">+2348104848901</a> */}
-								{/* </aside> */}
-								<aside className="mb-4">
-									{/* <span className="inline-flex text-lg justify-center items-center w-8 h-8 bg-white mr-4 rounded-xl shadow-lg">
-                                            <i className="fa fa-envelope"></i>
-                                        </span> */}
-									<a href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
-								</aside>
-							</div>
-							<div className="mt-4 px-4 flex justify-start items-center">
-								<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
-									<i className="fab fa-facebook"></i>
-								</a>
-								<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
-									<i className="fab fa-twitter"></i>
-								</a>
-								<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
-									<i className="fab fa-linkedin"></i>
-								</a>
+					<div className="w-1/2 lg:w-1/4 pt-4">
+						<h1 className="p-4 text-navyblue font-bold text-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" className="hidden md:inline mr-4 text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+								<path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+							</svg>
+							Products
+						</h1>
+						<div className="relative text-lg">
+							<ul className="pl-0">
+								<li className="px-4 py-2">
+									<Link href="/products/applications">
+										<a className="text-gray-600">Application development</a>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/products/websites">
+										<a className="text-gray-600">Web development</a>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div className="w-1/2 lg:w-1/4 pt-4">
+						<h1 className="p-4 text-navyblue font-bold text-xl">						
+							<svg xmlns="http://www.w3.org/2000/svg" className="hidden md:inline mr-4 text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+								<path strokeLinecap="round" strokeLinejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+							</svg>
+							Legal
+						</h1>
+						<div className="relative text-lg">
+							<ul className="pl-0">
+								<li className="px-4 py-2">
+									<Link href="/privacy-policy">
+										<a className="text-gray-600">Privacy Policy</a>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/terms-of-service">
+										<a className="text-gray-600">Terms of Service</a>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div className="w-1/2 lg:w-1/4 pt-4">
+						<h1 className="p-4 font-bold text-xl">
+							<svg xmlns="http://www.w3.org/2000/svg" className="hidden md:inline mr-4 text-green-300 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+								<path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+							</svg> Contact Us
+						</h1>
+						<div className="relative text-xl">
+							<div className="relative">
+								<div className="px-4">
+									<aside className="mb-4">
+										<a className="text-gray-600" href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
+									</aside>
+								</div>
+								<div className="text-navyblue mt-4 px-2 flex justify-start items-center">
+									<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
+										<i className="fab fa-facebook"></i>
+									</a>
+									<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
+										<i className="fab fa-twitter"></i>
+									</a>
+									<a href="#" data-aos="fade-left" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 bg-white shadow-lg">
+										<i className="fab fa-linkedin"></i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -147,7 +164,6 @@ export default function Footer() {
 			</div>
 			<a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-0 py-8 text-xl bg-gray-800 text-white">
 				© Copyright <span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
-				{/* <img src="./images/logo/algrith.png" alt="Algrith Logo" className="logo" /> */}
 			</a>
 		</footer>
 	)
