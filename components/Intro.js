@@ -15,7 +15,7 @@ export default function Intro({ payload }) {
 					{slogan}
 				</aside>}
 			</div>
-			{scroll_to && <span href={`#${scroll_to}`} className={`${accomodate ? 'hidden md:flex' : 'flex'} scroll-selector cursor-pointer absolute justify-center items-center right-8 md:right-12 lg:right-32 -bottom-8 rounded-full bg-green-400 text-white text-3xl w-16 h-16 md:w-18 md:h-18 z-10`}>
+			{scroll_to && <span href={`#${scroll_to}`} className={`${accomodate ? 'hidden md:flex' : 'flex'} ripple-node scroll-selector cursor-pointer absolute justify-center items-center right-8 md:right-12 lg:right-32 -bottom-8 rounded-full bg-green-500 text-white text-3xl w-16 h-16 md:w-18 md:h-18 z-10`}>
 				<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
 					<path strokeLinecap="round" strokeLinejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
 				</svg>
