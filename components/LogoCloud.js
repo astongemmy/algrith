@@ -41,12 +41,9 @@ export default class LogoCloud extends React.Component {
           <h1 className="xl:text-5xl md:text-3xl text-xl text-center md:text-left text-gray-800 font-extrabold mb-5 pt-4">
             Partnerships with Coveted Brands
           </h1>
-          {/* <p className="text-base md:text-lg lg:text-xl text-center text-gray-600 font-normal xl:w-10/12 xl:mx-auto">
-            Our success has come from being committed to the property and investing in the development of the product to maximize sales. At the same time and maintaining the integrity.
-          </p> */}
         </div>
         
-        <Carousel autoPlay={ true } itemClass="flex items-center px-4 md:scale-65 justify-center" infinite={ true } arrows={ false } responsive={ responsive }>
+        <Carousel autoPlay={ true } itemClass="flex items-center mr-8 md:mr-auto px-4 md:scale-65 justify-center" infinite={ true } arrows={ false } responsive={ responsive }>
           {logo_cloud.map((logo) => <div key={ logo }><img src={ logo } alt="" /></div>)}
         </Carousel>
       </div>
