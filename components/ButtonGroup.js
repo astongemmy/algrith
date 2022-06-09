@@ -25,7 +25,7 @@ export default function ButtonGroup({ defaultSelected, getSelected, type }) {
     <div className="mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-center p-0">
       <div className="flex items-start w-full">
         <div className="flex justify-between shadow overflow-hidden mx-auto w-full">
-          <button onClick={() => toggleSelected(buttonToRender[0].id)} className={`${ selected == buttonToRender[0].id ? 'bg-green-500 text-white' : 'text-gray-500 bg-white' } py-3 px-5 flex items-center justify-center text-lg focus:outline-none w-1/${buttonToRender.length}`}>
+          <button onClick={() => toggleSelected(buttonToRender[0].id)} className={`${ selected == buttonToRender[0].id ? 'bg-green-500 text-white font-semibold' : 'text-gray-700 bg-white' } py-3 px-5 flex items-center justify-center text-lg focus:outline-none w-1/${buttonToRender.length}`}>
             { buttonToRender[0].text }
           </button>
           {buttonToRender.length > 1 && (
