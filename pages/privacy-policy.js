@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
             <div className="flex flex-wrap w-full pb-6 md:pb-12">
               <div className="bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:pt-10 md:px-10 text-justify">
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Information We Collect</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Information We Collect</h1>
                   <p className="mb-12">
                     We only collect information about you if we have a reason to do so–for example, to
                     provide our Services, to communicate with you, or to make our Services better. We
@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
                   </p>
 
                   <div className="mb-12">
-                    <h1 className="text-teal-500 mb-8 text-2xl font-heading italic font-bol">Information You Provide to Us</h1>
+                    <h1 className="text-left text-teal-500 mb-8 text-2xl font-heading italic font-bol">Information You Provide to Us</h1>
                     <p>
                       It’s probably no surprise that we collect information that you provide to us. The amount
                       and type of information depends on the context and how we use the information. Here
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="text-teal-500 mb-8 text-2xl font-heading italic font-bol">
+                    <h1 className="text-left text-teal-500 mb-8 text-2xl font-heading italic font-bol">
                       Information We Collect Automatically
                     </h1>
                     <p>
@@ -119,10 +119,10 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">How And Why We Use Information</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">How And Why We Use Information</h1>
 
                   <div className="mb-12">
-                    <h1 className="text-teal-500 mb-8 text-2xl font-heading italic font-bol">
+                    <h1 className="text-left text-teal-500 mb-8 text-2xl font-heading italic font-bol">
                       Purposes for Using Information
                     </h1>
                     <p>
@@ -171,10 +171,10 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Sharing Information</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Sharing Information</h1>
 
                   <div className="mb-12">
-                    <h1 className="text-teal-500 mb-8 text-2xl font-heading italic font-bol">
+                    <h1 className="text-left text-teal-500 mb-8 text-2xl font-heading italic font-bol">
                       How We Share Information
                     </h1>
                     <p>
@@ -262,7 +262,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">How Long We Keep Information</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">How Long We Keep Information</h1>
                   <p className="mb-12">
                     We generally discard information about you when we no longer need the information
                     for the purposes for which we collect and use it--which are described in the section
@@ -277,7 +277,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Security</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Security</h1>
                   <p className="mb-12">
                     While no online service is 100% secure, we work very hard to protect information about
                     you against unauthorized access, use, alteration, or destruction, and take reasonable
@@ -287,7 +287,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Choices</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Choices</h1>
                   <p className="mb-12">
                     You have several choices available when it comes to information about you:
                   </p>
@@ -331,7 +331,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Your Rights</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Your Rights</h1>
                   <p className="mb-12">
                     If you are located in certain countries, including those that fall under the scope of the
                     European General Data Protection Regulation (AKA the “GDPR”), data protection laws
@@ -368,7 +368,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Controllers and Responsible Companies</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Controllers and Responsible Companies</h1>
                   <p className="mb-12">
                     Shuffle.dev has been created by REALWEB. Company that entered into the contract with
                     you under the Terms of Service for the the product or service you use. REALWEB is
@@ -378,7 +378,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">How to Reach Us</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">How to Reach Us</h1>
                   <p className="mb-12">
                     If you have a question about this Privacy Policy, or you would like to contact us about
                     any of the rights mentioned in the Your Rights section above, please contact us:
@@ -387,7 +387,7 @@ export default function PrivacyPolicy() {
                 </div>
 
                 <div className="relative">
-                  <h1 className="text-teal-500 mb-8 text-3xl font-heading font-bold">Privacy Policy Changes</h1>
+                  <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Privacy Policy Changes</h1>
                   <p className="mb-12">
                     Although most changes are likely to be minor, Shuffle.dev may change its Privacy Policy
                     from time to time. Shuffle.dev encourages visitors to frequently check this page for any

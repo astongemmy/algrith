@@ -42,7 +42,7 @@ export default function TermsOfService() {
               <div className="bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
                 <div className="relative">
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Purchase</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Purchase</h1>
                     <p>
                       If you wish to purchase any product or service made available through the Service
                       ("Purchase"), you may be asked to supply certain information relevant to your Purchase
@@ -71,7 +71,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Availability, Errors and Inaccuracies</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Availability, Errors and Inaccuracies</h1>
                     <p>
                       We are constantly updating our offerings of products and services on the Service. The
                       products or services available on our Service may be mispriced, described inaccurately, or
@@ -85,7 +85,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Content</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Content</h1>
                     <p>
                       Our Service allows you to post, link, store, share and otherwise make available certain
                       information, text, graphics, videos, or other material ("Content"). You are responsible for
@@ -109,7 +109,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Accounts</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Accounts</h1>
                     <p>
                       When you create an account with us, you must provide us information that is accurate,
                       complete, and current at all times. Failure to do so constitutes a breach of the Terms, which
@@ -123,7 +123,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Links To Other Web Sites</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Links To Other Web Sites</h1>
                     <p>
                       Our Service may contain links to third-party web sites or services that are not owned or
                       controlled by Algrith LLC.
@@ -137,7 +137,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Termination</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Termination</h1>
                     <p>
                       We may terminate or suspend your account immediately, without prior notice or liability,
                       for any reason whatsoever, including without limitation if you breach the Terms.
@@ -147,7 +147,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Disclaimer</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Disclaimer</h1>
                     <p>
                       Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS
                       AVAILABLE" basis. The Service is provided without warranties of any kind, whether express
@@ -173,7 +173,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Changes</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Changes</h1>
                     <p>
                       We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If
                       a revision is material we will try to provide at least 30 days notice prior to any new terms
@@ -185,7 +185,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Cookies</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Cookies</h1>
                     <p>
                       We employ the use of cookies. By accessing Algrith LLC, you agreed to use cookies in
                       agreement with the Algrith LLC's Privacy Policy.Most interactive websites use cookies
@@ -195,7 +195,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">License</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">License</h1>
                     <p>
                       Unless otherwise stated, Algrith LLC and/or its licensors own the intellectual
                       property rights for all material on Algrith LLC. All intellectual property rights
@@ -205,7 +205,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">iFrames</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">iFrames</h1>
                     <p>
                       Without prior approval and written permission, you may not create frames
                       around our Webpages that alter in any way the visual presentation or
@@ -214,7 +214,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Web application/design</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Web application/design</h1>
                     <ul className="pl-4 md:pl-8 my-8">
                       <li>
                         The Customer is solely responsible for preparing and sending detailed answers
@@ -254,7 +254,7 @@ export default function TermsOfService() {
                   </div>
 
                   <div className="mb-12">
-                    <h1 className="mb-8 text-pink-500 text-3xl font-heading font-bold">Miscellaneous</h1>
+                    <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Miscellaneous</h1>
                     <p>
                       Project duration: The Customer agrees to provide timely responses to 'Algrith.com'
                       after receiving status notifications from 'Algrith.com'. The Customer shall have
