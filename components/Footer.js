@@ -67,11 +67,6 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li className="px-4 py-2">
-									<Link href="/products">
-										<a className="text-gray-600">Products</a>
-									</Link>
-								</li>
-								<li className="px-4 py-2">
 									<Link href="/contact-us">
 										<a className="text-gray-600">Contact Us</a>
 									</Link>
