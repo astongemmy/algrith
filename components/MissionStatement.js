@@ -7,10 +7,10 @@ export default function MissionStatement() {
       <div className="relative overflow-hidden">
         <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-0 sm:static">
           <div className="lg:pr-28 xl:pr-32 px-2 md:px-auto">
-            <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 leading-tight sm:leading-tight sm:text-7xl">
+            <h1 className="text-4xl font-semibold text-gray-900 leading-tight sm:leading-tight sm:text-7xl">
               Focus on your business. Let us handle your online presence and visibillity.
             </h1>
-            <p className="mt-4 leading-relaxed text-xl md:leading-relaxed md:text-2xl text-gray-500">
+            <p className="mt-4 font-raleway leading-relaxed text-xl md:leading-relaxed md:text-2xl text-gray-500">
               This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
               if you live or die.
             </p>

@@ -35,6 +35,10 @@ module.exports = {
         '126': '28rem',
         '144': '32rem',
         '166': '38rem'
+      },
+      fontFamily: {
+        'raleway': ['raleway', '"Public sans"'],
+        'gilroy': ['gilroy-font', 'sans-serif']
       }
     },
   },
