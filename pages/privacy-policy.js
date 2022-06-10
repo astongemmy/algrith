@@ -11,8 +11,8 @@ export default function PrivacyPolicy() {
         <title> Privacy Policy | Algrith </title>
       </Head>
 
-      <main className="dark:bg-slate-800">
-        <section className="dark:text-gray-200 text-gray-600">
+      <main className="dark:bg-slate-900">
+        <section className="dark:text-slate-200 text-gray-600">
           <div className="px-8 md:px-14 lg:px-20 xl:px-28 pt-8 md:pt-12 pb-8 mb:pb-24 mx-auto">
             <div className="py-2">
               <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl font-heading font-bold">
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
               </p>
             </div>
             <div className="flex flex-wrap w-full pb-6 md:pb-12">
-              <div className="dark:bg-slate-700 bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:pt-10 md:px-10 text-justify">
+              <div className="dark:bg-slate-800 bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:pt-10 md:px-10 text-justify">
                 <div className="relative">
                   <h1 className="text-left text-teal-500 mb-8 text-3xl font-heading font-bold">Information We Collect</h1>
                   <p className="mb-12">
