@@ -11,8 +11,8 @@ export default function RefundPolicy() {
         <title> Refund Policy | Algrith </title>
       </Head>
 
-      <main>
-        <section className="text-gray-600">
+      <main className="dark:bg-slate-800">
+        <section className="dark:text-gray-200 text-gray-600">
           <div className="px-8 md:px-14 lg:px-20 xl:px-28 pt-8 md:pt-12 pb-8 mb:pb-24 mx-auto">
             <div className="py-2">
               <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl font-heading font-bold">
@@ -27,7 +27,7 @@ export default function RefundPolicy() {
               </p>
             </div>
             <div className="flex flex-wrap w-full pb-6 md:pb-12">
-              <div className="bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
+              <div className="dark:bg-slate-700 bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
                 <div className="relative">
                   <ul className="mb-12 pl-5 list-decimal space-y-4">
                     <li>

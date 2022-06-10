@@ -3,14 +3,14 @@ import Link from 'next/link'
 
 export default function MissionStatement() {
   return (
-    <div className="relative bg-white pt-10 md:pt-16 lg:pt-24 py-24 px-2 md:px-4 lg:px-16 xl:px-28 w-full dark:bg-black">
+    <div className="relative bg-white pt-10 md:pt-16 lg:pt-24 py-24 px-2 md:px-4 lg:px-16 xl:px-28 w-full dark:bg-gray-800">
       <div className="relative overflow-hidden">
         <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-0 sm:static">
           <div className="lg:pr-28 xl:pr-32 px-2 md:px-auto">
             <h1 className="text-4xl font-semibold text-rose-500 leading-tight sm:leading-tight sm:text-7xl">
               Focus on your business. Let us handle your online presence and visibillity.
             </h1>
-            <p className="mt-4 leading-relaxed text-xl md:leading-relaxed md:text-2xl text-gray-600">
+            <p className="mt-4 leading-relaxed text-xl md:leading-relaxed md:text-2xl dark:text-gray-400 text-gray-600">
               This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
               if you live or die.
             </p>

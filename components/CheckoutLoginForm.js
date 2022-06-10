@@ -19,11 +19,11 @@ export default function CheckoutLoginForm({ getAuth }) {
     <form onSubmit={Login} className="transition-left duration-700 w-full px-6">
       <div className="mb-4">
         <label htmlFor="login-email" className="w-full text-lg block mb-2">Email Address</label>
-        <input type="email" name="email" onChange={handleInputChange} defaultValue={login.email} id="login-email" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />
+        <input type="email" name="email" onChange={handleInputChange} defaultValue={login.email} id="login-email" className="dark:bg-transparent dark:text-gray-200 w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="e.g. johndoe@email.com" required />
       </div>
       <div className="mb-4">
         <label htmlFor="login-password" className="w-full text-lg block mb-2">Password</label>
-        <input type="password" name="password" onChange={handleInputChange} defaultValue={login.password} id="login-password" className="w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="*********" required />
+        <input type="password" name="password" onChange={handleInputChange} defaultValue={login.password} id="login-password" className="dark:bg-transparent dark:text-gray-200 w-full rounded-lg border border-gray-300 text-lg py-3" placeholder="*********" required />
       </div>
       <div className="relative text-xl">
         <button type="submit" className="w-full py-3 rounded-full text-white bg-green-500">

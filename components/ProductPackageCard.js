@@ -24,7 +24,7 @@ export default function ProductPackageCard({ item, slug }) {
 
   return (
     <div className="w-full md:w-1/3 px-0 md:px-2 xl:px-10 mb-8 lg:mb-0">
-      <div className="relative bg-white px-6 py-8 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border">
+      <div className="relative dark:bg-slate-800 bg-white px-6 py-8 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border dark:border-gray-500">
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
@@ -43,9 +43,9 @@ export default function ProductPackageCard({ item, slug }) {
             </p>
           </div>
         </div>
-        <div className="pb-4 mb-4 border-b">
+        <div className="pb-4 mb-4 border-b dark:border-b-gray-500">
           <div className="flex justify-between items-center">
-            <h3 className="text-xl text-black font-bold font-heading">Features</h3>
+            <h3 className="text-xl dark:text-gray-400 text-black font-bold font-heading">Features</h3>
             <p className="text-lg text-gray-600 font-bold">
               { (formatUnit(item.ordered)) }
               <span className="text-gray-600"> orders</span>
@@ -61,7 +61,7 @@ export default function ProductPackageCard({ item, slug }) {
                     <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
                   </svg>
                 </span>
-                <span className="text-gray-600"> { Object.values(feature)[0] } </span>
+                <span className="dark:text-gray-400 text-gray-600"> { Object.values(feature)[0] } </span>
               </li>
             )
           })}

@@ -12,10 +12,10 @@ export default function HowItWorks() {
       </Head>
 
       <main>
-        <section className="text-gray-500">
+        <section className="dark:bg-slate-800 dark:text-gray- text-gray-500">
           <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
             <div className="text-center py-2">
-              <h1 className="mb-8 text-3xl md:text-5xl font-heading font-bold">
+              <h1 className="mb-8 text-3xl md:text-5xl dark:text-gray-200 font-heading font-bold">
                 How it Works
               </h1>
               <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-12">

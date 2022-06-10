@@ -1,14 +1,14 @@
 export default function CountryInput({ required }) {
   return (
     <div className="mt-1 flex rounded-md shadow-sm">
-      <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+      <span className="dark:bg-transparent dark:text-gray-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       </span>
       {required && <span style="color: red !important; display: inline; float: none;">*</span>}
-      <select id="country" name="country" className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300">
+      <select id="country" name="country" className="dark:bg-transparent dark:text-gray-200 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300">
         <option defaultValue={""}>--select--</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Åland Islands">Åland Islands</option>

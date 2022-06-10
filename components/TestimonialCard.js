@@ -8,11 +8,11 @@ export default class TestimonialCard extends React.Component {
     const TestimononyCard = testimonials.map((testimonial) => {
       return (
         <div key={ testimonial.name } data-aos="fade-up" className="w-full md:w-1/3 m-4 md:m-0 px-2">
-          <figure className="overflow-hidden xl:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+          <figure className="overflow-hidden xl:flex bg-slate-100 rounded-xl p-8 dark:bg-slate-900">
             <img className="w-24 h-24 rounded-full mx-auto" src={ testimonial.avatar } alt="" width="384" height="512" />
             <div className="py-6 xl:pl-6 text-center xl:text-left space-y-4">
               <blockquote>
-                <p className="text-lg text-gray-500">
+                <p className="text-lg dark:text-gray-400 text-gray-500">
                   “{ testimonial.text }”
                 </p>
               </blockquote>

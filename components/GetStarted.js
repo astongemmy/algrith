@@ -3,17 +3,17 @@ import Link from 'next/link'
 
 export default function GetStarted() {
   return (
-    <div className="relative pb-10 md:pb-24 px-8 md:px-12 lg:px-20 xl:px-32 w-full dark:bg-black">
-      <div className="w-full mx-auto rounded-3xl shadow-lg relative bg-white overflow-hidden">
+    <div className="relative pb-10 md:pb-24 px-8 md:px-12 lg:px-20 xl:px-32 w-full dark:bg-slate-800">
+      <div className="w-full mx-auto rounded-3xl shadow-lg relative dark:bg-slate-900 bg-white overflow-hidden">
         <div className="pt-8 pb-10 sm:pt-24 sm:pb-40 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24 xl:pt-12 xl:pb-12">
           
           <div className="md:flex justify-between relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="leading-tight text-4xl font-extrabold tracking-tight text-gray-900 sm:leading-tight sm:text-6xl">
+              <h1 className="leading-tight text-4xl font-extrabold tracking-tight dark:text-gray-300 text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs are finally here
               </h1>
-              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed md:text-2xl text-gray-500">
+              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed md:text-2xl dark:text-gray-400 text-gray-500">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>

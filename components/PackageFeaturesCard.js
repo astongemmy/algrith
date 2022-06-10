@@ -22,11 +22,11 @@ export default function ProductFeatureCard({ item, slug }) {
 
   return (
     <div className="w-full px-3 md:px-0 mb-8 lg:mb-0">
-      <div className="bg-white">
-        <div className="pb-4 mb-4 border-b">
+      <div className="">
+        <div className="pb-4 mb-4 border-b dark:border-b-gray-500">
           <div className="flex justify-between items-center">
-            <h3 className="text-xl text-black font-bold font-heading">Features</h3>
-            <p className="text-lg text-red-500 font-bold"> { (formatUnit(item.ordered)) } <span className="text-gray-600"> orders</span> </p>
+            <h3 className="text-xl dark:text-gray-400 text-black font-bold font-heading">Features</h3>
+            <p className="text-lg text-red-500 font-bold"> { (formatUnit(item.ordered)) } <span className="dark:text-gray-400 text-gray-600"> orders</span> </p>
           </div>
         </div>
         <ul className="text-lg text-green-500 mb-6">
@@ -41,7 +41,7 @@ export default function ProductFeatureCard({ item, slug }) {
                     <path d="M18 12H6" fill="white" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>)} */}
                 </span>
-                <span className="text-gray-600"> { Object.values(feature)[0] } </span>
+                <span className="dark:text-gray-400 text-gray-600"> { Object.values(feature)[0] } </span>
               </li>
             )
           })}

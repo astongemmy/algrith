@@ -30,7 +30,7 @@ export default function ProductRating({ }) {
           </svg>
         </button>
       </div>
-      <span className="text-md text-gray-400 font-sans">4.59 (156k)</span>
+      <span className="text-md dark:text-gray-300 text-gray-400 font-sans">4.59 (156k)</span>
     </div>
   )
 }
