@@ -8,7 +8,8 @@ export default function Header({ openMenuRef }) {
 			<div id="brand" className="flex justify-start items-center transition-all ease-in-out duration-500 lg:ml-2 xl:ml-0">
 				<Link href="/">
 					<a id="brand-title" className="transform origin-left scale-65 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000">
-						<img src="/images/logo/algrith-logo-dark-transparent-clean.png" alt="brand-logo" />
+						<img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="Algrith-logo" />
+						<img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block" alt="Algrith-logo" />
 					</a>
 				</Link>
 			</div>

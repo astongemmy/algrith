@@ -16,7 +16,8 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 		<nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow md:shadow-none md:bg-transparent bg-white dark:bg-slate-800 fixed top-0 md:top-4 lg:top-6 -right-full md:right-8 xl:right-16 xl:mr-1 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-10/12 md:w-auto h-screen md:h-16 text-gray-600 lg:p-4">
 			<div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 md:px-8 py-4">
 				<h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
-					<img src="/images/logo/algrith-logo-dark-transparent.png" alt="brand-logo" />
+					<img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="brand-logo" />
+					<img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block" alt="brand-logo" />
 				</h1>
 				<div ref={ closeMenuRef } id="close-menu" className="flex justify-center h-12 w-12 bg-gray-300 dark:bg-slate-700 rounded-xl text-xl items-center dark:text-gray-400 text-black">
 					<i className="fa fa-times"></i>
