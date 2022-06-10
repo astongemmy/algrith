@@ -15,8 +15,8 @@ export default function CheckoutOrderRequirement({ Requirements }) {
   
   return (
     <div className="md:w-1/2 pr-0 md:pr-4 mb-8">
-      <div className="dark:bg-slate-800 bg-white rounded-lg dark:border-slate-700 border overflow-hidden">
-        <h3 className="dark:border-b-slate-700 border-b dark:text-gray-200 text-gray-800 px-4 py-3 mb-2 text-2xl font-heading font-semibold">
+      <div className="dark:bg-slate-800 bg-white rounded-lg dark:border-slate-800 border overflow-hidden">
+        <h3 className="dark:border-b-slate-700 border-b dark:text-slate-300 text-gray-800 px-4 py-3 mb-2 text-2xl font-heading font-semibold">
           Order requirements
         </h3>
         <div className="p-4 px-6 pb-8">
@@ -25,7 +25,7 @@ export default function CheckoutOrderRequirement({ Requirements }) {
               return (
                 <React.Fragment key={requirement[0]}>
                   {requirement[0] !== 'description' && requirement[0] !== 'theme_color' && <li className="w-full mb-3 flex flex-wra justify-between items-center overflow-x-auto">
-                    <span className="w-1/2 flex items-center text-lg dark:text-gray-400 text-gray-600">
+                    <span className="w-1/2 flex items-center text-lg dark:text-slate-300 text-gray-600">
                       <span className="mr-6 text-green-500">
                         <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
@@ -45,7 +45,7 @@ export default function CheckoutOrderRequirement({ Requirements }) {
                   </li>}
 
                   {requirement[0] == 'theme_color' && <li className="flex flex-wrap justify-between md:items-center">
-                    <span className="flex items-center text-lg dark:text-gray-400 text-gray-600 mb-4">
+                    <span className="flex items-center text-lg dark:text-slate-300 text-gray-600 mb-4">
                       <span className="mr-6 text-green-500">
                         <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
@@ -59,7 +59,7 @@ export default function CheckoutOrderRequirement({ Requirements }) {
                   </li>}
 
                   {requirement[0] == 'description' && <li className="mb-3 flex flex-col">
-                    <span className="flex items-center w-full block text-lg dark:text-gray-400 text-gray-600 mb-2">
+                    <span className="flex items-center w-full block text-lg dark:text-slate-300 text-gray-600 mb-2">
                       <span className="mr-6 text-green-500">
                         <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>

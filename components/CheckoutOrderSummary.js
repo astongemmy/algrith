@@ -1,8 +1,8 @@
 export default function CheckoutOrderSummary({ Package }) {
   return (
     <div className="w-full lg:w-1/3 lg:pr-0 xl:pr-10">
-      <div className="flex flex-col md:flex-row lg:flex-col overflow-hidden rounded-lg dark:bg-slate-800 bg-white p-2 mb-8 dark:border-slate-700 border">
-        <img src={Package.gallery[0]} className="overflow-hidden" alt={Package.name} />
+      <div className="flex flex-col md:flex-row lg:flex-col overflow-hidden rounded-lg dark:bg-slate-800 bg-white p-2 mb-8 dark:border-slate-800 border">
+        <img src={Package.gallery[0]} className="dark:opacity-50 overflow-hidden" alt={Package.name} />
         <div className="w-full px-3 my-4">
           <div className="pb-4 mb-4 dark:border-b-slate-700 border-b">
             <div className="flex justify-between items-center">
@@ -10,7 +10,7 @@ export default function CheckoutOrderSummary({ Package }) {
               <span className="text-lg text-red-500 font-bold"> {Package.currency.symbol + Package.price} </span>
             </div>
             <div className="flex justify-between items-center">
-              <h3 className="text-lg dark:text-gray-200 text-black font-bold font-heading">Features inclusive</h3>
+              <h3 className="text-lg dark:text-slate-300 text-black font-bold font-heading">Features inclusive</h3>
               <span className="text-lg font-bold">Qty: x1 </span>
             </div>
           </div>
@@ -23,7 +23,7 @@ export default function CheckoutOrderSummary({ Package }) {
                       <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="currentColor"></path>
                     </svg>
                   </span>
-                  <span className="dark:text-gray-400 text-gray-600"> {Object.values(feature)[0]} </span>
+                  <span className="dark:text-slate-300 text-gray-600"> {Object.values(feature)[0]} </span>
                 </li>
               )
             })}

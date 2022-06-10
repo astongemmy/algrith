@@ -38,12 +38,12 @@ export default function Product({ Product }) {
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> {Product.name} Products | Algrith </title>
       </Head>
-      <main>
-        <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-7 md:px-14 lg:px-20 xl:px-28 overflow-hidden dark:bg-slate-800">
+      <main className="dark:bg-slate-900">
+        <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-7 md:px-14 lg:px-20 xl:px-28 overflow-hidden">
           <div className="flex flex-wrap">
             <BreadCrumbs page={`products.${Product.slug}`} />
             <div className="w-full md:w-1/2 lg:pr-0 xl:pr-10">
-              <div className="overflow-hidden rounded-lg dark:bg-slate-700 bg-white p-2 mb-8 md:pl-0 border dark:border-slate-700">
+              <div className="overflow-hidden rounded-lg dark:bg-slate-800 bg-white p-2 mb-8 md:pl-0 border dark:border-slate-800">
                 <ImageGallery
                   autoPlay
                   lazyLoad

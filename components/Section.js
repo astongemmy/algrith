@@ -5,7 +5,7 @@ export default function Section({ payload }) {
   const { title, items, illustration } = payload;
 
   return (
-    <div id={title.text} className="relative py-8 md:py-16 px-1 xxl:px-24 w-full dark:bg-gray-800">
+    <div id={title.text} className="relative py-8 md:py-16 px-1 xxl:px-24 w-full">
       <div
         className={`
             relative flex 
@@ -18,7 +18,9 @@ export default function Section({ payload }) {
             shadow-xl rounded-full overflow-hidden p-8 transform 
             md:scale-${illustration.dimension.md.scale} 
             lg:scale-${illustration.dimension.lg.scale} 
-            animation-all duration-1000 ease-in-out`
+            animation-all duration-1000 ease-in-out
+            dark:opacity-50
+          `
         }>
         <img className="rounded-full" src={illustration.src} alt={`${title.text}-illustration`} />
       </div>

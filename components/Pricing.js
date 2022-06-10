@@ -9,7 +9,7 @@ export default function Pricing({ packages, slug }) {
           <h2 className="mb-4 text-4xl lg:text-6xl 2xl:text-7xl text-white font-bold font-heading">
             Choose a package
           </h2>
-          <p className="text-xl md:text-2xl text-gray-200">Get started with a suitable package.</p>
+          <p className="text-xl md:text-2xl dark:text-blue-300 text-gray-200">Get started with a suitable package.</p>
         </div>
 
         <div className="w-full mx-auto">

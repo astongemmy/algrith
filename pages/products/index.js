@@ -12,8 +12,8 @@ export default function Products({ Products }) {
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> Products | Algrith </title>
       </Head>
-      <main>
-        <section className="dark:bg-slate-800 w-full pt-4 md:pt-12 pb-10 px-4 md:px-12 lg:px-14 xl:px-24 rounded-b-10xl overflow-hidden">
+      <main className="dark:bg-slate-900">
+        <section className="w-full pt-4 md:pt-12 pb-10 px-4 md:px-12 lg:px-14 xl:px-24 rounded-b-10xl overflow-hidden">
           <div className="px-4 md:px-2 mx-auto">
             <div className="flex flex-wrap">
               <div className="lg:pl-4">
@@ -23,7 +23,7 @@ export default function Products({ Products }) {
                 {Products.map((product) => {
                   return (
                     <div key={ product.name }>
-                      <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-semibold dark:text-gray-400 text-black">
+                      <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-semibold dark:text-slate-300 text-black">
                         <span className="capitalize">{ product.name }</span> products
                       </h2>                      
                       <div className="flex flex-wrap overflow-hidden md:-mx-2 xl:-mx-11 md:py-8 md:my-8 md:mt-0">

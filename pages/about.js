@@ -57,7 +57,7 @@ export default function About() {
 				<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
 				<title> About | Algrith </title>
 			</Head>
-			<main>
+			<main className="dark:bg-slate-900">
 				<Intro payload={intro} />
 				<Outline outline={outlines} />
 			</main>

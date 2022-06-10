@@ -22,19 +22,20 @@ export default function SignUp () {
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> Sign up | Algrith </title>
       </Head>
-      <main>
+      <main className="dark:bg-slate-900">
         <section className="h-screen w-full p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
-            <div className="shadow rounded-2xl bg-white w-full pt-4 pb-12 px-6">
+            <div className="shadow rounded-2xl dark:bg-slate-800 dark:text-slate-300 bg-white w-full pt-4 pb-12 px-6">
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
                   <a>
-                    <img src="/images/logo/algrith-brand.png" className="h-16" alt="Algrith logo" />
+                    <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
+                    <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                   </a>
                 </Link>
-                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white bg-green-500 shadow-sm rounded-full">Sign up</h1>
+                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Sign up</h1>
               </div>
-              <form onSubmit={Signup} className="w-full px-1 mt-4">
+              <form onSubmit={Signup} className="w-full px-1 mt-8">
                 <div className="mb-4">
                   <label htmlFor="email" className="w-full text-lg block mb-2">Email address</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -44,11 +45,11 @@ export default function SignUp () {
                       id="email"
                       onChange={handleInputChange}
                       defaultValue={signup.email}
-                      className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="e.g. johndoe@email.com"
                       required
                     />
-                    <span className="inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
+                    <span className="dark:bg-slate-700 dark:border-slate-600 inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                       </svg>
@@ -64,11 +65,11 @@ export default function SignUp () {
                       id="firstname"
                       onChange={handleInputChange}
                       defaultValue={signup.firstname}
-                      className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="e.g. John"
                       required
                     />
-                    <span className="inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
+                    <span className="dark:bg-slate-700 dark:border-slate-600 inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                       </svg>
@@ -84,11 +85,11 @@ export default function SignUp () {
                       id="lastname"
                       onChange={handleInputChange}
                       defaultValue={signup.lastname}
-                      className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="e.g. Doe"
                       required
                     />
-                    <span className="inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
+                    <span className="dark:bg-slate-700 dark:border-slate-600 inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
@@ -104,11 +105,11 @@ export default function SignUp () {
                       id="password"
                       onChange={handleInputChange}
                       defaultValue={signup.password}
-                      className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="*********"
                       required
                     />
-                    <span onClick={()=>setPasswordVisibility(!passwordVisibility)} className="hover:bg-green-500 hover:text-white cursor-pointer inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
+                    <span onClick={()=>setPasswordVisibility(!passwordVisibility)} className="dark:bg-slate-700 dark:border-slate-600 dark:hover:bg-opacity-50 hover:bg-green-500 hover:text-white cursor-pointer inline-flex items-center px-4 rounded-r-md border border-l-0 border-gray-300 text-gray-500 text-lg">
                       {
                         !passwordVisibility ? <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -123,7 +124,7 @@ export default function SignUp () {
                   </div>
                 </div>
                 <div className="text-xl">
-                  <button type="submit" className="w-full py-3 rounded-full text-white bg-green-500">
+                  <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                     </svg>
@@ -134,7 +135,7 @@ export default function SignUp () {
               <p className="text-xl text-center mt-4">
                 Already have an account?
                 <Link href={'/login'}>
-                  <a className="block text-black font-bold">Sign in</a>
+                  <a className="block dark:text-blue-300 text-black font-bold">Sign in</a>
                 </Link>
               </p>
             </div>

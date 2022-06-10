@@ -23,10 +23,10 @@ export default function ProductFeatureCard({ item, slug }) {
   return (
     <div className="w-full px-3 md:px-0 mb-8 lg:mb-0">
       <div className="">
-        <div className="pb-4 mb-4 border-b dark:border-b-gray-500">
+        <div className="pb-4 mb-4 border-b dark:border-b-slate-700">
           <div className="flex justify-between items-center">
-            <h3 className="text-xl dark:text-gray-400 text-black font-bold font-heading">Features</h3>
-            <p className="text-lg text-red-500 font-bold"> { (formatUnit(item.ordered)) } <span className="dark:text-gray-400 text-gray-600"> orders</span> </p>
+            <h3 className="text-xl dark:text-slate-300 text-black font-bold font-heading">Features</h3>
+            <p className="text-lg text-red-500 font-bold"> { (formatUnit(item.ordered)) } <span className="dark:text-slate-400 text-gray-600"> orders</span> </p>
           </div>
         </div>
         <ul className="text-lg text-green-500 mb-6">
@@ -41,13 +41,13 @@ export default function ProductFeatureCard({ item, slug }) {
                     <path d="M18 12H6" fill="white" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>)} */}
                 </span>
-                <span className="dark:text-gray-400 text-gray-600"> { Object.values(feature)[0] } </span>
+                <span className="dark:text-slate-300 text-gray-600"> { Object.values(feature)[0] } </span>
               </li>
             )
           })}
         </ul>
         <div className="text-center">
-          <a href="#order-requirements" className="tracking-wider scroll-selector text-xl bg-green-500 inline-block px-10 py-4 border border-green-500 hover:border-green-100 rounded-full font-medium text-white">
+          <a href="#order-requirements" className="tracking-wider scroll-selector text-xl dark:bg-opacity-50 bg-green-500 inline-block px-10 py-4 border dark:border-opacity-10 border-green-500 hover:border-green-100 rounded-full font-medium text-white">
             Checkout
           </a>
         </div>

@@ -12,13 +12,13 @@ export default function HowItWorks() {
       </Head>
 
       <main>
-        <section className="dark:bg-slate-800 dark:text-gray- text-gray-500">
+        <section className="dark:bg-slate-900 text-gray-500">
           <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
             <div className="text-center py-2">
-              <h1 className="mb-8 text-3xl md:text-5xl dark:text-gray-200 font-heading font-bold">
+              <h1 className="mb-8 text-3xl md:text-5xl dark:text-slate-200 font-heading font-bold">
                 How it Works
               </h1>
-              <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-12">
+              <p className="leading-relaxed dark:text-slate-300 text-xl md:leading-relaxed md:text-2xl mb-12">
                 Howdy! You are at the right place. <br/>
                 In order to have a comprehensive overview of how we get things done, please follow
                 the steps outlined below to know better.
@@ -41,10 +41,10 @@ export default function HowItWorks() {
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-red-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 1</h2>
+                    <div className="dark:bg-red-900 dark:bg-opacity-10 bg-red-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-red-100 text-gray-900 mb-2 tracking-wider">Step 1</h2>
                       <h2 className="font-bold title-font text-2xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
-                      <p className="leading-relaxed text-lx md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl dark:text-slate-300">
                         Visit our <Link href={'/products'}><a className="text-red-500">products </a></Link> 
                         store and select a product that fits your demand exactly.
                         We have products covering website alongside its underlying web applications to power business demands.
@@ -54,14 +54,19 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-yellow-500 pointer-events-none" />
+                    <div className="mt-28 h-3/4 w-1 bg-yellow-500 pointer-events-none" />
                     <div className="w-12 h-12 md:h-16 md:w-24 border-yellow-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                    {/* Bottom pinging dot */}
+                    <div className="h-8 w-8 absolute -bottom-3 bg-yellow-500 rounded-full pointer-events-none">
+                      <div className="h-full w-full animate-ping border border-yellow-500 bg-white rounded-full" />
+                    </div>
+                    
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
-                    <div className="bg-yellow-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 2</h2>
+                    <div className="dark:bg-yellow-900 dark:bg-opacity-10 bg-yellow-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-yellow-100 text-gray-900 mb-2 tracking-wider">Step 2</h2>
                       <h2 className="font-bold title-font text-2xl text-yellow-500 mb-4 tracking-wider">Choose a Package</h2>
-                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed text-xl dark:text-slate-300 md:leading-relaxed md:text-2xl">
                         Our product display shelf is rich with amazing packages and 
                         you can choose from a minimum of three packages from any of our product shelves.
                       </p>
@@ -75,8 +80,12 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-green-500 pointer-events-none" />
+                    <div className="mt-28 h-3/4 w-1 bg-green-500 pointer-events-none" />
                     <div className="w-12 h-12 md:h-16 md:w-24 border-green-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    {/* Bottom pinging dot */}
+                    <div className="h-8 w-8 absolute -bottom-3 bg-green-500 rounded-full pointer-events-none">
+                      <div className="h-full w-full animate-ping border border-green-500 bg-white rounded-full" />
+                    </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-green-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-20 md:w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -84,10 +93,10 @@ export default function HowItWorks() {
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-green-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 3</h2>
+                    <div className="dark:bg-green-900 dark:bg-opacity-10 bg-green-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-green-100 text-gray-900 mb-2 tracking-wider">Step 3</h2>
                       <h2 className="font-bold title-font text-2xl text-green-500 mb-4 tracking-wider">Fill in your Requirements</h2>
-                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed dark:text-slate-300 text-xl md:leading-relaxed md:text-2xl">
                         For any package selected, there are a list of requirements with which you can specify how
                         you want your package delivered. Utilize this feature to get exactly what you desire.
                       </p>
@@ -96,14 +105,18 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-blue-500 pointer-events-none" />
+                    <div className="mt-28 h-3/4 w-1 bg-blue-500 pointer-events-none" />
                     <div className="w-12 h-12 md:h-16 md:w-24 border-blue-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                    {/* Bottom pinging dot */}
+                    <div className="h-8 w-8 absolute -bottom-3 bg-blue-500 rounded-full pointer-events-none">
+                      <div className="h-full w-full animate-ping border border-blue-500 bg-white rounded-full" />
+                    </div>
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
-                    <div className="bg-blue-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 4</h2>
+                    <div className="dark:bg-blue-900 dark:bg-opacity-10 bg-blue-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-blue-100 text-gray-900 mb-2 tracking-wider">Step 4</h2>
                       <h2 className="font-bold title-font text-2xl text-blue-500 mb-4 tracking-wider">Proceed to Checkout</h2>
-                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed dark:text-slate-300 text-xl md:leading-relaxed md:text-2xl">
                         Once you are satisfied with selecting and filling in requirements for a package, proceed to 
                         checkout in order to make payment.
                       </p>
@@ -117,8 +130,12 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-pink-500 pointer-events-none" />
+                    <div className="mt-28 h-3/4 w-1 bg-pink-500 pointer-events-none" />
                     <div className="w-12 h-12 md:h-16 md:w-24 border-pink-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    {/* Bottom pinging dot */}
+                    <div className="h-8 w-8 absolute -bottom-3 bg-pink-500 rounded-full pointer-events-none">
+                      <div className="h-full w-full animate-ping border border-pink-500 bg-white rounded-full" />
+                    </div>
                   </div>
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-pink-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-20 md:w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -126,10 +143,10 @@ export default function HowItWorks() {
                     </svg>
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-pink-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 5</h2>
+                    <div className="dark:bg-pink-900 dark:bg-opacity-10 bg-pink-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-pink-100 text-gray-900 mb-2 tracking-wider">Step 5</h2>
                       <h2 className="font-bold title-font text-2xl text-pink-500 mb-4 tracking-wider">Product design and Creation</h2>
-                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed dark:text-slate-300 text-xl md:leading-relaxed md:text-2xl">
                         This is the part where you head back to focus on your business while
                         we transform your request into a perfect result with reference to your requirements.
                       </p>
@@ -138,14 +155,18 @@ export default function HowItWorks() {
                 </div>
                 <div className="flex relative pb-16">
                   <div className="h-full w-12 md:w-32 absolute right-0 flex items-center justify-center">
-                    <div className="mt-40 h-full w-1 bg-teal-500 pointer-events-none" />
+                    <div className="mt-28 h-3/4 w-1 bg-teal-500 pointer-events-none" />
                     <div className="w-12 h-12 md:h-16 md:w-24 border-teal-500 border-t-4 border-r-4 rounded-tr-3xl absolute top-14 right-6 md:right-16 pointer-events-none" />
+                    {/* Bottom pinging dot */}
+                    <div className="h-8 w-8 absolute -bottom-3 bg-teal-500 rounded-full pointer-events-none">
+                      <div className="h-full w-full animate-ping border border-teal-500 bg-white rounded-full" />
+                    </div>
                   </div>
                   <div className="flex-grow pr-6 md:pr-8 text-right">
-                    <div className="bg-teal-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 6</h2>
+                    <div className="dark:bg-teal-900 dark:bg-opacity-10 bg-teal-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-teal-100 text-gray-900 mb-2 tracking-wider">Step 6</h2>
                       <h2 className="font-bold title-font text-2xl text-teal-500 mb-4 tracking-wider">Delivery and Completion</h2>
-                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed dark:text-slate-300 text-xl md:leading-relaxed md:text-2xl">
                         By now you would have received a delivery of your package and can indicate satisfaction
                         by acknowledging the order as completed.
                       </p>
@@ -171,10 +192,10 @@ export default function HowItWorks() {
                     </svg> */}
                   </div>
                   <div className="flex-grow pl-6 md:pl-8">
-                    <div className="bg-rose-50 shadow-sm p-8 rounded-3xl">
-                      <h2 className="font-bold title-font text-2xl md:text-4xl text-gray-900 mb-2 tracking-wider">Step 7</h2>
+                    <div className="dark:bg-rose-900 dark:bg-opacity-10 bg-rose-50 shadow-sm p-8 rounded-3xl">
+                      <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-rose-100 text-gray-900 mb-2 tracking-wider">Step 7</h2>
                       <h2 className="font-bold title-font text-2xl text-rose-500 mb-4 tracking-wider">Support Us with a Review</h2>
-                      <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl">
+                      <p className="leading-relaxed dark:text-slate-300 text-xl md:leading-relaxed md:text-2xl">
                         On order delivery, we would like you to give us a feedback on how the whole process
                         happened. This helps spread the new about our competence and character as a business.
                       </p>
@@ -182,10 +203,10 @@ export default function HowItWorks() {
                   </div>
                 </div>
                 <div className="pt-6 mb-6">
-                  <h2 className="mb-4 text-xl md:text-3xl font-heading font-bold">
+                  <h2 className="mb-4 dark:text-slate-400 text-xl md:text-3xl font-heading font-bold">
                     Congratulations! You can now get started with a product
                   </h2>
-                  <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-12">
+                  <p className="leading-relaxed dark:text-slate-400 text-xl md:leading-relaxed md:text-2xl mb-12">
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link href={'/products'}>
@@ -193,6 +214,7 @@ export default function HowItWorks() {
                       className="rounded-xl px-6 md:px-12 py-4 md:py-6 text-white text-2xl
                         bg-teal-500 hover:bg-teal-700 focus:bg-teal-400 font-semibold
                         border-teal-500 hover:border-teal-700 focus:border-teal-400
+                        dark:bg-opacity-50 dark:bg-teal-600 dark:text-teal-200
                       "
                     >
                       Get Started
@@ -200,7 +222,7 @@ export default function HowItWorks() {
                   </Link>
                 </div>
               </div>
-              <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8">
+              <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8 dark:text-slate-400">
                 <div className="pt-6">
                   <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
                     Our Aim
@@ -210,7 +232,7 @@ export default function HowItWorks() {
                     once you initiate this process with us, we will ensure to polish your ideas into
                     satisfactory output that will project your brand steps ahead of the competition.
                   </p>
-                  <img className="object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
+                  <img className="dark:opacity-50 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
                 </div>
                 <div className="pt-12">
                   <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
@@ -221,7 +243,7 @@ export default function HowItWorks() {
                     of our client could be possible even with the cheapest of budget.
                     Our plans are easy to afford and our delivery is more than commensurate.
                   </p>
-                  <img className="object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/payment-terminal.gif" alt="Pricing plan illustration" />
+                  <img className="dark:opacity-50 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/payment-terminal.gif" alt="Pricing plan illustration" />
                 </div>
               </div>
             </div>

@@ -10,14 +10,14 @@ export default function ContactForm() {
       <div className="mt-5 md:mt-0">
         <form onSubmit={sendMail} id="contact-form" method="POST">
           <div className="shadow rounded-md overflow-hidden">
-            <div className="px-6 py-5 sm:p-12 lg:px-6 xl:px-12 dark:bg-slate-700 bg-white space-y-6">
+            <div className="px-6 py-5 sm:p-12 lg:px-6 xl:px-12 dark:bg-slate-800 bg-white space-y-6">
               <div className="grid grid-cols-4 gap-6">
                 <div className="col-span-4 sm:col-span-2">
                   <label htmlFor="name" className="block text-lg font-medium dark:text-gray-200 text-gray-700">
                     Fullname
                   </label>
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 dark:bg-transparent dark:text-gray-200 bg-gray-50 text-gray-500 text-lg">
+                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
@@ -26,7 +26,7 @@ export default function ContactForm() {
                       type="text"
                       name="name"
                       id="name"
-                      className="dark:bg-transparent dark:text-gray-200 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. John Doe"
                     />
                   </div>
@@ -36,7 +36,7 @@ export default function ContactForm() {
                     Email
                   </label>
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 dark:bg-transparent dark:text-gray-200 bg-gray-50 text-gray-500 text-lg">
+                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                       </svg>
@@ -45,7 +45,7 @@ export default function ContactForm() {
                       type="email"
                       name="email"
                       id="email"
-                      className="dark:bg-transparent dark:text-gray-200 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. johndoe@email.com"
                     />
                   </div>
@@ -61,7 +61,7 @@ export default function ContactForm() {
                     Phone
                   </label>
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 dark:bg-transparent dark:text-gray-200 bg-gray-50 text-gray-500 text-lg">
+                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
@@ -70,7 +70,7 @@ export default function ContactForm() {
                       type="tel"
                       name="phone"
                       id="phone"
-                      className="dark:bg-transparent dark:text-gray-200 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. +88 9209 635"
                     />
                   </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
                     id="message"
                     name="message"
                     rows={7}
-                    className="dark:bg-transparent dark:text-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
+                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
                     placeholder="I need a corporate website for my business"
                     defaultValue={''}
                   />
@@ -96,8 +96,8 @@ export default function ContactForm() {
                 </p>
               </div>
             </div>
-            <div className="px-4 py-3 dark:bg-gray-600 bg-gray-50 sm:p-12">
-              <button type="submit" className="inline-flex justify-center items-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <div className="px-4 py-3 dark:bg-slate-800 bg-gray-50 sm:p-12">
+              <button type="submit" className="inline-flex justify-center items-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white dark:bg-opacity-50 bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 <i className="fa fa-paper-plane mr-4"></i> { progress == 'idle' ? 'Send' : progress }
               </button>
             </div>

@@ -5,12 +5,12 @@ export default function Outline({ outline }) {
 	const outlines = items.map((outline) => {
 		return (
 			<div key={outline.title} data-aos="fade-up" className="w-full md:w-1/3 m-4 md:m-0 p-2 md:py-10 md:px-3 lg:p-4 xl:px-8">
-				<div className="relative overflow-hidden w-full py-16 px-8 md:px-4 lg:p-16 dark:bg-slate-700 bg-gray-50 dark:text-gray-400 text-gray-500 text-xl md:leading-9 rounded-xl text-center shadow dark:shadow-gray-500">
-					<span className="dark:bg-slate-600 bg-white absolute left-0 top-0 w-full py-2 px-6 flex justify-between items-center">
-						<span className="flex justify-center items-center p-2 text-md text-white bg-green-500 w-10 h-10 rounded-full">
+				<div className="relative overflow-hidden w-full pt-24 pb-16 px-8 md:px-4 lg:p-16 dark:bg-slate-800 bg-gray-50 dark:text-slate-300 text-gray-500 text-xl md:leading-9 rounded-xl text-center shadow dark:shadow-none">
+					<span className="dark:bg-slate-700 bg-white absolute left-0 top-0 w-full py-2 px-6 flex justify-between items-center">
+						<span className="flex justify-center items-center p-2 text-md text-white dark:bg-opacity-50 bg-green-500 w-10 h-10 rounded-full">
 							<i className={outline.icon}></i>
 						</span>
-						<h2 className="text-md dark:text-gray-400 text-gray-900">
+						<h2 className="text-md dark:text-blue-300 text-gray-900">
 							{outline.subtitle}
 						</h2>
 					</span>
@@ -27,7 +27,7 @@ export default function Outline({ outline }) {
 	});
 
 	return (
-		<div id="outline" className="relative pt-16 pb-4 px-1 2xl:px-32 w-full dark:bg-slate-700">
+		<div id="outline" className="relative pt-16 pb-4 px-1 2xl:px-32 w-full">
 			<div
 				className={`
 					relative flex 
@@ -44,9 +44,9 @@ export default function Outline({ outline }) {
 					lg:scale-${illustration.dimension.lg.scale} 
 					animation-all duration-1000 ease-in-out
 			`}>
-				<img className="rounded-full" src={illustration.src} alt={`${title}-illustration`} />
+				<img className="dark:opacity-50 rounded-full" src={illustration.src} alt={`${title}-illustration`} />
 			</div>
-			<h1 className="relative uppercase py-4 text-3xl md:text-4xl dark:text-gray-300 text-gray-600 mx-auto w-full text-center font-bold">
+			<h1 className="relative uppercase py-4 text-3xl md:text-4xl dark:text-slate-300 text-gray-600 mx-auto w-full text-center font-bold">
 				{title}
 			</h1>
 			<div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center py-4 lg:py-16 px-2 md:px-10 lg:px-14 xl:px-32 w-full">
