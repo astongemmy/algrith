@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 import useClickAway from "../hooks/useClickAway"
+import useViewport from "../hooks/useViewport";
 
 export default function ThemeSwitch({ }) {
+  const { viewport } = useViewport()
   const themeSwitchRef = useRef(null)
+  const themeSwitchContainerRef = useRef(null)
   const [open, setOpen] = useState(false)
   useClickAway(themeSwitchRef, setOpen)
   const switchTheme = () => {
@@ -20,10 +23,26 @@ export default function ThemeSwitch({ }) {
     }
     switchTheme()
   }
-  useEffect(() => { switchTheme() }, [])
-
+  const repositionThemeSwitchOnScroll = () => {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      if (!['sm', 'md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.95rem'
+      if (['md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1.25rem'
+      if (['sm'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.35rem'
+    } else {
+      if (!['sm', 'md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '2.0rem'
+      if (['md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '2.25rem'
+      if (['sm'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1rem'
+    }
+  }  
+  useEffect(() => {
+    switchTheme()
+    repositionThemeSwitchOnScroll()
+    window.addEventListener('scroll', repositionThemeSwitchOnScroll)
+    return () => window.removeEventListener('scroll', repositionThemeSwitchOnScroll)
+  }, [viewport])
+  
   return (
-    <div className="transition-all z-50 ease-in-out duration-500 md:bg-transparent fixed top-4 md:top-8 right-16 md:right-24 lg:right-16 xl:right-24 mr-1 flex items-center w-auto text-green-500">
+    <div ref={ themeSwitchContainerRef } className="transition-all z-50 ease-in-out duration-500 md:bg-transparent fixed top-4 md:top-8 lg:top-12 right-16 md:right-24 lg:right-16 xl:right-24 mr-1 flex items-center w-auto text-green-500">
       <div ref={themeSwitchRef} onClick={() => setOpen(!open)} className="flex items-center dark:bg-slate-800 bg-green-50 px-2 rounded-lg lg:py-1">
         <label className="sr-only" id="headlessui-listbox-label-3">Theme</label>
         <button type="button" id="headlessui-listbox-button-4" aria-haspopup="true" aria-expanded="false" aria-labelledby="headlessui-listbox-label-3 headlessui-listbox-button-undefined">

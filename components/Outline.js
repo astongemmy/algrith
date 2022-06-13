@@ -10,7 +10,7 @@ export default function Outline({ outline }) {
 						<span className="flex justify-center items-center p-2 text-md text-white dark:bg-opacity-50 bg-green-500 w-10 h-10 rounded-full">
 							<i className={outline.icon}></i>
 						</span>
-						<h2 className="text-md dark:text-blue-300 text-gray-900">
+						<h2 className="text-md dark:text-teal-300 text-gray-900">
 							{outline.subtitle}
 						</h2>
 					</span>
