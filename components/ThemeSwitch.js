@@ -11,8 +11,12 @@ export default function ThemeSwitch({ }) {
   const switchTheme = () => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', 'rgb(15 23 42)');
+      document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', 'rgb(15 23 42)');
     } else {
       document.documentElement.classList.remove('dark')
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
+      document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', '#00a300');
     }
   }
   const setTheme = (theme) => {
@@ -42,7 +46,7 @@ export default function ThemeSwitch({ }) {
   }, [viewport])
   
   return (
-    <div ref={ themeSwitchContainerRef } className="transition-all z-50 ease-in-out duration-500 md:bg-transparent fixed top-4 md:top-8 lg:top-12 right-16 md:right-24 lg:right-16 xl:right-24 mr-1 flex items-center w-auto text-green-500">
+    <div ref={ themeSwitchContainerRef } className="z-20 md:bg-transparent fixed top-4 md:top-8 lg:top-12 right-16 md:right-24 lg:right-16 xl:right-24 mr-1 flex items-center w-auto text-green-500">
       <div ref={themeSwitchRef} onClick={() => setOpen(!open)} className="flex items-center dark:bg-slate-800 bg-green-50 px-2 rounded-lg lg:py-1">
         <label className="sr-only" id="headlessui-listbox-label-3">Theme</label>
         <button type="button" id="headlessui-listbox-button-4" aria-haspopup="true" aria-expanded="false" aria-labelledby="headlessui-listbox-label-3 headlessui-listbox-button-undefined">

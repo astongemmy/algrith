@@ -10,8 +10,8 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en-US" className="">
 				<Head>
-					<meta name="theme-color" content="#ffffff" />
-					<meta name="msapplication-TileColor" content="#00a300" />
+					<meta name="theme-color" content="" />
+					<meta name="msapplication-TileColor" content="" />
 					
 					<meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
 					<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
