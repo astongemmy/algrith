@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import BareLayout from '../components/BareLayout'
 
 export default function SignUp () {
   const [auth, setAuth] = useState({})
@@ -17,15 +18,15 @@ export default function SignUp () {
   }
 
   return (
-    <>
+    <BareLayout>
       <Head>
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> Sign up | Algrith </title>
       </Head>
-      <main className="dark:bg-slate-900">
+      <main>
         <section className="h-screen w-full p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
-            <div className="shadow rounded-2xl dark:bg-slate-800 dark:text-slate-300 bg-white w-full pt-4 pb-12 px-6">
+            <div className="shadow rounded-2xl dark:bg-slate-800 bg-white w-full pt-4 pb-12 px-6">
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
                   <a>
@@ -135,13 +136,13 @@ export default function SignUp () {
               <p className="text-xl text-center mt-4">
                 Already have an account?
                 <Link href={'/login'}>
-                  <a className="block dark:text-blue-300 text-black font-bold">Sign in</a>
+                  <a className="block dark:text-green-300 text-black font-bold tracking-wider">Sign in</a>
                 </Link>
               </p>
             </div>
           </div>
         </section>
       </main>
-    </>
+    </BareLayout>
   )
 }

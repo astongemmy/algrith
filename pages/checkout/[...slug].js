@@ -16,7 +16,7 @@ export default function Checkout({ Package, Requirements }) {
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> Checkout | Algrith </title>
       </Head>
-      <main className="dark:bg-slate-900">
+      <main>
         <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-6 md:px-12 lg:px-20 xl:px-28 overflow-hidden">
           <div className="px-2 lg:px-0 flex flex-wrap">
             <BreadCrumbs page={'checkout'} />

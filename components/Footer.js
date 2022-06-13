@@ -151,14 +151,14 @@ export default function Footer() {
 										<a className="text-gray-500" href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
 									</aside>
 								</div>
-								<div className="text-navyblue mt-4 px-2 flex justify-start items-center">
-									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-gray-400 bg-white shadow-lg">
+								<div className="dark:text-green-500 text-navyblue mt-4 px-2 flex justify-start items-center">
+									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-slate-700 bg-white shadow-lg">
 										<i className="fab fa-facebook"></i>
 									</a>
-									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-gray-400 bg-white shadow-lg">
+									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-slate-700 bg-white shadow-lg">
 										<i className="fab fa-twitter"></i>
 									</a>
-									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-gray-400 bg-white shadow-lg">
+									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-slate-700 bg-white shadow-lg">
 										<i className="fab fa-linkedin"></i>
 									</a>
 								</div>

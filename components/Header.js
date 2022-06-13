@@ -13,7 +13,7 @@ export default function Header({ openMenuRef }) {
 					</a>
 				</Link>
 			</div>
-			<div ref={ openMenuRef } id="hamburger" className="md:hidden flex justify-center items-center text-3xl cursor-pointer p-4 ml-4 -mr-3 text-gray-600 dark:text-blue-300 transform scale-y-75 transition-all ease-in-out duration-1000">
+			<div ref={ openMenuRef } className="lg:hidden flex justify-center items-center text-3xl cursor-pointer p-4 -mr-3 text-gray-600 dark:text-green-300 transform scale-y-75 transition-all ease-in-out duration-1000">
 				<i className="fa fa-bars"></i>
 			</div>
 		</header>

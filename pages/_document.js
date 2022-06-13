@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
 
 	render() {
 		return (
-			<Html lang="en-US">
+			<Html lang="en-US" className="">
 				<Head>
 					<meta name="theme-color" content="#ffffff" />
 					<meta name="msapplication-TileColor" content="#00a300" />
@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
 					<script type="text/javascript" src="/js/aos.js"></script>
 				</Head>
 
-				<body>
+				<body className="dark:bg-slate-900 dark:text-slate-300">
 					<Main />
 					<NextScript />
 				</body>

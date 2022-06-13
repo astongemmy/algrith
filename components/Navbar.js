@@ -13,7 +13,7 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 	]
 
 	return (
-		<nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow md:shadow-none md:bg-transparent bg-white dark:bg-slate-800 fixed top-0 md:top-4 lg:top-6 -right-full md:right-8 xl:right-16 xl:mr-1 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-10/12 md:w-auto h-screen md:h-16 text-gray-600 lg:p-4">
+		<nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow md:shadow-none md:bg-transparent bg-white dark:md:bg-transparent dark:bg-slate-800 fixed top-0 lg:top-6 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col md:flex-row justify-between md:justify-end md:items-center w-10/12 md:w-auto h-screen md:h-16 text-gray-600 lg:p-4">
 			<div className="md:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 md:px-8 py-4">
 				<h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
 					<img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="brand-logo" />
@@ -25,16 +25,16 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 			</div>
 			<div id="navbar-links" className="flex flex-col md:flex-row flex-grow flex-shrink-0 w-11/12 md:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
 				<Link href="/about">
-					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-blue-300 text-gray-600">
+					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-green-300 text-gray-600">
 						About
 					</a>
 				</Link>
 				<Link href="/how-it-works">
-					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-blue-300 text-gray-600">
+					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-green-300 text-gray-600">
 						How It Works
 					</a>
 				</Link>
-				<span ref={ dropDownContainerRef } onClick={() => setDropdown(!dropdown)} className="flex items-center justify-between cursor-pointer ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-blue-300 text-gray-600">
+				<span ref={ dropDownContainerRef } onClick={() => setDropdown(!dropdown)} className="flex items-center justify-between cursor-pointer ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-green-300 text-gray-600">
 					Products
 					<svg className="inline ml-4" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M10.4594 0.289848C10.8128 -0.096616 11.3841 -0.096616 11.7349 0.289848C12.0871 0.676312 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880363 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.096616 1.53966 0.289848L6.00147 4.81927L10.4594 0.289848Z" fill="currentColor"></path>
@@ -42,7 +42,7 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 					<Popover toggle={dropdown} items={products} />
 				</span>
 				<Link href="/contact-us">
-					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-blue-300 text-gray-600">
+					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto md:mx-4 px-0 md:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left md:text-center w-full md:w-auto text-xl dark:text-green-300 text-gray-600">
 						Contact
 					</a>
 				</Link>

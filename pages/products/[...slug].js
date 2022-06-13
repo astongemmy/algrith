@@ -23,7 +23,7 @@ export default function Product({ Product }) {
   // useEffect(() => { setSelectedPackage(activePackage) }, [Product])
   const setPakageGallery = (gallery) => {
     return gallery.map((image) => {
-      const sample = { originalClass: "overflow-hidden w-full h-72 md:h-auto lg:h-112 2xl:h-144 rounded-lg object-center object-cover" }
+      const sample = { originalClass: "filter dark:brightness-75 overflow-hidden w-full h-72 md:h-auto lg:h-112 2xl:h-144 rounded-lg object-center object-cover" }
       sample.original = image
       sample.thumbnail = image
       return sample
@@ -38,7 +38,7 @@ export default function Product({ Product }) {
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> {Product.name} Products | Algrith </title>
       </Head>
-      <main className="dark:bg-slate-900">
+      <main>
         <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-7 md:px-14 lg:px-20 xl:px-28 overflow-hidden">
           <div className="flex flex-wrap">
             <BreadCrumbs page={`products.${Product.slug}`} />

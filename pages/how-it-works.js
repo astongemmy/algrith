@@ -12,7 +12,7 @@ export default function HowItWorks() {
       </Head>
 
       <main>
-        <section className="dark:bg-slate-900 text-gray-500">
+        <section className="text-gray-500">
           <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
             <div className="text-center py-2">
               <h1 className="mb-8 text-3xl md:text-5xl dark:text-slate-200 font-heading font-bold">
@@ -224,7 +224,7 @@ export default function HowItWorks() {
               </div>
               <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8 dark:text-slate-400">
                 <div className="pt-6">
-                  <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
+                  <h2 className="mb-4 text-2xl dark:text-green-400 md:text-3xl font-heading font-bold">
                     Our Aim
                   </h2>
                   <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-8">
@@ -232,10 +232,10 @@ export default function HowItWorks() {
                     once you initiate this process with us, we will ensure to polish your ideas into
                     satisfactory output that will project your brand steps ahead of the competition.
                   </p>
-                  <img className="dark:opacity-50 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
+                  <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
                 </div>
                 <div className="pt-12">
-                  <h2 className="mb-4 text-2xl md:text-3xl font-heading font-bold">
+                  <h2 className="mb-4 text-2xl dark:text-green-400 md:text-3xl font-heading font-bold">
                     Excellent Pricing
                   </h2>
                   <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl mb-8">
@@ -243,7 +243,7 @@ export default function HowItWorks() {
                     of our client could be possible even with the cheapest of budget.
                     Our plans are easy to afford and our delivery is more than commensurate.
                   </p>
-                  <img className="dark:opacity-50 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/payment-terminal.gif" alt="Pricing plan illustration" />
+                  <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/payment-terminal.gif" alt="Pricing plan illustration" />
                 </div>
               </div>
             </div>

@@ -10,7 +10,7 @@ export default function GetStarted() {
           <div className="md:flex justify-between relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="leading-tight text-4xl font-extrabold tracking-tight dark:text-blue-300 text-gray-900 sm:leading-tight sm:text-6xl">
+              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-green-300 text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs are finally here
               </h1>
               <p className="mt-4 text-xl leading-relaxed md:leading-relaxed md:text-2xl dark:text-slate-300 text-gray-500">
@@ -29,7 +29,7 @@ export default function GetStarted() {
 
             <div className="sm:max-w-2xl mt-8 md:mt-auto px-2 md:px-auto">
               <div className="rounded-lg overflow-hidden">
-                <img src="./images/illustrations/responsive.gif" alt="" className="dark:opacity-50 w-full h-full object-center object-cover" />
+                <img src="./images/illustrations/responsive.gif" alt="" className="filter dark:brightness-75 w-full h-full object-center object-cover" />
               </div>
             </div>
           </div>

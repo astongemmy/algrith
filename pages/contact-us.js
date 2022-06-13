@@ -27,7 +27,7 @@ export default function ContactUs() {
 				<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
 				<title> Contact Us | Algrith </title>
 			</Head>
-			<main className="relative dark:bg-slate-900">
+			<main className="relative">
 				<Intro payload={intro} />
 				<Contact />
 			</main>

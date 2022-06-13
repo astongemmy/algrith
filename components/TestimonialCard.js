@@ -17,7 +17,7 @@ export default class TestimonialCard extends React.Component {
                 </p>
               </blockquote>
               <figcaption className="font-medium">
-                <div className="text-xl text-sky-700 dark:text-sky-400">
+                <div className="text-xl text-sky-700 dark:text-green-400">
                 { testimonial.name }
                 </div>
                 <div className="text-slate-700 dark:text-slate-500">

@@ -11,7 +11,7 @@ export default function TermsOfService() {
         <title> Terms of Service | Algrith </title>
       </Head>
 
-      <main className="dark:bg-slate-900">
+      <main>
         <section className="dark:text-slate-200 text-gray-600">
           <div className="px-8 md:px-14 lg:px-20 xl:px-28 pt-8 md:pt-12 pb-8 mb:pb-24 mx-auto">
             <div className="py-2">

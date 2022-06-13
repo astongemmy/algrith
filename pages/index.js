@@ -93,7 +93,7 @@ export default function Index({ Products, Testimonials }) {
         <title> Home | Algrith </title>
       </Head>
 
-      <main className="dark:bg-slate-900">
+      <main>
         <WelcomeIntro payload={intro} />
         <LogoCloud />
         <Hero products={ products } />

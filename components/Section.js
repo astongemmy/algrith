@@ -19,7 +19,7 @@ export default function Section({ payload }) {
             md:scale-${illustration.dimension.md.scale} 
             lg:scale-${illustration.dimension.lg.scale} 
             animation-all duration-1000 ease-in-out
-            dark:opacity-50
+            filter dark:brightness-75
           `
         }>
         <img className="rounded-full" src={illustration.src} alt={`${title.text}-illustration`} />

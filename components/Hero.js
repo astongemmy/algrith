@@ -28,7 +28,7 @@ export default function Hero({ products }) {
     <div id="product-intro" className="w-full pt-10 lg:py-16 dark:bg-slate-900 bg-white">
       <div className="max-w-7xl mx-auto px-8 sm:px-6 md:px-12 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-lg dark:text-blue-300 text-indigo-600 font-semibold tracking-wide uppercase">Pick a product and get started!</h2>
+          <h2 className="text-lg dark:text-green-300 text-indigo-600 font-semibold tracking-wide uppercase">Pick a product and get started!</h2>
           <p className="mt-2 text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight dark:text-slate-200 text-gray-900 sm:text-5xl">
             Order for a landing page design, corporate website design or even an e-commerce website.
           </p>
@@ -49,7 +49,7 @@ export default function Hero({ products }) {
               </div>
               <div className="mt-4 flex justify-between px-4 pb-4">
                 <div>
-                  <h3 className="text-lg dark:text-blue-400 text-gray-800 font-bold">
+                  <h3 className="text-lg dark:text-green-400 text-gray-800 font-bold">
                     <Link href={`/products/${product.slug}/${product.package.id}`}>
                       <a>
                         <span aria-hidden="true" className="absolute inset-0" />

@@ -12,7 +12,7 @@ export default function Products({ Products }) {
         <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <title> Products | Algrith </title>
       </Head>
-      <main className="dark:bg-slate-900">
+      <main>
         <section className="w-full pt-4 md:pt-12 pb-10 px-4 md:px-12 lg:px-14 xl:px-24 rounded-b-10xl overflow-hidden">
           <div className="px-4 md:px-2 mx-auto">
             <div className="flex flex-wrap">

@@ -14,7 +14,7 @@ export default function Outline({ outline }) {
 							{outline.subtitle}
 						</h2>
 					</span>
-					<h2 className="text-2xl text-green-500 font-bold my-4">
+					<h2 className="text-2xl text-green-500 dark:text-green-300 font-bold my-4">
 						{outline.title}
 					</h2>
 					{/* <span className="flex justify-center items-center my-8 mx-auto p-1 text-4xl text-white bg-green-500 w-20 h-20 rounded-full">
@@ -44,7 +44,7 @@ export default function Outline({ outline }) {
 					lg:scale-${illustration.dimension.lg.scale} 
 					animation-all duration-1000 ease-in-out
 			`}>
-				<img className="dark:opacity-50 rounded-full" src={illustration.src} alt={`${title}-illustration`} />
+				<img className="rounded-full filter dark:brightness-75" src={illustration.src} alt={`${title}-illustration`} />
 			</div>
 			<h1 className="relative uppercase py-4 text-3xl md:text-4xl dark:text-slate-300 text-gray-600 mx-auto w-full text-center font-bold">
 				{title}
