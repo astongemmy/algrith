@@ -49,7 +49,7 @@ export default function Outline({ outline }) {
 			<h1 className="relative uppercase py-4 text-3xl md:text-4xl dark:text-slate-300 text-gray-600 mx-auto w-full text-center font-bold">
 				{title}
 			</h1>
-			<div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center py-4 lg:py-16 px-2 md:px-10 lg:px-14 xl:px-32 w-full">
+			<div className="relative flex flex-wrap xl:flex-nowrap justify-start xl:justify-between items-center py-4 lg:py-16 px-2 md:px-10 lg:px-14 xl:px-32 2xl:px-0 w-full">
 				{outlines}
 			</div>
 		</div>
