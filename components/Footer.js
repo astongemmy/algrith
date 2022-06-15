@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Footer() {
 	return (
-		<footer className="relative dark:bg-slate-800 bg-gray-100 2xl:w-8/12 2xl:mx-auto">
-			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12">
+		<footer className="relative dark:bg-slate-800 bg-gray-100">
+			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12 2xl:w-8/12 2xl:mx-auto">
 				<div className="w-full md:w-2/5 lg:w-3/12 pt-8">
 					<h1 className="p-4 dark:text-slate-400 text-navyblue text-xl font-bold">
 						<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
