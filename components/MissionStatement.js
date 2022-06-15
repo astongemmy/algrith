@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function MissionStatement() {
   return (
     <div className="relative bg-white pt-10 md:pt-16 lg:pt-24 py-24 px-2 md:px-4 lg:px-16 xl:px-28 w-full dark:bg-gray-800">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden 2xl:w-8/12 2xl:mx-auto">
         <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-0 sm:static">
           <div className="lg:pr-28 xl:pr-32 px-2 md:px-auto">
             <h1 className="text-4xl font-semibold text-rose-500 leading-tight sm:leading-tight sm:text-7xl">

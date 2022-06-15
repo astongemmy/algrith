@@ -13,7 +13,7 @@ export default function Products({ Products }) {
         <title> Products | Algrith </title>
       </Head>
       <main>
-        <section className="w-full pt-4 md:pt-12 pb-10 px-4 md:px-12 lg:px-14 xl:px-24 rounded-b-10xl overflow-hidden">
+        <section className="w-full pt-4 md:pt-12 pb-10 px-4 md:px-12 lg:px-14 xl:px-24 rounded-b-10xl overflow-hidden 2xl:w-8/12 2xl:mx-auto">
           <div className="px-4 md:px-2 mx-auto">
             <div className="flex flex-wrap">
               <div className="lg:pl-4">

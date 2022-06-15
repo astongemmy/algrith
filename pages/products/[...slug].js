@@ -39,7 +39,7 @@ export default function Product({ Product }) {
         <title> {Product.name} Products | Algrith </title>
       </Head>
       <main>
-        <section className="w-full pt-4 pb-12 md:pt-12 md:pb-24 px-7 md:px-14 lg:px-20 xl:px-28 overflow-hidden">
+        <section className="w-full 2xl:w-8/12 2xl:mx-auto pt-4 pb-12 md:pt-12 md:pb-24 px-7 md:px-14 lg:px-20 xl:px-28 overflow-hidden">
           <div className="flex flex-wrap">
             <BreadCrumbs page={`products.${Product.slug}`} />
             <div className="w-full md:w-1/2 lg:pr-0 xl:pr-10">

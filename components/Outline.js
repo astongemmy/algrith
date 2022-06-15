@@ -27,7 +27,7 @@ export default function Outline({ outline }) {
 	});
 
 	return (
-		<div id="outline" className="relative pt-16 pb-4 px-1 2xl:px-32 w-full">
+		<div id="outline" className="relative pt-16 pb-4 px-1 2xl:px-32 w-full 2xl:w-8/12 2xl:mx-auto">
 			<div
 				className={`
 					relative flex 

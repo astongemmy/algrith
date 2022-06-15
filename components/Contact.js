@@ -5,7 +5,7 @@ import ContactInquiryCard from './ContactInquiryCard'
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full relative md:py-12 lg:py-0">
+    <section id="contact" className="w-full 2xl:w-8/12 2xl:mx-auto relative md:py-12 lg:py-0">
       <div className="relative px-5 mx-auto">
         <div className="px-2 md:px-4 lg:px-10 xl:px-20 w-full mx-auto">
           <div className="flex w-full flex-wrap justify-center mb-4 lg:mb-0">

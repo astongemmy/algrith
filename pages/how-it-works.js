@@ -12,7 +12,7 @@ export default function HowItWorks() {
       </Head>
 
       <main>
-        <section className="text-gray-500">
+        <section className="text-gray-500 2xl:w-8/12 2xl:mx-auto">
           <div className="px-8 md:px-16 lg:px-28 pt-12 pb-24 mx-auto">
             <div className="text-center py-2">
               <h1 className="mb-8 text-3xl md:text-5xl dark:text-slate-200 font-heading font-bold">

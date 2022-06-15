@@ -4,7 +4,7 @@ import React from 'react'
 export default function Pricing({ packages, slug }) {
   return (
     <section className="w-full pt-12 pb-10 md:pb-24 lg:pb-32 2xl:py-40 bg-gray-800">
-      <div className="px-1 md:px-0 lg:px-14 xl:px-28">
+      <div className="px-1 md:px-0 lg:px-14 xl:px-28 2xl:w-8/12 2xl:mx-auto">
         <div className="px-4 md:px-auto mb-4 md:mb-14 text-center">
           <h2 className="mb-4 text-4xl lg:text-6xl 2xl:text-7xl text-white font-bold font-heading">
             Choose a package

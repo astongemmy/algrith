@@ -24,7 +24,7 @@ export default function SignUp () {
         <title> Sign up | Algrith </title>
       </Head>
       <main>
-        <section className="h-screen w-full p-8">
+        <section className="h-screen w-full 2xl:w-8/12 2xl:mx-auto p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
             <div className="shadow rounded-2xl dark:bg-slate-800 bg-white w-full pt-4 pb-12 px-6">
               <div className="flex justify-between items-center">

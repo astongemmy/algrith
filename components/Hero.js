@@ -25,7 +25,7 @@ export default function Hero({ products }) {
   };
 
   return (
-    <div id="product-intro" className="w-full pt-10 lg:py-16 dark:bg-slate-900 bg-white">
+    <div id="product-intro" className="w-full pt-10 lg:py-16 dark:bg-slate-900 bg-white 2xl:w-8/12 2xl:mx-auto">
       <div className="max-w-7xl mx-auto px-8 sm:px-6 md:px-12 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-lg dark:text-green-300 text-indigo-600 font-semibold tracking-wide uppercase">Pick a product and get started!</h2>

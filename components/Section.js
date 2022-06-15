@@ -5,7 +5,7 @@ export default function Section({ payload }) {
   const { title, items, illustration } = payload;
 
   return (
-    <div id={title.text} className="relative py-8 md:py-16 px-1 xxl:px-24 w-full">
+    <div id={title.text} className="relative py-8 md:py-16 px-1 xxl:px-24 w-full 2xl:w-8/12 2xl:mx-auto">
       <div
         className={`
             relative flex 
