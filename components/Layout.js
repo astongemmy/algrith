@@ -35,7 +35,7 @@ export default function Layout(props) {
 	})
 
 	return (
-		<div>
+		<div className="2xl:w-8/12 2xl:mx-auto">
 			<Header openMenuRef={openMenuRef} />
 			<Navbar closeMenuRef={closeMenuRef} navbarRef={navbarRef} />
 			<ThemeSwitch />
