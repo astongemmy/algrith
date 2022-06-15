@@ -6,7 +6,7 @@ export default function ContactForm() {
   const { progress, sendMail } = useSendMail()
 
   return (
-    <div className="lg:order-2 lg:w-6/12 -mt-24 md:-mt-32 lg:-mt-24 sm:px-12 lg:px-4 xl:px-12">
+    <div className="lg:order-2 lg:w-6/12 -mt-24 md:-mt-32 lg:-mt-24 sm:px-12 lg:px-4 xl:px-12 2xl:px-4">
       <div className="mt-5 md:mt-0">
         <form onSubmit={sendMail} id="contact-form" method="POST">
           <div className="shadow rounded-md overflow-hidden">

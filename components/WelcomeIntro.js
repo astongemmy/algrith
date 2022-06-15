@@ -9,8 +9,8 @@ export default function WelcomeIntro({ payload }) {
 	return (
 		<div id="intro-index" className="relative w-full h-auto xl:h-126 bg-intro-index bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 			<div className="h-full w-full relative px-4 md:px-3 lg:px-9 2xl:px-0 flex flex-wrap xl:flex-nowrap justify-around xl:justify-start items-center bg-gradient-to-b dark:from-slate-900 from-white">
-				<div className="relative 2xl:w-8/12 2xl:mx-auto h-full">
-					<div data-aos="fade" className="relative w-full xl:w-3/5 text-green-500 m-0 px-2 md:px-10 py-8 lg:pr-0 lg:p-10 xl:p-20">
+				<div className="relative w-full 2xl:w-8/12 2xl:mx-auto h-full">
+					<div data-aos="fade" className="relative w-full xl:w-3/5 text-green-500 m-0 px-2 md:px-10 py-8 lg:pr-0 lg:p-10 xl:p-20 2xl:px-0 2xl:py-20">
 						<span className="w-full font-bold leading-tight text-5xl md:leading-tight md:text-5xl lg:leading-tight lg:text-8xl intro-lead"></span>
 						{subtitle.text && <span className="block mt-4 dark:text-slate-700 text-gray-600 text-2xl font-semibold lg:text-3xl"> {subtitle.text} </span>}
 					</div>
