@@ -34,16 +34,18 @@ export default function LogoCloud() {
   ]
 
   return (
-    <div className="dark:bg-slate-800 bg-slate-100 w-full px-8 md:px-12 lg:px-20 xl:px-28 pt-4 md:pt-8 pb-8 md:pb-10 lg:pb-12 2xl:w-8/12 2xl:mx-auto">
-      <div className="w-full md:w-3/3 mx-auto sm:mb-6">
-        <h1 className="xl:text-4xl md:text-3xl text-xl text-center md:text-left dark:text-slate-300 text-gray-800 font-extrabold mb-5 pt-4">
-          Partnerships with Coveted Brands
-        </h1>
-      </div>
+    <div className="dark:bg-slate-800 bg-slate-100 w-full px-8 md:px-12 lg:px-20 xl:px-28 pt-4 md:pt-8 pb-8 md:pb-10 lg:pb-12">
+      <div className="2xl:w-8/12 2xl:mx-auto">
+        <div className="w-full md:w-3/3 mx-auto sm:mb-6">
+          <h1 className="xl:text-4xl md:text-3xl text-xl text-center md:text-left dark:text-slate-300 text-gray-800 font-extrabold mb-5 pt-4">
+            Partnerships with Coveted Brands
+          </h1>
+        </div>
 
-      <Carousel autoPlay={true} itemClass="flex items-center px-4 md:scale-65 justify-center" infinite={true} arrows={false} responsive={responsive}>
-        {logo_cloud.map((logo) => <div key={logo}><img src={logo} alt="" /></div>)}
-      </Carousel>
+        <Carousel autoPlay={true} itemClass="flex items-center px-4 md:scale-65 justify-center" infinite={true} arrows={false} responsive={responsive}>
+          {logo_cloud.map((logo) => <div key={logo}><img src={logo} alt="" /></div>)}
+        </Carousel>
+      </div>
     </div>
   )
 }
