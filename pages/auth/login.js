@@ -105,7 +105,7 @@ export default function Login () {
                   </div>
                   <InputFieldError message={validationError.password} />
                 </div>
-                <Link href={'/forgot-password'}>
+                <Link href={'/auth/forgot-password'}>
                   <a className="text-lg text-center my-4 block dark:text-green-300 text-gray-600">Recover password?</a>
                 </Link>
                 <ResponseFeedbackDisplay payload={response} />
@@ -120,7 +120,7 @@ export default function Login () {
               </form>
               <p className="text-xl text-center mt-4">
                 Don't have an account?
-                <Link href={'/signup'}>
+                <Link href={'/auth/signup'}>
                   <a className="block dark:text-green-300 text-black font-bold tracking-wider">Sign up</a>
                 </Link>
               </p>

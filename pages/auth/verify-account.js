@@ -60,7 +60,7 @@ export default function VerifyAccount() {
               }
               {response.type == 'error' && <p className="text-xl text-center mt-4">
                   You should consider restarting verification process.
-                  <Link href={'/resend-verification'}>
+                  <Link href={'/auth/resend-verification'}>
                     <a className="block dark:text-green-300 text-green-500 tracking-wider">Resend email</a>
                   </Link>
                 </p>
