@@ -1,20 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import BareLayout from '../components/BareLayout'
+import BareLayout from '../../components/BareLayout'
+import apiClient from '../../apiClient/auth'
+import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import InputFieldError from '../../components/InputFieldError'
 
 export default function SignUp () {
+  const { registerUser } = apiClient()
   const [auth, setAuth] = useState({})
-  const [signup, setSignUp] = useState({ email: "", firstname: "", lastname: "", password: "" })
+  const [validationError, setValidationError] = useState({})
+  const [response, setResponse] = useState({ message: '', type: '' })
   const [passwordVisibility, setPasswordVisibility] = useState(false)
+  const [signup_button_text, setSignUpButtonText] = useState('Sign up')
+  const [signup, setSignUp] = useState({
+    email: "",
+    first_name: "",
+    lastname: "",
+    password: ""
+  })
+
   const handleInputChange = (e) => {
     const value = e.target.value
     const key = e.target.name
     setSignUp(prevState => { return { ...prevState, [key]: value } })
   }
-  const Signup = (e) => {
+
+  const Signup = async (e) => {
     e.preventDefault()
-    setAuth(prevAuth => { return { user: signup, status: true } })
+    setSignUpButtonText('Processing...')
+    const { status, message, data } = await registerUser(signup)
+    if (status) {
+      setResponse({ message: 'Successful!', type: 'success' })
+      setAuth(prevAuth => { return { user: data, status: true } })
+    } else {
+      setResponse({ message, type: 'error' })
+      if (data.validationError) setValidationError({...data.validationError })
+    }
+    setSignUpButtonText('Sign up')
   }
 
   return (
@@ -56,16 +79,17 @@ export default function SignUp () {
                       </svg>
                     </span>
                   </div>
+                  <InputFieldError message={validationError.email} />
                 </div>                
                 <div className="mb-4">
-                  <label htmlFor="firstname" className="w-full text-lg block mb-2">First name</label>
+                  <label htmlFor="first_name" className="w-full text-lg block mb-2">First name</label>
                   <div className="flex rounded-md shadow-sm mt-3">
                     <input
                       type="text"
-                      name="firstname"
-                      id="firstname"
+                      name="first_name"
+                      id="first_name"
                       onChange={handleInputChange}
-                      defaultValue={signup.firstname}
+                      defaultValue={signup.first_name}
                       className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="e.g. John"
                       required
@@ -76,16 +100,17 @@ export default function SignUp () {
                       </svg>
                     </span>
                   </div>
+                  <InputFieldError message={validationError.first_name} />
                 </div>                
                 <div className="mb-4">
-                  <label htmlFor="lastname" className="w-full text-lg block mb-2">Last name</label>
+                  <label htmlFor="last_name" className="w-full text-lg block mb-2">Last name</label>
                   <div className="flex rounded-md shadow-sm mt-3">
                     <input
                       type="text"
-                      name="lastname"
-                      id="lastname"
+                      name="last_name"
+                      id="last_name"
                       onChange={handleInputChange}
-                      defaultValue={signup.lastname}
+                      defaultValue={signup.last_name}
                       className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="e.g. Doe"
                       required
@@ -96,6 +121,7 @@ export default function SignUp () {
                       </svg>
                     </span>
                   </div>
+                  <InputFieldError message={validationError.last_name} />
                 </div>                
                 <div className="mb-6">
                   <label htmlFor="password" className="w-full text-lg block mb-2">Password</label>
@@ -123,19 +149,21 @@ export default function SignUp () {
                       }
                     </span>
                   </div>
+                  <InputFieldError message={validationError.password} />
                 </div>
+                <ResponseFeedbackDisplay payload={response} />
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                     </svg>
-                    Sign up
+                    { signup_button_text }
                   </button>
                 </div>
               </form>
               <p className="text-xl text-center mt-4">
                 Already have an account?
-                <Link href={'/login'}>
+                <Link href={'/auth/login'}>
                   <a className="block dark:text-green-300 text-black font-bold tracking-wider">Sign in</a>
                 </Link>
               </p>

@@ -46,7 +46,7 @@ export default function Navbar({ closeMenuRef, navbarRef }) {
 						Contact
 					</a>
 				</Link>
-				<Link href="/login">
+				<Link href="/auth/login">
 					<a className="flex items-center justify-between dark:bg-opacity-50 bg-green-500 rounded lg:rounded-full ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 py-3 px-4 lg:py-2 lg:px-4 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl text-white">
 						Login
 						<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
