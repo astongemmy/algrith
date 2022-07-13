@@ -1,23 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function BreadCrumbs({ page }) {
+export default function BreadCrumbs({ page, crumbs = [] }) {
   const breadcrumbs = {
     checkout: [{ text: 'Checkout', url: '/checkout' }],
-    products: {
-      index: [ { text: 'Products', url: '/products'} ],
-      websites: [
-        { text: 'Products', url: '/products' },
-        { text: 'Websites', url: '/products/websites' }
-      ],
-      applications: [
-        { text: 'Products', url: '/products' },
-        { text: 'Applications', url: '/products/applications' }
-      ]
-    }
-  };
-  const pageArray = page.split('.')
-  const breadcrumbsToRender = pageArray.length > 1 ? breadcrumbs[pageArray[0]][pageArray[1]] : breadcrumbs[pageArray[0]]
+    products: [{ text: 'Products', url: '/products' }]
+  }
+  if (crumbs.length) {
+    Object.keys(breadcrumbs).forEach(key => {
+      if (key === page) crumbs.forEach(crumb => breadcrumbs[key].push(crumb))
+    })
+  }
 
   return (
     <div className="w-full">
@@ -32,7 +25,7 @@ export default function BreadCrumbs({ page }) {
             </a>
           </Link>
         </li>
-        {breadcrumbsToRender.slice(0, -1).map((breadcrumb) => {
+        {breadcrumbs[page].slice(0, -1).map((breadcrumb) => {
           return (
             <li key={ breadcrumb.url } className="mr-6">
               <Link href={ breadcrumb.url }>
@@ -48,7 +41,7 @@ export default function BreadCrumbs({ page }) {
         })}
         <li>
           <a className="text-lg font-medium text-green-500 hover:text-green-600" href="#">
-            { breadcrumbsToRender.slice(-1)[0].text }
+            { breadcrumbs[page].slice(-1)[0].text }
           </a>
         </li>
       </ul>

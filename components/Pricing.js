@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Pricing({ packages, slug }) {
+export default function Pricing({ products, isDataSet, error }) {
+  let product; let packages;
+  if (isDataSet) {
+    product = products.filter(product => product.slug.includes('website'))[0]
+    if (product.packages.length) packages = product.packages
+  }
+
   return (
     <section className="w-full pt-12 pb-10 md:pb-24 lg:pb-32 2xl:py-40 bg-gray-800">
       <div className="px-1 md:px-0 lg:px-14 xl:px-28 2xl:w-8/12 2xl:mx-auto">
@@ -13,10 +19,10 @@ export default function Pricing({ packages, slug }) {
         </div>
 
         <div className="w-full mx-auto">
-          <div className="flex flex-wrap items-center lg:-mx-3 px-4 md:px-10 lg:px-4">
+          {packages && (<div className="flex flex-wrap items-center lg:-mx-3 px-4 md:px-10 lg:px-4">
             {packages.map((item) => {
               return (
-                <div key={ item.id } className="relative w-full md:w-1/3 px-3 mb-8 lg:mb-0 group">
+                <div key={ item._id } className="relative w-full md:w-1/3 px-3 mb-8 lg:mb-0 group">
                   <div className={`${item.active ? 'bg-orange-500' : 'bg-navyBlue-500 border'} px-8 md:px-4 lg:px-8 xl:px-12 py-12 md:py-6 lg:py-16 rounded-3xl`}>
                     <div className={`${item.active ? 'border-blue-300' : 'border-gray-400'} pb-8 mb-12 border-b`}>
                       <div className="flex flex-wrap justify-between items-center px-3">
@@ -39,7 +45,7 @@ export default function Pricing({ packages, slug }) {
                       })}
                     </ul>
                     <div className="text-center">
-                      <Link href={ `/products/${slug}/${item.id}` }>
+                      <Link href={ `/products/${product.slug}/${item.slug}` }>
                         <a className={`
                           ${item.active ? 'border-white hover:border-white text-white' : 'border-orange-500 hover:border-orange-100 text-orange-500'} rounded-full font-bold text-orange-500'}
                           stretched inline-block text-xl
@@ -54,7 +60,13 @@ export default function Pricing({ packages, slug }) {
                 </div>
               )
             })}
-          </div>
+          </div>)}
+          {!isDataSet && (<div className="flex items-center justify-center">
+            Loading package pricing...
+          </div>)}
+          {error && (<div className="flex items-center justify-center">
+            Could not load package pricing.
+          </div>)}
         </div>
       </div>
     </section>

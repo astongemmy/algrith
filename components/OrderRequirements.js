@@ -12,17 +12,16 @@ export default function OrderRequirements({ product_slug, selectedPackage }) {
     domain_password: "",
     theme_color: [],
     description: ""
-
   })
+
   const handleInputChange = (e) => {
     const value = e.target.value
     const key = e.target.name
     setRequirements(prevState => { return { ...prevState, [key]: value }})
   }
-  const handleColorsChange = (color) => {
-    setRequirements(prevState => { return { ...prevState, theme_color: color }})
-  }
 
+  const handleColorsChange = (color) => setRequirements(prevState => { return { ...prevState, theme_color: color }})
+  
   return (
     <div id="order-requirements" className="dark:bg-slate-800 bg-white dark:border-slate-800 border rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
       <h2 className="text-2xl font-heading dark:text-slate-300 text-gray-900 font-semibold">
@@ -148,7 +147,7 @@ export default function OrderRequirements({ product_slug, selectedPackage }) {
       </div>
 
       <div className="flex flex-wrap mt-2 lg:mt-8 mb-8 lg:mb-12">
-        <CheckoutButton product_slug={ product_slug } item={selectedPackage} requirements={ requirements } />
+        <CheckoutButton item={selectedPackage} requirements={ requirements } />
         <WishlistButton />
       </div>
 

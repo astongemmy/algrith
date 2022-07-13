@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function ProductFeatureCard({ item, slug }) {
+export default function PackageFeaturesCard({ features, order_count }) {
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -26,11 +26,11 @@ export default function ProductFeatureCard({ item, slug }) {
         <div className="pb-4 mb-4 border-b dark:border-b-slate-700">
           <div className="flex justify-between items-center">
             <h3 className="text-xl dark:text-slate-300 text-black font-bold font-heading">Features</h3>
-            <p className="text-lg text-red-500 font-bold"> { (formatUnit(item.ordered)) } <span className="dark:text-slate-400 text-gray-600"> orders</span> </p>
+            <p className="text-lg text-red-500 font-bold"> { (formatUnit(order_count)) } <span className="dark:text-slate-400 text-gray-600"> orders</span> </p>
           </div>
         </div>
         <ul className="text-lg text-green-500 mb-6">
-          {item.features.map((feature) => {
+          {features?.map((feature) => {
             return (
               <li key={ Object.keys(feature)[0] } className="flex items-center mb-2">
                 <span className="mr-6">

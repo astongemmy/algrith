@@ -1,7 +1,10 @@
 import React from "react"
+import useRating from '../hooks/useRating'
 import ProductRating from "./ProductRating"
 
 export default function PackageDescription({ item }) {
+  const rating = useRating({ reviews: item?.reviews })
+
   return (
     <section className="dark:border-slate-800 border px-6 md:px-6 lg:px-8 md:mb-8 dark:bg-slate-800 bg-white rounded-xl overflow-hidden">
       <h1 className="capitalize my-5 text-2xl font-heading dark:text-slate-300 text-gray-900 font-semibold">Description</h1>
@@ -11,7 +14,7 @@ export default function PackageDescription({ item }) {
             { item.name }
           </a>
           <span className="mb-4 lg:mb-auto">
-            <ProductRating />
+            <ProductRating rating={rating} total={item?.reviews?.length} />
           </span>
         </div>
         <p className="text-lg dark:text-slate-300 text-gray-600">

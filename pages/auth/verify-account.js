@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
-import BareLayout from '../../components/BareLayoutout'
-import apiClient from '../../apiClient/authuth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplaylay'
-import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyFieldeld'
+import BareLayout from '../../components/BareLayout'
+import apiClient from '../../apiClient/auth'
+import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
 
 
 export default function VerifyAccount() {
@@ -54,17 +54,26 @@ export default function VerifyAccount() {
               {response.type == 'success' && <p className="text-xl text-center mt-4">
                   Verification successful! 
                   <Link href={'/auth/login'}>
-                    <a className="block dark:text-green-300 text-black font-bold tracking-wider">Login now</a>
+                    <a className="block dark:text-green-300 text-green-500 tracking-wider">Login now</a>
                   </Link>
-                </p>
-              }
-              {response.type == 'error' && <p className="text-xl text-center mt-4">
+              </p>}
+              {(response.type == 'error' && !response.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
                   You should consider restarting verification process.
                   <Link href={'/auth/resend-verification'}>
                     <a className="block dark:text-green-300 text-green-500 tracking-wider">Resend email</a>
                   </Link>
-                </p>
-              }
+              </p>}
+              {(response.type == 'error' && response.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
+                Go to 
+                <Link href={'/auth/login'}>
+                  <a className="dark:text-green-300 text-green-500 tracking-wider"> login </a>
+                </Link>
+                page to access your account or 
+                <Link href={'/auth/forgot-password'}>
+                  <a className="dark:text-green-300 text-green-500 tracking-wider"> reset your password </a>
+                </Link>
+                if you have forgotten.
+              </p>}
             </div>
           </div>
         </section>

@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
-import BareLayout from '../../components/BareLayoutout'
-import apiClient from '../../apiClient/authuth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplaylay'
-import InputFieldError from '../../components/InputFieldErrorror'
-import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyFieldeld'
+import BareLayout from '../../components/BareLayout'
+import apiClient from '../../apiClient/auth'
+import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import InputFieldError from '../../components/InputFieldError'
+import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
 
 
 export default function ResetPassword() {
@@ -27,12 +27,12 @@ export default function ResetPassword() {
   
   const ResetPassword = async (e) => {
     e.preventDefault()
-    const password_reset_params = { id: router.query.id, token: router.query.token }
-    if (hasAnyFalsyField(password_reset_params)) {
+    const { id, token } = router.query
+    if (hasAnyFalsyField({ id, token })) {
       return setResponse({ message: 'Invalid URL. Can not process request.', type: 'warning' })
     }
     setButtonText('Processing...')
-    const { status, message, data } = await resetPassword(passwords, { password_reset_params })
+    const { status, message, data } = await resetPassword(passwords, { id, token })
     if (status) {
       setResponse({ message: 'Password reset successful!', type: 'success' })
     } else {
@@ -130,7 +130,7 @@ export default function ResetPassword() {
               </form>
               <p className="text-xl text-center mt-4">
                 <Link href={'/auth/login'}>
-                  <a className="block dark:text-green-300 text-black font-bold tracking-wider">Login</a>
+                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Login</a>
                 </Link>
               </p>
             </div>

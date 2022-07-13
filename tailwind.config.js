@@ -41,6 +41,9 @@ module.exports = {
         'raleway': ['raleway', '"Public sans"'],
         'gilroy': ['gilroy-font', 'sans-serif'],
         'sans': ['Public sans', 'sans-serif']
+      },
+      fontSize: {
+        '7.5xl': '5.5rem'
       }
     },
   },

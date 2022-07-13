@@ -19,7 +19,7 @@ export default function ResponseFeedbackDisplay({ payload, clear = true }) {
 
   return (
     <>
-      {response.message && <div className={`${response_class[response.type]} text-md font-bold text-center mb-2`}>
+      {response.message && <div className={`${response_class[response.type]} text-md text-center mb-2`}>
         { response.message }
       </div>}
     </>

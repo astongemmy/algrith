@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-export default function Footer() {
+export default function Footer({ product_links = [] }) {
 	return (
 		<footer className="relative dark:bg-slate-800 bg-gray-100">
 			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12 2xl:w-8/12 2xl:mx-auto">
@@ -93,16 +93,17 @@ export default function Footer() {
 						</h1>
 						<div className="relative text-lg">
 							<ul className="pl-0">
-								<li className="px-4 py-2">
-									<Link href="/products/applications">
-										<a className="text-gray-500">Application Development</a>
-									</Link>
-								</li>
-								<li className="px-4 py-2">
-									<Link href="/products/websites">
-										<a className="text-gray-500">Web Development</a>
-									</Link>
-								</li>
+								{product_links && (
+									product_links.map(product => {
+										return (
+											<li key={product.href} className="px-4 py-2">
+												<Link href={product.href}>
+													<a className="text-gray-500"> { product.text } </a>
+												</Link>
+											</li>
+										)
+									})
+								)}
 								<li className="px-4 py-2">
 									<Link href="/products">
 										<a className="text-gray-500">All Products</a>
@@ -167,9 +168,11 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<a href="/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center mx-0 py-8 text-lg dark:bg-transparent bg-gray-800 text-white">
-				© Copyright <span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
-			</a>
+			<Link href="/">
+				<a className="flex justify-center items-center mx-0 py-8 text-lg dark:bg-transparent bg-gray-800 text-white">
+					© Copyright <span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
+				</a>
+			</Link>
 		</footer>
 	)
 }

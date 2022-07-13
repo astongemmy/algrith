@@ -164,7 +164,7 @@ export default function SignUp () {
               <p className="text-xl text-center mt-4">
                 Already have an account?
                 <Link href={'/auth/login'}>
-                  <a className="block dark:text-green-300 text-black font-bold tracking-wider">Sign in</a>
+                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Sign in</a>
                 </Link>
               </p>
             </div>

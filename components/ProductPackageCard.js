@@ -28,7 +28,7 @@ export default function ProductPackageCard({ item, slug }) {
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-bold font-heading">
-              <Link href={`/products/${slug}/${item.id}`}>
+              <Link href={`/products/${slug}/${item.slug}`}>
                 <a className="">
                   <span aria-hidden="true" className="absolute inset-0" />
                   { item.name }
@@ -47,7 +47,7 @@ export default function ProductPackageCard({ item, slug }) {
           <div className="flex justify-between items-center">
             <h3 className="text-xl dark:text-slate-300 text-black font-bold font-heading">Features</h3>
             <p className="text-lg font-bold">
-              { (formatUnit(item.ordered)) }
+              { (formatUnit(item.order_count)) }
               <span> orders</span>
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function ProductPackageCard({ item, slug }) {
           })}
         </ul>
         <div className="text-center mt-8">
-          <Link href={`/products/${slug}/${item.id}`}>
+          <Link href={`/products/${slug}/${item.slug}`}>
             <a className="text-xl dark:bg-opacity-50 bg-green-500 inline-block px-10 py-4 border dark:border-opacity-10 border-green-500 hover:border-green-100 rounded-full font-bold text-white">
               Buy now
             </a>

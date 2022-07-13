@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import apiClient from '../apiClient/product'
 import DynamicCssGenerator from './DynamicCssGenerator'
 import useHideCurrentPageLink from '../hooks/useHideCurrentPageLink'
 import useRippleEffect from '../hooks/useRippleEffect'
@@ -16,7 +17,32 @@ export default function Layout(props) {
 	const closeMenuRef = useRef(null)
 	const navbarRef = useRef(null)
 	const overlayRef = useRef(null)
-	useEffect(() => { AOS.init({ easing: 'ease-in-out-sine' }) }, [])
+	const [product_links, setProductLinks] = useState([]);
+	const { getProducts } = apiClient()
+	const GetProductSlugs = async () => {
+		let ProductSlugs;
+		const product_icons = { application: 'fa fa-terminal', website: 'fa fa-globe' }
+		const { status, data } = await getProducts()
+		if (status && data.length) {
+			ProductSlugs = data.filter(product => product.published).map(product => {
+				const icon_key = Object.entries(product_icons).map(([k, v]) => {
+					if (product.slug.toLowerCase().includes(k)) return k
+				}).join('')
+			  return {
+			    href: '/products/' + product.slug,
+			    text: product.name,
+			    icon: product_icons[icon_key]
+			  }
+			})
+		}
+		return ProductSlugs;
+	}
+	useEffect(() => { 
+		(async () => {
+			AOS.init({ easing: 'ease-in-out-sine' })
+			setProductLinks(await GetProductSlugs())
+		})()
+	}, [])
 	useHideCurrentPageLink()
 	useRippleEffect()
 	useResizeHeaderOnScroll()
@@ -37,10 +63,10 @@ export default function Layout(props) {
 	return (
 		<div>
 			<Header openMenuRef={openMenuRef} />
-			<Navbar closeMenuRef={closeMenuRef} navbarRef={navbarRef} />
+			<Navbar closeMenuRef={closeMenuRef} navbarRef={navbarRef} product_links={product_links} />
 			<ThemeSwitch />
 			{props.children}
-			<Footer />
+			<Footer product_links={product_links} />
 			<span id="back-to-top" className="scroll-selector cursor-pointer hidden fixed justify-center items-center right-8 md:right-12 bottom-8 rounded-full dark:bg-teal-700 bg-green-500 ripple-node text-white text-3xl w-16 h-16 md:w-18 md:h-18">
 				<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
 					<path strokeLinecap="round" strokeLinejoin="round" d="M7 11l5-5m0 0l5 5m-5-5v12" />
