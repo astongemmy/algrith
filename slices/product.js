@@ -29,15 +29,15 @@ export const getProductsFromInterface = createAsyncThunk(
   '/products',
   async (query, thunkAPI) => {
     try {
-      const Interface = { products: [],error: false, isDataSet: false }
+      const Interface = { products: [], error: false, isDataSet: false }
       const { status, data, error } = await ProductService.getProducts(query)
       if (error) Interface.error = true
+      if (status) Interface.isDataSet = true
       if (status && data.length) {
         Interface.products = data.filter(product => product.packages.length && product.published)
         Interface.products.forEach(product => {
           product.packages = product.packages.filter(_package => _package.published)
         })
-        if (Interface.products.length) Interface.isDataSet = true
       }
       Interface.isLoading = !Interface.isDataSet && !Interface.products.length && !Interface.error
       Interface.isAvailable = Interface.isDataSet && Interface.products.length && !Interface.error
