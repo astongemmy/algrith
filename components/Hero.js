@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function Hero({ products, isDataSet, error }) {
+export default function Hero({ isAvailable, isNotAvailable, isLoading, products, error }){
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -41,7 +41,7 @@ export default function Hero({ products, isDataSet, error }) {
         </div>
 
         <div className="w-full mx-auto py-6 sm:py-10 px-4 md:px-8 sm:px-6 md:px-10 lg:px-14 xl:px-28">
-          {isDataSet && (<Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
+          {isAvailable && (<Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
             {products?.map((product) => (
               product?.packages?.map(_package => {
                 return (
@@ -68,7 +68,8 @@ export default function Hero({ products, isDataSet, error }) {
               })
             ))}
           </Carousel>)}
-          {!isDataSet && <div className="flex justify-center"> Loading packages... </div>}
+          {isNotAvailable && <div className="flex justify-center"> No packages yet! </div>}
+          {isLoading && <div className="flex justify-center"> Loading packages... </div>}
           {error && <div className="flex justify-center"> Error while fetching packages. </div>}
         </div>
       </div>

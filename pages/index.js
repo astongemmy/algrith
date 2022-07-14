@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import apiClient from '../apiClient/product'
 import Layout from '../components/Layout'
 import WelcomeIntro from '../components/WelcomeIntro'
 import Outline from '../components/Outline'
@@ -10,32 +9,11 @@ import MissionStatement from '../components/MissionStatement'
 import Hero from '../components/Hero'
 import Pricing from '../components/Pricing'
 import LogoCloud from '../components/LogoCloud'
-// import { getAllProducts } from '../lib/products'
-// import { getAllTestimonials } from '../lib/testimonials'
+import useInterfaceClient from '../hooks/useInterfaceClient'
 
-export default function Index() {
-  const [products, setProducts] = useState({});
-  const { getProducts } = apiClient()
-  const GetProducts = async () => {
-    const Payload = {
-      products: [],
-      error: false,
-      isDataSet: false
-    }
-    const { status, data, error } = await getProducts()
-    if (error) Payload.error = true
-    if (status && data.length) {
-      Payload.products = data.filter(product => product.packages.length)
-      if (Payload.products.length) Payload.isDataSet = true
-    }
-    return Payload;
-  }
-  useEffect(() => { 
-		(async () => {
-      setProducts(await GetProducts())
-		})()
-	}, [])
-
+export default function Index(){
+  const { productInterface } = useInterfaceClient()
+  
   const outlines = {
     title: 'Why choose us',
     illustration: {
@@ -81,7 +59,7 @@ export default function Index() {
         },
         src: "./images/illustrations/testimonial.gif"
       },
-      // items: Testimonials
+      items: require('../constants/testimonials.json')
     }
   }
   const intro = {
@@ -100,13 +78,6 @@ export default function Index() {
     },
     scroll_to: "product-intro"
   }
-  // Selecting random packages to display
-  // const products = [
-  //   {slug: Products[0].slug, package: Products[0].packages[0] },
-  //   {slug: Products[1].slug, package: Products[1].packages[1] },
-  //   {slug: Products[0].slug, package: Products[0].packages[1] },
-  //   {slug: Products[1].slug, package: Products[1].packages[0] }
-  // ]
   
   return (
     <Layout>
@@ -118,22 +89,13 @@ export default function Index() {
       <main>
         <WelcomeIntro payload={intro} />
         <LogoCloud />
-        <Hero products={products.products} isDataSet={products.isDataSet} error={products.error} />
-        <Outline outline={outlines} />
+        <Hero { ...productInterface } />
+        <Outline outline={ outlines } />
         <MissionStatement />
-        <Pricing products={products.products} isDataSet={products.isDataSet} error={products.error} />
-        {/* <Section payload={sections.testimonial} /> */}
+        <Pricing { ...productInterface } />
+        <Section payload={ sections.testimonial } />
         <GetStarted />
       </main>
     </Layout>
   )
 }
-
-// export async function getStaticProps({ params }) {
-//   return {
-//     props: {
-      // Products: getAllProducts(),
-      // Testimonials: getAllTestimonials()
-//     }
-//   }
-// }

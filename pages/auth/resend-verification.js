@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import BareLayout from '../../components/BareLayout'
-import apiClient from '../../apiClient/auth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
+import { useDispatch, useSelector } from 'react-redux'
+import { resendVerificationEmail } from '../../slices/auth'
 
 export default function ResendVerification() {
-  const { resendVerificationEmail } = apiClient()
-  const [validationError, setValidationError] = useState({})
-  const [response, setResponse] = useState({ message: '', type: '' })
+  const dispatch = useDispatch()
+  const feedback = useSelector((state) => state.feedback)
+  const validationError = useSelector((state) => state.validation)
   const [button_text, setButtonText] = useState('Resend')
   const [verification, setVerification] = useState({ email: "" })
   
@@ -22,13 +23,14 @@ export default function ResendVerification() {
   const ResendVerificationEmail = async (e) => {
     e.preventDefault()
     setButtonText('Sending...')
-    const { status, message, data } = await resendVerificationEmail(verification)
-    if (status) {
-      setResponse({ message: 'Sent!', type: 'success' })
-    } else {
-      setResponse({ message, type: 'error' })
-      if (data.validationError) setValidationError({...data.validationError })
-    }
+    dispatch(resendVerificationEmail(verification))
+    // const { status, message, data } = await resendVerificationEmail(verification)
+    // if (status) {
+    //   setResponse({ message: 'Sent!', type: 'success' })
+    // } else {
+    //   setResponse({ message, type: 'error' })
+    //   if (data.validationError) setValidationError({...data.validationError })
+    // }
     setButtonText('Resend')
   }
 
@@ -73,7 +75,7 @@ export default function ResendVerification() {
                   </div>
                   <InputFieldError message={validationError.email} />
                 </div>                
-                <ResponseFeedbackDisplay payload={response} />
+                {feedback?.resend_verification?.message && <FeedbackDisplay target="resend_verification" />}
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

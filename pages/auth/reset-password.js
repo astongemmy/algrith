@@ -3,18 +3,19 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 import BareLayout from '../../components/BareLayout'
-import apiClient from '../../apiClient/auth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
 import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { resetPassword } from '../../slices/auth'
+import { setFeedback, setFeedbackObject } from '../../slices/feedback'
 
 export default function ResetPassword() {
+  const dispatch = useDispatch()
   const router = useRouter()
-  const { resetPassword } = apiClient()
+  const feedback = useSelector((state) => state.feedback)
+  const validationError = useSelector((state) => state.validation)
   const { hasAnyFalsyField } = useHasAnyFalsyField()
-  const [validationError, setValidationError] = useState({})
-  const [response, setResponse] = useState({ message: '', type: '' })
   const [button_text, setButtonText] = useState('Reset')
   const [passwords, setPasswords] = useState({ password: "", confirm_password: "" })
   const [passwordVisibility, setPasswordVisibility] = useState(false)
@@ -29,16 +30,18 @@ export default function ResetPassword() {
     e.preventDefault()
     const { id, token } = router.query
     if (hasAnyFalsyField({ id, token })) {
-      return setResponse({ message: 'Invalid URL. Can not process request.', type: 'warning' })
+      const feedbackObject = dispatch(setFeedbackObject('Invalid URL. Can not process request.', 'warning'))
+      return dispatch(setFeedback({ target: 'reset_password', feedback: feedbackObject }))
     }
     setButtonText('Processing...')
-    const { status, message, data } = await resetPassword(passwords, { id, token })
-    if (status) {
-      setResponse({ message: 'Password reset successful!', type: 'success' })
-    } else {
-      setResponse({ message, type: 'error' })
-      if (data.validationError) setValidationError({...data.validationError })
-    }
+    dispatch(resetPassword({ id, token, ...passwords }))
+    // const { status, message, data } = await resetPassword(passwords, { id, token })
+    // if (status) {
+    //   setResponse({ message: 'Password reset successful!', type: 'success' })
+    // } else {
+    //   setResponse({ message, type: 'error' })
+    //   if (data.validationError) setValidationError({...data.validationError })
+    // }
     setButtonText('Reset')
   }
 
@@ -118,7 +121,7 @@ export default function ResetPassword() {
                   </div>
                   <InputFieldError message={validationError.confirm_password} />
                 </div>
-                <ResponseFeedbackDisplay payload={response} />
+                {feedback?.reset_password?.message && <FeedbackDisplay target="reset_password" />}
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

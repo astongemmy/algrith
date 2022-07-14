@@ -1,5 +1,8 @@
-export default function authHeader() {
-  const user = JSON.parse(localStorage.getItem('user'));
-  if (user && user.access_token) return { Authorization: `Bearer ${user.access_token}` }
-  return {}
+import { setAuth } from '../slices/auth'
+import { store } from '../store'
+
+export default function getAuthHeader() {
+  const token = store.getState()?.auth?.user?.access_token
+  if (token) return { Authorization: `Bearer ${token}` }
+  return store.dispatch(setAuth({ user: null, isLoggedIn: false }))
 }

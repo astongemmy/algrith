@@ -28,7 +28,7 @@ export default function ProductRating({ rating, total }) {
       <div className="inline-flex items-center">
         {ratingObject?.ratingArray?.map(count => {
           return (
-            <button key={count} className="mr-1">
+            <button key={Math.random(3)} className="mr-1">
               <svg width={10 + (count + 1)} height={10 + (count + 1)} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z" fill="rgb(245 158 11)"></path>
               </svg>
@@ -37,7 +37,7 @@ export default function ProductRating({ rating, total }) {
         })}
         {ratingObject?.emptyRatingArray?.map(count => {
           return (
-            <button key={ratingObject?.ratingArray?.length + 1}>
+            <button key={Math.random(3)}>
               <svg width={10 + (ratingObject?.ratingArray?.length + 1)} height={10 + (ratingObject?.ratingArray?.length + 1)} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z" fill="#C1C9D3"></path>
               </svg>

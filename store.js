@@ -8,17 +8,24 @@ import authReducer from './slices/auth';
 import messageReducer from './slices/message';
 import reviewReducer from './slices/review';
 import checkoutReducer from './slices/checkout';
+import productReducer from './slices/product'
+import feedbackReducer from './slices/feedback'
+import validationReducer from './slices/validation'
 
 const persistConfig = {
   key: 'root',
-  storage
+  storage,
+  blacklist: ['feedback', 'message', 'validation']
 };
 
 const reducers = combineReducers({
   auth: authReducer,
   message: messageReducer,
   review: reviewReducer,
-  checkout: checkoutReducer
+  checkout: checkoutReducer,
+  product: productReducer,
+  feedback: feedbackReducer,
+  validation: validationReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers);

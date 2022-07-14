@@ -3,29 +3,31 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 import BareLayout from '../../components/BareLayout'
-import apiClient from '../../apiClient/auth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import FeedbackDisplay from '../../components/FeedbackDisplay'
 import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { verifyUser } from '../../slices/auth'
 
 export default function VerifyAccount() {
+  const dispatch = useDispatch()
   const router = useRouter()
-  const { verifyUser } = apiClient()
+  const feedback = useSelector((state) => state.feedback)
   const { hasAnyFalsyField } = useHasAnyFalsyField()
-  const [response, setResponse] = useState({ message: '', type: '' })
   
   const VerifyUser = async () => {
     const { id, token } = router.query
     if (hasAnyFalsyField({ id, token })) {
-      return setResponse({ message: 'Invalid URL. Can not process verification request.', type: 'warning' })
+      const feedbackObject = dispatch(setFeedbackObject('Invalid URL. Can not process verification request.', 'warning'))
+      return dispatch(setFeedback({ target: 'verify_user', feedback: feedbackObject }))
     }
-    setResponse({ message: 'Processing verification request...', type: 'pending' })
-    const { status, message } = await verifyUser({ id, token })
-    if (status) {
-      setResponse({ message, type: 'success' })
-    } else {
-      setResponse({ message, type: 'error' })
-    }
+    dispatch(verifyUser({ id, token }))
+    // setResponse({ message: 'Processing verification request...', type: 'pending' })
+    // const { status, message } = await verifyUser({ id, token })
+    // if (status) {
+    //   setResponse({ message, type: 'success' })
+    // } else {
+    //   setResponse({ message, type: 'error' })
+    // }
   }
   useEffect(() => { if (router.isReady) VerifyUser() }, [router])
 
@@ -48,22 +50,25 @@ export default function VerifyAccount() {
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Verify Account</h1>
               </div>
+
               <div className="w-full px-1 mt-8">
-                <ResponseFeedbackDisplay payload={response} clear={false} />
+                {feedback?.verify_user?.message && <FeedbackDisplay target="verify_user" clear={false} />}
               </div>
-              {response.type == 'success' && <p className="text-xl text-center mt-4">
-                  Verification successful! 
-                  <Link href={'/auth/login'}>
-                    <a className="block dark:text-green-300 text-green-500 tracking-wider">Login now</a>
-                  </Link>
+
+              {feedback?.verify_user?.type === 'success' && <p className="text-xl text-center mt-4">
+                Verification successful! 
+                <Link href={'/auth/login'}>
+                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Login now</a>
+                </Link>
               </p>}
-              {(response.type == 'error' && !response.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
-                  You should consider restarting verification process.
-                  <Link href={'/auth/resend-verification'}>
-                    <a className="block dark:text-green-300 text-green-500 tracking-wider">Resend email</a>
-                  </Link>
+              {(feedback?.verify_user?.type === 'error' && !feedback?.verify_user?.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
+                You should consider restarting verification process.
+                <Link href={'/auth/resend-verification'}>
+                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Resend email</a>
+                </Link>
               </p>}
-              {(response.type == 'error' && response.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
+              
+              {(feedback?.verify_user?.type == 'error' && feedback?.verify_user?.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
                 Go to 
                 <Link href={'/auth/login'}>
                   <a className="dark:text-green-300 text-green-500 tracking-wider"> login </a>
@@ -74,6 +79,7 @@ export default function VerifyAccount() {
                 </Link>
                 if you have forgotten.
               </p>}
+
             </div>
           </div>
         </section>

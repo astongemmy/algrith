@@ -2,37 +2,37 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import BareLayout from '../../components/BareLayout'
-import apiClient from '../../apiClient/auth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../slices/auth'
 
 export default function Login () {
-  const { authenticateUser } = apiClient()
-  const [auth, setAuth] = useState({})
-  const [validationError, setValidationError] = useState({})
-  const [response, setResponse] = useState({ message: '', type: '' })
+  const dispatch = useDispatch()
+  const feedback = useSelector((state) => state.feedback)
+  const validationError = useSelector((state) => state.validation)
   const [login_button_text, setLoginButtonText] = useState('Login')
-  const [login, setLogin] = useState({ email: "", password: "" })
+  const [authentication, setAuthentication] = useState({ email: "", password: "" })
   const [passwordVisibility, setPasswordVisibility] = useState(false)
   
   const handleInputChange = (e) => {
     const value = e.target.value
     const key = e.target.name
-    setLogin(prevState => { return { ...prevState, [key]: value } })
+    setAuthentication(prevState => { return { ...prevState, [key]: value } })
   }
   
   const Login = async (e) => {
     e.preventDefault()
     setLoginButtonText('Logging in...')
-    const { status, message, data } = await authenticateUser(login)
-    if (status) {
-      setResponse({ message: 'Successful!', type: 'success' })
-      setAuth(prevAuth => { return { user: data, status: true } })
-    } else {
-      setResponse({ message, type: 'error' })
-      if (data.validationError) setValidationError({...data.validationError })
-    }
+    dispatch(login(authentication))
+    // const { status, message, data } = await authenticateUser(login)
+    // if (status) {
+    //   setResponse({ message: 'Successful!', type: 'success' })
+    //   setAuth(prevAuth => { return { user: data, status: true } })
+    // } else {
+    //   setResponse({ message, type: 'error' })
+    //   if (data.validationError) setValidationError({...data.validationError })
+    // }
     setLoginButtonText('Login')
   }
 
@@ -64,7 +64,7 @@ export default function Login () {
                       name="email"
                       id="email"
                       onChange={handleInputChange}
-                      defaultValue={login.email}
+                      defaultValue={authentication.email}
                       className="dark:bg-slate-700 dark:border-slate-600 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="e.g. johndoe@email.com"
                       required
@@ -85,7 +85,7 @@ export default function Login () {
                       name="password"
                       id="password"
                       onChange={handleInputChange}
-                      defaultValue={login.password}
+                      defaultValue={authentication.password}
                       className="dark:bg-slate-700 dark:border-slate-600 border-r-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-l-md text-lg border-gray-300"
                       placeholder="*********"
                       required
@@ -108,7 +108,7 @@ export default function Login () {
                 <Link href={'/auth/forgot-password'}>
                   <a className="text-lg text-center my-4 block dark:text-green-300 text-gray-600">Recover password?</a>
                 </Link>
-                <ResponseFeedbackDisplay payload={response} />
+                {feedback?.login?.message && <FeedbackDisplay target="login" />}
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

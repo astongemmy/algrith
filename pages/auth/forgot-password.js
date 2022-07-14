@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import BareLayout from '../../components/BareLayout'
-import apiClient from '../../apiClient/auth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { forgotPassword } from '../../slices/auth'
 
 export default function ForgotPassword() {
-  const { passwordResetRequest } = apiClient()
-  const [validationError, setValidationError] = useState({})
-  const [response, setResponse] = useState({ message: '', type: '' })
+  const dispatch = useDispatch()
+  const feedback = useSelector((state) => state.feedback)
+  const validationError = useSelector((state) => state.validation)
   const [button_text, setButtonText] = useState('Send')
   const [password_request, setPasswordRequest] = useState({ email: "" })
   
@@ -20,16 +20,17 @@ export default function ForgotPassword() {
     setPasswordRequest(prevState => { return { ...prevState, [key]: value } })
   }
   
-  const RequestPasswordReset = async (e) => {
+  const ForgotPassword = async (e) => {
     e.preventDefault()
     setButtonText('Sending...')
-    const { status, message, data } = await passwordResetRequest(password_request)
-    if (status) {
-      setResponse({ message: 'Sent!', type: 'success' })
-    } else {
-      setResponse({ message, type: 'error' })
-      if (data.validationError) setValidationError({...data.validationError })
-    }
+    dispatch(forgotPassword(password_request))
+    // const { status, message, data } = await passwordResetRequest(password_request)
+    // if (status) {
+    //   setResponse({ message: 'Sent!', type: 'success' })
+    // } else {
+    //   setResponse({ message, type: 'error' })
+    //   if (data.validationError) setValidationError({...data.validationError })
+    // }
     setButtonText('Send')
   }
 
@@ -52,7 +53,7 @@ export default function ForgotPassword() {
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Forgot Password</h1>
               </div>
-              <form onSubmit={RequestPasswordReset} className="w-full px-1 mt-8">
+              <form onSubmit={ForgotPassword} className="w-full px-1 mt-8">
                 <div className="mb-6">
                   <label htmlFor="email" className="w-full text-lg block mb-2">Email address</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -74,7 +75,7 @@ export default function ForgotPassword() {
                   </div>
                   <InputFieldError message={validationError.email} />
                 </div>                
-                <ResponseFeedbackDisplay payload={response} />
+                {feedback?.forgot_password?.message && <FeedbackDisplay target="forgot_password" />}
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

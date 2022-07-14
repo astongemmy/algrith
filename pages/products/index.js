@@ -1,10 +1,20 @@
 import Head from 'next/head'
-import apiClient from '../../apiClient/product'
 import Layout from '../../components/Layout'
 import BreadCrumbs from '../../components/BreadCrumbs'
 import ProductPackageCard from '../../components/ProductPackageCard';
+import useInterfaceClient from '../../hooks/useInterfaceClient'
 
-export default function Products({ Products, isDataSet, error }) {
+export default function Products() {
+  const {
+    productInterface: {
+      products,
+      isAvailable,
+      isNotAvailable,
+      isLoading,
+      error
+    }
+  } = useInterfaceClient()
+
   return (
     <Layout>
       <Head>
@@ -18,8 +28,8 @@ export default function Products({ Products, isDataSet, error }) {
               <div className="lg:pl-4">
                 <BreadCrumbs page="products" />
               </div>
-              {isDataSet && (<div className="w-full px-0 md:px-0 lg:px-4 xl:px-4">
-                {Products?.map((product) => {
+              {isAvailable && (<div className="w-full px-0 md:px-0 lg:px-4 xl:px-4">
+                {products?.map((product) => {
                   return (
                     <div key={ product?.name }>
                       <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-semibold dark:text-slate-300 text-black">
@@ -34,7 +44,10 @@ export default function Products({ Products, isDataSet, error }) {
                   )
                 })}
               </div>)}
-              {!isDataSet && (<div className="flex justify-center w-full">
+              {isLoading && (<div className="flex justify-center w-full">
+                Loading products...
+              </div>)}
+              {isNotAvailable && (<div className="flex justify-center w-full">
                 No products at the moment!
               </div>)}
               {error && (<div className="flex justify-center w-full">
@@ -46,26 +59,4 @@ export default function Products({ Products, isDataSet, error }) {
       </main>
     </Layout>
   )
-}
-
-export async function getServerSideProps({ params }) {
-  const { getProducts } = apiClient()
-  const GetProducts = async () => {
-    const Payload = {
-      Products: [],
-      error: false,
-      isDataSet: false
-    }
-    const { status, data, error } = await getProducts()
-    if (error) Payload.error = true
-    if (status && data.length) {
-      Payload.Products = data.filter(product => product.packages.length)
-      if (Payload.Products.length) Payload.isDataSet = true
-    }
-    return Payload;
-  }
-  const { Products, isDataSet, error } = await GetProducts()
-  return {
-    props: { Products, isDataSet, error }
-  }
 }

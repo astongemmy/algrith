@@ -2,21 +2,22 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import BareLayout from '../../components/BareLayout'
-import apiClient from '../../apiClient/auth'
-import ResponseFeedbackDisplay from '../../components/ResponseFeedbackDisplay'
+import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
+import { useDispatch, useSelector } from 'react-redux'
+import { register } from '../../slices/auth'
+
 
 export default function SignUp () {
-  const { registerUser } = apiClient()
-  const [auth, setAuth] = useState({})
-  const [validationError, setValidationError] = useState({})
-  const [response, setResponse] = useState({ message: '', type: '' })
+  const dispatch = useDispatch()
+  const feedback = useSelector((state) => state.feedback)
+  const validationError = useSelector((state) => state.validation)
   const [passwordVisibility, setPasswordVisibility] = useState(false)
   const [signup_button_text, setSignUpButtonText] = useState('Sign up')
   const [signup, setSignUp] = useState({
     email: "",
     first_name: "",
-    lastname: "",
+    last_name: "",
     password: ""
   })
 
@@ -29,14 +30,15 @@ export default function SignUp () {
   const Signup = async (e) => {
     e.preventDefault()
     setSignUpButtonText('Processing...')
-    const { status, message, data } = await registerUser(signup)
-    if (status) {
-      setResponse({ message: 'Successful!', type: 'success' })
-      setAuth(prevAuth => { return { user: data, status: true } })
-    } else {
-      setResponse({ message, type: 'error' })
-      if (data.validationError) setValidationError({...data.validationError })
-    }
+    dispatch(register(signup))
+    // const { status, message, data } = await registerUser(signup)
+    // if (status) {
+    //   setResponse({ message: 'Successful!', type: 'success' })
+    //   setAuth(prevAuth => { return { user: data, status: true } })
+    // } else {
+    //   setResponse({ message, type: 'error' })
+    //   if (data.validationError) setValidationError({...data.validationError })
+    // }
     setSignUpButtonText('Sign up')
   }
 
@@ -151,7 +153,7 @@ export default function SignUp () {
                   </div>
                   <InputFieldError message={validationError.password} />
                 </div>
-                <ResponseFeedbackDisplay payload={response} />
+                {feedback?.register?.message && <FeedbackDisplay target="register" />}
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

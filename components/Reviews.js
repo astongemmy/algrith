@@ -3,6 +3,11 @@ import ReviewCard from './ReviewCard'
 
 export default function Reviews({ reviews }) {
   const [display, setDisplay] = useState(6)
+  const toggleReviews = (e) => {
+    console.log(e.target)
+    e.preventDefault()
+    display !== 6 ? setDisplay(6) : setDisplay(reviews.length)
+  }
 
   return (
     <section className="px-6 lg:px-8 dark:border-slate-800 border dark:bg-slate-800 bg-white rounded-xl overflow-hidden">
@@ -12,15 +17,7 @@ export default function Reviews({ reviews }) {
       </div>      
       {reviews?.slice(0, display).map((review) => <ReviewCard key={ review._id } review={ review } />)}
       <div className="text-center my-4 py-4">
-        <button
-          onClick={() => display !== 6 ? setDisplay(6) : setDisplay(reviews.length)}
-          className="inline-block w-full
-            md:w-auto py-3 px-10
-            leading-8 font-heading font-medium
-            tracking-wider text-xl text-white
-            bg-green-500 hover:bg-green-600 rounded-xl
-            dark:bg-opacity-50
-          ">
+        <button onClick={toggleReviews} className="inline-block w-full md:w-auto py-3 px-10 leading-8 font-heading font-medium tracking-wider text-xl text-white bg-green-500 hover:bg-green-600 rounded-xl dark:bg-opacity-50">
           { display !== 6 ? 'See less' : 'See all' }
         </button>
       </div>

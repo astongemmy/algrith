@@ -1,21 +1,33 @@
 import { useEffect, useState } from "react"
 import { usePaystackPayment } from 'react-paystack'
+import { useSelector, useDispatch } from "react-redux";
 import CheckoutLoginForm from "./CheckoutLoginForm";
 import CheckoutSignUpForm from "./CheckoutSignUpForm";
+import { clearFeedback } from '../slices/feedback'
 
 export default function CheckoutBillingForm({ Package }) {
+  const dispatch = useDispatch()
   const [ loginForm, toggleLoginForm ] = useState(false)
-  const [auth, setAuth] = useState({})
+  const { user } = useSelector((state) => state.auth)
+  const feedback = useSelector((state) => state.feedback)
+
+  // Paystack payment config
   const config = {
     reference: (new Date()).getTime().toString(),
-    email: auth.status ? auth.user.email : '',
+    email: user?.email,
     amount: Package.price * 100,
     publicKey: "pk_test_3851bb68ea57c1da0fea7acffa71c1e3fbcbe477"
   }
+
   const initializePayment = usePaystackPayment(config);
   const onSuccess = (reference) => console.log(reference)
   const onClose = () => console.log('closed')
-  useEffect(() => { auth.status ? initializePayment(onSuccess, onClose) : '' }, [auth])
+
+  useEffect(() => { dispatch(clearFeedback()) }, [])
+  useEffect(() => {
+    const isAuthTriggered = feedback?.register?.type === 'success' || feedback?.login?.type === 'success'
+    if (isAuthTriggered && user) initializePayment(onSuccess, onClose)
+  }, [user, feedback])
   
   return (
     <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
@@ -25,8 +37,8 @@ export default function CheckoutBillingForm({ Package }) {
         </h3>
         
         <div className="relative overflow-hidden pt-6 w-full">
-          { !loginForm && <CheckoutSignUpForm getAuth={(auth) => setAuth(auth)} /> }
-          { loginForm && <CheckoutLoginForm getAuth={(auth) => setAuth(auth)} /> }
+          { !loginForm && <CheckoutSignUpForm /> }
+          { loginForm && <CheckoutLoginForm /> }
         </div>
 
         <div className="h-full p-6 dark:text-slate-300 text-gray-800 pb-6 text-center w-full">
