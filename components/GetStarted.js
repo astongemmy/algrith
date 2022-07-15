@@ -17,7 +17,7 @@ export default function GetStarted() {
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>
-              <Link href="/products/websites">
+              <Link href="/products">
                 <a className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-block text-center bg-indigo-600 border dark:bg-opacity-50 border-transparent rounded-md py-4 px-8 text-2xl text-white hover:bg-indigo-700">
                   Get Started 
                   <svg xmlns="http://www.w3.org/2000/svg" className="inline ml-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
