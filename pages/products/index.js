@@ -28,7 +28,7 @@ export default function Products() {
               <div className="lg:pl-4">
                 <BreadCrumbs page="products" />
               </div>
-              {isAvailable && (<div className="w-full px-0 md:px-0 lg:px-4 xl:px-4">
+              {!!isAvailable && (<div className="w-full px-0 md:px-0 lg:px-4 xl:px-4">
                 {products?.map((product) => {
                   return (
                     <div key={ product?.name }>
