@@ -15,7 +15,7 @@ export default function Pricing({ isAvailable, isNotAvailable, isLoading, produc
         </div>
 
         <div className="w-full mx-auto">
-          {(isAvailable && product?.packages?.length) && (<div className="flex flex-wrap items-center lg:-mx-3 px-4 md:px-10 lg:px-4">
+          {!!(isAvailable && product?.packages?.length) && <div className="flex flex-wrap items-center lg:-mx-3 px-4 md:px-10 lg:px-4">
             {product.packages.map((item) => {
               return (
                 <div key={ item._id } className="relative w-full md:w-1/3 px-3 mb-8 lg:mb-0 group">
@@ -56,7 +56,7 @@ export default function Pricing({ isAvailable, isNotAvailable, isLoading, produc
                 </div>
               )
             })}
-          </div>)}
+          </div>}
           {isNotAvailable && (<div className="flex items-center justify-center">
             No packages available!
           </div>)}
