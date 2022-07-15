@@ -1,12 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Pricing({ products, isDataSet, error }) {
-  let product; let packages;
-  if (isDataSet) {
-    product = products.filter(product => product.slug.includes('website'))[0]
-    if (product.packages.length) packages = product.packages
-  }
+export default function Pricing({ isAvailable, isNotAvailable, isLoading, products, error }) {
+  const product = isAvailable ? products.filter(product => product.slug.includes('website'))[0] : {}
 
   return (
     <section className="w-full pt-12 pb-10 md:pb-24 lg:pb-32 2xl:py-40 bg-gray-800">
@@ -19,8 +15,8 @@ export default function Pricing({ products, isDataSet, error }) {
         </div>
 
         <div className="w-full mx-auto">
-          {packages && (<div className="flex flex-wrap items-center lg:-mx-3 px-4 md:px-10 lg:px-4">
-            {packages.map((item) => {
+          {(isAvailable && product?.packages?.length) && (<div className="flex flex-wrap items-center lg:-mx-3 px-4 md:px-10 lg:px-4">
+            {product.packages.map((item) => {
               return (
                 <div key={ item._id } className="relative w-full md:w-1/3 px-3 mb-8 lg:mb-0 group">
                   <div className={`${item.active ? 'bg-orange-500' : 'bg-navyBlue-500 border'} px-8 md:px-4 lg:px-8 xl:px-12 py-12 md:py-6 lg:py-16 rounded-3xl`}>
@@ -61,7 +57,10 @@ export default function Pricing({ products, isDataSet, error }) {
               )
             })}
           </div>)}
-          {!isDataSet && (<div className="flex items-center justify-center">
+          {isNotAvailable && (<div className="flex items-center justify-center">
+            No packages available!
+          </div>)}
+          {isLoading && (<div className="flex items-center justify-center">
             Loading package pricing...
           </div>)}
           {error && (<div className="flex items-center justify-center">
