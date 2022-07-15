@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import apiClient from '../apiClient/product'
 import DynamicCssGenerator from './DynamicCssGenerator'
 import useHideCurrentPageLink from '../hooks/useHideCurrentPageLink'
 import useRippleEffect from '../hooks/useRippleEffect'
@@ -11,6 +10,7 @@ import useScrollToElement from '../hooks/useScrollToElement'
 import useToggleNavbar from '../hooks/useToggleNavbar'
 import useResizeHeaderOnScroll from '../hooks/useResizeHeaderOnScroll'
 import ThemeSwitch from './ThemeSwitch'
+import useInterfaceClient from '../hooks/useInterfaceClient'
 
 export default function Layout(props) {
 	const openMenuRef = useRef(null)
@@ -18,31 +18,29 @@ export default function Layout(props) {
 	const navbarRef = useRef(null)
 	const overlayRef = useRef(null)
 	const [product_links, setProductLinks] = useState([]);
-	const { getProducts } = apiClient()
-	const GetProductSlugs = async () => {
+	const { productInterface } = useInterfaceClient()
+
+	const GetProductSlugs = () => {
 		let ProductSlugs;
 		const product_icons = { application: 'fa fa-terminal', website: 'fa fa-globe' }
-		const { status, data } = await getProducts()
-		if (status && data.length) {
-			ProductSlugs = data.filter(product => product.published).map(product => {
-				const icon_key = Object.entries(product_icons).map(([k, v]) => {
-					if (product.slug.toLowerCase().includes(k)) return k
-				}).join('')
-			  return {
-			    href: '/products/' + product.slug,
-			    text: product.name,
-			    icon: product_icons[icon_key]
-			  }
-			})
-		}
+		ProductSlugs = productInterface.products.map(product => {
+			const icon_key = Object.entries(product_icons).map(([k, v]) => {
+				if (product.slug.toLowerCase().includes(k)) return k
+			}).join('')
+			return {
+				href: '/products/' + product.slug,
+				text: product.name,
+				icon: product_icons[icon_key]
+			}
+		})
 		return ProductSlugs;
 	}
+	
 	useEffect(() => { 
-		(async () => {
-			AOS.init({ easing: 'ease-in-out-sine' })
-			setProductLinks(await GetProductSlugs())
-		})()
+		AOS.init({ easing: 'ease-in-out-sine' })
+		setProductLinks(GetProductSlugs())
 	}, [])
+
 	useHideCurrentPageLink()
 	useRippleEffect()
 	useResizeHeaderOnScroll()
