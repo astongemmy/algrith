@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Link from 'next/link'
 import Popover from './Popover'
 import useClickAway from '../hooks/useClickAway'
@@ -7,7 +7,6 @@ export default function Navbar({ closeMenuRef, navbarRef, product_links = [] }) 
 	const dropDownContainerRef = useRef(null)
 	const [dropdown, setDropdown] = useState(false);
 	useClickAway(dropDownContainerRef, setDropdown)
-	console.log(product_links)
 
 	return (
 		<nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow lg:shadow-none lg:bg-transparent bg-white dark:lg:bg-transparent dark:bg-slate-800 fixed top-0 lg:top-6 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col lg:flex-row justify-between lg:justify-end lg:items-center w-10/12 md:w-5/12 lg:w-auto h-screen lg:h-16 text-gray-600 lg:p-4">

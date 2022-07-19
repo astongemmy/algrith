@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import storage from 'redux-persist/lib/storage'
 import { combineReducers } from 'redux'
 import { persistStore } from 'redux-persist';
+import { getPersistConfig } from 'redux-deep-persist'
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist'
 
 import authReducer from './slices/auth';
@@ -11,12 +12,6 @@ import checkoutReducer from './slices/checkout';
 import productReducer from './slices/product'
 import feedbackReducer from './slices/feedback'
 import validationReducer from './slices/validation'
-
-const persistConfig = {
-  key: 'root',
-  storage,
-  blacklist: ['feedback', 'message', 'validation']
-};
 
 const reducers = combineReducers({
   auth: authReducer,
@@ -28,7 +23,14 @@ const reducers = combineReducers({
   validation: validationReducer
 })
 
-const persistedReducer = persistReducer(persistConfig, reducers);
+const config = getPersistConfig({
+  key: 'root',
+  storage,
+  blacklist: ['feedback', 'message', 'validation'],
+  rootReducer: reducers
+})
+
+const persistedReducer = persistReducer(config, reducers);
 
 const store = configureStore({
   reducer: persistedReducer,

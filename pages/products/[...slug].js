@@ -14,18 +14,12 @@ import PackageDescription from '../../components/PackageDescription'
 import PackageSelector from '../../components/PackageSelector'
 import ProductService from '../../services/product.service';
 
-export default function Product({ isAvailable, isNotAvailable, isLoading, product, error }){
+export default function Product({ product, active, error, isAvailable }){
   const { viewport } = useViewport()
-  const [selectedPackage, setSelectedPackage] = useState({})
-  useEffect(() => {
-    if (isAvailable) {
-      const activePackage = product.packages.filter(_package => _package.active)[0]
-      setSelectedPackage(activePackage)
-    }
-  }, [isAvailable])
-
+  const [selectedPackage, setSelectedPackage] = useState(active)
+  
   const setPackageGallery = (gallery) => {
-    return gallery.map((image) => {
+    return gallery?.map((image) => {
       const sample = { originalClass: "filter dark:brightness-75 overflow-hidden w-full h-72 md:h-auto lg:h-112 2xl:h-144 rounded-lg object-center object-cover" }
       sample.original = `${process.env.NEXT_PUBLIC_API_PUBLIC_URL}${image.path}`
       sample.thumbnail = `${process.env.NEXT_PUBLIC_API_PUBLIC_URL}${image.path}`
@@ -48,7 +42,7 @@ export default function Product({ isAvailable, isNotAvailable, isLoading, produc
             <BreadCrumbs page="products" crumbs={setBreadcrumbs(selectedPackage?.name, selectedPackage?.slug)} />
             <div className="w-full md:w-1/2 lg:pr-0 xl:pr-10">
               <div className="overflow-hidden rounded-lg dark:bg-slate-800 bg-white p-2 mb-8 md:pl-0 border dark:border-slate-800">
-                {selectedPackage?.gallery?.length > 0 && (<ImageGallery
+                {!!selectedPackage?.gallery?.length && (<ImageGallery
                   autoPlay
                   lazyLoad
                   showFullscreenButton={false}
@@ -85,11 +79,8 @@ export default function Product({ isAvailable, isNotAvailable, isLoading, produc
               {['sm'].includes(viewport) && <Reviews reviews={selectedPackage?.reviews} />}
             </div>
           </div>)}
-          {isNotAvailable && (<div className="flex justify-center">
+          {!isAvailable && (<div className="flex justify-center">
             No packages available!
-          </div>)}
-          {isLoading && (<div className="flex justify-center">
-            Loading packages...
           </div>)}
           {error && (<div className="flex justify-center">
             Error fetching packages!
@@ -107,27 +98,31 @@ export async function getServerSideProps({ params }) {
   }
   
   const GetProduct = async ({ product_slug, package_slug }) => {
-    const Interface = { product: {}, error: false, isDataSet: false }
     const query = { slug: product_slug }
-    const { status, data, error } = await ProductService.getProducts(query)
-    if (error) Interface.error = true
-    if (status && data.length) {
-      Interface.product = data.filter(product => product.slug === product_slug && product.published)[0]
-      if (Interface.product.packages.length) {
-        const packages = Interface.product.packages.map((_package, index) => {
-          _package.active = false
-          if (package_slug && _package.slug === package_slug) _package.active = true
-          if (!package_slug && index === 0) _package.active = true
-          return _package
-        })
-        Interface.product.packages = packages.filter(_package => _package.published)
-        Interface.isDataSet = true
+    const Interface = { product: {}, active: {}, error: false, isAvailable: false }
+    try {
+      const products = await ProductService.getProducts(query)
+      if (products.length) {
+        Interface.product = products.filter(product => product.slug === product_slug)[0]
+        if (Interface.product?.packages?.length) {
+          const packages = Interface.product?.packages.map((_package, index) => {
+            _package.active = false
+            if (package_slug && _package.slug === package_slug) _package.active = true
+            if (!package_slug && index === 0) _package.active = true
+            return _package
+          })
+          Interface.product.packages = packages.filter(_package => _package.published)
+          if (packages.length) {
+            Interface.isAvailable = true
+            Interface.active = packages.filter(_package => _package.active)[0]
+          }
+        }
       }
+      return Interface
+    } catch (err) {
+      Interface.error = true
+      return Interface
     }
-    Interface.isLoading = !Interface.isDataSet && !Object.keys(Interface.product).length && !Interface.error
-    Interface.isAvailable = Interface.isDataSet && Object.keys(Interface.product).length && !Interface.error
-    Interface.isNotAvailable = Interface.isDataSet && !Object.keys(Interface.product).length && !Interface.error
-    return Interface
   }
 
   return {

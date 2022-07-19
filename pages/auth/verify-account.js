@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -7,6 +7,7 @@ import FeedbackDisplay from '../../components/FeedbackDisplay'
 import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
 import { useDispatch, useSelector } from 'react-redux'
 import { verifyUser } from '../../slices/auth'
+import { setFeedback, setFeedbackObject } from '../../slices/feedback'
 
 export default function VerifyAccount() {
   const dispatch = useDispatch()
@@ -21,14 +22,8 @@ export default function VerifyAccount() {
       return dispatch(setFeedback({ target: 'verify_user', feedback: feedbackObject }))
     }
     dispatch(verifyUser({ id, token }))
-    // setResponse({ message: 'Processing verification request...', type: 'pending' })
-    // const { status, message } = await verifyUser({ id, token })
-    // if (status) {
-    //   setResponse({ message, type: 'success' })
-    // } else {
-    //   setResponse({ message, type: 'error' })
-    // }
   }
+  
   useEffect(() => { if (router.isReady) VerifyUser() }, [router])
 
   return (
@@ -41,6 +36,7 @@ export default function VerifyAccount() {
         <section className="h-screen w-full 2xl:w-9/12 2xl:mx-auto p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
             <div className="shadow rounded-2xl dark:bg-slate-800 bg-white w-full pt-4 pb-12 px-6">
+              
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
                   <a>
@@ -48,7 +44,9 @@ export default function VerifyAccount() {
                     <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                   </a>
                 </Link>
-                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Verify Account</h1>
+                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
+                  Verify Account
+                </h1>
               </div>
 
               <div className="w-full px-1 mt-8">
@@ -61,6 +59,7 @@ export default function VerifyAccount() {
                   <a className="block dark:text-green-300 text-green-500 tracking-wider">Login now</a>
                 </Link>
               </p>}
+
               {(feedback?.verify_user?.type === 'error' && !feedback?.verify_user?.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
                 You should consider restarting verification process.
                 <Link href={'/auth/resend-verification'}>

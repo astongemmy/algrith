@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import BareLayout from '../../components/BareLayout'
 import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
 import { useDispatch, useSelector } from 'react-redux'
-import { login } from '../../slices/auth'
+import { login, logout } from '../../slices/auth'
 
 export default function Login () {
+  const router = useRouter()
   const dispatch = useDispatch()
+  const logoutSignal = () => typeof router.query.flush !== 'undefined' && router.query.flush === 'true'
   const feedback = useSelector((state) => state.feedback)
+  const { user, isLoggedIn, isLoading } = useSelector((state) => state.auth)
   const validationError = useSelector((state) => state.validation)
-  const [login_button_text, setLoginButtonText] = useState('Login')
   const [authentication, setAuthentication] = useState({ email: "", password: "" })
   const [passwordVisibility, setPasswordVisibility] = useState(false)
   
@@ -20,20 +23,18 @@ export default function Login () {
     const key = e.target.name
     setAuthentication(prevState => { return { ...prevState, [key]: value } })
   }
+
+  useEffect(() => {
+    if (router.isReady && logoutSignal() && (user || isLoggedIn)) dispatch(logout())
+  }, [router])
   
   const Login = async (e) => {
     e.preventDefault()
-    setLoginButtonText('Logging in...')
-    dispatch(login(authentication))
-    // const { status, message, data } = await authenticateUser(login)
-    // if (status) {
-    //   setResponse({ message: 'Successful!', type: 'success' })
-    //   setAuth(prevAuth => { return { user: data, status: true } })
-    // } else {
-    //   setResponse({ message, type: 'error' })
-    //   if (data.validationError) setValidationError({...data.validationError })
-    // }
-    setLoginButtonText('Login')
+    const response = await dispatch(login(authentication)).unwrap()
+    if (response.user) {
+      const dashboardURL = `${process.env.NEXT_PUBLIC_DASHBOARD_APP_URL}login?client=${JSON.stringify(response.user)}&sourceURL=${process.env.NEXT_PUBLIC_APP_URL}auth/login/&intendedURL=/dashboard/app`
+      return window.location = dashboardURL
+    }
   }
 
   return (
@@ -46,6 +47,7 @@ export default function Login () {
         <section className="h-screen w-full 2xl:w-9/12 2xl:mx-auto p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
             <div className="shadow rounded-2xl dark:bg-slate-800 bg-white w-full pt-4 pb-12 px-6">
+              
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
                   <a>
@@ -53,9 +55,13 @@ export default function Login () {
                     <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                   </a>
                 </Link>
-                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Login</h1>
+                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
+                  Login
+                </h1>
               </div>
+              
               <form onSubmit={Login} className="w-full px-1 mt-8">
+                
                 <div className="mb-4">
                   <label htmlFor="email" className="w-full text-lg block mb-2">Email address</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -76,7 +82,8 @@ export default function Login () {
                     </span>
                   </div>
                   <InputFieldError message={validationError.email} />
-                </div>                
+                </div>
+
                 <div className="mb-4">
                   <label htmlFor="password" className="w-full text-lg block mb-2">Password</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -105,25 +112,33 @@ export default function Login () {
                   </div>
                   <InputFieldError message={validationError.password} />
                 </div>
+                
                 <Link href={'/auth/forgot-password'}>
-                  <a className="text-lg text-center my-4 block dark:text-green-300 text-gray-600">Recover password?</a>
+                  <a className="text-lg text-center my-4 block dark:text-green-300 text-gray-600">
+                    Recover password
+                  </a>
                 </Link>
+
                 {feedback?.login?.message && <FeedbackDisplay target="login" />}
+
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
                     </svg>
-                    { login_button_text }
+                    { isLoading ? 'Logging in...' : 'Login' }
                   </button>
                 </div>
+
               </form>
+
               <p className="text-xl text-center mt-4">
                 Don't have an account?
                 <Link href={'/auth/signup'}>
                   <a className="block dark:text-green-300 text-green-500 tracking-wider">Sign up</a>
                 </Link>
               </p>
+
             </div>
           </div>
         </section>

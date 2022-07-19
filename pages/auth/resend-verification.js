@@ -11,8 +11,8 @@ export default function ResendVerification() {
   const dispatch = useDispatch()
   const feedback = useSelector((state) => state.feedback)
   const validationError = useSelector((state) => state.validation)
-  const [button_text, setButtonText] = useState('Resend')
-  const [verification, setVerification] = useState({ email: "" })
+  const { isLoading } = useSelector((state) => state.auth)
+  const [verification, setVerification] = useState({ email: '' })
   
   const handleInputChange = (e) => {
     const value = e.target.value
@@ -22,16 +22,7 @@ export default function ResendVerification() {
   
   const ResendVerificationEmail = async (e) => {
     e.preventDefault()
-    setButtonText('Sending...')
     dispatch(resendVerificationEmail(verification))
-    // const { status, message, data } = await resendVerificationEmail(verification)
-    // if (status) {
-    //   setResponse({ message: 'Sent!', type: 'success' })
-    // } else {
-    //   setResponse({ message, type: 'error' })
-    //   if (data.validationError) setValidationError({...data.validationError })
-    // }
-    setButtonText('Resend')
   }
 
   return (
@@ -44,6 +35,7 @@ export default function ResendVerification() {
         <section className="h-screen w-full 2xl:w-9/12 2xl:mx-auto p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
             <div className="shadow rounded-2xl dark:bg-slate-800 bg-white w-full pt-4 pb-12 px-6">
+              
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
                   <a>
@@ -51,9 +43,13 @@ export default function ResendVerification() {
                     <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                   </a>
                 </Link>
-                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Resend Email</h1>
+                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
+                  Resend Email
+                </h1>
               </div>
+              
               <form onSubmit={ResendVerificationEmail} className="w-full px-1 mt-8">
+                
                 <div className="mb-6">
                   <label htmlFor="email" className="w-full text-lg block mb-2">Email address</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -75,15 +71,18 @@ export default function ResendVerification() {
                   </div>
                   <InputFieldError message={validationError.email} />
                 </div>                
+                
                 {feedback?.resend_verification?.message && <FeedbackDisplay target="resend_verification" />}
+                
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
                     </svg>
-                    { button_text }
+                    { isLoading ? 'Sending...' : 'Resend' }
                   </button>
                 </div>
+
               </form>
             </div>
           </div>

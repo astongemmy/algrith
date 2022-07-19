@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {}
 
 const reviewSlice = createSlice({
-  name: "review",
+  name: 'review',
   initialState,
   reducers: {
     setReviewPackageId: (state, action) => {

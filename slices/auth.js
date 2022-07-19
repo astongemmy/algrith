@@ -50,7 +50,7 @@ export const forgotPassword = createAsyncThunk(
   'auth/forgot-password',
   async ({ email }, thunkAPI) => {
     try {
-      const forgot_password = await AuthService.forgotPassword({ email })
+      await AuthService.forgotPassword({ email })
       const feedbackObject = thunkAPI.dispatch(setFeedbackObject('Password reset email sent!', 'success'))
       thunkAPI.dispatch(setFeedback({ target: 'forgot_password', feedback: feedbackObject }))
     } catch (error) {
@@ -70,7 +70,7 @@ export const resendVerificationEmail = createAsyncThunk(
   'auth/resend-verification',
   async ({ email }, thunkAPI) => {
     try {
-      const resend_verification = await AuthService.resendVerificationEmail({ email })
+      await AuthService.resendVerificationEmail({ email })
       const feedbackObject = thunkAPI.dispatch(setFeedbackObject('Verification email sent!', 'success'))
       thunkAPI.dispatch(setFeedback({ target: 'resend_verification', feedback: feedbackObject }))
     } catch (error) {
@@ -90,7 +90,7 @@ export const resetPassword = createAsyncThunk(
   'auth/reset-password',
   async ({ id, token, password, confirm_password }, thunkAPI) => {
     try {
-      const reset_password = await AuthService.resetPassword({ id, token, password, confirm_password })
+      await AuthService.resetPassword({ id, token, password, confirm_password })
       const feedbackObject = thunkAPI.dispatch(setFeedbackObject('Password reset successful!', 'success'))
       thunkAPI.dispatch(setFeedback({ target: 'reset_password', feedback: feedbackObject }))
     } catch (error) {
@@ -111,42 +111,55 @@ export const verifyUser = createAsyncThunk(
   async ({ id, token }, thunkAPI) => {
     try {
       let feedbackObject = thunkAPI.dispatch(setFeedbackObject('Processing verification request...', 'pending'))
-      thunkAPI.dispatch(setFeedback({ target: 'verification', feedback: feedbackObject }))
-      
+      thunkAPI.dispatch(setFeedback({ target: 'verification', feedback: feedbackObject }))      
       const verification = await AuthService.verifyUser({ id, token })
       feedbackObject = thunkAPI.dispatch(setFeedbackObject(verification.message, 'success'))
       thunkAPI.dispatch(setFeedback({ target: 'verification', feedback: feedbackObject }))
     } catch (error) {
-      const { message, type, data } = errorProcessor(error)
-      if (type === 'validation') {
-        thunkAPI.dispatch(setValidationError(data))
-      } else {
-        const feedbackObject = thunkAPI.dispatch(setFeedbackObject(message, 'error'))
-        thunkAPI.dispatch(setFeedback({ target: 'verification', feedback: feedbackObject }))
-      }
+      const { message } = errorProcessor(error)
+      const feedbackObject = thunkAPI.dispatch(setFeedbackObject(message, 'error'))
+      thunkAPI.dispatch(setFeedback({ target: 'verification', feedback: feedbackObject }))
       return thunkAPI.rejectWithValue();
     }
   }
 )
 
-export const logout = () => {
-  return async (dispatch, getState) => {
+export const logout = createAsyncThunk(
+  'auth/logout',
+  async (thunkAPI) => {
     try {
-      const accessToken = getState()?.auth?.user?.access_token
+      const accessToken = thunkAPI.getState()?.auth?.user?.access_token
       const authHeader = { Authorization: `Bearer ${accessToken}` }
       await AuthService.logout(authHeader)
-      const feedbackObject = dispatch(setFeedbackObject('Logged out!', 'success'))
-      dispatch(setFeedback({ target: 'login', feedback: feedbackObject }))
-      dispatch(setAuth({ user: null, isLoggedIn: false }))
+      const feedbackObject = thunkAPI.dispatch(setFeedbackObject('Logged out!', 'success'))
+      thunkAPI.dispatch(setFeedback({ target: 'login', feedback: feedbackObject }))
     } catch (error) {
-      const feedbackObject = dispatch(setFeedbackObject('Logged out!', 'success'))
-      dispatch(setFeedback({ target: 'login', feedback: feedbackObject }))
-      dispatch(setAuth({ user: null, isLoggedIn: false }))
+      const feedbackObject = thunkAPI.dispatch(setFeedbackObject('Logged out!', 'success'))
+      thunkAPI.dispatch(setFeedback({ target: 'login', feedback: feedbackObject }))
+      return thunkAPI.rejectWithValue();
     }
   }
+)
+
+const resetAll = (state) => {
+  state.isLoggedIn = false
+  state.isLoading = false
+  state.user = null
 }
 
-const initialState = { isLoggedIn: false, user: null }
+const setUserOnly = (state, action) => {
+  state.user = action.payload.user
+  state.isLoggedIn = false
+  state.isLoading = false
+}
+
+const setAllAndResetIsLoading = (state, action) => {
+  state.user = action.payload.user
+  state.isLoggedIn = true
+  state.isLoading = false
+}
+
+const initialState = { isLoggedIn: false, user: null, isLoading: false }
 
 const authSlice = createSlice({
   name: 'auth',
@@ -157,30 +170,21 @@ const authSlice = createSlice({
     }
   },
   extraReducers: {
-    [register.fulfilled]: (state, action) => {
-      state.isLoggedIn = false;
-      state.user = action.payload.user;
-    },
-    [register.rejected]: (state, action) => {
-      state.isLoggedIn = false;
-      state.user = null;
-    },
-    [login.fulfilled]: (state, action) => {
-      state.isLoggedIn = true;
-      state.user = action.payload.user;
-    },
-    [login.rejected]: (state, action) => {
-      state.isLoggedIn = false;
-      state.user = null;
-    },
-    [resetPassword.fulfilled]: (state, action) => {
-      state.isLoggedIn = false;
-      state.user = null;
-    },
-    [resetPassword.rejected]: (state, action) => {
-      state.isLoggedIn = false;
-      state.user = null;
-    }
+    [register.pending]: (state, action) => { state.isLoading = true },
+    [register.fulfilled]: (state, action) => { setUserOnly(state, action) },
+    [register.rejected]: (state, action) => { resetAll(state) },
+
+    [login.pending]: (state, action) => { state.isLoading = true },
+    [login.fulfilled]: (state, action) => { setAllAndResetIsLoading(state, action) },
+    [login.rejected]: (state, action) => { resetAll(state) },
+    
+    [logout.pending]: (state, action) => { state.isLoading = true },
+    [logout.fulfilled]: (state, action) => { resetAll(state) },
+    [logout.rejected]: (state, action) => { resetAll(state) },
+    
+    [resetPassword.pending]: (state, action) => { state.isLoading = true },
+    [resetPassword.fulfilled]: (state, action) => { resetAll(state) },
+    [resetPassword.rejected]: (state, action) => { resetAll(state) }
   }
 })
 

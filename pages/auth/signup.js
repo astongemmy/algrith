@@ -13,7 +13,7 @@ export default function SignUp () {
   const feedback = useSelector((state) => state.feedback)
   const validationError = useSelector((state) => state.validation)
   const [passwordVisibility, setPasswordVisibility] = useState(false)
-  const [signup_button_text, setSignUpButtonText] = useState('Sign up')
+  const { isLoading } = useSelector((state) => state.auth)
   const [signup, setSignUp] = useState({
     email: "",
     first_name: "",
@@ -29,17 +29,7 @@ export default function SignUp () {
 
   const Signup = async (e) => {
     e.preventDefault()
-    setSignUpButtonText('Processing...')
     dispatch(register(signup))
-    // const { status, message, data } = await registerUser(signup)
-    // if (status) {
-    //   setResponse({ message: 'Successful!', type: 'success' })
-    //   setAuth(prevAuth => { return { user: data, status: true } })
-    // } else {
-    //   setResponse({ message, type: 'error' })
-    //   if (data.validationError) setValidationError({...data.validationError })
-    // }
-    setSignUpButtonText('Sign up')
   }
 
   return (
@@ -52,6 +42,7 @@ export default function SignUp () {
         <section className="h-screen w-full 2xl:w-10/12 2xl:mx-auto p-8">
           <div className="h-full flex flex-col justify-center items-center mx-auto w-full md:w-6/12 lg:w-5/12 xl:w-3/12">
             <div className="shadow rounded-2xl dark:bg-slate-800 bg-white w-full pt-4 pb-12 px-6">
+              
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
                   <a>
@@ -59,9 +50,13 @@ export default function SignUp () {
                     <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                   </a>
                 </Link>
-                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">Sign up</h1>
+                <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
+                  Sign up
+                </h1>
               </div>
+              
               <form onSubmit={Signup} className="w-full px-1 mt-8">
+                
                 <div className="mb-4">
                   <label htmlFor="email" className="w-full text-lg block mb-2">Email address</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -83,6 +78,7 @@ export default function SignUp () {
                   </div>
                   <InputFieldError message={validationError.email} />
                 </div>                
+                
                 <div className="mb-4">
                   <label htmlFor="first_name" className="w-full text-lg block mb-2">First name</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -104,6 +100,7 @@ export default function SignUp () {
                   </div>
                   <InputFieldError message={validationError.first_name} />
                 </div>                
+                
                 <div className="mb-4">
                   <label htmlFor="last_name" className="w-full text-lg block mb-2">Last name</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -125,6 +122,7 @@ export default function SignUp () {
                   </div>
                   <InputFieldError message={validationError.last_name} />
                 </div>                
+                
                 <div className="mb-6">
                   <label htmlFor="password" className="w-full text-lg block mb-2">Password</label>
                   <div className="flex rounded-md shadow-sm mt-3">
@@ -153,22 +151,27 @@ export default function SignUp () {
                   </div>
                   <InputFieldError message={validationError.password} />
                 </div>
+                
                 {feedback?.register?.message && <FeedbackDisplay target="register" />}
+                
                 <div className="text-xl">
                   <button type="submit" className="w-full py-3 rounded-full text-white dark:bg-opacity-50 bg-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                     </svg>
-                    { signup_button_text }
+                    { isLoading ? 'Processing...' : 'Sign up' }
                   </button>
                 </div>
+
               </form>
+
               <p className="text-xl text-center mt-4">
                 Already have an account?
                 <Link href={'/auth/login'}>
                   <a className="block dark:text-green-300 text-green-500 tracking-wider">Sign in</a>
                 </Link>
               </p>
+
             </div>
           </div>
         </section>

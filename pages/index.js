@@ -9,10 +9,10 @@ import MissionStatement from '../components/MissionStatement'
 import Hero from '../components/Hero'
 import Pricing from '../components/Pricing'
 import LogoCloud from '../components/LogoCloud'
-import useInterfaceClient from '../hooks/useInterfaceClient'
+import { useSelector } from 'react-redux'
 
 export default function Index(){
-  const { productInterface } = useInterfaceClient()
+  const { products, isLoading } = useSelector((state) => state.product)
   
   const outlines = {
     title: 'Why choose us',
@@ -89,10 +89,10 @@ export default function Index(){
       <main>
         <WelcomeIntro payload={intro} />
         <LogoCloud />
-        <Hero { ...productInterface } />
+        <Hero products={products} isLoading={isLoading} />
         <Outline outline={ outlines } />
         <MissionStatement />
-        <Pricing { ...productInterface } />
+        <Pricing products={products} isLoading={isLoading} />
         <Section payload={ sections.testimonial } />
         <GetStarted />
       </main>

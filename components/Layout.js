@@ -10,7 +10,7 @@ import useScrollToElement from '../hooks/useScrollToElement'
 import useToggleNavbar from '../hooks/useToggleNavbar'
 import useResizeHeaderOnScroll from '../hooks/useResizeHeaderOnScroll'
 import ThemeSwitch from './ThemeSwitch'
-import useInterfaceClient from '../hooks/useInterfaceClient'
+import { useSelector } from 'react-redux'
 
 export default function Layout(props) {
 	const openMenuRef = useRef(null)
@@ -18,12 +18,11 @@ export default function Layout(props) {
 	const navbarRef = useRef(null)
 	const overlayRef = useRef(null)
 	const [product_links, setProductLinks] = useState([]);
-	const { productInterface } = useInterfaceClient()
+	const { products } = useSelector((state) => state.product)
 
 	const GetProductSlugs = () => {
-		let ProductSlugs;
 		const product_icons = { application: 'fa fa-terminal', website: 'fa fa-globe' }
-		ProductSlugs = productInterface.products.map(product => {
+		const ProductSlugs = products?.map(product => {
 			const icon_key = Object.entries(product_icons).map(([k, v]) => {
 				if (product.slug.toLowerCase().includes(k)) return k
 			}).join('')
@@ -44,13 +43,16 @@ export default function Layout(props) {
 	useHideCurrentPageLink()
 	useRippleEffect()
 	useResizeHeaderOnScroll()
+	
 	useScrollToElement({
 		selector: ".scroll-selector"
 	});
+	
 	useToggleScrollToTopController({
 		selector: "#back-to-top",
 		display: "flex"
 	});
+	
 	useToggleNavbar({
 		opener: openMenuRef,
 		closer: closeMenuRef,
