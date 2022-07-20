@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import jwt from 'jsonwebtoken'
 import BareLayout from '../../components/BareLayout'
 import FeedbackDisplay from '../../components/FeedbackDisplay'
 import InputFieldError from '../../components/InputFieldError'
@@ -32,7 +33,15 @@ export default function Login () {
     e.preventDefault()
     const response = await dispatch(login(authentication)).unwrap()
     if (response.user) {
-      const dashboardURL = `${process.env.NEXT_PUBLIC_DASHBOARD_APP_URL}login?client=${JSON.stringify(response.user)}&sourceURL=${process.env.NEXT_PUBLIC_APP_URL}auth/login/&intendedURL=/dashboard/app`
+      const payload = {
+        client: response.user,
+        sourceURL: `${process.env.NEXT_PUBLIC_APP_URL}auth/login/`,
+        intendedURL: '/dashboard/app'
+      }
+      const token = jwt.sign(payload, process.env.NEXT_PUBLIC_JWT_SECRET, {
+        expiresIn: '60 seconds'
+      })
+      const dashboardURL = `${process.env.NEXT_PUBLIC_DASHBOARD_APP_URL}login?token=${token}`
       return window.location = dashboardURL
     }
   }
