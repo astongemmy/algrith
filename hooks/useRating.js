@@ -38,7 +38,7 @@ export default function useRating({ reviews }) {
   }
 
   useEffect(() => {
-    if (reviews) calculateRating({ reviews, ratings })
+    if (reviews.length) calculateRating({ reviews, ratings })
   }, [reviews])
 
   return rating
