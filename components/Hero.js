@@ -42,7 +42,7 @@ export default function Hero({ products, isLoading }){
 
         <div className="w-full mx-auto py-6 sm:py-10 px-4 md:px-8 sm:px-6 md:px-10 lg:px-14 xl:px-28">
           
-          {!!products.length && (<Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
+          {!!(!isLoading && products.length) && (<Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
             {products?.map((product) => (
               product?.packages?.map(_package => {
                 return (
@@ -70,7 +70,7 @@ export default function Hero({ products, isLoading }){
             ))}
           </Carousel>)}
           
-          {!!(!products.length) && <div className="flex justify-center"> No packages yet! </div>}
+          {!!(!isLoading && !products.length) && <div className="flex justify-center"> No packages yet! </div>}
           
           {isLoading && <div className="flex justify-center"> Loading packages... </div>}
 
