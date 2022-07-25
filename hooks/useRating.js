@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export default function useRating({ reviews }) {
-  const [rating, setRating] = useState('')
+  const [rating, setRating] = useState(0)
 
   const sumArrayElements = (arr) => arr.reduce((a, b) => a + b, 0)
   
