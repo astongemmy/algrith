@@ -8,8 +8,8 @@ export const getProducts = createAsyncThunk(
   async (query, thunkAPI) => {
     try {
       let productsWithPackages = [];
-      const { products } = await ProductService.getProducts({ ...query, published: true })
-      if (products.length) productsWithPackages = products.filter(product => product.packages.length && product.packages.published)
+      const { data } = await ProductService.getProducts({ ...query, published: true })
+      if (data.length) productsWithPackages = data.filter(product => product.packages.length)
       if (productsWithPackages.length) {
         productsWithPackages.forEach(product => {
           product.packages = product.packages.filter(_package => _package.published)
@@ -29,8 +29,8 @@ export const getProduct = createAsyncThunk(
   '/products/:id',
   async ({ id, query }, thunkAPI) => {
     try {
-      const { product } = await ProductService.getProduct({id, query})
-      const publishedProduct = [...product].filter(product => product.published && product.packages.length)
+      const { data } = await ProductService.getProduct({id, query})
+      const publishedProduct = [...data].filter(product => product.published && product.packages.length)
       if (publishedProduct.length) {
         publishedProduct[0].packages = publishedProduct[0].packages.filter(_package => _package.published)
       }
