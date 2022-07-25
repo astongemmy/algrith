@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import ImageGallery from 'react-image-gallery';
 import useViewport from '../../hooks/useViewport'
@@ -102,7 +102,7 @@ export async function getServerSideProps({ params }) {
     const Interface = { product: {}, active: {}, error: false, isAvailable: false }
     try {
       const { data } = await ProductService.getProducts(query)
-      if (data.length) Interface.product = data.products[0]
+      if (data.length) Interface.product = data[0].products
       if (Interface.product?.packages?.length) {
         const packages = Interface.product?.packages.map((_package, index) => {
           _package.active = false
