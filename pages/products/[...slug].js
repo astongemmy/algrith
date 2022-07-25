@@ -101,21 +101,19 @@ export async function getServerSideProps({ params }) {
     const query = { slug: product_slug }
     const Interface = { product: {}, active: {}, error: false, isAvailable: false }
     try {
-      const products = await ProductService.getProducts(query)
-      if (products.length) {
-        Interface.product = products.filter(product => product.slug === product_slug)[0]
-        if (Interface.product?.packages?.length) {
-          const packages = Interface.product?.packages.map((_package, index) => {
-            _package.active = false
-            if (package_slug && _package.slug === package_slug) _package.active = true
-            if (!package_slug && index === 0) _package.active = true
-            return _package
-          })
-          Interface.product.packages = packages.filter(_package => _package.published)
-          if (packages.length) {
-            Interface.isAvailable = true
-            Interface.active = packages.filter(_package => _package.active)[0]
-          }
+      const { data } = await ProductService.getProducts(query)
+      if (data.length) Interface.product = data.products[0]
+      if (Interface.product?.packages?.length) {
+        const packages = Interface.product?.packages.map((_package, index) => {
+          _package.active = false
+          if (package_slug && _package.slug === package_slug) _package.active = true
+          if (!package_slug && index === 0) _package.active = true
+          return _package
+        })
+        Interface.product.packages = packages.filter(_package => _package.published)
+        if (packages.length) {
+          Interface.isAvailable = true
+          Interface.active = packages.filter(_package => _package.active)[0]
         }
       }
       return Interface
