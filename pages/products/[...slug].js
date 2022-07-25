@@ -15,6 +15,9 @@ import PackageSelector from '../../components/PackageSelector'
 import ProductService from '../../services/product.service';
 
 export default function Product({ product, active, error, isAvailable }){
+  console.log(product)
+  console.log(active)
+  console.log(isAvailable)
   const { viewport } = useViewport()
   const [selectedPackage, setSelectedPackage] = useState(active)
   
@@ -102,7 +105,7 @@ export async function getServerSideProps({ params }) {
     const Interface = { product: {}, active: {}, error: false, isAvailable: false }
     try {
       const { data } = await ProductService.getProducts(query)
-      if (data.length) Interface.product = data[0].products
+      if (data.length) Interface.product = data[0]
       if (Interface.product?.packages?.length) {
         const packages = Interface.product?.packages.map((_package, index) => {
           _package.active = false
