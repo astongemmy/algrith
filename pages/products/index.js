@@ -22,7 +22,7 @@ export default function Products() {
                 <BreadCrumbs page="products" />
               </div>
               
-              {!!Object.keys(products).length && (
+              {!!(!isLoading && products.length) && (
                 <div className="w-full px-0 md:px-0 lg:px-4 xl:px-4">
                   {products?.map((product) => {
                     return (
@@ -47,7 +47,7 @@ export default function Products() {
                 </div>
               )}
               
-              {!isLoading && !!(!Object.keys(products).length) && (
+              {!!(!isLoading && !products.length) && (
                 <div className="flex justify-center w-full">
                   No products at the moment!
                 </div>
