@@ -15,9 +15,6 @@ import PackageSelector from '../../components/PackageSelector'
 import ProductService from '../../services/product.service';
 
 export default function Product({ product, active, error, isAvailable }){
-  console.log(product)
-  console.log(active)
-  console.log(isAvailable)
   const { viewport } = useViewport()
   const [selectedPackage, setSelectedPackage] = useState(active)
   
