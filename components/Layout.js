@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Header from './Header'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -10,9 +11,10 @@ import useScrollToElement from '../hooks/useScrollToElement'
 import useToggleNavbar from '../hooks/useToggleNavbar'
 import useResizeHeaderOnScroll from '../hooks/useResizeHeaderOnScroll'
 import ThemeSwitch from './ThemeSwitch'
-import { useSelector } from 'react-redux'
+import { getProducts } from '../slices/product'
 
 export default function Layout(props) {
+	const dispatch = useDispatch()
 	const openMenuRef = useRef(null)
 	const closeMenuRef = useRef(null)
 	const navbarRef = useRef(null)
@@ -37,6 +39,7 @@ export default function Layout(props) {
 	
 	useEffect(() => { 
 		AOS.init({ easing: 'ease-in-out-sine' })
+		dispatch(getProducts())
 		setProductLinks(GetProductSlugs())
 	}, [])
 

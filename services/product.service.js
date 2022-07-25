@@ -10,7 +10,7 @@ const getProducts = async (query = {}) => {
   if (response.data.status) return response.data
 }
 
-const getProduct = async (id, query) => {
+const getProduct = async ({id, query = {}}) => {
   const queryString = query ? formQueryUsingParams(query) : ''
   const response = await axios.get(`${API_URL}products/${id}/${queryString}`)
   if (response.data.status) return response.data

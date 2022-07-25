@@ -7,17 +7,15 @@ export const getProducts = createAsyncThunk(
   '/products',
   async (query, thunkAPI) => {
     try {
-      let publishedProducts;
-      const products = await ProductService.getProducts(query)
-      if (products.length) {
-        publishedProducts = products.filter(product => product.packages.length && product.published)
-      }
-      if (publishedProducts.length) {
-        publishedProducts.products.forEach(product => {
+      let productsWithPackages = [];
+      const { products } = await ProductService.getProducts({ ...query, published: true })
+      if (products.length) productsWithPackages = products.filter(product => product.packages.length && product.packages.published)
+      if (productsWithPackages.length) {
+        productsWithPackages.forEach(product => {
           product.packages = product.packages.filter(_package => _package.published)
         })
       }
-      return { products: publishedProducts }
+      return { products: productsWithPackages }
     } catch (error) {
       const { message } = errorProcessor(error)
       const feedbackObject = thunkAPI.dispatch(setFeedbackObject(message, 'error'))
@@ -31,10 +29,12 @@ export const getProduct = createAsyncThunk(
   '/products/:id',
   async ({ id, query }, thunkAPI) => {
     try {
-      const product = await ProductService.getProduct(id, query)
-      const publishedProduct = [product].filter(product => product.published)[0]
-      if (Object.keys(publishedProduct).length) return { product: publishedProduct }
-      return { product: {} }
+      const { product } = await ProductService.getProduct({id, query})
+      const publishedProduct = [...product].filter(product => product.published && product.packages.length)
+      if (publishedProduct.length) {
+        publishedProduct[0].packages = publishedProduct[0].packages.filter(_package => _package.published)
+      }
+      return { product: publishedProduct[0] }
     } catch (error) {
       const { message } = errorProcessor(error)
       const feedbackObject = thunkAPI.dispatch(setFeedbackObject(message, 'error'))
