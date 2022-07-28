@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export default function useRating({ reviews }) {
   const [rating, setRating] = useState(0)
-
+  
   const sumArrayElements = (arr) => arr.reduce((a, b) => a + b, 0)
   
   const scale = 5
@@ -41,5 +41,5 @@ export default function useRating({ reviews }) {
     if (reviews.length) calculateRating({ reviews, ratings })
   }, [reviews])
 
-  return rating
+  return { rating, total: reviews.length }
 }

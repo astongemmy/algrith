@@ -79,12 +79,15 @@ export default function Product({ product, active, error, isAvailable }){
               {['sm'].includes(viewport) && <Reviews reviews={selectedPackage?.reviews} />}
             </div>
           </div>)}
+
           {!isAvailable && (<div className="flex justify-center">
             No packages available!
           </div>)}
+          
           {error && (<div className="flex justify-center">
             Error fetching packages!
           </div>)}
+          
         </section>
       </main>
     </Layout>

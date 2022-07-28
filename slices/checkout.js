@@ -1,8 +1,30 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import PaymentService from '../services/payment.service'
+import { setFeedback, setFeedbackObject } from './feedback'
+import { errorProcessor } from '../utils/errorProcessor'
+
+
+export const confirmPayment = createAsyncThunk(
+  'payment/confirm',
+  async ({user_id, reference}, thunkAPI) => {
+    try {
+      const { data } = await PaymentService.confirmPayment({user_id, reference})
+      const feedbackObject = thunkAPI.dispatch(setFeedbackObject('Payment confimed successfully!', 'success'))
+      thunkAPI.dispatch(setFeedback({ target: 'confirm_payment', feedback: feedbackObject }))
+      return { confirmed: data.status }
+    } catch (error) {
+      const { message, type, data } = errorProcessor(error)
+      const feedbackObject = thunkAPI.dispatch(setFeedbackObject(message, 'error'))
+      thunkAPI.dispatch(setFeedback({ target: 'confirm_payment', feedback: feedbackObject }))
+      return thunkAPI.rejectWithValue();
+    }
+  }
+)
 
 const initialState = {
   _package: {},
-  requirements: {}
+  requirements: {},
+  confirmed: false
 }
 
 const checkoutSlice = createSlice({
@@ -15,6 +37,14 @@ const checkoutSlice = createSlice({
         requirements: action.payload.requirements
       }
     }
+  },
+  extraReducers: {
+    [confirmPayment.pending]: (state, action) => { state.isLoading = true },
+    [confirmPayment.rejected]: (state, action) => { state.isLoading = false },
+    [confirmPayment.fulfilled]: (state, action) => {
+      state.confirmed = action.payload.confirmed
+      state.isLoading = false
+    },
   }
 });
 

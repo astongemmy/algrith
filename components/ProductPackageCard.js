@@ -1,8 +1,10 @@
 import Link from "next/link"
 import React from "react"
 import ProductRating from "./ProductRating"
+import useRating from '../hooks/useRating'
 
 export default function ProductPackageCard({ item, slug }) {
+  const { rating, total } = useRating({ reviews: item.reviews })
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -27,7 +29,7 @@ export default function ProductPackageCard({ item, slug }) {
       <div className="relative dark:bg-slate-800 bg-white px-6 py-8 md:py-6 md:px-3 lg:p-8 lg:py-12 rounded-2xl border dark:border-slate-800">
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
-            <h1 className="text-2xl text-green-500 font-bold font-heading">
+            <h1 className="text-2xl text-green-500 font-medium font-heading">
               <Link href={`/products/${slug}/${item.slug}`}>
                 <a className="">
                   <span aria-hidden="true" className="absolute inset-0" />
@@ -35,7 +37,7 @@ export default function ProductPackageCard({ item, slug }) {
                 </a>
               </Link>
               <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
-                <ProductRating />
+                <ProductRating rating={rating} total={total} />
               </span>
             </h1>
             <p className="text-2xl md:text-sm lg:text-2xl text-red-500 font-bold">
@@ -45,8 +47,8 @@ export default function ProductPackageCard({ item, slug }) {
         </div>
         <div className="pb-4 mb-4 border-b text-gray-600 dark:text-slate-400 dark:border-b-slate-700">
           <div className="flex justify-between items-center">
-            <h3 className="text-xl dark:text-slate-300 text-black font-bold font-heading">Features</h3>
-            <p className="text-lg font-bold">
+            <h3 className="text-xl dark:text-slate-300 text-black font-medium font-heading">Features</h3>
+            <p className="text-lg font-medium">
               { (formatUnit(item.order_count)) }
               <span> orders</span>
             </p>

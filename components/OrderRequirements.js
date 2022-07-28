@@ -24,7 +24,7 @@ export default function OrderRequirements({ product_slug, selectedPackage }) {
   
   return (
     <div id="order-requirements" className="dark:bg-slate-800 bg-white dark:border-slate-800 border rounded-lg px-6 lg:px-8 py-4 lg:py-6 mb-8">
-      <h2 className="text-2xl font-heading dark:text-slate-300 text-gray-900 font-semibold">
+      <h2 className="text-2xl font-heading dark:text-slate-300 text-gray-900 font-medium">
         Order requirements
       </h2>
       <div className="grid grid-cols-4 gap-6 pt-4">

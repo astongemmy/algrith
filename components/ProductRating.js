@@ -13,9 +13,7 @@ export default function ProductRating({ rating, total }) {
     })
   }
 
-  useEffect(() => {
-    if (rating) prepareRating(rating)
-  }, [rating])
+  useEffect(() => { prepareRating(rating) }, [rating])
 
   const formatUnit = (unit) => {
     if (unit >= 1000) return Math.round(unit / 1000) + 'k'
@@ -45,7 +43,7 @@ export default function ProductRating({ rating, total }) {
           )
         })}
       </div>
-      {total && <span className="text-md dark:text-gray-300 text-gray-400 font-sans ml-4">
+      {!!(total) && <span className="text-md dark:text-gray-300 text-gray-400 font-sans ml-4">
         { rating } ({ formatUnit(total) })
       </span>}
     </div>

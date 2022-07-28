@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import DisplayColors from './DisplayColors';
 
-export default function CheckoutOrderRequirement({ Requirements }) {
+export default function CheckoutOrderRequirement() {
+  const { requirements } = useSelector((state) => state.checkout)
   const [ passwordVisibility, togglePasswordVisibility ] = useState(false)
+  
   const keyToProperFormat = (text) => {
     if (text !== null) {
       text = text.split('_');
@@ -16,12 +19,12 @@ export default function CheckoutOrderRequirement({ Requirements }) {
   return (
     <div className="md:w-1/2 pr-0 md:pr-4 mb-8">
       <div className="dark:bg-slate-800 bg-white rounded-lg dark:border-slate-800 border overflow-hidden">
-        <h3 className="dark:border-b-slate-700 border-b dark:text-slate-300 text-gray-800 px-4 py-3 mb-2 text-2xl font-heading font-semibold">
+        <h3 className="dark:border-b-slate-700 border-b dark:text-slate-300 text-gray-800 px-4 py-3 mb-2 text-2xl font-heading font-medium">
           Order requirements
         </h3>
         <div className="p-4 px-6 pb-8">
           <ul className="w-full text-lg">
-            {Object.entries(Requirements).map((requirement) => {
+            {Object.entries(requirements).map((requirement) => {
               return (
                 <React.Fragment key={requirement[0]}>
                   {requirement[0] !== 'description' && requirement[0] !== 'theme_color' && <li className="w-full mb-3 flex flex-wra justify-between items-center overflow-x-auto">

@@ -27,7 +27,7 @@ export default function Products() {
                   {products?.map((product) => {
                     return (
                       <div key={ product?.name }>
-                        <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-semibold dark:text-slate-300 text-black">
+                        <h2 className="my-6 mb-4 text-3xl md:text-4xl font-heading font-medium dark:text-slate-300 text-black">
                           <span className="capitalize">{ product?.name }</span>
                         </h2>
                         <div className="flex flex-wrap overflow-hidden md:-mx-2 xl:-mx-11 md:py-8 md:my-8 md:mt-0">

@@ -1,26 +1,43 @@
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router";
 import { usePaystackPayment } from 'react-paystack'
 import { useSelector, useDispatch } from "react-redux";
+import { clearFeedback } from '../slices/feedback'
+import { confirmPayment } from '../slices/checkout'
+import { placeOrder } from "../slices/order";
 import CheckoutLoginForm from "./CheckoutLoginForm";
 import CheckoutSignUpForm from "./CheckoutSignUpForm";
-import { clearFeedback } from '../slices/feedback'
 
-export default function CheckoutBillingForm({ Package }) {
+export default function CheckoutBillingForm() {
+  const router = useRouter()
   const dispatch = useDispatch()
   const [ loginForm, toggleLoginForm ] = useState(false)
   const { user } = useSelector((state) => state.auth)
   const feedback = useSelector((state) => state.feedback)
+  const { _package, requirements } = useSelector((state) => state.checkout)
 
   // Paystack payment config
   const config = {
     reference: (new Date()).getTime().toString(),
     email: user?.email,
-    amount: Package.price * 100,
+    amount: _package?.price * 100,
     publicKey: "pk_test_3851bb68ea57c1da0fea7acffa71c1e3fbcbe477"
   }
 
   const initializePayment = usePaystackPayment(config);
-  const onSuccess = (reference) => console.log(reference)
+  const onSuccess = async (response) => {
+    const { reference } = response
+    const { confirmed } = await dispatch(confirmPayment({ user_id: user._id, reference })).unwrap()
+    if (confirmed) {
+      const { order } = await dispatch(placeOrder({
+        user_id: user._id,
+        package_id: _package._id,
+        requirements
+      })).unwrap()
+
+      if (order) router.push('/order-successful')
+    }
+  }
   const onClose = () => console.log('closed')
 
   useEffect(() => { dispatch(clearFeedback()) }, [])
@@ -32,7 +49,7 @@ export default function CheckoutBillingForm({ Package }) {
   return (
     <div className="w-full md:w-1/2 mb-8 pl-0 md:pl-4">
       <div className="relative dark:bg-slate-800 bg-white rounded-lg dark:border-slate-800 border pb-4">
-        <h3 className="relative px-4 py-3 dark:border-b-slate-700 border-b text-2xl font-heading dark:text-slate-300 text-gray-800 font-semibold">
+        <h3 className="relative px-4 py-3 dark:border-b-slate-700 border-b text-2xl font-heading dark:text-slate-300 text-gray-800 font-medium">
           Billing details
         </h3>
         
