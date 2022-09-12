@@ -42,33 +42,35 @@ export default function Hero({ products, isLoading }){
 
         <div className="w-full mx-auto py-6 sm:py-10 px-4 md:px-8 sm:px-6 md:px-10 lg:px-14 xl:px-28">
           
-          {!!(!isLoading && products.length) && (<Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
-            {products?.map((product) => (
-              product?.packages?.map(_package => {
-                return (
-                  <div key={_package?._id} className="rounded-lg overflow-hidden dark:bg-slate-800 dark:shadow-none shadow-lg group relative">
-                    <div className="w-full min-h-64 bg-gray-200 overflow-hidden group-hover:opacity-75">
-                      <img src={process.env.NEXT_PUBLIC_API_PUBLIC_URL + _package?.gallery[0]?.path} alt={_package?.name} className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
-                    </div>
-                    <div className="mt-4 flex justify-between px-4 pb-4">
-                      <div>
-                        <h3 className="text-lg dark:text-green-400 text-gray-800 font-bold">
-                          <Link href={`/products/${product?.slug}/${_package?.slug}`}>
-                            <a>
-                              <span aria-hidden="true" className="absolute inset-0" />
-                              {_package?.name}
-                            </a>
-                          </Link>
-                        </h3>
-                        <p className="mt-1 text-lg dark:text-slate-300 text-gray-500"> {_package?.category} </p>
+          {!!(!isLoading && products.length) && (
+            <Carousel sliderClass="mt-6" itemClass="px-4" containerClass="pb-8 flex justify-between" responsive={responsive}>
+              {products?.map((product) => (
+                product?.packages?.map(_package => {
+                  return (
+                    <div key={_package?._id} className="rounded-lg overflow-hidden dark:bg-slate-800 dark:shadow-none shadow-lg group relative">
+                      <div className="w-full min-h-64 bg-gray-200 overflow-hidden group-hover:opacity-75">
+                        <img src={process.env.NEXT_PUBLIC_API_PUBLIC_URL + _package?.gallery[0]?.path} alt={_package?.name} className="w-full h-full object-center object-cover lg:w-full lg:h-full" />
                       </div>
-                      <p className="text-md font-bold text-teal-600"> {_package.currency?.symbol + _package?.price} </p>
+                      <div className="mt-4 flex justify-between px-4 pb-4">
+                        <div>
+                          <h3 className="text-lg dark:text-green-400 text-gray-800 font-bold">
+                            <Link href={`/products/${product?.slug}/${_package?.slug}`}>
+                              <a>
+                                <span aria-hidden="true" className="absolute inset-0" />
+                                {_package?.name}
+                              </a>
+                            </Link>
+                          </h3>
+                          <p className="mt-1 text-lg dark:text-slate-300 text-gray-500"> {_package?.category} </p>
+                        </div>
+                        <p className="text-md font-bold text-teal-600"> {_package.currency?.symbol + _package?.price} </p>
+                      </div>
                     </div>
-                  </div>
-                )
-              })
-            ))}
-          </Carousel>)}
+                  )
+                })
+              ))}
+            </Carousel>
+          )}
           
           {!!(!isLoading && !products.length) && <div className="flex justify-center"> No packages yet! </div>}
           

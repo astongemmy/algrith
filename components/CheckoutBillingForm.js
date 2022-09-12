@@ -7,8 +7,11 @@ import { confirmPayment } from '../slices/checkout'
 import { placeOrder } from "../slices/order";
 import CheckoutLoginForm from "./CheckoutLoginForm";
 import CheckoutSignUpForm from "./CheckoutSignUpForm";
+import socket from "../socket";
+import useSocketIO from "../hooks/useSocketIO"
 
 export default function CheckoutBillingForm() {
+  useSocketIO()
   const router = useRouter()
   const dispatch = useDispatch()
   const [ loginForm, toggleLoginForm ] = useState(false)
@@ -35,7 +38,10 @@ export default function CheckoutBillingForm() {
         requirements
       })).unwrap()
 
-      if (order) router.push('/order-successful')
+      if (order) {
+        socket.emit('place order', { order })
+        router.push('/order-successful')
+      }
     }
   }
   const onClose = () => console.log('closed')

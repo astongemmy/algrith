@@ -36,6 +36,7 @@
     "redux-persist": "^6.0.0",
     "reduxjs-toolkit-persist": "^7.2.1",
     "sequelize": "^6.3.5",
+    "socket.io-client": "^4.5.2",
     "swr": "^0.4.2"
   },
   "devDependencies": {
