@@ -4,7 +4,7 @@ import ProductRating from "./ProductRating"
 import useRating from '../hooks/useRating'
 
 export default function ProductPackageCard({ item, slug }) {
-  const { rating, total } = useRating({ reviews: item.reviews })
+  const { rating, total } = useRating({ reviews: item?.reviews })
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -30,10 +30,10 @@ export default function ProductPackageCard({ item, slug }) {
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-medium font-heading">
-              <Link href={`/products/${slug}/${item.slug}`}>
+              <Link href={`/products/${slug}/${item?.slug}`}>
                 <a className="">
                   <span aria-hidden="true" className="absolute inset-0" />
-                  { item.name }
+                  { item?.name }
                 </a>
               </Link>
               <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
@@ -41,7 +41,7 @@ export default function ProductPackageCard({ item, slug }) {
               </span>
             </h1>
             <p className="text-2xl md:text-sm lg:text-2xl text-red-500 font-bold">
-              {` ${item.currency.symbol} ${item.price} `}
+              {` ${item?.currency?.symbol} ${item?.price} `}
             </p>
           </div>
         </div>
@@ -49,13 +49,13 @@ export default function ProductPackageCard({ item, slug }) {
           <div className="flex justify-between items-center">
             <h3 className="text-xl dark:text-slate-300 text-black font-medium font-heading">Features</h3>
             <p className="text-lg font-medium">
-              { (formatUnit(item.order_count)) }
+              { (formatUnit(item?.order_count)) }
               <span> orders</span>
             </p>
           </div>
         </div>
         <ul className="text-lg text-green-500 mb-6">
-          {item.features.map((feature) => {
+          {item?.features?.map((feature) => {
             return (
               <li key={ Object.keys(feature)[0] } className="flex items-center mb-2">
                 <span className="mr-6">
@@ -69,7 +69,7 @@ export default function ProductPackageCard({ item, slug }) {
           })}
         </ul>
         <div className="text-center mt-8">
-          <Link href={`/products/${slug}/${item.slug}`}>
+          <Link href={`/products/${slug}/${item?.slug}`}>
             <a className="text-xl dark:bg-opacity-50 bg-green-500 inline-block px-10 py-4 border dark:border-opacity-10 border-green-500 hover:border-green-100 rounded-full font-bold text-white">
               Buy now
             </a>
