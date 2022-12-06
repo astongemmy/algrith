@@ -101,23 +101,42 @@ export async function getServerSideProps({ params }) {
   }
   
   const GetProduct = async ({ product_slug, package_slug }) => {
-    const query = { slug: product_slug }
-    const Interface = { product: {}, active: {}, error: false, isAvailable: false }
+    const query = { slug: product_slug, published: true }
+    const Interface = {
+      product: {},
+      active: {},
+      error: false,
+      isAvailable: false
+    }
+
     try {
       const { data } = await ProductService.getProducts(query)
       if (data.length) Interface.product = data[0]
       if (Interface.product?.packages?.length) {
-        const packages = Interface.product?.packages.map((_package, index) => {
-          _package.active = false
-          if (package_slug && _package.slug === package_slug) _package.active = true
-          if (!package_slug && index === 0) _package.active = true
-          return _package
-        })
-        Interface.product.packages = packages.filter(_package => _package.published)
-        if (packages.length) {
-          Interface.isAvailable = true
-          Interface.active = packages.filter(_package => _package.active)[0]
+        Interface.product.packages = Interface.product?.packages?.filter(_package => _package.published)
+        if (package_slug) {
+          const requestedPackageIndex = Interface.product?.packages?.findIndex(_package => _package.slug === package_slug)
+          if (requestedPackageIndex >= 0) {
+            Interface.product.packages = Interface.product?.packages?.map((_package, index) => {
+              if (index !== requestedPackageIndex) _package.active = false
+              if (index === requestedPackageIndex) _package.active = true
+              return _package
+            })
+          } else {
+            const defaultActivePackageIndex = Interface.product?.packages?.findIndex(_package => _package.active)
+            if (defaultActivePackageIndex < 0) {
+              Interface.product.packages[0].active = true
+            }
+          }
+        } else {
+          const defaultActivePackageIndex = Interface.product?.packages?.findIndex(_package => _package.active)
+          if (defaultActivePackageIndex < 0) {
+            Interface.product.packages[0].active = true
+          }
         }
+
+        Interface.isAvailable = true
+        Interface.active = Interface?.product?.packages.filter(_package => _package.active)[0]
       }
       return Interface
     } catch (err) {
