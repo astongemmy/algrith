@@ -1,6 +1,7 @@
-import Link from 'next/link'
-import Carousel from 'react-multi-carousel';
+import Link from 'next/link';
+
 import 'react-multi-carousel/lib/styles.css';
+import Carousel from 'react-multi-carousel';
 
 export default function Hero({ products, isLoading }){
   const responsive = {

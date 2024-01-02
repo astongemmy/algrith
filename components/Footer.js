@@ -1,11 +1,11 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from 'next/link';
+import React from 'react';
 
-export default function Footer({ product_links = [] }) {
+const Footer = ({ product_links = [] }) => {
 	return (
 		<footer className="relative dark:bg-slate-800 bg-gray-100">
 			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12 2xl:w-8/12 2xl:mx-auto">
-				<div className="w-full md:w-2/5 lg:w-3/12 pt-8">
+				<div className="w-full md:w-2/5 lg:w-4/12 pt-8">
 					<h1 className="p-4 dark:text-slate-400 text-navyblue text-xl font-bold">
 						<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
 							<path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -51,7 +51,7 @@ export default function Footer({ product_links = [] }) {
 						</details>
 					</div>
 				</div>
-				<div className="flex flex-wrap justify-between w-full md:w-3/5 lg:w-9/12 pt-4 md:pl-4">
+				<div className="flex flex-wrap justify-between w-full md:w-3/5 lg:w-8/12 pt-4 md:pl-4">
 					<div className="w-1/2 lg:w-1/4 pt-4">
 						<h1 className="p-4 dark:text-slate-400 text-navyblue font-bold text-xl">
 							<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -84,7 +84,7 @@ export default function Footer({ product_links = [] }) {
 							</ul>
 						</div>
 					</div>
-					<div className="w-1/2 lg:w-1/4 pt-4">
+					{/* <div className="w-1/2 lg:w-1/4 pt-4">
 						<h1 className="p-4 dark:text-slate-400 text-navyblue font-bold text-xl">
 							<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
 								<path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -111,7 +111,7 @@ export default function Footer({ product_links = [] }) {
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> */}
 					<div className="w-1/2 lg:w-1/4 pt-4">
 						<h1 className="p-4 dark:text-slate-400 text-navyblue font-bold text-xl">						
 							<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -139,20 +139,16 @@ export default function Footer({ product_links = [] }) {
 							</ul>
 						</div>
 					</div>
-					<div className="w-1/2 lg:w-1/4 pt-4">
+					<div className="w-full lg:w-1/4 pt-4">
 						<h1 className="p-4 dark:text-slate-400 text-navyblue font-bold text-xl">
 							<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-green-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
 								<path strokeLinecap="round" strokeLinejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-							</svg> Contact
+							</svg>
+							Contact
 						</h1>
 						<div className="relative text-lg">
-							<div className="relative">
-								<div className="px-4">
-									<aside className="mb-4">
-										<a className="text-gray-500" href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
-									</aside>
-								</div>
-								<div className="dark:text-green-500 text-navyblue mt-4 px-2 flex justify-start items-center">
+							<div className="lg:block flex items-center justify-between relative">
+								<div className="lg-order-2 dark:text-green-500 text-navyblue lg:mt-3 lg:mb-4 px-2 flex justify-start items-center">
 									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-slate-700 bg-white shadow-lg">
 										<i className="fab fa-facebook"></i>
 									</a>
@@ -162,6 +158,11 @@ export default function Footer({ product_links = [] }) {
 									<a href="#" data-aos="fade-in" className="flex justify-center mx-1 items-center rounded-xl text-xl h-8 w-8 dark:bg-slate-700 bg-white shadow-lg">
 										<i className="fab fa-linkedin"></i>
 									</a>
+								</div>
+								<div className="lg:order-1 px-4">
+									<aside className="lg:mt-4">
+										<a className="text-gray-500" href="mailto:algrithllc@gmail.com">algrithllc@gmail.com</a>
+									</aside>
 								</div>
 							</div>
 						</div>
@@ -175,4 +176,6 @@ export default function Footer({ product_links = [] }) {
 			</Link>
 		</footer>
 	)
-}
+};
+
+export default Footer;

@@ -31,19 +31,25 @@ export default function About() {
 		},
 		items: [
 			{
-				title: 'Web Application',
+				title: 'Web Application Development',
 				subtitle: 'Strictly responsive',
 				icon: 'fa fa-globe',
 				content: 'We design and build efficient websites and web applications for your business, leveraging modern tools and technologies such as artificial intelligence when needed'
 			},
 			{
-				title: 'Data Science',
+				title: 'Artificial Intelligence',
 				subtitle: 'Indepth analysis',
 				icon: 'fa fa-chart-bar',
-				content: 'Our team of dedicated data scientists and machine learning engineers will help you make sense of your companys data by analysing and building machine learning models when needed, offering you the best insights'
+				content: 'Want to know how to integrate AI into your business?'
 			},
 			{
-				title: 'Refactoring',
+				title: 'Website Revamp (Redesign)',
+				subtitle: 'Cleaner code',
+				icon: 'fa fa-code-branch',
+				content: 'Since we are updated with industry trends, we are at best position to refactor your existing codebase for maximum efficiency, such that you have never experienced before'
+			},
+			{
+				title: 'Mobile Application Development',
 				subtitle: 'Cleaner code',
 				icon: 'fa fa-code-branch',
 				content: 'Since we are updated with industry trends, we are at best position to refactor your existing codebase for maximum efficiency, such that you have never experienced before'

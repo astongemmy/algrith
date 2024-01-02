@@ -1,20 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import WelcomeIntro from '../components/WelcomeIntro'
-import Outline from '../components/Outline'
-import Section from '../components/Section'
-import GetStarted from '../components/GetStarted'
-import MissionStatement from '../components/MissionStatement'
-import Hero from '../components/Hero'
-import Pricing from '../components/Pricing'
-import LogoCloud from '../components/LogoCloud'
-import { useSelector } from 'react-redux'
+import Head from 'next/head';
+import React from 'react';
 
-export default function Index(){
-  const { products, isLoading } = useSelector((state) => state.product)
+import MissionStatement from '../components/MissionStatement';
+import WelcomeIntro from '../components/WelcomeIntro';
+import GetStarted from '../components/GetStarted';
+import TechStack from '../components/TechSTack';
+import LogoCloud from '../components/LogoCloud';
+import WhoWeAre from '../components/WhoWeAre';
+import Pricing from '../components/Pricing';
+import Outline from '../components/Outline';
+import Section from '../components/Section';
+import { useSelector } from 'react-redux';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+
+export default function Index() {
+  const { products, isLoading } = useSelector((state) => state.product);
   
-  const outlines = {
+	const whyChooseUsOutlines = {
     title: 'Why choose us',
     illustration: {
       align: { x: 'left', y: 'top' },
@@ -27,24 +30,63 @@ export default function Index(){
     items: [
       {
         title: 'Swift and Accurate',
-        subtitle: '6days delivery',
+        subtitle: 'Delivery',
         icon: 'fa fa-rocket',
-        content: 'Time is a valuable currency of business and we give our clients value in time'
+        content: 'Time is a valuable currency of business and we give our clients value in time.'
       },
       {
-        title: 'Competence',
-        subtitle: 'Tool mastery',
+        title: 'Innovative',
+        subtitle: 'Skilled',
         icon: 'fa fa-cog',
-        content: 'We posses sufficiency of skills to drive your web presence and experience to the next level'
+        content: 'We stay ahead of the curve, incorporating the latest technologies to ensure your business remains competitive in a rapidly evolving landscape.'
       },
       {
         title: 'Trusted',
-        subtitle: 'High reputation',
+        subtitle: 'Reputable',
         icon: 'fa fa-shield-alt',
-        content: 'Integrity defines business life span and we are determined to live long with you'
+        content: 'Integrity defines business life span and we are determined to live long with you.'
       }
     ]
-  }
+  };
+
+  const whatWeDoOutlines = {
+		title: 'What we do',
+		illustration: {
+			align: { x: 'left', y: 'top' },
+			dimension: {
+				md: { x: 20, y: 32, scale: 65 },
+				lg: { x: 52, y: 72, scale: 45 }
+			},
+			src: './images/illustrations/girl_3.gif'
+		},
+		items: [
+			{
+				title: 'Web Application Development',
+				subtitle: 'Exposure',
+				icon: 'fa fa-globe',
+				content: 'Need a web application for your business or industry?'
+			},
+			{
+				title: 'Artificial Intelligence',
+				subtitle: 'Relief',
+				icon: 'fa fa-chart-bar',
+				content: 'Want to know how to integrate AI into your business?'
+			},
+			{
+				title: 'Website Revamp (Redesign)',
+				subtitle: 'Sophistication',
+				icon: 'fa fa-code-branch',
+				content: 'Does your website need an aesthetically pleasing new look?'
+			},
+			{
+				title: 'Business Optimization',
+				subtitle: 'Upgrade',
+				icon: 'fa fa-code-branch',
+				content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?. Our team of skilled developers is dedicated to creating software that aligns seamlessly with your business goals.'
+			}
+		]
+	};
+
   const sections = {
     testimonial: {
       title: {
@@ -61,7 +103,8 @@ export default function Index(){
       },
       items: require('../constants/testimonials.json')
     }
-  }
+  };
+
   const intro = {
     title: {
       text: "The best software algorithm solution",
@@ -77,7 +120,7 @@ export default function Index(){
       text: "Get Started"
     },
     scroll_to: "product-intro"
-  }
+  };
   
   return (
     <Layout>
@@ -88,11 +131,14 @@ export default function Index(){
 
       <main>
         <WelcomeIntro payload={intro} />
-        <LogoCloud />
-        <Hero products={products} isLoading={isLoading} />
-        <Outline outline={ outlines } />
+        {/* <LogoCloud /> */}
+        {/* <Hero products={products} isLoading={isLoading} /> */}
+        <WhoWeAre />
+        <Outline outline={ whatWeDoOutlines } />
+        <Outline outline={ whyChooseUsOutlines } />
+        <TechStack />
         <MissionStatement />
-        <Pricing products={products} isLoading={isLoading} />
+        {/* <Pricing products={products} isLoading={isLoading} /> */}
         <Section payload={ sections.testimonial } />
         <GetStarted />
       </main>

@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
-import useTyping from '../hooks/useTyping'
-import ProductSearch from './ProductSearch'
+import React, { useEffect } from 'react';
+
+import ProductSearch from './ProductSearch';
+import useTyping from '../hooks/useTyping';
 
 export default function WelcomeIntro({ payload }) {
-	const { title, subtitle, accomodate, action, scroll_to } = payload
+	const { title, subtitle, accomodate, action, scroll_to } = payload;
 	useTyping(title.text)
 
 	return (
