@@ -2,20 +2,19 @@ import Head from 'next/head';
 import React from 'react';
 
 import MissionStatement from '../components/MissionStatement';
+import ContactUsCall from '../components/ContactUsCall';
 import WelcomeIntro from '../components/WelcomeIntro';
 import GetStarted from '../components/GetStarted';
 import TechStack from '../components/TechSTack';
-import LogoCloud from '../components/LogoCloud';
 import WhoWeAre from '../components/WhoWeAre';
-import Pricing from '../components/Pricing';
+// import Pricing from '../components/Pricing';
 import Outline from '../components/Outline';
 import Section from '../components/Section';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
 
 export default function Index() {
-  const { products, isLoading } = useSelector((state) => state.product);
+  // const { products, isLoading } = useSelector((state) => state.product);
   
 	const whyChooseUsOutlines = {
     title: 'Why choose us',
@@ -131,10 +130,9 @@ export default function Index() {
 
       <main>
         <WelcomeIntro payload={intro} />
-        {/* <LogoCloud /> */}
-        {/* <Hero products={products} isLoading={isLoading} /> */}
         <WhoWeAre />
         <Outline outline={ whatWeDoOutlines } />
+        <ContactUsCall />
         <Outline outline={ whyChooseUsOutlines } />
         <TechStack />
         <MissionStatement />

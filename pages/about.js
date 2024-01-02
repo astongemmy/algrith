@@ -1,10 +1,11 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Intro from '../components/Intro'
-import Outline from '../components/Outline'
+import Head from 'next/head';
+import React from 'react';
 
-export default function About() {
+import Outline from '../components/Outline';
+import Layout from '../components/Layout';
+import Intro from '../components/Intro';
+
+const About = () => {
 	const intro = {
 		title: {
 			text: "Who we really are!",
@@ -12,7 +13,7 @@ export default function About() {
 			case: ""
 		},
 		description: {
-			text: "Algrith is a software company dedicated to delivering elegant, efficient,\n secure, accessible etc, web applications and websites for use by\n clients both in the public and private sector.",
+			text: "We are a software company dedicated to delivering elegant, efficient,\n secure, accessible etc, web applications and websites for use by\n clients both in the public and private sector.",
 			align: "",
 			case: ""
 		},
@@ -32,27 +33,27 @@ export default function About() {
 		items: [
 			{
 				title: 'Web Application Development',
-				subtitle: 'Strictly responsive',
+				subtitle: 'Exposure',
 				icon: 'fa fa-globe',
-				content: 'We design and build efficient websites and web applications for your business, leveraging modern tools and technologies such as artificial intelligence when needed'
+				content: 'Need a web application for your business or industry?'
 			},
 			{
 				title: 'Artificial Intelligence',
-				subtitle: 'Indepth analysis',
+				subtitle: 'Relief',
 				icon: 'fa fa-chart-bar',
 				content: 'Want to know how to integrate AI into your business?'
 			},
 			{
 				title: 'Website Revamp (Redesign)',
-				subtitle: 'Cleaner code',
+				subtitle: 'Sophistication',
 				icon: 'fa fa-code-branch',
-				content: 'Since we are updated with industry trends, we are at best position to refactor your existing codebase for maximum efficiency, such that you have never experienced before'
+				content: 'Does your website need an aesthetically pleasing new look?'
 			},
 			{
-				title: 'Mobile Application Development',
-				subtitle: 'Cleaner code',
+				title: 'Business Optimization',
+				subtitle: 'Upgrade',
 				icon: 'fa fa-code-branch',
-				content: 'Since we are updated with industry trends, we are at best position to refactor your existing codebase for maximum efficiency, such that you have never experienced before'
+				content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?. Our team of skilled developers is dedicated to creating software that aligns seamlessly with your business goals.'
 			}
 		]
 	}
@@ -69,4 +70,6 @@ export default function About() {
 			</main>
 		</Layout>
 	)
-}
+};
+
+export default About;

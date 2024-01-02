@@ -2,15 +2,16 @@ import React from 'react'
 
 export default function Outline({ outline }) {
 	const { title, items, illustration } = outline;
+
 	const outlines = items.map((outline) => {
 		return (
-			<div key={outline.title} data-aos="fade-up" className="w-full md:w-1/3 m-4 md:m-0 p-2 md:py-10 md:px-3 lg:p-4 xl:px-8 2xl:px-4">
+			<div key={outline.title} data-aos="fade-up" className="w-full md:w-1/2 lg:w-1/3 m-4 md:m-0 p-2 md:py-10 md:px-3 lg:p-4 xl:px-8 2xl:px-4">
 				<div className="relative overflow-hidden w-full pt-24 pb-16 px-8 md:px-4 lg:p-16 dark:bg-slate-800 bg-gray-50 dark:text-slate-300 text-gray-500 text-xl md:leading-9 rounded-xl text-center shadow dark:shadow-none">
 					<span className="dark:bg-slate-700 bg-white absolute left-0 top-0 w-full py-2 px-6 flex justify-between items-center">
 						<span className="flex justify-center items-center p-2 text-md text-white dark:bg-opacity-50 bg-green-500 w-10 h-10 rounded-full">
 							<i className={outline.icon}></i>
 						</span>
-						<h2 className="text-md dark:text-teal-300 text-gray-900">
+						<h2 className="text-md dark:text-teal-300 text-algrithYellow">
 							{outline.subtitle}
 						</h2>
 					</span>
@@ -50,7 +51,7 @@ export default function Outline({ outline }) {
 			<h1 className="relative text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight dark:text-slate-200 text-gray-900 sm:text-5xl py-4 mx-auto w-full text-center">
 				{title}
 			</h1>
-			<div className="relative flex flex-wrap xl:flex-nowrap justify-around xl:justify-between items-center py-4 lg:py-16 px-2 md:px-10 lg:px-14 xl:px-32 2xl:px-0 w-full">
+			<div className="relative flex flex-wrap xl:flex-nowrap justify-around xl:justify-between lg:items-center py-4 lg:py-16 px-2 md:px-10 lg:px-14 xl:px-32 2xl:px-0 w-full">
 				{outlines}
 			</div>
 		</div>
