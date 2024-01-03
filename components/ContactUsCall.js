@@ -18,7 +18,7 @@ const ContactUsCall = () => {
               We would be glad to help.
             </p>
             <Link
-              className="mt-6 md:mt-8 lg:mt-10 inline-block text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-3 px-8 text-2xl text-white hover:bg-indigo-700"
+              className="mt-6 md:mt-8 lg:mt-10 inline-block text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-2 px-6 text-2xl text-white hover:bg-indigo-700"
               href="/products">
               Get a Session
               <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
