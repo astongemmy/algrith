@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from 'next/link';
+import React from 'react';
 
-export default function GetStarted() {
+const GetStarted = () => {
   return (
     <div className="relative pb-10 md:pb-24 px-8 md:px-12 lg:px-20 xl:px-32 w-full 2xl:w-8/12 2xl:mx-auto">
       <div className="w-full mx-auto rounded-3xl shadow-lg relative dark:bg-slate-900 bg-white overflow-hidden">
@@ -17,13 +17,13 @@ export default function GetStarted() {
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>
-              <Link href="/products">
-                <a className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-block text-center bg-indigo-600 border dark:bg-opacity-50 border-transparent rounded-md py-4 px-8 text-2xl text-white hover:bg-indigo-700">
-                  Get Started 
-                  <svg xmlns="http://www.w3.org/2000/svg" className="inline ml-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                  </svg>
-                </a>
+              <Link
+                className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-block text-center bg-indigo-600 border dark:bg-opacity-50 border-transparent rounded-md py-4 px-8 text-2xl text-white hover:bg-indigo-700"
+                href="/products">
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" className="inline ml-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                </svg>
               </Link>
             </div>
 
@@ -36,5 +36,7 @@ export default function GetStarted() {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default GetStarted;

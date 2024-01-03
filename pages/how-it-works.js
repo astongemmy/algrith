@@ -1,9 +1,10 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Link from 'next/link'
+import Head from 'next/head';
+import React from 'react';
 
-export default function HowItWorks() {
+import Layout from '../components/Layout';
+import Link from 'next/link';
+
+const HowItWorks = () => {
   return (
     <Layout>
       <Head>
@@ -45,7 +46,7 @@ export default function HowItWorks() {
                       <h2 className="font-bold title-font text-2xl md:text-4xl dark:text-red-100 text-gray-900 mb-2 tracking-wider">Step 1</h2>
                       <h2 className="font-bold title-font text-2xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
                       <p className="leading-relaxed text-xl md:leading-relaxed md:text-2xl dark:text-slate-300">
-                        Visit our <Link href={'/products'}><a className="text-red-500">products </a></Link> 
+                        Visit our <Link href={'/products'} className="text-red-500">products </Link> 
                         store and select a product that fits your demand exactly.
                         We have products covering website alongside its underlying web applications to power business demands.
                       </p>
@@ -209,16 +210,16 @@ export default function HowItWorks() {
                   <p className="leading-relaxed dark:text-slate-400 text-xl md:leading-relaxed md:text-2xl mb-12">
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
-                  <Link href={'/products'}>
-                    <a
-                      className="rounded-xl px-6 md:px-12 py-4 md:py-6 text-white text-2xl
-                        bg-teal-500 hover:bg-teal-700 focus:bg-teal-400 font-semibold
-                        border-teal-500 hover:border-teal-700 focus:border-teal-400
-                        dark:bg-opacity-50 dark:bg-teal-600 dark:text-teal-200
-                      "
-                    >
+                  <Link
+                    href={'/products'}
+                    className="rounded-xl px-6 md:px-12 py-4 md:py-6 text-white text-2xl
+                      bg-teal-500 hover:bg-teal-700 focus:bg-teal-400 font-semibold
+                      border-teal-500 hover:border-teal-700 focus:border-teal-400
+                      dark:bg-opacity-50 dark:bg-teal-600 dark:text-teal-200
+                    ">
+                    
                       Get Started
-                    </a>
+                    
                   </Link>
                 </div>
               </div>
@@ -251,5 +252,7 @@ export default function HowItWorks() {
         </section>
       </main>
     </Layout>
-  )
-}
+  );
+};
+
+export default HowItWorks

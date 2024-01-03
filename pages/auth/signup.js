@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import BareLayout from '../../components/BareLayout'
-import FeedbackDisplay from '../../components/FeedbackDisplay'
-import InputFieldError from '../../components/InputFieldError'
-import { useDispatch, useSelector } from 'react-redux'
-import { register } from '../../slices/auth'
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+import FeedbackDisplay from '../../components/FeedbackDisplay';
+import InputFieldError from '../../components/InputFieldError';
+import BareLayout from '../../components/BareLayout';
+import { register } from '../../slices/auth';
 
 
-export default function SignUp () {
+const SignUp = () => {
   const dispatch = useDispatch()
   const feedback = useSelector((state) => state.feedback)
   const validationError = useSelector((state) => state.validation)
@@ -45,10 +46,8 @@ export default function SignUp () {
               
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
-                  <a>
-                    <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
-                    <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
-                  </a>
+                  <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
+                  <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
                   Sign up
@@ -167,15 +166,16 @@ export default function SignUp () {
 
               <p className="text-xl text-center mt-4">
                 Already have an account?
-                <Link href={'/auth/login'}>
-                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Sign in</a>
+                <Link href={'/auth/login'} className="block dark:text-green-300 text-green-500 tracking-wider">
+                  Sign in
                 </Link>
               </p>
-
             </div>
           </div>
         </section>
       </main>
     </BareLayout>
-  )
-}
+  );
+};
+
+export default SignUp;

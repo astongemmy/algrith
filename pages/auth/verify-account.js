@@ -1,30 +1,38 @@
-import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import Link from 'next/link'
-import BareLayout from '../../components/BareLayout'
-import FeedbackDisplay from '../../components/FeedbackDisplay'
-import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
-import { useDispatch, useSelector } from 'react-redux'
-import { verifyUser } from '../../slices/auth'
-import { setFeedback, setFeedbackObject } from '../../slices/feedback'
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function VerifyAccount() {
-  const dispatch = useDispatch()
-  const router = useRouter()
-  const feedback = useSelector((state) => state.feedback)
-  const { hasAnyFalsyField } = useHasAnyFalsyField()
-  
+import { setFeedback, setFeedbackObject } from '../../slices/feedback';
+import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField';
+import FeedbackDisplay from '../../components/FeedbackDisplay';
+import BareLayout from '../../components/BareLayout';
+import { verifyUser } from '../../slices/auth';
+
+const VerifyAccount = () => {
+  const feedback = useSelector((state) => state.feedback);
+  const { hasAnyFalsyField } = useHasAnyFalsyField();
+  const dispatch = useDispatch();
+  const router = useRouter();
+
   const VerifyUser = async () => {
-    const { id, token } = router.query
+    const { id, token } = router.query;
+
     if (hasAnyFalsyField({ id, token })) {
       const feedbackObject = dispatch(setFeedbackObject('Invalid URL. Can not process verification request.', 'warning'))
-      return dispatch(setFeedback({ target: 'verify_user', feedback: feedbackObject }))
-    }
-    dispatch(verifyUser({ id, token }))
-  }
+      return dispatch(setFeedback({
+        feedback: feedbackObject,
+        target: 'verify_user'
+      }));
+    };
+
+    dispatch(verifyUser({ id, token }));
+  };
   
-  useEffect(() => { if (router.isReady) VerifyUser() }, [router])
+  useEffect(() => {
+    if (router.isReady) VerifyUser();
+  }, [router]);
 
   return (
     <BareLayout>
@@ -39,10 +47,8 @@ export default function VerifyAccount() {
               
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
-                  <a>
-                    <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
-                    <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
-                  </a>
+                  <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
+                  <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
                   Verify Account
@@ -55,34 +61,37 @@ export default function VerifyAccount() {
 
               {feedback?.verify_user?.type === 'success' && <p className="text-xl text-center mt-4">
                 Verification successful! 
-                <Link href={'/auth/login'}>
-                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Login now</a>
+                <Link href={'/auth/login'} className="block dark:text-green-300 text-green-500 tracking-wider">
+                  Login now
                 </Link>
               </p>}
 
               {(feedback?.verify_user?.type === 'error' && !feedback?.verify_user?.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
                 You should consider restarting verification process.
-                <Link href={'/auth/resend-verification'}>
-                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Resend email</a>
+                <Link
+                  className="block dark:text-green-300 text-green-500 tracking-wider"
+                  href={'/auth/resend-verification'}>
+                  Resend email
                 </Link>
               </p>}
               
               {(feedback?.verify_user?.type == 'error' && feedback?.verify_user?.message.includes('confirmed')) && <p className="text-xl text-center mt-4">
                 Go to 
-                <Link href={'/auth/login'}>
-                  <a className="dark:text-green-300 text-green-500 tracking-wider"> login </a>
+                <Link href={'/auth/login'} className="dark:text-green-300 text-green-500 tracking-wider">
+                   login 
                 </Link>
                 page to access your account or 
-                <Link href={'/auth/forgot-password'}>
-                  <a className="dark:text-green-300 text-green-500 tracking-wider"> reset your password </a>
+                <Link href={'/auth/forgot-password'} className="dark:text-green-300 text-green-500 tracking-wider">
+                  reset your password 
                 </Link>
                 if you have forgotten.
               </p>}
-
             </div>
           </div>
         </section>
       </main>
     </BareLayout>
-  )
-}
+  );
+};
+
+export default VerifyAccount;

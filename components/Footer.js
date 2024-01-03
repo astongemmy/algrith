@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = ({ product_links = [] }) => {
 	return (
-		<footer className="relative dark:bg-slate-800 bg-gray-100">
+        <footer className="relative dark:bg-slate-800 bg-gray-100">
 			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12 2xl:w-8/12 2xl:mx-auto">
 				<div className="w-full md:w-2/5 lg:w-4/12 pt-8">
 					<h1 className="p-4 dark:text-slate-400 text-navyblue text-xl font-bold">
@@ -62,23 +62,23 @@ const Footer = ({ product_links = [] }) => {
 						<div className="relative text-lg">
 							<ul className="pl-0">
 								<li className="px-4 py-2">
-									<Link href="/how-it-works">
-										<a className="text-gray-500">How it Works</a>
+									<Link href="/how-it-works" className="text-gray-500">
+										How it Works
 									</Link>
 								</li>
 								<li className="px-4 py-2">
-									<Link href="/contact-us">
-										<a className="text-gray-500">Contact Us</a>
+									<Link href="/contact-us" className="text-gray-500">
+										Contact Us
 									</Link>
 								</li>
 								<li className="px-4 py-2">
-									<Link href="/about">
-										<a className="text-gray-500">About Us</a>
+									<Link href="/about" className="text-gray-500">
+										About Us
 									</Link>
 								</li>
 								<li className="px-4 py-2">
-									<Link href="/">
-										<a className="text-gray-500">FAQ</a>
+									<Link href="/" className="text-gray-500">
+										FAQ
 									</Link>
 								</li>
 							</ul>
@@ -97,16 +97,16 @@ const Footer = ({ product_links = [] }) => {
 									product_links.map(product => {
 										return (
 											<li key={product.href} className="px-4 py-2">
-												<Link href={product.href}>
-													<a className="text-gray-500"> { product.text } </a>
+												<Link href={product.href} className="text-gray-500">
+												  { product.text }
 												</Link>
 											</li>
 										)
 									})
 								)}
 								<li className="px-4 py-2">
-									<Link href="/products">
-										<a className="text-gray-500">All Products</a>
+									<Link href="/products" className="text-gray-500">
+									  All Products
 									</Link>
 								</li>
 							</ul>
@@ -122,18 +122,18 @@ const Footer = ({ product_links = [] }) => {
 						<div className="relative text-lg">
 							<ul className="pl-0">
 								<li className="px-4 py-2">
-									<Link href="/terms-of-service">
-										<a className="text-gray-500">Terms of Service</a>
+									<Link href="/terms-of-service" className="text-gray-500">
+										Terms of Service
 									</Link>
 								</li>
 								<li className="px-4 py-2">
-									<Link href="/privacy-policy">
-										<a className="text-gray-500">Privacy Policy</a>
+									<Link href="/privacy-policy" className="text-gray-500">
+										Privacy Policy
 									</Link>
 								</li>
 								<li className="px-4 py-2">
-									<Link href="/refund-policy">
-										<a className="text-gray-500">Refund Policy</a>
+									<Link href="/refund-policy" className="text-gray-500">
+										Refund Policy
 									</Link>
 								</li>
 							</ul>
@@ -169,13 +169,13 @@ const Footer = ({ product_links = [] }) => {
 					</div>
 				</div>
 			</div>
-			<Link href="/">
-				<a className="flex justify-center items-center mx-0 py-8 text-lg dark:bg-transparent bg-gray-800 text-white">
-					© Copyright <span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
-				</a>
+			<Link
+			  className="flex justify-center items-center mx-0 py-8 text-lg dark:bg-transparent bg-gray-800 text-white"
+				href="/">
+        © Copyright<span className="ml-1 text-green-400"> Algrith {new Date().getFullYear()} </span>
 			</Link>
 		</footer>
-	)
+    );
 };
 
 export default Footer;

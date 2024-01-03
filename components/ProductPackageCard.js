@@ -3,8 +3,9 @@ import React from "react"
 import ProductRating from "./ProductRating"
 import useRating from '../hooks/useRating'
 
-export default function ProductPackageCard({ item, slug }) {
+const ProductPackageCard = ({ item, slug }) => {
   const { rating, total } = useRating({ reviews: item?.reviews })
+  
   const formatUnit = (unit) => {
     if (unit >= 1000) {
       return Math.round(unit / 1000) + 'k'
@@ -13,7 +14,8 @@ export default function ProductPackageCard({ item, slug }) {
     } else {
       return unit
     }
-  }
+  };
+
   const getProperFormat = (text) => {
     if (text !== null) {
       text = text.split('-');
@@ -22,7 +24,7 @@ export default function ProductPackageCard({ item, slug }) {
       }).join(" ");
       return text
     }
-  }
+  };
 
   return (
     <div className="w-full md:w-1/3 px-0 md:px-2 xl:px-10 2xl:px-4 mb-8 lg:mb-0">
@@ -30,11 +32,9 @@ export default function ProductPackageCard({ item, slug }) {
         <div className="mb-2">
           <div className="flex flex-wrap justify-between">
             <h1 className="text-2xl text-green-500 font-medium font-heading">
-              <Link href={`/products/${slug}/${item?.slug}`}>
-                <a className="">
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  { item?.name }
-                </a>
+              <Link href={`/products/${slug}/${item?.slug}`} className="">
+                <span aria-hidden="true" className="absolute inset-0" />
+                { item?.name }
               </Link>
               <span className="block mb-6 text-sm md:text-xs lg:text-sm mt-2">
                 <ProductRating rating={rating} total={total} />
@@ -69,13 +69,16 @@ export default function ProductPackageCard({ item, slug }) {
           })}
         </ul>
         <div className="text-center mt-8">
-          <Link href={`/products/${slug}/${item?.slug}`}>
-            <a className="text-xl dark:bg-opacity-50 bg-green-500 inline-block px-10 py-4 border dark:border-opacity-10 border-green-500 hover:border-green-100 rounded-full font-bold text-white">
-              Buy now
-            </a>
+          <Link
+            className="text-xl dark:bg-opacity-50 bg-green-500 inline-block px-10 py-4 border dark:border-opacity-10 border-green-500 hover:border-green-100 rounded-full font-bold text-white"
+            href={`/products/${slug}/${item?.slug}`}
+          >
+            Buy now
           </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default ProductPackageCard;

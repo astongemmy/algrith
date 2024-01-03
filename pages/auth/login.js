@@ -1,33 +1,41 @@
-import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import jwt from 'jsonwebtoken'
-import BareLayout from '../../components/BareLayout'
-import FeedbackDisplay from '../../components/FeedbackDisplay'
-import InputFieldError from '../../components/InputFieldError'
-import { useDispatch, useSelector } from 'react-redux'
-import { login, logout } from '../../slices/auth'
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import jwt from 'jsonwebtoken';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function Login () {
-  const router = useRouter()
-  const dispatch = useDispatch()
-  const logoutSignal = () => typeof router.query.flush !== 'undefined' && router.query.flush === 'true'
-  const feedback = useSelector((state) => state.feedback)
-  const { user, isLoggedIn, isLoading } = useSelector((state) => state.auth)
-  const validationError = useSelector((state) => state.validation)
-  const [authentication, setAuthentication] = useState({ email: "", password: "" })
-  const [passwordVisibility, setPasswordVisibility] = useState(false)
+import FeedbackDisplay from '../../components/FeedbackDisplay';
+import InputFieldError from '../../components/InputFieldError';
+import { useDispatch, useSelector } from 'react-redux';
+import BareLayout from '../../components/BareLayout';
+import { login, logout } from '../../slices/auth';
+
+const Login = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const logoutSignal = () => typeof router.query.flush !== 'undefined' && router.query.flush === 'true';
+  const [authentication, setAuthentication] = useState({ email: '', password: '' });
+  const { user, isLoggedIn, isLoading } = useSelector((state) => state.auth);
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
+  const validationError = useSelector((state) => state.validation);
+  const feedback = useSelector((state) => state.feedback);
   
   const handleInputChange = (e) => {
-    const value = e.target.value
-    const key = e.target.name
-    setAuthentication(prevState => { return { ...prevState, [key]: value } })
-  }
+    const value = e.target.value;
+    const key = e.target.name;
+
+    setAuthentication(prevState => {
+      return {
+        ...prevState,
+        [key]: value
+      }
+    });
+  };
 
   useEffect(() => {
-    if (router.isReady && logoutSignal() && (user || isLoggedIn)) dispatch(logout())
-  }, [router])
+    if (router.isReady && logoutSignal() && (user || isLoggedIn)) dispatch(logout());
+  }, [router]);
   
   const Login = async (e) => {
     e.preventDefault()
@@ -59,10 +67,10 @@ export default function Login () {
               
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
-                  <a>
-                    <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
-                    <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
-                  </a>
+
+                  <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
+                  <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
+
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
                   Login
@@ -122,10 +130,12 @@ export default function Login () {
                   <InputFieldError message={validationError.password} />
                 </div>
                 
-                <Link href={'/auth/forgot-password'}>
-                  <a className="text-lg text-center my-4 block dark:text-green-300 text-gray-600">
+                <Link
+                  href={'/auth/forgot-password'}
+                  className="text-lg text-center my-4 block dark:text-green-300 text-gray-600">
+                  
                     Recover password
-                  </a>
+                  
                 </Link>
 
                 {feedback?.login?.message && <FeedbackDisplay target="login" />}
@@ -143,8 +153,10 @@ export default function Login () {
 
               <p className="text-xl text-center mt-4">
                 Don't have an account?
-                <Link href={'/auth/signup'}>
-                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Sign up</a>
+                <Link
+                  href={'/auth/signup'}
+                  className="block dark:text-green-300 text-green-500 tracking-wider">
+                  Sign up
                 </Link>
               </p>
 
@@ -153,5 +165,7 @@ export default function Login () {
         </section>
       </main>
     </BareLayout>
-  )
-}
+  );
+};
+
+export default Login;

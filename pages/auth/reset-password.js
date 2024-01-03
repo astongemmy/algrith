@@ -1,40 +1,54 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import Link from 'next/link'
-import BareLayout from '../../components/BareLayout'
-import FeedbackDisplay from '../../components/FeedbackDisplay'
-import InputFieldError from '../../components/InputFieldError'
-import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField'
-import { useDispatch, useSelector } from 'react-redux'
-import { resetPassword } from '../../slices/auth'
-import { setFeedback, setFeedbackObject } from '../../slices/feedback'
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function ResetPassword() {
-  const dispatch = useDispatch()
-  const router = useRouter()
-  const feedback = useSelector((state) => state.feedback)
-  const validationError = useSelector((state) => state.validation)
-  const { isLoading } = useSelector((state) => state.auth)
-  const { hasAnyFalsyField } = useHasAnyFalsyField()
-  const [passwords, setPasswords] = useState({ password: '', confirm_password: '' })
-  const [passwordVisibility, setPasswordVisibility] = useState(false)
+import { setFeedback, setFeedbackObject } from '../../slices/feedback';
+import useHasAnyFalsyField from '../../hooks/useHasAnyFalsyField';
+import FeedbackDisplay from '../../components/FeedbackDisplay';
+import InputFieldError from '../../components/InputFieldError';
+import BareLayout from '../../components/BareLayout';
+import { resetPassword } from '../../slices/auth';
+
+const ResetPassword = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  
+  const [passwords, setPasswords] = useState({ password: '', confirm_password: '' });
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
+  const validationError = useSelector((state) => state.validation);
+  const { isLoading } = useSelector((state) => state.auth);
+  const feedback = useSelector((state) => state.feedback);
+  const { hasAnyFalsyField } = useHasAnyFalsyField();
   
   const handleInputChange = (e) => {
-    const value = e.target.value
-    const key = e.target.name
-    setPasswords(prevState => { return { ...prevState, [key]: value } })
-  }
+    const value = e.target.value;
+    const key = e.target.name;
+
+    setPasswords(prevState => {
+      return {
+        ...prevState,
+        [key]: value
+      }
+    });
+  };
   
   const ResetPassword = async (e) => {
-    e.preventDefault()
-    const { id, token } = router.query
+    const { id, token } = router.query;
+
     if (hasAnyFalsyField({ id, token })) {
-      const feedbackObject = dispatch(setFeedbackObject('Invalid URL. Can not process request.', 'warning'))
-      return dispatch(setFeedback({ target: 'reset_password', feedback: feedbackObject }))
+      const feedbackObject = dispatch(setFeedbackObject('Invalid URL. Can not process request.', 'warning'));
+      
+      return dispatch(setFeedback({
+        target: 'reset_password',
+        feedback: feedbackObject
+      }));
     }
-    dispatch(resetPassword({ id, token, ...passwords }))
-  }
+
+    dispatch(resetPassword({ id, token, ...passwords }));
+    e.preventDefault();
+  };
 
   return (
     <BareLayout>
@@ -49,10 +63,8 @@ export default function ResetPassword() {
               
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
-                  <a>
-                    <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
-                    <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
-                  </a>
+                  <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
+                  <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
                   Reset Password
@@ -133,8 +145,8 @@ export default function ResetPassword() {
               </form>
 
               <p className="text-xl text-center mt-4">
-                <Link href={'/auth/login'}>
-                  <a className="block dark:text-green-300 text-green-500 tracking-wider">Login</a>
+                <Link className="block dark:text-green-300 text-green-500 tracking-wider" href={'/auth/login'}>
+                  Login
                 </Link>
               </p>
 
@@ -143,5 +155,7 @@ export default function ResetPassword() {
         </section>
       </main>
     </BareLayout>
-  )
-}
+  );
+};
+
+export default ResetPassword;

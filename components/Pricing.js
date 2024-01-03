@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Pricing({ isLoading, products }) {
+const Pricing = ({ isLoading, products }) => {
   const product = !isLoading ? products?.filter(product => product?.slug.includes('website'))[0] : {}
 
   return (
@@ -42,20 +42,19 @@ export default function Pricing({ isLoading, products }) {
                       })}
                     </ul>
                     <div className="text-center">
-                      <Link href={ `/products/${product?.slug}/${item?.slug}` }>
-                        <a className={`
+                      <Link href={ `/products/${product?.slug}/${item?.slug}` }
+                        className={`
                           ${item.active ? 'border-white hover:border-white text-white' : 'border-orange-500 hover:border-orange-100 text-orange-500'} rounded-full font-bold text-orange-500'}
                           stretched inline-block text-xl
                           px-10 py-4 border rounded-full
                           font-bold
                         `}>
-                          Buy Now
-                        </a>
+                        Buy Now
                       </Link>
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>}
           
@@ -70,5 +69,7 @@ export default function Pricing({ isLoading, products }) {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Pricing;

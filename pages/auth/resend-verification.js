@@ -1,29 +1,36 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import BareLayout from '../../components/BareLayout'
-import FeedbackDisplay from '../../components/FeedbackDisplay'
-import InputFieldError from '../../components/InputFieldError'
-import { useDispatch, useSelector } from 'react-redux'
-import { resendVerificationEmail } from '../../slices/auth'
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function ResendVerification() {
-  const dispatch = useDispatch()
-  const feedback = useSelector((state) => state.feedback)
-  const validationError = useSelector((state) => state.validation)
-  const { isLoading } = useSelector((state) => state.auth)
-  const [verification, setVerification] = useState({ email: '' })
+import FeedbackDisplay from '../../components/FeedbackDisplay';
+import InputFieldError from '../../components/InputFieldError';
+import { resendVerificationEmail } from '../../slices/auth';
+import BareLayout from '../../components/BareLayout';
+
+const ResendVerification = () => {
+  const validationError = useSelector((state) => state.validation);
+  const [verification, setVerification] = useState({ email: '' });
+  const { isLoading } = useSelector((state) => state.auth);
+  const feedback = useSelector((state) => state.feedback);
+  const dispatch = useDispatch();
   
   const handleInputChange = (e) => {
-    const value = e.target.value
-    const key = e.target.name
-    setVerification(prevState => { return { ...prevState, [key]: value } })
-  }
+    const value = e.target.value;
+    const key = e.target.name;
+
+    setVerification(prevState => {
+      return {
+        ...prevState,
+        [key]: value
+      }
+    });
+  };
   
   const ResendVerificationEmail = async (e) => {
-    e.preventDefault()
-    dispatch(resendVerificationEmail(verification))
-  }
+    dispatch(resendVerificationEmail(verification));
+    e.preventDefault();
+  };
 
   return (
     <BareLayout>
@@ -38,10 +45,10 @@ export default function ResendVerification() {
               
               <div className="flex justify-between items-center">
                 <Link href={'/'}>
-                  <a>
-                    <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
-                    <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
-                  </a>
+
+                  <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden h-10" alt="Algrith logo" />
+                  <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block h-10" alt="Algrith logo" />
+
                 </Link>
                 <h1 className="text-xl font-medium text-heading px-4 py-2 text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
                   Resend Email
@@ -89,5 +96,7 @@ export default function ResendVerification() {
         </section>
       </main>
     </BareLayout>
-  )
-}
+  );
+};
+
+export default ResendVerification;

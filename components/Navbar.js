@@ -1,15 +1,16 @@
-import React, { useRef, useState } from 'react'
-import Link from 'next/link'
-import Popover from './Popover'
-import useClickAway from '../hooks/useClickAway'
+import React, { useRef, useState } from 'react';
+import Link from 'next/link';
 
-export default function Navbar({ closeMenuRef, navbarRef, product_links = [] }) {
+import useClickAway from '../hooks/useClickAway';
+import Popover from './Popover';
+
+const Navbar = ({ closeMenuRef, navbarRef, product_links = [] }) => {
 	const dropDownContainerRef = useRef(null)
 	const [dropdown, setDropdown] = useState(false);
 	useClickAway(dropDownContainerRef, setDropdown)
 
 	return (
-		<nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow lg:shadow-none lg:bg-transparent bg-white dark:lg:bg-transparent dark:bg-slate-800 fixed top-0 lg:top-6 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col lg:flex-row justify-between lg:justify-end lg:items-center w-10/12 md:w-5/12 lg:w-auto h-screen lg:h-16 text-gray-600 lg:p-4">
+    <nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow lg:shadow-none lg:bg-transparent bg-white dark:lg:bg-transparent dark:bg-slate-800 fixed top-0 lg:top-6 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col lg:flex-row justify-between lg:justify-end lg:items-center w-10/12 md:w-5/12 lg:w-auto h-screen lg:h-16 text-gray-600 lg:p-4">
 			<div className="lg:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 lg:px-8 py-4">
 				<h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
 					<img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="brand-logo" />
@@ -20,15 +21,15 @@ export default function Navbar({ closeMenuRef, navbarRef, product_links = [] }) 
 				</div>
 			</div>
 			<div id="navbar-links" className="flex flex-col lg:flex-row flex-grow flex-shrink-0 w-11/12 lg:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
-				<Link href="/about">
-					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600">
-						About
-					</a>
+				<Link
+				  className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600"
+					href="/about">
+					About
 				</Link>
-				<Link href="/how-it-works">
-					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600">
-						How It Works
-					</a>
+				<Link
+				  className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600"
+					href="/how-it-works">
+					How It Works
 				</Link>
 				{!!product_links.length && <span ref={ dropDownContainerRef } onClick={() => setDropdown(!dropdown)} className="flex items-center justify-between cursor-pointer ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600">
 					Products
@@ -37,18 +38,16 @@ export default function Navbar({ closeMenuRef, navbarRef, product_links = [] }) 
 					</svg>
 					<Popover toggle={dropdown} items={product_links} />
 				</span>}
-				<Link href="/contact-us">
-					<a className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600">
-						Contact
-					</a>
+				<Link
+				  className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl dark:text-green-300 text-gray-600"
+					href="/contact-us">
+					Contact
 				</Link>
-				{/* <Link href="/auth/login">
-					<a className="flex items-center justify-between dark:bg-opacity-50 bg-green-500 rounded lg:rounded-full ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 py-3 px-4 lg:py-2 lg:px-4 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl text-white">
-						Login
-						<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-							<path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
-						</svg>
-					</a>
+				{/* <Link href="/auth/login" className="flex items-center justify-between dark:bg-opacity-50 bg-green-500 rounded lg:rounded-full ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 py-3 px-4 lg:py-2 lg:px-4 hover:border-opacity-100 border-green-400 border-b-4 border-opacity-0 text-left lg:text-center w-full lg:w-auto text-xl text-white">
+					Login
+					<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+						<path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+					</svg>
 				</Link> */}
 			</div>
 			<div className="lg:hidden flex justify-between items-center flex-grow-0 flex-shrink relative p-4 w-full dark:bg-slate-700 bg-gray-200 mt-2">
@@ -68,5 +67,7 @@ export default function Navbar({ closeMenuRef, navbarRef, product_links = [] }) 
 				</div>
 			</div>
 		</nav>
-	)
-}
+  );
+};
+
+export default Navbar;

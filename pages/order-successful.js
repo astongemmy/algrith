@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import BareLayout from '../components/BareLayout'
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function OrderSuccessful() {
+import BareLayout from '../components/BareLayout';
+
+const OrderSuccessful = () => {
   
   return (
     <BareLayout>
@@ -27,10 +28,10 @@ export default function OrderSuccessful() {
                   </span>
                 </div>
 
-                <Link href={'/'}>
-                  <a className="text-md font-medium text-heading px-2 py-3 mt-12 block text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full">
-                    Back to homepage
-                  </a>
+                <Link
+                  className="text-md font-medium text-heading px-2 py-3 mt-12 block text-white dark:bg-opacity-50 bg-green-500 shadow-sm rounded-full"
+                  href={'/'}>
+                  Back to homepage
                 </Link>
               </div>
 
@@ -39,5 +40,7 @@ export default function OrderSuccessful() {
         </section>
       </main>
     </BareLayout>
-  )
-}
+  );
+};
+
+export default OrderSuccessful;

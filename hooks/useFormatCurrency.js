@@ -7,7 +7,8 @@ export default function useFormatCurrency() {
     } else {
       return unit
     }
-  }
+  };
+  
   const currency = () => {
     return {
       usd: (value) => {
@@ -29,6 +30,6 @@ export default function useFormatCurrency() {
         const formatted_float_amount = parseFloat(formatted_amount);
         return { amount: formatted_float_amount, unit: formatted_amount_unit };
       }
-    }
-  }
-}
+    };
+  };
+};

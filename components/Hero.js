@@ -3,7 +3,7 @@ import Link from 'next/link';
 import 'react-multi-carousel/lib/styles.css';
 import Carousel from 'react-multi-carousel';
 
-export default function Hero({ products, isLoading }){
+const Hero = ({ products, isLoading }) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -56,10 +56,8 @@ export default function Hero({ products, isLoading }){
                         <div>
                           <h3 className="text-lg dark:text-green-400 text-gray-800 font-bold">
                             <Link href={`/products/${product?.slug}/${_package?.slug}`}>
-                              <a>
-                                <span aria-hidden="true" className="absolute inset-0" />
-                                {_package?.name}
-                              </a>
+                              <span aria-hidden="true" className="absolute inset-0" />
+                              {_package?.name}
                             </Link>
                           </h3>
                           <p className="mt-1 text-lg dark:text-slate-300 text-gray-500"> {_package?.category} </p>
@@ -67,7 +65,7 @@ export default function Hero({ products, isLoading }){
                         <p className="text-md font-bold text-teal-600"> {_package.currency?.symbol + _package?.price} </p>
                       </div>
                     </div>
-                  )
+                  );
                 })
               ))}
             </Carousel>
@@ -80,5 +78,7 @@ export default function Hero({ products, isLoading }){
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Hero;

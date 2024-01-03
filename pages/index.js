@@ -5,7 +5,7 @@ import MissionStatement from '../components/MissionStatement';
 import ContactUsCall from '../components/ContactUsCall';
 import WelcomeIntro from '../components/WelcomeIntro';
 import GetStarted from '../components/GetStarted';
-import TechStack from '../components/TechSTack';
+import TechStack from '../components/TechStack';
 import WhoWeAre from '../components/WhoWeAre';
 // import Pricing from '../components/Pricing';
 import Outline from '../components/Outline';
