@@ -13,7 +13,7 @@ import Section from '../components/Section';
 // import { useSelector } from 'react-redux';
 import Layout from '../components/Layout';
 
-export default function Index() {
+const Index = () => {
   // const { products, isLoading } = useSelector((state) => state.product);
   
 	const whyChooseUsOutlines = {
@@ -141,5 +141,7 @@ export default function Index() {
         <GetStarted />
       </main>
     </Layout>
-  )
-}
+  );
+};
+
+export default Index;

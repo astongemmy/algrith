@@ -1,14 +1,15 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import '../public/styles/fonts.css'
-import '../public/styles/App.css'
-import '../public/styles/Icons.css'
-import '../public/styles/aos.css'
-import '../public/styles/animate.css'
-import "react-image-gallery/styles/css/image-gallery.css";
+import { PersistGate } from 'redux-persist/integration/react';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react'
-import { store, persistor } from '../store'
+import { useEffect } from 'react';
+
+import { store, persistor } from '../store';
+import '../public/styles/animate.css';
+import '../public/styles/fonts.css';
+import '../public/styles/Icons.css';
+import '../public/styles/App.css';
+import '../public/styles/aos.css';
 
 // Add a request interceptor
 // window.axios.interceptors.request.use(function (config) {
@@ -18,16 +19,18 @@ import { store, persistor } from '../store'
 // });
 
 
-export default function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
+	const router = useRouter();
+
 	useEffect(() => {
 		window.axios = require('axios');
 		window.axios.defaults.headers.common = {
 			'X-Requested-With': 'XMLHttpRequest',
 		};
+
 		window.axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 	}, [])
 	
-	const router = useRouter()
 	return (
 		<Provider store={store}>
 			<PersistGate loading={null} persistor={persistor}>
@@ -35,4 +38,6 @@ export default function MyApp({ Component, pageProps }) {
 			</PersistGate>
 		</Provider>
 	)
-}
+};
+
+export default App;
