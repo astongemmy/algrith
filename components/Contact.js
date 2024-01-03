@@ -1,9 +1,10 @@
-import React from 'react'
-import ContactDetails from './ContactDetails'
-import ContactForm from './ContactForm'
-import ContactInquiryCard from './ContactInquiryCard'
+import React from 'react';
 
-export default function Contact() {
+import ContactInquiryCard from './ContactInquiryCard';
+import ContactDetails from './ContactDetails';
+import ContactForm from './ContactForm';
+
+const Contact = () => {
   return (
     <section id="contact" className="w-full 2xl:w-8/12 2xl:mx-auto relative md:py-12 lg:py-0">
       <div className="relative px-5 mx-auto">
@@ -21,5 +22,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Contact;

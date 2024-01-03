@@ -69,10 +69,10 @@ const ProductSearch = () => {
 
   return (
     <section className="overflow-hidden dark:bg-slate-800 bg-white rounded-lg shadow-lg hidden xl:block">
-      <header className=" dark:bg-slate-700 bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
+      <header className="dark:bg-slate-700 bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
         <div className="flex items-center justify-between">
           <h2 className="font-semibold dark:text-green-400 tracking-wider text-slate-900">
-            Projects
+            Services
           </h2>
           <Link
             className="hover:bg-blue-400 group flex items-center rounded-md dark:bg-teal-600 bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"

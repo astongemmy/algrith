@@ -1,18 +1,19 @@
-import React from 'react'
-import useTyping from '../hooks/useTyping'
+import React from 'react';
 
-export default function Intro({ payload }) {
+import useTyping from '../hooks/useTyping';
+
+const Intro = ({ payload }) => {
 	const { title, description, slogan, accomodate, scroll_to } = payload
 	useTyping(title.text)
 	return (
 		<div id="intro-about" className="relative w-full bg-intro-about bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 			<div className="w-full bg-gradient-to-b dark:from-slate-900 from-white pt-0 lg:pt-12 pb-12 lg:pb-20 px-8 md:px-12 lg:px-18 xl:px-24">
 				<div className=" 2xl:w-8/12 2xl:mx-auto relative">
-					{title.text && <h1 data-aos="fade-down" className={`intro-lead relative ${title.case ? title.case : ''} text-4xl md:text-5xl lg:text-8xl text-green-500 py-8 m-0 w-full text-${title.align ? title.align : 'center'} font-bold`}></h1>}
-					{description.text && <p data-aos="fade-up" className={`w-full md:whitespace-pre ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} dark:text-slate-300 text-gray-700 leading-relaxed text-2xl lg:leading-relaxed lg:text-3xl`}>
+					{title.text && <h1 data-aos="fade-down" className={`intro-lead relative ${title.case ? title.case : ''} text-3xl md:text-4xl lg:text-7xl text-green-500 py-8 m-0 w-full text-${title.align ? title.align : 'center'} font-bold`}></h1>}
+					{description.text && <p data-aos="fade-up" className={`w-full md:whitespace-pre ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} dark:text-slate-300 text-gray-700 leading-relaxed text-xl lg:leading-relaxed lg:text-2xl`}>
 						{description.text}
 					</p>}
-					{slogan && <aside data-aos="fade-right" className={`${accomodate ? 'mb-16' : ''} mt-4 md:mt-8 ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} dark:text-slate-700 text-navyblue text-xl font-bold lg:text-3xl`}>
+					{slogan && <aside data-aos="fade-right" className={`${accomodate ? 'mb-16' : ''} mt-4 md:mt-8 ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} dark:text-slate-700 text-navyblue text-lg font-bold lg:text-2xl`}>
 						{slogan}
 					</aside>}
 				</div>
@@ -23,5 +24,7 @@ export default function Intro({ payload }) {
 				</span>}
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default Intro;

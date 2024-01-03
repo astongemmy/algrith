@@ -81,7 +81,7 @@ const Index = () => {
 				title: 'Business Optimization',
 				subtitle: 'Upgrade',
 				icon: 'fa fa-code-branch',
-				content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?. Our team of skilled developers is dedicated to creating software that aligns seamlessly with your business goals.'
+				content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?.'
 			}
 		]
 	};

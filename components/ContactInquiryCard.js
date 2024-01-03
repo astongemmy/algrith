@@ -7,12 +7,12 @@ const ContactInquiryCard = () => {
       <div className="dark:bg-slate-800 bg-white rounded-b-lg shadow">
         <img className="filter dark:brightness-75 h-64 w-full rounded-t-lg object-cover" src="/images/contact-us/how-it-works.gif" alt="" />
         <div className="px-8 py-8">
-          <h3 className="mb-8 lg:mb-4 text-xl dark:text-slate-300 text-gray-600 font-semibol">
+          <h3 className="mb-8 lg:mb-4 text-lg dark:text-slate-300 text-gray-600 font-semibol">
             Do you need understanding on how our system works?
           </h3>
           <div className="md:text-right">
             <Link
-              className="inline-block text-lg px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-semibold dark:text-slate-300 text-gray-600"
+              className="inline-block text-lg px-6 py-2 border border-gray-300 hover:border-gray-200 rounded-full font-semibold dark:text-slate-300 text-gray-800"
               href="/how-it-works">
               Learn Now
             </Link>
