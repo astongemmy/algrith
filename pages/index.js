@@ -62,20 +62,20 @@ const Index = () => {
 			{
 				content: 'Elevate businesses with cutting-edge web applications. Seamless, efficient, and tailored solutions for success.',
 				title: 'Web Application Development',
-				icon: 'bi bi-code-slash text-3xl',
+				icon: 'bi bi-code-slash text-2xl',
 				subtitle: 'Exposure'
 			},
 			{
 				content: 'Unlock possibilities with our AI services—innovative solutions for smarter automation, enhanced decision-making, and unparalleled efficiency.',
 				title: 'Artificial Intelligence',
-				icon: 'bi bi-robot text-3xl',
+				icon: 'bi bi-robot text-2xl',
 				subtitle: 'Relief'
 			},
 			{
 				content: 'Transform online presence to reflect modern, user-friendly design for a powerful impact!',
 				title: 'Website Revamp (Redesign)',
 				subtitle: 'Sophistication',
-				icon: 'bi bi-stars text-3xl'
+				icon: 'bi bi-stars text-2xl'
 			},
 			{
 				// content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?.',

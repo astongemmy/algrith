@@ -19,13 +19,12 @@ const ContactUsCall = () => {
               className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-700"
               href="/contact-us">
               Book a Session
-              <i className="bi bi-easel-fill text-2xl"></i>
+              <i className="bi bi-easel-fill text-xl"></i>
             </Link>
           </div>
 
           <div className="sm:max-w-lg mt-12 md:mt-0 px-2 md:px-auto">
             <div className="rounded-lg overflow-hidden">
-              
               <img src="./images/illustrations/session-2.gif" alt="" className="filter dark:brightness-75 w-full h-full object-center object-cover" />
             </div>
           </div>
