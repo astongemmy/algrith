@@ -1,5 +1,6 @@
 import { PersistGate } from 'redux-persist/integration/react';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { useEffect } from 'react';

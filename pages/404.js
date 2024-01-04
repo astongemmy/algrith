@@ -1,3 +1,9 @@
-export default function Custom404() {
-  return <h1>404 - Page Not Found</h1>
-}
+import { usePathname } from 'next/navigation';
+
+const NotfoundError = () => {
+  const pathname = usePathname() && `"${usePathname()}" `;
+
+  return <h1>404 - Page { pathname }Not Found</h1>
+};
+
+export default NotfoundError;

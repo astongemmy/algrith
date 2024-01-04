@@ -68,7 +68,7 @@ const ProductSearch = () => {
   ];
 
   return (
-    <section className="overflow-hidden dark:bg-slate-800 bg-white rounded-lg shadow-lg hidden xl:block">
+    <section data-aos="fade-up" className="relative mx-auto overflow-hidden dark:bg-slate-800 bg-white rounded-lg shadow-lg hidden lg:block">
       <header className="dark:bg-slate-700 bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
         <div className="flex items-center justify-between">
           <h2 className="font-semibold dark:text-green-400 tracking-wider text-slate-900">
@@ -120,7 +120,8 @@ const ProductSearch = () => {
           />
         </form>
       </header>
-      <ul className="dark:bg-slate-900 bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 text-sm leading-6">
+
+      <ul className="dark:bg-slate-900 bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm leading-6">
         {projects.map((project) => {
           return (
             <li key={project.id}>
@@ -128,7 +129,7 @@ const ProductSearch = () => {
                 className="block dark:hover:bg-teal-700 hover:bg-blue-500 dark:hover:ring-teal-700 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 dark:bg-slate-800 bg-white ring-1 ring-slate-200 shadow-sm"
                 href={project.url}
               >
-                <dl className="grid sm:block lg:grid xl:block grid-cols-2 grid-rows-2 items-center">
+                <dl className="grid sm:block grid-cols-2 grid-rows-2 items-center">
                   <div>
                     <dt className="sr-only">Title</dt>
                     <dd className="group-hover:text-white font-semibold dark:text-teal-400 tracking-wide text-slate-900">
@@ -142,7 +143,7 @@ const ProductSearch = () => {
                       {project.category}{" "}
                     </dd>
                   </div>
-                  <div className="flex col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
+                  <div className="flex col-start-2 row-start-1 row-end-3 sm:mt-4">
                     <dt className="sr-only">Users</dt>
                     <UserCard users={project.users} />
                   </div>

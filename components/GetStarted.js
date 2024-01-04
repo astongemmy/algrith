@@ -11,17 +11,20 @@ const GetStarted = () => {
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
               <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-green-300 text-gray-900 sm:leading-tight sm:text-6xl">
-                Responsive designs are finally here
+                Responsive designs for your web app.
               </h1>
-              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed md:text-2xl dark:text-slate-300 text-gray-500">
-                This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
-                if you live or die.
+              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed dark:text-slate-300 text-gray-500">
+                🎉 Our designs are sleek and responsive, ensuring a seamless experience across all devices. 
+                Whether you're on a desktop, tablet, or mobile, enjoy a visually stunning and user-friendly interface. 
+                <span className="hidden lg:inline">
+                  {' '}Explore effortlessly and stay connected with our latest updates.
+                </span>
               </p>
               <Link
-                className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-block text-center bg-indigo-600 border dark:bg-opacity-50 border-transparent rounded-md py-2 px-6 text-2xl text-white hover:bg-indigo-700"
-                href="/products">
+                className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-flex items-center gap-4 text-center bg-indigo-600 border dark:bg-opacity-50 border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-700"
+                href="/contact-us">
                 Get Started
-                <svg xmlns="http://www.w3.org/2000/svg" className="inline ml-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
                 </svg>
               </Link>

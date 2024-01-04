@@ -28,22 +28,22 @@ const Index = () => {
     },
     items: [
       {
+        content: 'Time is a valuable currency of business and we give our clients value in time.',
+        icon: 'bi bi-rocket-takeoff text-2xl',
         title: 'Swift and Accurate',
         subtitle: 'Delivery',
-        icon: 'fa fa-rocket',
-        content: 'Time is a valuable currency of business and we give our clients value in time.'
       },
       {
+        content: 'We stay ahead of the curve, incorporating the latest technologies to ensure your business remains competitive in a rapidly evolving landscape.',
+        icon: 'bi bi-magic text-2xl',
         title: 'Innovative',
         subtitle: 'Skilled',
-        icon: 'fa fa-cog',
-        content: 'We stay ahead of the curve, incorporating the latest technologies to ensure your business remains competitive in a rapidly evolving landscape.'
       },
       {
-        title: 'Trusted',
+        content: 'Integrity defines business life span and we are determined to live long with you.',
+        icon: 'bi bi-patch-check text-3xl',
         subtitle: 'Reputable',
-        icon: 'fa fa-shield-alt',
-        content: 'Integrity defines business life span and we are determined to live long with you.'
+        title: 'Trusted'
       }
     ]
   };
@@ -60,65 +60,67 @@ const Index = () => {
 		},
 		items: [
 			{
+				content: 'Elevate businesses with cutting-edge web applications. Seamless, efficient, and tailored solutions for success.',
 				title: 'Web Application Development',
-				subtitle: 'Exposure',
-				icon: 'fa fa-globe',
-				content: 'Need a web application for your business or industry?'
+				icon: 'bi bi-code-slash text-3xl',
+				subtitle: 'Exposure'
 			},
 			{
+				content: 'Unlock possibilities with our AI services—innovative solutions for smarter automation, enhanced decision-making, and unparalleled efficiency.',
 				title: 'Artificial Intelligence',
-				subtitle: 'Relief',
-				icon: 'fa fa-chart-bar',
-				content: 'Want to know how to integrate AI into your business?'
+				icon: 'bi bi-robot text-3xl',
+				subtitle: 'Relief'
 			},
 			{
+				content: 'Transform online presence to reflect modern, user-friendly design for a powerful impact!',
 				title: 'Website Revamp (Redesign)',
 				subtitle: 'Sophistication',
-				icon: 'fa fa-code-branch',
-				content: 'Does your website need an aesthetically pleasing new look?'
+				icon: 'bi bi-stars text-3xl'
 			},
 			{
+				// content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?.',
+				content: 'Maximize efficiency, minimize costs. Elevate your business with our tailored solutions for streamlined operations and growth.',
+				icon: 'bi bi-graph-up-arrow text-2xl',
 				title: 'Business Optimization',
-				subtitle: 'Upgrade',
-				icon: 'fa fa-code-branch',
-				content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?.'
+				subtitle: 'Upgrade'
 			}
 		]
 	};
 
   const sections = {
     testimonial: {
-      title: {
-        text: "Testimonials",
-        align: "left"
-      },
+      items: require('../constants/testimonials.json'),
       illustration: {
+        src: './images/illustrations/testimonial.gif',
         align: { x: 'right', y: 'top' },
         dimension: {
           md: { x: 32, y: 52, scale: 65 },
           lg: { x: 28, y: 64, scale: 65 }
-        },
-        src: "./images/illustrations/testimonial.gif"
+        }
       },
-      items: require('../constants/testimonials.json')
+      title: {
+        text: 'Testimonials',
+        align: 'left'
+      }
     }
   };
 
   const intro = {
     title: {
-      text: "The best software algorithm solution",
-      align: "",
-      case: ""
-    },
-    subtitle: {
-      text: "We make happy clients",
-      align: "",
-      case: ""
+      text: 'The best software algorithm solution',
+      align: '',
+      case: ''
     },
     action: {
-      text: "Get Started"
+      icon: 'bi bi-compass-fill text-2xl ml-4',
+      text: 'Get Started',
     },
-    scroll_to: "product-intro"
+    subtitle: {
+      text: 'We make happy clients',
+      align: '',
+      case: ''
+    },
+    scroll_to: 'who-we-are'
   };
   
   return (

@@ -8,23 +8,24 @@ const MissionStatement = () => {
         <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-0 sm:static">
           <div className="lg:pr-28 xl:pr-32 px-2 md:px-auto">
             <h1 className="text-4xl font-semibold text-rose-500 leading-tight sm:leading-tight sm:text-7xl">
-              Focus on your business. Let us handle your online presence and visibillity.
+              Let us handle your online presence and visibillity while you focus on your business.
             </h1>
-            <p className="mt-4 leading-relaxed text-xl md:leading-relaxed md:text-2xl dark:text-slate-300 text-gray-600">
-              This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
-              if you live or die.
+            <p className="mt-4 leading-relaxed text-xl md:leading-relaxed dark:text-slate-300 text-gray-600">
+              <span className="hidden lg:inline">
+                Delegate your online presence to us! We specialize in enhancing visibility, managing content, and optimizing engagement.{' '}
+              </span>
+              Concentrate on business growth, while we ensure your brand shines brightly in the digital landscape.
+              <span className="hidden lg:inline"> Elevate your online journey with our expertise.</span>
             </p>
             <Link
-              className="mt-6 md:mt-8 lg:mt-10 inline-block text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-2 px-6 text-2xl text-white hover:bg-indigo-700"
+              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-700"
               href="/products">
-              Order Now
-              <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
+              Learn how
+              <i className="bi bi-megaphone-fill"></i>
             </Link>
           </div>
 
-          <div className="sm:max-w-lg mt-8 md:mt-0 px-2 md:px-auto">
+          <div className="sm:max-w-lg mt-14 md:mt-0 px-2 md:px-auto">
             <div className="rounded-lg overflow-hidden">
               <img src="./images/illustrations/dribbble.gif" alt="" className="filter dark:brightness-75 w-full h-full object-center object-cover" />
             </div>

@@ -39,9 +39,16 @@ module.exports = {
         '166': '38rem'
       },
       fontFamily: {
-        'raleway': ['raleway', '"Public sans"'],
+        'bootstrapIcons': ['bootstrap-icons', '"Public sans"'],
+        'nunito-black': ['Nunito-Black', '"Public sans"'],
+        'nunito-light': ['Nunito-Light', '"Public sans"'],
+        'montserrat': ['Montserrat', '"Public sans"'],
+        'manrope': ['Manrope', '"Public sans"'],
+        'raleway': ['Raleway', '"Public sans"'],
         'gilroy': ['gilroy-font', 'sans-serif'],
-        'sans': ['Public sans', 'sans-serif']
+        'roboto': ['Roboto', '"Public sans"'],
+        'sans': ['Public sans', 'sans-serif'],
+        'dosis': ['Dosis', '"Public sans"']
       },
       fontSize: {
         '7.5xl': '5.5rem'
