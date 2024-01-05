@@ -40,6 +40,11 @@ module.exports = {
         '166': '38rem',
         '188': '44rem',
       },
+      padding: {
+        '13': '3.2rem',
+        '23': '4.7rem',
+        '33': '7.3rem',
+      },
       fontFamily: {
         'nunito-black': ['Nunito-Black', '"Public sans"'],
         'nunito-light': ['Nunito-Light', '"Public sans"'],
