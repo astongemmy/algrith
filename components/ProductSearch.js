@@ -75,7 +75,7 @@ const ProductSearch = () => {
             Services
           </h2>
           <Link
-            className="hover:bg-blue-400 group flex items-center rounded-md dark:bg-teal-600 bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
+            className="hover:bg-green-400 group flex items-center rounded-md dark:bg-teal-600 bg-green-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
             href="/new"
           >
             <svg
@@ -92,7 +92,7 @@ const ProductSearch = () => {
         </div>
         <form className="group relative">
           <svg
-            className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none dark:group-focus-within:text-teal-500 group-focus-within:text-blue-500"
+            className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none dark:group-focus-within:text-teal-500 group-focus-within:text-green-500"
             fill="currentColor"
             aria-hidden="true"
             height="20"
@@ -109,7 +109,7 @@ const ProductSearch = () => {
               dark:bg-transparent dark:text-slate-200 
               dark:ring-slate-700 dark:focus:ring-teal-500 
               dark:focus:outline-none dark:outline-none
-              focus:ring-2 focus:ring-blue-500 focus:outline-none 
+              focus:ring-2 focus:ring-green-500 focus:outline-none 
               appearance-none w-full text-sm leading-6 text-slate-900 
               placeholder-slate-400 rounded-md py-2 pl-10 
               ring-1 ring-slate-200 shadow-sm
@@ -126,7 +126,7 @@ const ProductSearch = () => {
           return (
             <li key={project.id}>
               <Link
-                className="block dark:hover:bg-teal-700 hover:bg-blue-500 dark:hover:ring-teal-700 hover:ring-blue-500 hover:shadow-md group rounded-md p-3 dark:bg-slate-800 bg-white ring-1 ring-slate-200 shadow-sm"
+                className="block dark:hover:bg-teal-700 hover:bg-green-500 dark:hover:ring-teal-700 hover:ring-green-500 hover:shadow-md group rounded-md p-3 dark:bg-slate-800 bg-white ring-1 ring-slate-200 shadow-sm"
                 href={project.url}
               >
                 <dl className="grid sm:block grid-cols-2 grid-rows-2 items-center">
@@ -138,7 +138,7 @@ const ProductSearch = () => {
                   </div>
                   <div>
                     <dt className="sr-only">Category</dt>
-                    <dd className="group-hover:text-blue-200">
+                    <dd className="group-hover:text-green-200">
                       {" "}
                       {project.category}{" "}
                     </dd>
@@ -154,11 +154,11 @@ const ProductSearch = () => {
         })}
         <li className="flex">
           <Link
-            className="dark:hover:border-teal-500 hover:border-blue-500 hover:border-solid dark:hover:bg-slate-700 hover:bg-white dark:hover:text-teal-500 hover:text-blue-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed dark:border-teal-500 border-slate-300 text-sm leading-6 dark:text-teal-500 text-slate-900 font-medium py-3"
+            className="dark:hover:border-teal-500 hover:border-green-500 hover:border-solid dark:hover:bg-slate-700 hover:bg-white dark:hover:text-teal-500 hover:text-green-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed dark:border-teal-500 border-slate-300 text-sm leading-6 dark:text-teal-500 text-slate-900 font-medium py-3"
             href="/new"
           >
             <svg
-              className="dark:group-hover:text-teal-500 group-hover:text-blue-500 mb-1 dark:text-teal-500 text-slate-400"
+              className="dark:group-hover:text-teal-500 group-hover:text-green-500 mb-1 dark:text-teal-500 text-slate-400"
               fill="currentColor"
               aria-hidden="true"
               height="20"
@@ -166,7 +166,7 @@ const ProductSearch = () => {
             >
               <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
             </svg>
-            New project
+            Request a service
           </Link>
         </li>
       </ul>
