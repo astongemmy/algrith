@@ -1,15 +1,13 @@
-/* ./styles/globals.css */
 @tailwind base;
 
 /* Custom base CSS styles */
 html, body {
+    font-family: gilroy-font, sans-serif;
+    font-weight: normal;
+    color: #888888;
+    font-size: 13px;
     padding: 0;
     margin: 0;
-    font-size:13px;
-    color: #888888;
-    font-weight:normal;
-    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-    font-family: gilroy-font, sans-serif;
 }
 
 * {

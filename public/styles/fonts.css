@@ -64,3 +64,11 @@
 		url("./webfonts/gilroy/Gilroy-Medium.eot") format("eot")
 	;
 }
+
+@font-face {
+	font-family: 'Public Sans';
+	font-style: normal;
+	font-display: auto;
+	src: url("./webfonts/Public-Sans/PublicSans-VariableFont_wght.ttf");
+	src: url("./webfonts/Public-Sans/PublicSans-VariableFont_wght.ttf") format("truetype");
+}

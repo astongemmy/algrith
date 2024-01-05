@@ -14,8 +14,9 @@ module.exports = {
         purple: colors.violet,
       },
       backgroundImage: theme => ({
-        'intro-index': "url('/images/sections/intro-index.jpeg')",
         'intro-about': "url('/images/sections/intro-about.jpg'), linear-gradient(to bottom, rgba(0,0,0,.9), rgba(255,255,255,.6))",
+        'intro-index-dark': "url('/images/sections/abstract-art-atom.jpeg')",
+        'intro-index': "url('/images/sections/intro-index.jpeg')",
       }),
       scale: {
         '35': '.35',
@@ -36,10 +37,10 @@ module.exports = {
         '112': '26rem',
         '126': '28rem',
         '144': '32rem',
-        '166': '38rem'
+        '166': '38rem',
+        '188': '44rem',
       },
       fontFamily: {
-        'bootstrapIcons': ['bootstrap-icons', '"Public sans"'],
         'nunito-black': ['Nunito-Black', '"Public sans"'],
         'nunito-light': ['Nunito-Light', '"Public sans"'],
         'montserrat': ['Montserrat', '"Public sans"'],
