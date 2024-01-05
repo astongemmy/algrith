@@ -41,8 +41,8 @@ const Layout = (props) => {
 	
 	useEffect(() => { 
 		AOS.init({ easing: 'ease-in-out-sine' });
-		setProductLinks(GetProductSlugs());
-		dispatch(getProducts());
+		// setProductLinks(GetProductSlugs());
+		// dispatch(getProducts());
 	}, []);
 
 	useScrollToElement({ selector: '.scroll-selector' });

@@ -1,49 +1,61 @@
-import { useEffect, useRef, useState } from "react"
-import useClickAway from "../hooks/useClickAway"
-import useViewport from "../hooks/useViewport";
+import { useEffect, useRef, useState } from 'react';
+import useClickAway from '../hooks/useClickAway';
+import useViewport from '../hooks/useViewport';
 
-export default function ThemeSwitch({ }) {
-  const { viewport } = useViewport()
-  const themeSwitchRef = useRef(null)
-  const themeSwitchContainerRef = useRef(null)
-  const [open, setOpen] = useState(false)
-  useClickAway(themeSwitchRef, setOpen)
+const ThemeSwitch = () => {
+  const themeSwitchContainerRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const themeSwitchRef = useRef(null);
+  const { viewport } = useViewport();
+
+  useClickAway(themeSwitchRef, setOpen);
+
+  const repositionThemeSwitch = () => {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      if (!['sm', 'md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.40rem';
+      if (['md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.60rem';
+      if (['sm'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.65rem';
+    } else {
+      if (!['sm', 'md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1.0rem';
+      if (['md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1.26rem';
+      if (['sm'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1.30rem';
+    }
+  };
+
+  const activeThemeIndicator = {
+    system: !['light', 'dark'].includes(localStorage.theme) ? 'bg-green-50 dark:bg-green-600/30' : '',
+    dark: localStorage.theme === 'dark' ? 'bg-green-600/30' : '',
+    light: localStorage.theme === 'light' ? 'bg-green-50' : ''
+  };
+
   const switchTheme = () => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', 'rgb(15 23 42)');
       document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', 'rgb(15 23 42)');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', 'rgb(15 23 42)');
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark')
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
       document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', '#00a300');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
+      document.documentElement.classList.remove('dark');
     }
-  }
-  const setTheme = (theme) => {
-    if (theme !== 'system') {
-      localStorage.theme = theme
-    } else {
-      localStorage.removeItem('theme')
-    }
-    switchTheme()
-  }
-  const repositionThemeSwitchOnScroll = () => {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      if (!['sm', 'md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.95rem'
-      if (['md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1.25rem'
-      if (['sm'].includes(viewport)) themeSwitchContainerRef.current.style.top = '0.35rem'
-    } else {
-      if (!['sm', 'md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '2.0rem'
-      if (['md'].includes(viewport)) themeSwitchContainerRef.current.style.top = '2.25rem'
-      if (['sm'].includes(viewport)) themeSwitchContainerRef.current.style.top = '1rem'
-    }
-  }  
+  };
+
+  const setTheme = (e) => {
+    const theme = e.target.dataset.theme;
+    localStorage.removeItem('theme');
+
+    if (theme !== 'system') localStorage.theme = theme;
+    switchTheme();
+  };
+
   useEffect(() => {
-    switchTheme()
-    repositionThemeSwitchOnScroll()
-    window.addEventListener('scroll', repositionThemeSwitchOnScroll)
-    return () => window.removeEventListener('scroll', repositionThemeSwitchOnScroll)
-  }, [viewport])
+    window.addEventListener('scroll', repositionThemeSwitch);
+    repositionThemeSwitch();
+    switchTheme();
+
+    return () => window.removeEventListener('scroll', repositionThemeSwitch);
+  }, [viewport]);
+
   
   return (
     <div ref={ themeSwitchContainerRef } className="z-20 md:bg-transparent fixed top-4 md:top-8 lg:top-12 right-16 md:right-24 lg:right-16 xl:right-24 mr-1 flex items-center w-auto text-green-500">
@@ -51,13 +63,14 @@ export default function ThemeSwitch({ }) {
         <label className="sr-only" id="headlessui-listbox-label-3">Theme</label>
         <button type="button" id="headlessui-listbox-button-4" aria-haspopup="true" aria-expanded="false" aria-labelledby="headlessui-listbox-label-3 headlessui-listbox-button-undefined">
           <span className="dark:hidden">
-            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
               <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="fill-green-400/20 stroke-green-500"></path>
               <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" className="stroke-green-500"></path>
             </svg>
           </span>
+
           <span className="hidden dark:inline">
-            <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10">
+            <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8">
               <path fillRule="evenodd" clipRule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" className="fill-green-400/20"></path>
               <path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" className="fill-green-500"></path>
               <path fillRule="evenodd" clipRule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" className="fill-green-500"></path>
@@ -65,30 +78,56 @@ export default function ThemeSwitch({ }) {
           </span>
         </button>
       </div>
-      {open && <ul className="absolute z-50 top-16 right-0 bg-white rounded-lg ring-1 ring-green-900/10 shadow-lg overflow-hidden w-40 text-xl text-green-700 dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-green-300" aria-labelledby="headlessui-listbox-label-3" aria-orientation="vertical" id="headlessui-listbox-options-5" role="listbox" tabIndex="0" aria-activedescendant="headlessui-listbox-option-21">
-        <li onClick={()=>setTheme('light')} className="py-3 px-3 flex items-center cursor-pointer" id="headlessui-listbox-option-20" role="option" tabIndex="-1">
-          <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 mr-2">
-            <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="stroke-green-400 dark:stroke-green-500"></path>
-            <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" className="stroke-green-400 dark:stroke-green-500"></path>
-          </svg>
-          Light
-        </li>
-        <li onClick={()=>setTheme('dark')} className="py-3 px-3 flex items-center cursor-pointer text-green-500 bg-green-50 dark:bg-green-600/30" id="headlessui-listbox-option-21" role="option" tabIndex="-1" aria-selected="true">
-          <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 mr-2">
-            <path fillRule="evenodd" clipRule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" className="fill-green-400/20"></path>
-            <path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" className="fill-green-500"></path>
-            <path fillRule="evenodd" clipRule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" className="fill-green-500"></path>
-          </svg>
-          Dark
-        </li>
-        <li onClick={()=>setTheme('system')} className="py-3 px-3 flex items-center cursor-pointer" id="headlessui-listbox-option-22" role="option" tabIndex="-1">
-          <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 mr-2">
-            <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z" strokeWidth="2" strokeLinejoin="round" className="stroke-green-400 dark:stroke-green-500"></path>
-            <path d="M14 15c0 3 2 5 2 5H8s2-2 2-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stroke-green-400 dark:stroke-green-500"></path>
-          </svg>
-          System
-        </li>
-      </ul>}
+
+      {open && (
+        <ul className="absolute z-50 top-16 right-0 bg-white rounded-lg ring-1 ring-green-900/10 shadow-lg overflow-hidden w-40 text-lg text-slate-700 dark:text-slate-200 dark:bg-slate-800 dark:ring-0 dark:highlight-white/5" aria-labelledby="headlessui-listbox-label-3" aria-orientation="vertical" id="headlessui-listbox-options-5" role="listbox" tabIndex="0" aria-activedescendant="headlessui-listbox-option-21">
+          <li
+            className={`py-3 px-3 flex gap-4 items-center cursor-pointer ${activeThemeIndicator.light}`}
+            id="headlessui-listbox-option-20"
+            onClick={setTheme}
+            data-theme="light"
+            role="option"
+            tabIndex="-1">
+            <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+              <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="stroke-green-400 dark:stroke-green-500"></path>
+              <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" className="stroke-green-400 dark:stroke-green-500"></path>
+            </svg>
+           Light
+          </li>
+          
+          <li
+            className={`py-3 px-3 flex gap-4 items-center cursor-pointer ${activeThemeIndicator.dark}`}
+            id="headlessui-listbox-option-21"
+            aria-selected="true"
+            onClick={setTheme}
+            data-theme="dark"
+            role="option"
+            tabIndex="-1">
+            <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+             <path fillRule="evenodd" clipRule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" className="fill-green-400/20"></path>
+             <path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" className="fill-green-500"></path>
+             <path fillRule="evenodd" clipRule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" className="fill-green-500"></path>
+            </svg>
+            Dark
+          </li>
+
+          <li
+            className={`py-3 px-3 flex gap-4 items-center cursor-pointer ${activeThemeIndicator.system}`}
+            id="headlessui-listbox-option-22"
+            data-theme="system"
+            onClick={setTheme}
+            role="option"
+            tabIndex="-1">
+            <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+              <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Z" strokeWidth="2" strokeLinejoin="round" className="stroke-green-400 dark:stroke-green-500"></path>
+              <path d="M14 15c0 3 2 5 2 5H8s2-2 2-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stroke-green-400 dark:stroke-green-500"></path>
+            </svg>
+            System
+          </li>
+        </ul>
+      )}
     </div>
-  )
-}
+  );
+};
+
+export default ThemeSwitch;
