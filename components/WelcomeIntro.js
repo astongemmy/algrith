@@ -12,7 +12,7 @@ const WelcomeIntro = ({ payload }) => {
           <span className="w-full font-bold leading-tight md:leading-tight lg:leading-tight text-white text-5xl lg:text-7xl 2xl:text-8xl intro-lead"></span>
 
           {subtitle.text && (
-            <span className="block mt-4 dark:text-slate-400 text-gray-300 text-2xl font-semibold lg:text-3xl">
+            <span className="block mt-4 dark:text-slate-400 text-gray-600 text-2xl font-semibold lg:text-3xl">
               {subtitle.text}
             </span>
           )}
