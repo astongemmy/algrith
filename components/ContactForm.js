@@ -14,7 +14,7 @@ export default function ContactForm() {
               <div className="grid grid-cols-4 gap-6">
                 <div className="col-span-4 sm:col-span-2">
                   <label htmlFor="name" className="block text-lg font-medium dark:text-gray-200 text-gray-700">
-                    Fullname
+                    Name
                   </label>
                   <div className="mt-1 flex rounded-md shadow-sm">
                     <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
@@ -26,7 +26,7 @@ export default function ContactForm() {
                       type="text"
                       name="name"
                       id="name"
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-slate-500 focus:border-slate-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. John Doe"
                     />
                   </div>
@@ -45,7 +45,7 @@ export default function ContactForm() {
                       type="email"
                       name="email"
                       id="email"
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-slate-500 focus:border-slate-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. johndoe@email.com"
                     />
                   </div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
                       type="tel"
                       name="phone"
                       id="phone"
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:outline-none focus:ring-none focus:border-none flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. +88 9209 635"
                     />
                   </div>
@@ -79,14 +79,17 @@ export default function ContactForm() {
 
               <div>
                 <label htmlFor="message" className="block text-lg font-medium dark:text-gray-200 text-gray-700">
-                  Message
+                  Message{' '}
+                  <span className="italic">
+                    (Briefly describe your business, and include links if any.)
+                  </span>
                 </label>
                 <div className="mt-1">
                   <textarea
                     id="message"
                     name="message"
                     rows={7}
-                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
+                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 shadow-sm focus:ring-slate-500 focus:border-slate-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
                     placeholder="I need a corporate website for my business"
                     defaultValue={''}
                   />

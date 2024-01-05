@@ -12,6 +12,7 @@ const WhoWeAre = () => {
             </p> */}
             <p className="mt-4 max-w-4xl leading-9 text-xl dark:text-slate-300 text-gray-500 lg:mx-auto">
               At Algrith, we are committed to providing sophisticated, secure, and accessible applications tailored for clients across both public and private sectors.
+              <br/>
               By leveraging cutting-edge technology and frameworks, we specialize in delivering scalable and resilient software solutions that precisely align with the dynamic demands of your business.
             </p>
           </div>

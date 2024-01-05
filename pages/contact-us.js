@@ -1,8 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Intro from '../components/Intro'
-import Contact from '../components/Contact'
+import React from 'react';
+import Head from 'next/head';
+
+import Layout from '../components/Layout';
+import Intro from '../components/Intro';
+import Contact from '../components/Contact';
 
 export default function ContactUs() {
 	const intro = {
@@ -12,7 +13,9 @@ export default function ContactUs() {
 			case: ""
 		},
 		description: {
-			text: "You could get started with a prospective business conversation in just few steps. \n Just send us a message and we will guide you through. \n Do not hesitate to write to us regarding an issue, \n a feedback or most importantly, a business proposal.",
+			text: "If You're not sure how to use technology in your business.\n You're looking for ways to optimize your business using technology to save time and money?\n Looking for excellence at an affordable rate?",
+			// Brief description of your business, please include links in any. 	
+			// Book a 15-minute FREE call. Use GMT time.",
 			align: "",
 			case: ""
 		},

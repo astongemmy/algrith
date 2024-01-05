@@ -14,9 +14,9 @@ const Header = ({ openMenuRef }) => {
         </Link>
 			</div>
 
-			<div ref={ openMenuRef } className="lg:hidden flex justify-center items-center text-3xl cursor-pointer p-4 -mr-3 text-gray-600 dark:text-green-300 transform scale-y-75 transition-all ease-in-out duration-1000">
+			<button type="button" ref={ openMenuRef } className="lg:hidden flex justify-center items-center text-3xl p-4 -mr-3 text-gray-600 dark:text-teal-500 bg:transparent outline-none focus:outline-none border-none transform scale-y-75 transition-all ease-in-out duration-1000">
 				<i className="fa fa-bars"></i>
-			</div>
+			</button>
 		</header>
   );
 };
