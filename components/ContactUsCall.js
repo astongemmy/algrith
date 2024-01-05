@@ -16,7 +16,7 @@ const ContactUsCall = () => {
               We would be glad to help.
             </p>
             <Link
-              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-700"
+              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center bg-teal-500 dark:bg-teal-700 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-teal-400 dark:hover:bg-teal-600"
               href="/contact-us">
               Book a Session
               <i className="bi bi-easel-fill text-xl"></i>

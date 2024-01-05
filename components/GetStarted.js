@@ -10,7 +10,7 @@ const GetStarted = () => {
           <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-green-300 text-gray-900 sm:leading-tight sm:text-6xl">
+              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-teal-500 text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs for your web app.
               </h1>
               <p className="mt-4 text-xl leading-relaxed md:leading-relaxed dark:text-slate-300 text-gray-500">
@@ -20,8 +20,9 @@ const GetStarted = () => {
                   {' '}Explore effortlessly and stay connected with our latest updates.
                 </span>
               </p>
+
               <Link
-                className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-flex items-center gap-4 text-center bg-indigo-600 border dark:bg-opacity-50 border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-700"
+                className="mt-6 md:mt-8 lg:mt-10 md:ml-auto inline-flex items-center gap-4 text-center bg-indigo-600 dark:bg-indigo-700 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-500 dark:hover:bg-indigo-600"
                 href="/contact-us">
                 Get Started
                 <svg xmlns="http://www.w3.org/2000/svg" className="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

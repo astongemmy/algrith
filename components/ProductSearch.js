@@ -71,11 +71,12 @@ const ProductSearch = () => {
     <section data-aos="fade-up" className="relative mx-auto overflow-hidden dark:bg-slate-800 bg-white rounded-lg shadow-lg hidden lg:block">
       <header className="dark:bg-slate-700 bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
         <div className="flex items-center justify-between">
-          <h2 className="font-semibold dark:text-green-400 tracking-wider text-slate-900">
+          <h2 className="dark:text-teal-500 text-xl font-nunito-black tracking-wider text-slate-900">
             Services
           </h2>
+
           <Link
-            className="hover:bg-green-400 group flex items-center rounded-md dark:bg-teal-600 bg-green-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
+            className="hover:bg-green-400 group flex items-center rounded-md dark:bg-teal-600 bg-green-500 font-montserrat text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
             href="/new"
           >
             <svg
@@ -90,6 +91,7 @@ const ProductSearch = () => {
             New
           </Link>
         </div>
+
         <form className="group relative">
           <svg
             className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none dark:group-focus-within:text-teal-500 group-focus-within:text-green-500"
@@ -112,7 +114,7 @@ const ProductSearch = () => {
               focus:ring-2 focus:ring-green-500 focus:outline-none 
               appearance-none w-full text-sm leading-6 text-slate-900 
               placeholder-slate-400 rounded-md py-2 pl-10 
-              ring-1 ring-slate-200 shadow-sm
+              ring-1 ring-slate-200 shadow-sm font-montserrat
             "
             placeholder="Filter projects..."
             aria-label="Filter projects"
@@ -121,7 +123,7 @@ const ProductSearch = () => {
         </form>
       </header>
 
-      <ul className="dark:bg-slate-900 bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm leading-6">
+      <ul className="font-montserrat dark:bg-slate-900 bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm leading-6">
         {projects.map((project) => {
           return (
             <li key={project.id}>

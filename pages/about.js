@@ -64,6 +64,7 @@ const About = () => {
 				<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
 				<title> About | Algrith </title>
 			</Head>
+			
 			<main>
 				<Intro payload={intro} />
 				<Outline outline={outlines} />

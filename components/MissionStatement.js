@@ -17,8 +17,9 @@ const MissionStatement = () => {
               Concentrate on business growth, while we ensure your brand shines brightly in the digital landscape.
               <span className="hidden lg:inline"> Elevate your online journey with our expertise.</span>
             </p>
+            
             <Link
-              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center dark:bg-opacity-50 bg-teal-500 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-indigo-700"
+              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center bg-teal-500 dark:bg-teal-700 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-teal-400 dark:hover:bg-teal-600"
               href="/products">
               Learn how
               <i className="bi bi-megaphone-fill"></i>

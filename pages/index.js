@@ -112,7 +112,7 @@ const Index = () => {
       case: ''
     },
     action: {
-      icon: 'bi bi-compass-fill text-2xl ml-4',
+      icon: 'bi bi-compass-fill text-2xl',
       text: 'Get Started',
     },
     subtitle: {
