@@ -18,7 +18,7 @@ const WelcomeIntro = ({ payload }) => {
           )}
 
           {action.text && (
-            <a href={`#${scroll_to}`} className="mt-10 md:mt-16 scroll-selector inline-block bg-green-600 hover:bg-green-500 dark:bg-teal-700 dark:hover:bg-teal-600 relative rounded-full text-xl capitalize text-white ml-2 px-8 py-4 select-none hover:select-none">
+            <a href={`#${scroll_to}`} className="mt-10 md:mt-16 scroll-selector inline-block bg-green-500 md:bg-green-600 hover:bg-green-500 dark:bg-teal-700 dark:hover:bg-teal-600 relative rounded-full text-xl capitalize text-white ml-2 px-8 py-4 select-none hover:select-none">
               <div className="w-8 w-8 absolute bg-green-600 -top-2 -left-2 md:-left-1 flex items-center justify-center -z-10">
                 <div className="h-6 w-6 absolute top-1 z-10 rounded-full" />
                 <div className="h-8 w-8 absolute top-0 rounded-full pointer-events-none">
