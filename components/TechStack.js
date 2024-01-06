@@ -25,16 +25,42 @@ const TechStack = () => {
   };
 
   const tech_stack_images = [
-    '/images/tech-stack/firebase.png',
-    '/images/tech-stack/python.png',
-    '/images/tech-stack/react.png',
-
-    '/images/tech-stack/tensorflow.png',
-    '/images/tech-stack/pytorch.png',
-    '/images/tech-stack/opencv.png',
-    '/images/tech-stack/onnx.png',
-
-    '/images/tech-stack/bash.png',
+    {
+      dark: '/images/tech-stack/tailwindcss-light.svg',
+      light: '/images/tech-stack/tailwindcss.svg',
+    },
+    {
+      dark: '/images/tech-stack/firebase-light.png',
+      light: '/images/tech-stack/firebase.png',
+    },
+    {
+      dark: '/images/tech-stack/python-light.png',
+      light: '/images/tech-stack/python.png',
+    },
+    {
+      dark: '/images/tech-stack/react-light.png',
+      light: '/images/tech-stack/react.png',
+    },
+    {
+      dark: '/images/tech-stack/tensorflow-light.png',
+      light: '/images/tech-stack/tensorflow.png',
+    },
+    {
+      dark: '/images/tech-stack/pytorch-light.png',
+      light: '/images/tech-stack/pytorch.png',
+    },
+    {
+      dark: '/images/tech-stack/opencv-light.png',
+      light: '/images/tech-stack/opencv.png',
+    },
+    {
+      dark: '/images/tech-stack/onnx-light.png',
+      light: '/images/tech-stack/onnx.png',
+    },
+    {
+      dark: '/images/tech-stack/bash-light.png',
+      light: '/images/tech-stack/bash.png',
+    }
   ]
 
   return (
@@ -61,11 +87,16 @@ const TechStack = () => {
           draggable
           autoPlay
           infinite>
-          {tech_stack_images.map((image) => <div key={image}><img src={image} alt="" /></div>)}
+          {tech_stack_images.map(({ light, dark }) => (
+            <div key={light}>
+              <img src={dark} className="hidden dark:block" />
+              <img src={light} className="dark:hidden" />
+            </div>
+          ))}
         </Carousel>
       </div>
     </div>
-  )
+  );
 };
 
 export default TechStack;
