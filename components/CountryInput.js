@@ -8,7 +8,7 @@ export default function CountryInput({ required }) {
         </svg>
       </span>
       {required && <span style="color: red !important; display: inline; float: none;">*</span>}
-      <select id="country" name="country" className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300">
+      <select id="country" name="country" className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300">
         <option defaultValue={""}>--select--</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Åland Islands">Åland Islands</option>

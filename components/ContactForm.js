@@ -1,9 +1,10 @@
-import React from 'react'
-import CountryInput from './CountryInput'
-import useSendMail from '../hooks/useSendMail'
+import React from 'react';
 
-export default function ContactForm() {
-  const { progress, sendMail } = useSendMail()
+import useSendMail from '../hooks/useSendMail';
+import CountryInput from './CountryInput';
+
+const ContactForm = () => {
+  const { progress, sendMail } = useSendMail();
 
   return (
     <div className="lg:order-2 lg:w-6/12 -mt-24 md:-mt-32 lg:-mt-24 sm:px-12 lg:px-4 xl:px-12 2xl:px-4">
@@ -26,11 +27,12 @@ export default function ContactForm() {
                       type="text"
                       name="name"
                       id="name"
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-slate-500 focus:border-slate-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. John Doe"
                     />
                   </div>
                 </div>
+
                 <div className="col-span-4 sm:col-span-2">
                   <label htmlFor="email" className="block text-lg font-medium dark:text-gray-200 text-gray-700">
                     Email
@@ -45,17 +47,19 @@ export default function ContactForm() {
                       type="email"
                       name="email"
                       id="email"
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-slate-500 focus:border-slate-500 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. johndoe@email.com"
                     />
                   </div>
                 </div>
+
                 <div className="col-span-4 sm:col-span-2">
                   <label htmlFor="location" className="block text-lg font-medium dark:text-gray-200 text-gray-700">
                     Location
                   </label>
                   <CountryInput />
                 </div>
+
                 <div className="col-span-4 sm:col-span-2">
                   <label htmlFor="phone" className="block text-lg font-medium dark:text-gray-200 text-gray-700">
                     Phone
@@ -70,7 +74,7 @@ export default function ContactForm() {
                       type="tel"
                       name="phone"
                       id="phone"
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:outline-none focus:ring-none focus:border-none flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       placeholder="e.g. +88 9209 635"
                     />
                   </div>
@@ -89,7 +93,7 @@ export default function ContactForm() {
                     id="message"
                     name="message"
                     rows={7}
-                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 shadow-sm focus:ring-slate-500 focus:border-slate-500 mt-1 block w-full text-lg border border-gray-300 rounded-md"
+                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 shadow-sm focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 mt-1 block w-full text-lg border border-gray-300 rounded-md"
                     placeholder="I need a corporate website for my business"
                     defaultValue={''}
                   />
@@ -108,5 +112,7 @@ export default function ContactForm() {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default ContactForm;

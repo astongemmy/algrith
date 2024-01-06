@@ -26,24 +26,62 @@ const TechStack = () => {
 
   const tech_stack_images = [
     {
-      dark: '/images/tech-stack/tailwindcss-light.svg',
-      light: '/images/tech-stack/tailwindcss.svg',
+      dark: '/images/tech-stack/javascript.png',
+    },
+    {
+      dark: '/images/tech-stack/nodejs.svg'
+    },
+    {
+      dark: '/images/tech-stack/tailwindcss-light.png',
+      light: '/images/tech-stack/tailwindcss.png',
+    },
+    {
+      dark: '/images/tech-stack/mongodb-light.png',
+      light: '/images/tech-stack/mongodb.png',
+    },
+    {
+      dark: '/images/tech-stack/bootstrap.png',
     },
     {
       dark: '/images/tech-stack/firebase-light.png',
       light: '/images/tech-stack/firebase.png',
     },
     {
+      dark: '/images/tech-stack/php.png',
+    },
+    {
+      dark: '/images/tech-stack/docker.avif',
+    },
+    {
       dark: '/images/tech-stack/python-light.png',
       light: '/images/tech-stack/python.png',
+    },
+    {
+      dark: '/images/tech-stack/redis-light.png',
+      light: '/images/tech-stack/redis.png',
+    },
+    {
+      dark: '/images/tech-stack/flask.png',
     },
     {
       dark: '/images/tech-stack/react-light.png',
       light: '/images/tech-stack/react.png',
     },
     {
-      dark: '/images/tech-stack/tensorflow-light.png',
-      light: '/images/tech-stack/tensorflow.png',
+      dark: '/images/tech-stack/laravel.png',
+    },
+    {
+      dark: '/images/tech-stack/git-light.png',
+      light: '/images/tech-stack/git.png',
+    },
+    {
+      dark: '/images/tech-stack/expressjs.png',
+    },
+    {
+      dark: '/images/tech-stack/tensorflow.png',
+    },
+    {
+      dark: '/images/tech-stack/mysql.svg',
     },
     {
       dark: '/images/tech-stack/pytorch-light.png',
@@ -76,21 +114,20 @@ const TechStack = () => {
           itemClass="flex items-center px-4 md:scale-65 justify-center"
           customTransition="all 1s linear"
           rewindWithAnimation={false}
-          transitionDuration={1000}
           additionalTransfrom={0}
           responsive={responsive}
           shouldResetAutoplay
-          autoPlaySpeed={3}
+          autoPlaySpeed={1000}
           rewind={false}
           arrows={false}
           swipeable
           draggable
           autoPlay
           infinite>
-          {tech_stack_images.map(({ light, dark }) => (
-            <div key={light}>
-              <img src={dark} className="hidden dark:block" />
-              <img src={light} className="dark:hidden" />
+          {tech_stack_images.map((image) => (
+            <div key={image}>
+              <img src={image?.light || image.dark} className="dark:hidden" />
+              <img src={image.dark} className="hidden dark:block" />
             </div>
           ))}
         </Carousel>
