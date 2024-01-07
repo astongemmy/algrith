@@ -1,32 +1,44 @@
-import React from "react";
+import React from 'react';
 
-export default function useSerializeForm() {
+const useSerializeForm = () => {
   const serializeForm = ({ form }) => {
-    let form_data = [], serialize = {};
-    Array.prototype.slice.call(form.elements).forEach(function (field) {
-      if (!field.name || field.disabled || ['file', 'reset', 'submit', 'button'].indexOf(field.type) > -1) {
+    const serialized = {};
+    const form_data = [];
+
+    Array.prototype.slice.call(form.elements).forEach((field) => {
+      if (!field.name || field.disabled || ['file', 'reset', 'submit', 'button'].includes(field.type)) {
         return;
       }
+
       if (field.type === 'select-multiple') {
-        Array.prototype.slice.call(field.options).forEach(function (option) {
+        Array.prototype.slice.call(field.options).forEach((option) => {
           if (!option.selected) return;
+
           form_data.push({
-            name: field.name,
-            value: field.value
-          })
+            value: field.value,
+            name: field.name
+          });
         });
+
         return;
       }
-      if (['checkbox', 'radio'].indexOf(field.type) > -1 && !field.checked) return;
+
+      if (['checkbox', 'radio'].includes(field.type) && !field.checked) return;
+      
       form_data.push({
-        name: field.name,
-        value: field.value
-      })
+        value: field.value,
+        name: field.name
+      });
     });
-    Object.entries(form_data).forEach(([key, value]) => {
-      serialize[value.name] = value['value'];
+
+    Object.entries(form_data).forEach(([key, { value, name }]) => {
+      serialized[name] = value;
     });
-    return serialize;
+
+    return serialized;
   };
-  return { serializeForm }
-}
+
+  return { serializeForm };
+};
+
+export default useSerializeForm;

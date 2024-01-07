@@ -1,40 +1,30 @@
-import { useState } from 'react'
-import useSerializeForm from './useSerializeForm'
-import useShowAlert from './useShowAlert'
+import { useState } from 'react';
 
-export default function useSendMail() {
-  const [progress, setProgress] = useState('idle')
-  const { serializeForm } = useSerializeForm()
-  const { showAlert } = useShowAlert()
+const useSendMail = () => {
+  const [status, setStatus] = useState();
   
-  const sendMail = (e) => {
-    e.preventDefault()
-    const contactForm = e.target
-    const contact = serializeForm({ form: contactForm })
-    setProgress('Sending...')
+  const sendMail = (payload) => {
+    setStatus('sending');
+
     fetch('/api/contacts', {
-      method: 'POST',
-      mode: 'same-origin',
       credentials: 'same-origin',
+      mode: 'same-origin',
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json', //	Content type sent
-        'Accept': 'application/json',	//	Content type expected
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
-      body: JSON.stringify(contact)
+      body: JSON.stringify(payload)
     }).then(response => response.json())
     .then(response => {
-      if (response.success) {
-        setProgress('Sent')
-        contactForm.reset()
-        showAlert(response.message)      
-        const toggleProgress = setTimeout(() => {
-          setProgress('Send')
-          clearTimeout(toggleProgress);
-        }, 2000);      
-      }
+      if (response.success) setStatus('sent');
     }).catch(error => {
-      showAlert('Error while sending mail!')
-    })
-  }
-  return { progress, sendMail }
-}
+      console.log('An error occurred while sending message!', error);
+      setStatus('error');
+    });
+  };
+
+  return { status, sendMail };
+};
+
+export default useSendMail;

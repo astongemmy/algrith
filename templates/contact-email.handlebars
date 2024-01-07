@@ -191,10 +191,26 @@
 									<td style="text-align: center;">
 										<div class="text-author">
 											<img src="images/person_2.jpg" alt="" style="width: 100px; max-width: 600px; height: auto; margin: auto; display: block;">
-											<h3 class="name"> {{ name }} </h3>
-											<span class="position"> {{ email }} </span>
-											<p><a href="#" class="btn btn-primary"> {{ phone }} </a></p>
-											<p><a href="#" class="btn-custom"> {{ country }} </a></p>
+											
+											<h3 class="name">Name: {{ name }} </h3>
+											
+											<span class="position">Email: {{ email }} </span>
+											
+											<p>
+												Phone: <a href="#" class="btn btn-primary"> {{ phone }} </a>
+											</p>
+
+											<p>
+												Topic: <a href="#" class="btn btn-primary"> {{ topic }} </a>
+											</p>
+
+											<p>
+												Custom Topic: {{ customTopic }}
+											</p>
+											
+											<p>
+												Country: {{ country }}
+											</p>
 										</div>
 									</td>
 								</tr>

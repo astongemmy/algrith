@@ -13,6 +13,7 @@ import ThemeSwitch from './ThemeSwitch';
 import Header from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Alert from './Alert';
 
 const Layout = (props) => {
 	const { products } = useSelector((state) => state.product);
@@ -79,14 +80,9 @@ const Layout = (props) => {
 			</span>
 			
 			<div ref={overlayRef} className="fixed hidden top-0 left-0 z-20 bg-black opacity-50 h-screen w-screen"></div>
-			
-			<div id="alert" className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-100 text-green-500 p-4 w-3/5 flex justify-between items-center">
-				<span id="message">Message</span>
-				<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-					<path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-				</svg>
-			</div>
-			
+
+			<Alert />
+
 			{/*
 				Since TailwindCSS uses treeshaking, classes not visible in jsx elements won't
 				be generated. DynamicCssGenerator component helps generate all css styles used

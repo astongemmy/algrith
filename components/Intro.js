@@ -1,16 +1,16 @@
 import React from 'react';
 
-import useTyping from '../hooks/useTyping';
+import useTypist from '../hooks/useTypist';
 
 const Intro = ({ payload }) => {
 	const { title, description, slogan, accomodate, scroll_to } = payload;
-	useTyping(title.text);
+	useTypist(title.text);
 
 	return (
 		<div id="intro-about" className="relative w-full bg-intro-about bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
 			<div className="w-full h-full bg-gradient-to-b from-white dark:from-slate-900 dark:bg-slate-900/90 pt-0 lg:pt-12 pb-12 lg:pb-20 px-8 md:px-12 lg:px-18 xl:px-24">
 				<div className=" 2xl:w-8/12 mx-auto relative">
-					{title.text && <h1 data-aos="fade-down" className={`intro-lead relative ${title.case ? title.case : ''} text-3xl md:text-4xl lg:text-7xl dark:text-gray-300 text-green-500 py-8 m-0 w-full text-${title.align ? title.align : 'center'} font-bold`}></h1>}
+					{title.text && <h1 data-aos="fade-down" className={`typing-pad relative ${title.case ? title.case : ''} text-3xl md:text-4xl lg:text-7xl dark:text-gray-300 text-green-500 py-8 m-0 w-full text-${title.align ? title.align : 'center'} font-bold`}></h1>}
 					
 					{description.text && <p data-aos="fade-up" className={`w-full md:whitespace-pre ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} dark:text-slate-400 text-gray-700 leading-relaxed text-xl lg:leading-relaxed lg:text-2xl`}>
 						{description.text}

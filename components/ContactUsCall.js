@@ -13,7 +13,7 @@ const ContactUsCall = () => {
               Looking for excellence at an affordable rate?
             </h1>
             <p className="mt-4 leading-relaxed text-xl md:leading-relaxed dark:text-slate-300 text-gray-600">
-              We would be glad to help.
+              Our team of skilled developers is dedicated to creating software that aligns seamlessly with your business goals.
             </p>
             <Link
               className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center bg-teal-500 dark:bg-teal-700 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-teal-400 dark:hover:bg-teal-600"

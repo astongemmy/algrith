@@ -10,13 +10,13 @@ const ContactDetails = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
             </svg>
           </span>
-          <a href="#" data-aos="fade-in" className="px-2 text-white flex justify-center items-center rounded-xl text-2xl h-12 w-12 dark:bg-opacity-50 bg-blue-400 shadow-lg">
+          <a href="#" className="px-2 text-white flex justify-center items-center rounded-xl text-2xl h-12 w-12 dark:bg-opacity-50 bg-blue-400 shadow-lg">
             <i className="fab fa-facebook"></i>
           </a>
-          <a href="#" data-aos="fade-in" className="px-2 text-white flex justify-center items-center rounded-xl text-2xl h-12 w-12 dark:bg-opacity-50 bg-blue-400 shadow-lg">
+          <a href="#" className="px-2 text-white flex justify-center items-center rounded-xl text-2xl h-12 w-12 dark:bg-opacity-50 bg-blue-400 shadow-lg">
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="#" data-aos="fade-in" className="px-2 text-white flex justify-center items-center rounded-xl text-2xl h-12 w-12 dark:bg-opacity-50 bg-blue-400 shadow-lg">
+          <a href="#" className="px-2 text-white flex justify-center items-center rounded-xl text-2xl h-12 w-12 dark:bg-opacity-50 bg-blue-400 shadow-lg">
             <i className="fab fa-linkedin"></i>
           </a>
         </div>

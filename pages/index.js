@@ -99,7 +99,7 @@ const Index = () => {
         }
       },
       title: {
-        text: 'Testimonials',
+        text: 'Reviews',
         align: 'left'
       }
     }

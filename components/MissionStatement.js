@@ -7,7 +7,7 @@ const MissionStatement = () => {
       <div className="relative overflow-hidden 2xl:w-8/12 2xl:mx-auto">
         <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-0 sm:static">
           <div className="lg:pr-28 xl:pr-32 px-2 md:px-auto">
-            <h1 className="text-4xl font-semibold text-rose-500 leading-tight sm:leading-tight sm:text-7xl">
+            <h1 className="text-4xl font-semibold text-sky-700 dark:text-teal-600 leading-tight sm:leading-tight sm:text-7xl">
               Let us handle your online presence and visibillity while you focus on your business.
             </h1>
             <p className="mt-4 leading-relaxed text-xl md:leading-relaxed dark:text-slate-300 text-gray-600">
@@ -19,7 +19,7 @@ const MissionStatement = () => {
             </p>
             
             <Link
-              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center bg-teal-500 dark:bg-teal-700 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-teal-400 dark:hover:bg-teal-600"
+              className="mt-6 md:mt-8 lg:mt-10 inline-flex items-center gap-4 text-center bg-sky-700 dark:bg-teal-700 border border-transparent rounded-md py-2 px-6 text-xl text-white hover:bg-teal-400 dark:hover:bg-teal-600"
               href="/products">
               Learn how
               <i className="bi bi-megaphone-fill"></i>

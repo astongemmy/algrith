@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
 
-export default function useShowAlert() {
+const useShowAlert = () => {
   const showAlert = (message) => {
     // Append response message to feedback element
-    if (message) document.querySelector('#alert #message').textContent = message
+    if (message) document.querySelector('#alert #message').textContent = message;
+    
     // Display feedback element
     document.querySelector('#alert').classList.remove('-top-32');
     document.querySelector('#alert').classList.add('top-8');
+    
     // Hide feedback element after set time
     const toggleAlert = setInterval(() => {
       document.querySelector('#alert #message').textContent = '';
@@ -14,6 +16,9 @@ export default function useShowAlert() {
       document.querySelector('#alert').classList.add('-top-32');
       clearInterval(toggleAlert);
     }, 2000);
-  }
-  return { showAlert }
-}
+  };
+
+  return { showAlert };
+};
+
+export default useShowAlert;
