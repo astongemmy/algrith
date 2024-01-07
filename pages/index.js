@@ -1,3 +1,4 @@
+// import { useSelector } from 'react-redux';
 import Head from 'next/head';
 import React from 'react';
 
@@ -10,7 +11,6 @@ import WhoWeAre from '../components/WhoWeAre';
 // import Pricing from '../components/Pricing';
 import Outline from '../components/Outline';
 import Section from '../components/Section';
-// import { useSelector } from 'react-redux';
 import Layout from '../components/Layout';
 
 const Index = () => {
@@ -88,8 +88,8 @@ const Index = () => {
 	};
 
   const sections = {
-    testimonial: {
-      items: require('../constants/testimonials.json'),
+    reviews: {
+      items: require('../constants/reviews.json'),
       illustration: {
         src: './images/illustrations/testimonial.gif',
         align: { x: 'right', y: 'top' },
@@ -139,7 +139,7 @@ const Index = () => {
         <TechStack />
         <MissionStatement />
         {/* <Pricing products={products} isLoading={isLoading} /> */}
-        <Section payload={ sections.testimonial } />
+        <Section payload={ sections.reviews } />
         <GetStarted />
       </main>
     </Layout>

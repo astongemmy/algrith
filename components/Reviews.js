@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
-import ReviewCard from './ReviewCard'
+import React, { useState } from 'react';
+import ReviewCard from './ReviewCard';
 
-export default function Reviews({ reviews }) {
-  const [display, setDisplay] = useState(6)
+const Reviews = ({ reviews }) => {
+  const [display, setDisplay] = useState(6);
+
   const toggleReviews = (e) => {
-    e.preventDefault()
-    display !== 6 ? setDisplay(6) : setDisplay(reviews.length)
-  }
+    display !== 6 ? setDisplay(6) : setDisplay(reviews.length);
+    e.preventDefault();
+  };
 
   return (
     <section className="px-6 lg:px-8 dark:border-slate-800 border dark:bg-slate-800 bg-white rounded-xl overflow-hidden">
@@ -33,5 +34,7 @@ export default function Reviews({ reviews }) {
         </div>
       )}
     </section>
-  )
-}
+  );
+};
+
+export default Reviews;

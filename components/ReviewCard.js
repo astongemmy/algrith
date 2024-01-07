@@ -1,7 +1,7 @@
-import React from "react"
-import ProductRating from "./ProductRating"
+import ProductRating from './ProductRating';
+import React from 'react';
 
-export default function ReviewCard({ review }) {
+const ReviewCard = ({ review }) => {
   return (
     <div className="mt-8 border dark:border-slate-800 border-green-100 rounded-3xl overflow-hidden">
       <div className="bg-green-200 bg-opacity-40 py-2 lg:py-3 px-8 relative flex flex-wrap justify-between">
@@ -22,5 +22,7 @@ export default function ReviewCard({ review }) {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default ReviewCard;

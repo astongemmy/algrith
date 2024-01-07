@@ -1,4 +1,4 @@
-import TestimonialCard from './TestimonialCard';
+import HomePageReviews from './HomePageReviews';
 
 const Section = ({ payload }) => {
   const { title, items, illustration } = payload;
@@ -26,7 +26,7 @@ const Section = ({ payload }) => {
         {title.text}
       </h1>
       <div className="relative flex flex-wrap xl:flex-nowrap justify-start lg:justify-between items-center bg-grey-900 py-4 lg:py-16 px-1 md:px-9 lg:px-16 xl:px-28 w-full xl:space-x-4">
-        {(title.text.toLowerCase() == "testimonials" && <TestimonialCard testimonials={items} />)}
+        {(title.text.toLowerCase() == 'reviews' && <HomePageReviews reviews={items} />)}
       </div>
     </div>
   );
