@@ -14,8 +14,8 @@ const Navbar = ({ closeMenuRef, navbarRef, product_links = [] }) => {
     <nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow lg:shadow-none lg:bg-transparent bg-white dark:lg:bg-transparent dark:bg-slate-800 fixed top-0 lg:top-0 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col lg:flex-row justify-between lg:justify-end lg:items-center w-10/12 md:w-5/12 lg:w-auto h-screen lg:h-16 text-gray-600 lg:p-4">
 			<div className="lg:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 lg:px-8 py-4">
 				<h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
-					<img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="brand-logo" />
-					<img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block" alt="brand-logo" />
+					<img src="/images/logo/algrith-logo-dark.png" className="dark:hidden" alt="brand-logo" />
+					<img src="/images/logo/algrith-logo-light.png" className="hidden dark:block" alt="brand-logo" />
 				</h1>
 
 				<button type="button" ref={ closeMenuRef } id="close-menu" className="flex justify-center rounded-xl items-center bg-transparent focus:bg-transparent hover:bg-transparent border-none outline-none dark:text-slate-200 text-black">

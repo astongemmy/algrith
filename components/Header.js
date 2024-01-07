@@ -9,8 +9,10 @@ const Header = ({ openMenuRef }) => {
           className="transform origin-left scale-65 h-16 w-64 ripple-node flex justify-start items-center align-center uppercase mx-auto text-center transition-all ease-in-out duration-1000"
           id="brand-title"
           href="/">
-            <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="Algrith-logo" />
-            <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block" alt="Algrith-logo" />
+            <img src="/images/logo/algrith-logo-dark.png" className="dark:hidden" alt="Algrith-logo" />
+            <img src="/images/logo/algrith-logo-light.png" className="hidden dark:block" alt="Algrith-logo" />
+            {/* <img src="/images/logo/algrith-logo-dark-transparent-clean.png" className="dark:hidden" alt="Algrith-logo" />
+            <img src="/images/logo/algrith-logo-light-transparent-clean.png" className="hidden dark:block" alt="Algrith-logo" /> */}
         </Link>
 			</div>
 
