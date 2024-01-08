@@ -24,7 +24,8 @@ module.exports = {
         '65': '.65'
       },
       textColor: {
-        'navyblue': '#0B214A',
+        'algrith-green': '#2ca474',
+        'navyblue': '#0b214a',
       },
       width: {
         '112': '26rem',
