@@ -74,10 +74,12 @@ const TechStack = () => {
       light: '/images/tech-stack/git.png',
     },
     {
-      dark: '/images/tech-stack/expressjs.png',
+      dark: '/images/tech-stack/expressjs-light.svg',
+      light: '/images/tech-stack/expressjs.png',
     },
     {
-      dark: '/images/tech-stack/tensorflow.png',
+      dark: '/images/tech-stack/tensorflow-light.png',
+      light: '/images/tech-stack/tensorflow.png',
     },
     {
       dark: '/images/tech-stack/mysql.png',
@@ -111,16 +113,10 @@ const TechStack = () => {
         
         <Carousel
           itemClass="flex items-center px-4 md:scale-65 justify-center"
-          customTransition="all 1s linear"
-          rewindWithAnimation={false}
-          additionalTransfrom={0}
           responsive={responsive}
-          shouldResetAutoplay
-          autoPlaySpeed={1000}
-          rewind={false}
+          autoPlaySpeed={2}
           arrows={false}
           swipeable
-          draggable
           autoPlay
           infinite>
           {tech_stack_images.map((image) => (
