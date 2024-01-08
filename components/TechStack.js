@@ -81,7 +81,7 @@ const TechStack = () => {
       dark: '/images/tech-stack/tensorflow.png',
     },
     {
-      dark: '/images/tech-stack/mysql.svg',
+      dark: '/images/tech-stack/mysql.png',
     },
     {
       dark: '/images/tech-stack/pytorch-light.png',
