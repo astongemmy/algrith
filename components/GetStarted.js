@@ -10,7 +10,7 @@ const GetStarted = () => {
           <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-teal-500 text-gray-900 sm:leading-tight sm:text-6xl">
+              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-algrith-green text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs for your web app.
               </h1>
               <p className="mt-4 text-xl leading-relaxed md:leading-relaxed dark:text-slate-300 text-gray-500">

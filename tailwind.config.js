@@ -9,9 +9,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'algrith-green': '#2ca474',
+        purple: colors.violet,
         green: colors.emerald,
         yellow: colors.amber,
-        purple: colors.violet,
       },
       backgroundImage: theme => ({
         'intro-about': "url('/images/sections/intro-about.jpg'), linear-gradient(to bottom, rgba(0,0,0,.9), rgba(255,255,255,.6))",
@@ -19,6 +20,9 @@ module.exports = {
         'intro-index': "url('/images/sections/intro-index.jpeg')",
       }),
       backgroundColor: {
+        'algrith-green': '#2ca474',
+      },
+      borderColor: {
         'algrith-green': '#2ca474',
       },
       scale: {

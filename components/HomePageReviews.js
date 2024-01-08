@@ -13,9 +13,10 @@ const HomePageReviews = ({ reviews }) => {
               </blockquote>
               
               <figcaption className="font-medium">
-                <div className="text-xl text-sky-700 dark:text-teal-600">
+                <div className="text-xl text-sky-700 dark:text-algrith-green">
                   { review.name }
                 </div>
+
                 <div className="text-slate-700 dark:text-slate-500">
                   { `${ review.designation }, ${ review.location }` }
                 </div>

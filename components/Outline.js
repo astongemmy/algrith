@@ -6,7 +6,7 @@ const Outline = ({ outline }) => {
 			<div key={outline.title} data-aos="fade-up" className="w-full md:w-1/2 lg:w-1/3 m-4 md:m-0 p-2 md:pb-10 md:px-3 lg:p-4 xl:px-8 2xl:px-4">
 				<div className="relative overflow-hidden w-full px-6 pt-24 lg:pt-20 pb-16 dark:bg-slate-800 bg-gray-50 dark:text-slate-300 text-gray-500 text-lg md:leading-9 rounded-xl text-center shadow dark:shadow-none md:min-h-84 lg:min-h-80">
 					<span className="dark:bg-slate-700 bg-white absolute left-0 top-0 w-full py-2 px-6 flex justify-between items-center">
-						<span className="flex justify-center items-center p-2 text-md text-white dark:bg-teal-700 bg-algrith-green w-10 h-10 rounded-full">
+						<span className="flex justify-center items-center p-2 text-md text-white bg-algrith-green w-10 h-10 rounded-full">
 							<i className={outline.icon}></i>
 						</span>
 
@@ -15,7 +15,7 @@ const Outline = ({ outline }) => {
 						</h2>
 					</span>
 
-					<h2 className="text-xl text-algrith-green dark:text-teal-500 font-bold my-4">
+					<h2 className="text-xl text-algrith-green font-bold my-4">
 						{outline.title}
 					</h2>
 
@@ -50,10 +50,10 @@ const Outline = ({ outline }) => {
 				<img className="rounded-full filter dark:brightness-75" src={illustration.src} alt={`${title}-illustration`} />
 			</div>
 			
-			{/* <h1 className="relative uppercase py-4 text-3xl md:text-4xl dark:text-slate-300 text-gray-600 mx-auto w-full text-center font-bold"> */}
 			<h1 className="relative text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight dark:text-slate-200 text-gray-900 sm:text-5xl py-4 mx-auto w-full text-center">
 				{title}
 			</h1>
+
 			<div className="relative flex flex-wrap 2xl:flex-nowrap justify-around 2xl:justify-between py-4 md:pt-16 lg:pb-16 px-2 md:px-10 lg:px-14 xl:px-32 2xl:px-0 w-full">
 				{outlines}
 			</div>

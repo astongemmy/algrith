@@ -20,6 +20,7 @@ const About = () => {
 		slogan: "We make happy clients",
 		scroll_to: "outline"
 	}
+
 	const outlines = {
 		title: 'What we really do',
 		illustration: {
@@ -32,28 +33,29 @@ const About = () => {
 		},
 		items: [
 			{
+				content: 'Elevate businesses with cutting-edge web applications. Seamless, efficient, and tailored solutions for success.',
 				title: 'Web Application Development',
-				subtitle: 'Exposure',
-				icon: 'fa fa-globe',
-				content: 'Need a web application for your business or industry?'
+				icon: 'bi bi-code-slash text-2xl',
+				subtitle: 'Exposure'
 			},
 			{
+				content: 'Unlock possibilities with our AI services—innovative solutions for smarter automation, enhanced decision-making, and unparalleled efficiency.',
 				title: 'Artificial Intelligence',
-				subtitle: 'Relief',
-				icon: 'fa fa-chart-bar',
-				content: 'Want to know how to integrate AI into your business?'
+				icon: 'bi bi-robot text-2xl',
+				subtitle: 'Relief'
 			},
 			{
+				content: 'Transform online presence to reflect modern, user-friendly design for a powerful impact!',
 				title: 'Website Revamp (Redesign)',
 				subtitle: 'Sophistication',
-				icon: 'fa fa-code-branch',
-				content: 'Does your website need an aesthetically pleasing new look?'
+				icon: 'bi bi-stars text-2xl'
 			},
 			{
+				// content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?.',
+				content: 'Maximize efficiency, minimize costs. Elevate your business with our tailored solutions for streamlined operations and growth.',
+				icon: 'bi bi-graph-up-arrow text-2xl',
 				title: 'Business Optimization',
-				subtitle: 'Upgrade',
-				icon: 'fa fa-code-branch',
-				content: 'Are you looking to automate repetitive tasks, or improve overall workflow in order to make your customers happier?. Our team of skilled developers is dedicated to creating software that aligns seamlessly with your business goals.'
+				subtitle: 'Upgrade'
 			}
 		]
 	}

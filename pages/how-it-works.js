@@ -229,20 +229,17 @@ const HowItWorks = () => {
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link
+                    className="rounded-xl px-6 py-4 text-white text-lg bg-algrith-green hover:bg-algrith-green/80 font-semibold"
                     href={'/contact-us'}
-                    className="rounded-xl px-6 py-4 text-white text-lg
-                      bg-teal-500 hover:bg-teal-700 focus:bg-teal-400 font-semibold
-                      border-teal-500 hover:border-teal-700 focus:border-teal-400
-                      dark:bg-opacity-50 dark:bg-teal-600 dark:text-teal-200
-                    ">
-                      Get Started
+                  >
+                    Get Started
                   </Link>
                 </div>
               </div>
               
               <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8 dark:text-slate-400">
                 <div className="pt-6">
-                  <h2 className="mb-4 text-2xl dark:text-green-400 font-heading font-bold">
+                  <h2 className="mb-4 text-2xl dark:text-algrith-green font-heading font-bold">
                     Our Aim
                   </h2>
                   <p className="leading-relaxed text-lg md:text-xl md:leading-relaxed mb-8">
@@ -253,7 +250,7 @@ const HowItWorks = () => {
                   <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
                 </div>
                 <div className="pt-12">
-                  <h2 className="mb-4 text-2xl dark:text-green-400 font-heading font-bold">
+                  <h2 className="mb-4 text-2xl dark:text-algrith-green font-heading font-bold">
                     Excellent Pricing
                   </h2>
                   <p className="leading-relaxed text-lg md:text-xl md:leading-relaxed mb-8">
