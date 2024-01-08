@@ -15,11 +15,11 @@ const Outline = ({ outline }) => {
 						</h2>
 					</span>
 
-					<h2 className="text-xl text-green-500 dark:text-teal-500 font-bold my-4">
+					<h2 className="text-xl text-algrith-green dark:text-teal-500 font-bold my-4">
 						{outline.title}
 					</h2>
 
-					{/* <span className="flex justify-center items-center my-8 mx-auto p-1 text-4xl text-white bg-green-500 w-20 h-20 rounded-full">
+					{/* <span className="flex justify-center items-center my-8 mx-auto p-1 text-4xl text-white bg-algrith-green w-20 h-20 rounded-full">
 						<i className={outline.icon}></i>
 					</span> */}
 					
