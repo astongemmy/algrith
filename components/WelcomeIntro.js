@@ -12,7 +12,7 @@ const WelcomeIntro = ({ payload }) => {
           <span className="typing-pad w-full font-bold leading-tight md:leading-tight lg:leading-tight dark:text-gray-300 text-white text-5xl lg:text-7xl 2xl:text-8xl"></span>
 
           {subtitle.text && (
-            <span className="block mt-4 text-yellow-300 font-nunito-black tracking-wide text-2xl font-semibold lg:text-3xl">
+            <span className="block mt-4 text-algrith-yellow font-nunito-black tracking-wide text-2xl font-semibold lg:text-3xl">
               {subtitle.text}
             </span>
           )}
@@ -22,7 +22,7 @@ const WelcomeIntro = ({ payload }) => {
               <div className="w-8 w-8 absolute bg-green-600 -top-2 -left-2 md:-left-1 flex items-center justify-center -z-10">
                 <div className="h-6 w-6 absolute top-1 z-10 rounded-full" />
                 <div className="h-8 w-8 absolute top-0 rounded-full pointer-events-none">
-                  <div className="h-full w-full animate-ping border border-yellow-600 rounded-full" />
+                  <div className="h-full w-full animate-ping border border-algrith-yellow rounded-full" />
                 </div>
               </div>
 

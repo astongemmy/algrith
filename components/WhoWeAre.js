@@ -4,7 +4,7 @@ const WhoWeAre = () => {
       <div className="2xl:w-8/12 2xl:mx-auto">
         <div className="max-w-7xl mx-auto px-8 sm:px-6 md:px-12 lg:px-8">
           <div className="lg:text-center">
-            <h2 className="text-xl dark:text-algrith-green text-indigo-600 font-bold tracking-wide uppercase">
+            <h2 className="text-xl dark:text-algrith-yellow text-indigo-600 font-bold tracking-wide uppercase">
               Welcome! We're sure you would like an introduction.
             </h2>
             {/* <p className="mt-2 text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight dark:text-slate-200 text-gray-900 sm:text-5xl">

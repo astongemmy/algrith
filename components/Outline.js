@@ -10,7 +10,7 @@ const Outline = ({ outline }) => {
 							<i className={outline.icon}></i>
 						</span>
 
-						<h2 className="text-sm tracking-widest font-public-sans italic text-yellow-500">
+						<h2 className="text-sm tracking-widest font-public-sans italic text-algrith-yellow">
 							{outline.subtitle}
 						</h2>
 					</span>

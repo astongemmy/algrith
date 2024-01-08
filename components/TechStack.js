@@ -106,7 +106,7 @@ const TechStack = () => {
     <div className="dark:bg-slate-800 bg-yellow-50 w-full px-8 md:px-12 lg:px-20 xl:px-28 pt-8 lg:pt-12 pb-10 lg:pb-14">
       <div className="2xl:w-8/12 2xl:mx-auto">
         <div className="w-full md:w-3/3 mx-auto sm:mb-6">
-          <h1 className="xl:text-4xl md:text-3xl font-nunito-black text-xl text-center dark:text-yellow-300 text-yellow-500 font-extrabold mb-5 pt-4">
+          <h1 className="xl:text-4xl md:text-3xl font-nunito-black text-xl text-center text-algrith-yellow font-extrabold mb-5 pt-4">
             We are versatile with amazing tools.
           </h1>
         </div>

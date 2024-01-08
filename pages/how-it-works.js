@@ -229,7 +229,7 @@ const HowItWorks = () => {
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link
-                    className="rounded-xl px-6 py-4 text-white text-lg bg-algrith-green hover:bg-algrith-green/80 font-semibold"
+                    className="rounded-xl px-6 py-4 text-white text-lg bg-algrith-green hover:bg-green-500 font-semibold"
                     href={'/contact-us'}
                   >
                     Get Started

@@ -16,7 +16,7 @@ const Intro = ({ payload }) => {
 						{description.text}
 					</p>}
 					
-					{slogan && <aside data-aos="fade-right" className={`${accomodate ? 'mb-16' : ''} mt-4 md:mt-8 ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} font-nunito-black dark:text-yellow-300 text-navyblue text-lg font-bold lg:text-2xl`}>
+					{slogan && <aside data-aos="fade-right" className={`${accomodate ? 'mb-16' : ''} mt-4 md:mt-8 ${description.case ? description.case : ''} text-${description.align ? description.align : 'center'} font-nunito-black dark:text-algrith-yellow text-navyblue text-lg font-bold lg:text-2xl`}>
 						{slogan}
 					</aside>}
 				</div>
