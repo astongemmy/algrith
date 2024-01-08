@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Footer = ({ product_links = [] }) => {
+const Footer = () => {
 	return (
-        <footer className="relative dark:bg-slate-800 bg-gray-100">
+    <footer className="relative dark:bg-slate-800 bg-gray-100">
 			<div className="flex flex-wrap justify-between px-4 md:px-8 lg:px-16 xl:px-24 pb-12 2xl:w-8/12 2xl:mx-auto">
 				<div className="w-full md:w-2/5 lg:w-4/12 pt-8">
 					<h1 className="p-4 dark:text-slate-400 text-navyblue text-xl font-bold">
@@ -84,34 +84,6 @@ const Footer = ({ product_links = [] }) => {
 							</ul>
 						</div>
 					</div>
-					{/* <div className="w-1/2 lg:w-1/4 pt-4">
-						<h1 className="p-4 dark:text-slate-400 text-navyblue font-bold text-xl">
-							<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-algrith-green h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-								<path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-							</svg>
-							Products
-						</h1>
-						<div className="relative text-lg">
-							<ul className="pl-0">
-								{product_links && (
-									product_links.map(product => {
-										return (
-											<li key={product.href} className="px-4 py-2">
-												<Link href={product.href} className="text-gray-500">
-												  { product.text }
-												</Link>
-											</li>
-										)
-									})
-								)}
-								<li className="px-4 py-2">
-									<Link href="/products" className="text-gray-500">
-									  All Products
-									</Link>
-								</li>
-							</ul>
-						</div>
-					</div> */}
 					<div className="w-1/2 lg:w-1/4 pt-4">
 						<h1 className="p-4 dark:text-slate-400 text-navyblue font-bold text-xl">						
 							<svg xmlns="http://www.w3.org/2000/svg" className="inline mr-4 text-algrith-green h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default function DynamicCssGenerator() {  
+const DynamicCssGenerator = () => {  
   return (
     <span 
       className="
@@ -50,5 +50,7 @@ export default function DynamicCssGenerator() {
     >
       DynamicCssGenerator
     </span>
-  )
-}
+  );
+};
+
+export default DynamicCssGenerator;

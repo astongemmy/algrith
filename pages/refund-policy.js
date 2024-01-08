@@ -1,9 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Link from 'next/link'
+import Head from 'next/head';
+import React from 'react';
 
-export default function RefundPolicy() {
+import Layout from '../components/Layout';
+
+const RefundPolicy = () => {
   return (
     <Layout>
       <Head>
@@ -127,5 +127,7 @@ export default function RefundPolicy() {
         </section>
       </main>
     </Layout>
-  )
-}
+  );
+};
+
+export default RefundPolicy;

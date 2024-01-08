@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-export default function useRippleEffect() {
+const useRippleEffect = () => {
   useEffect(() => {
     const createRippleEffect = () => {
       document.querySelectorAll('.ripple-node').forEach(button => {
@@ -20,7 +20,10 @@ export default function useRippleEffect() {
           return false;
         });  
       });  
-    }
-    createRippleEffect()    
-  }, [])
-}
+    };
+
+    createRippleEffect();    
+  }, []);
+};
+
+export default useRippleEffect;

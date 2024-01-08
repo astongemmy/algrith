@@ -1,15 +1,7 @@
-import React, { useRef, useState } from 'react';
 import Link from 'next/link';
+import React from 'react';
 
-import useClickAway from '../hooks/useClickAway';
-import Popover from './Popover';
-
-const Navbar = ({ closeMenuRef, navbarRef, product_links = [] }) => {
-	const [dropdown, setDropdown] = useState(false);
-	const dropDownContainerRef = useRef(null);
-
-	useClickAway(dropDownContainerRef, setDropdown);
-
+const Navbar = ({ closeMenuRef, navbarRef }) => {
 	return (
     <nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow lg:shadow-none lg:bg-transparent bg-white dark:lg:bg-transparent dark:bg-slate-800 fixed top-0 lg:top-0 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col lg:flex-row justify-between lg:justify-end lg:items-center w-10/12 md:w-5/12 lg:w-auto h-screen lg:h-16 text-gray-600 lg:p-4">
 			<div className="lg:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 lg:px-8 py-4">
@@ -35,14 +27,6 @@ const Navbar = ({ closeMenuRef, navbarRef, product_links = [] }) => {
 					href="/how-it-works">
 					How It Works
 				</Link>
-				
-				{!!product_links.length && <span ref={ dropDownContainerRef } onClick={() => setDropdown(!dropdown)} className="flex items-center justify-between cursor-pointer ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 dark:border-algrith-green border-green-400 border-b-4 border-opacity-0 dark:border-opacity-0 text-left lg:text-center w-full lg:w-auto text-lg dark:text-slate-200 text-gray-600">
-					Products
-					<svg className="inline ml-4" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M10.4594 0.289848C10.8128 -0.096616 11.3841 -0.096616 11.7349 0.289848C12.0871 0.676312 12.0897 1.30071 11.7349 1.68718L6.63794 7.21015C6.28579 7.59662 5.71584 7.59662 5.36108 7.21015L0.264109 1.68718C-0.0880363 1.30215 -0.0880363 0.676312 0.264109 0.289848C0.617558 -0.096616 1.18882 -0.096616 1.53966 0.289848L6.00147 4.81927L10.4594 0.289848Z" fill="currentColor"></path>
-					</svg>
-					<Popover toggle={dropdown} items={product_links} />
-				</span>}
 				
 				<Link
 				  className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-green-400 dark:border-algrith-green border-b-4 border-opacity-0 dark:border-opacity-0 text-left lg:text-center w-full lg:w-auto text-lg dark:text-slate-200 text-gray-600"

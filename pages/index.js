@@ -1,4 +1,3 @@
-// import { useSelector } from 'react-redux';
 import Head from 'next/head';
 import React from 'react';
 
@@ -8,14 +7,11 @@ import WelcomeIntro from '../components/WelcomeIntro';
 import GetStarted from '../components/GetStarted';
 import TechStack from '../components/TechStack';
 import WhoWeAre from '../components/WhoWeAre';
-// import Pricing from '../components/Pricing';
 import Outline from '../components/Outline';
 import Section from '../components/Section';
 import Layout from '../components/Layout';
 
 const Index = () => {
-  // const { products, isLoading } = useSelector((state) => state.product);
-  
 	const whyChooseUsOutlines = {
     title: 'Why choose us',
     illustration: {
@@ -138,7 +134,6 @@ const Index = () => {
         <Outline outline={ whyChooseUsOutlines } />
         <TechStack />
         <MissionStatement />
-        {/* <Pricing products={products} isLoading={isLoading} /> */}
         <Section payload={ sections.reviews } />
         <GetStarted />
       </main>

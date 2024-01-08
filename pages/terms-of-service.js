@@ -1,9 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Link from 'next/link'
+import Head from 'next/head';
+import React from 'react';
 
-export default function TermsOfService() {
+import Layout from '../components/Layout';
+
+const TermsOfService = () => {
   return (
     <Layout>
       <Head>
@@ -293,5 +293,7 @@ export default function TermsOfService() {
         </section>
       </main>
     </Layout>
-  )
-}
+  );
+};
+
+export default TermsOfService;

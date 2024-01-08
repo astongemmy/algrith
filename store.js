@@ -5,28 +5,14 @@ import storage from 'redux-persist/lib/storage';
 import { persistStore } from 'redux-persist';
 import { combineReducers } from 'redux';
 
-import validationReducer from './slices/validation';
-import checkoutReducer from './slices/checkout';
-import feedbackReducer from './slices/feedback';
-import messageReducer from './slices/message';
-import productReducer from './slices/product';
-import reviewReducer from './slices/review';
 import alertReducer from './slices/alert';
-import authReducer from './slices/auth';
 
 const reducers = combineReducers({
-  validation: validationReducer,
-  feedback: feedbackReducer,
-  checkout: checkoutReducer,
-  product: productReducer,
-  message: messageReducer,
-  review: reviewReducer,
-  alert: alertReducer,
-  auth: authReducer
+  alert: alertReducer
 });
 
 const config = getPersistConfig({
-  blacklist: ['feedback', 'message', 'validation', 'alert'],
+  blacklist: ['alert'],
   rootReducer: reducers,
   key: 'root',
   storage,

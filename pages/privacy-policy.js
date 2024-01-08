@@ -1,9 +1,9 @@
+import Head from 'next/head';
 import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Link from 'next/link'
 
-export default function PrivacyPolicy() {
+import Layout from '../components/Layout';
+
+const PrivacyPolicy = () => {
   return (
     <Layout>
       <Head>
@@ -413,5 +413,7 @@ export default function PrivacyPolicy() {
         </section>
       </main >
     </Layout >
-  )
-}
+  );
+};
+
+export default PrivacyPolicy;
