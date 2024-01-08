@@ -18,6 +18,9 @@ module.exports = {
         'intro-index-dark': "url('/images/sections/abstract-art-atom.jpeg')",
         'intro-index': "url('/images/sections/intro-index.jpeg')",
       }),
+      backgroundColor: {
+        'algrith-green': '#2ca474',
+      },
       scale: {
         '35': '.35',
         '45': '.45',
