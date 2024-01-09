@@ -2,7 +2,7 @@
   "name": "Algrith",
   "short_name": "Algrith",
   "theme_color": "#2ca374",
-  "background_color": "#ffffff",
+  "background_color": "#2ca374",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",

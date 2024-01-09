@@ -26,7 +26,7 @@ const TechStack = () => {
   const tech_stack_images = [
     {
       dark: '/images/tech-stack/javascript.png',
-      class: 'scale-35 md:scale-65',
+      class: 'scale-45 md:scale-65',
     },
     {
       dark: '/images/tech-stack/nodejs.svg',
@@ -41,7 +41,7 @@ const TechStack = () => {
     },
     {
       dark: '/images/tech-stack/bootstrap.png',
-      class: 'scale-35 md:scale-65',
+      class: 'scale-45 md:scale-65',
     },
     {
       dark: '/images/tech-stack/firebase-light.png',
@@ -49,7 +49,7 @@ const TechStack = () => {
     },
     {
       dark: '/images/tech-stack/php.png',
-      class: 'scale-50 md:scale-75',
+      class: 'scale-65 md:scale-75',
     },
     {
       dark: '/images/tech-stack/docker.avif',
