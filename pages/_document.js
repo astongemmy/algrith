@@ -24,7 +24,7 @@ const AppDocument = () => {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color={colors.theme.primary} />
         <link rel="shortcut icon" type="image/png" href="/images/favicon/favicon.ico" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/app.webmanifest" />
 
         <script type="text/javascript" src="/js/aos.js"></script>
       </Head>

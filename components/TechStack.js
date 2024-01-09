@@ -122,7 +122,7 @@ const TechStack = () => {
         </div>
         
         <Carousel
-          itemClass="flex items-center lg:mx-24 md:mx-12 mx-8 justify-center"
+          itemClass="flex items-center lg:px-12 justify-center"
           responsive={responsive}
           autoPlaySpeed={2}
           arrows={false}
