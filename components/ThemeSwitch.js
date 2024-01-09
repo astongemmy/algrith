@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+
 import useClickAway from '../hooks/useClickAway';
 import useViewport from '../hooks/useViewport';
+import colors from '../lib/colors';
 
 const ThemeSwitch = () => {
   const themeSwitchContainerRef = useRef(null);
@@ -31,15 +33,12 @@ const ThemeSwitch = () => {
   };
 
   const switchTheme = () => {
-    const darkModeBgColor = process.env.NEXT_PUBLIC_DARK_MODE_PRIMARY_COLOR;
-    const themeColor = process.env.NEXT_PUBLIC_PRIMARY_THEME_COLOR;
-
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', darkModeBgColor);
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', darkModeBgColor);
+      document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', colors.dark.primary);
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', colors.dark.primary);
       document.documentElement.classList.add('dark');
     } else {
-      document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', themeColor);
+      document.querySelector('meta[name="msapplication-TileColor"]').setAttribute('content', colors.theme.primary);
       document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
       document.documentElement.classList.remove('dark');
     }

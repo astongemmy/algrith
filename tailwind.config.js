@@ -1,3 +1,5 @@
+import colors from './lib/colors';
+
 module.exports = {
   content: [
     './components/**/*.{js,ts,jsx,tsx}',
@@ -22,16 +24,16 @@ module.exports = {
         'dosis': ['Dosis', 'sans-serif']
       },
       colors: {
-        'dark-mode-quaternary': process.env.NEXT_PUBLIC_DARK_MODE_QUATERNARY_COLOR,
-        'dark-mode-secondary': process.env.NEXT_PUBLIC_DARK_MODE_SECONDARY_COLOR,
-        'dark-mode-septenary': process.env.NEXT_PUBLIC_DARK_MODE_SEPTENARY_COLOR,
-        'dark-mode-octonary': process.env.NEXT_PUBLIC_DARK_MODE_OCTONARY_COLOR,
-        'dark-mode-tertiary': process.env.NEXT_PUBLIC_DARK_MODE_TERTIARY_COLOR,
-        'dark-mode-quinary': process.env.NEXT_PUBLIC_DARK_MODE_QUINARY_COLOR,
-        'dark-mode-primary': process.env.NEXT_PUBLIC_DARK_MODE_PRIMARY_COLOR,
-        'dark-mode-senary': process.env.NEXT_PUBLIC_DARK_MODE_SENARY_COLOR,
-        'theme-secondary': process.env.NEXT_PUBLIC_SECONDARY_THEME_COLOR,
-        'theme-primary': process.env.NEXT_PUBLIC_PRIMARY_THEME_COLOR,
+        'dark-mode-quaternary': colors.dark.quaternary,
+        'dark-mode-secondary': colors.dark.secondary,
+        'dark-mode-septenary': colors.dark.septenary,
+        'dark-mode-octonary': colors.dark.octonary,
+        'dark-mode-tertiary': colors.dark.tertiary,
+        'theme-secondary': colors.theme.secondary,
+        'dark-mode-quinary': colors.dark.quinary,
+        'dark-mode-primary': colors.dark.primary,
+        'dark-mode-senary': colors.dark.senary,
+        'theme-primary': colors.theme.primary,
         'navyblue': '#0b214a'
       },
       spacing: {

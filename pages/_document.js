@@ -1,10 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import colors from '../lib/colors';
 
 const AppDocument = () => {
   return (
     <Html lang="en-US">
       <Head>
-        <meta name="msapplication-TileColor" content={process.env.NEXT_PUBLIC_PRIMARY_THEME_COLOR} />
+        <meta name="msapplication-TileColor" content={colors.theme.primary} />
         <meta name="theme-color" content="#ffffff" />
 
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
@@ -16,12 +17,12 @@ const AppDocument = () => {
         <meta property="og:author" name="author" content="Algrith LLC" />
         <meta name="description" content="Algrith LLC" />
         
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color={process.env.NEXT_PUBLIC_PRIMARY_THEME_COLOR} />
         <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-chrome-192x192.png" />
         <link rel="apple-touch-icon" type="image/png" href="/images/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color={colors.theme.primary} />
         <link rel="shortcut icon" type="image/png" href="/images/favicon/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest.json" />
 
