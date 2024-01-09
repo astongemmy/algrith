@@ -122,24 +122,31 @@ const TechStack = () => {
         </div>
         
         <Carousel
-          itemClass="flex items-center px-12 justify-center"
-          additionalTransfrom={0}
+          itemClass="flex items-center md:px-12 px-6 justify-center"
+          customTransition="all 1.2s linear"
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside={false}
+          shouldResetAutoplay={false}
+          rewindWithAnimation={false}
+          transitionDuration={1200}
+          renderDotsOutside={false}
           responsive={responsive}
-          autoPlaySpeed={3000}
+          additionalTransfrom={0}
+          minimumTouchDrag={80}
+          focusOnSelect={false}
           centerMode={false}
+          autoPlaySpeed={1}
+          showDots={false}
+          keyBoardControl
           arrows={false}
-
-      draggable
-      focusOnSelect={false}
-      keyBoardControl
-      minimumTouchDrag={80}
-      renderButtonGroupOutside={false}
-      renderDotsOutside={false}
-
-
+          rewind={false}
+          pauseOnHover
+          rtl={false}
           swipeable
+          draggable
           autoPlay
-          infinite>
+          infinite
+        >
           {tech_stack_images.map((image) => (
             <div key={image} className={image?.class}>
               <img src={image?.light || image.dark} className="dark:hidden" />
