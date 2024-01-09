@@ -22,8 +22,16 @@ module.exports = {
         'dosis': ['Dosis', 'sans-serif']
       },
       colors: {
-        'algrith-yellow': '#ecaf22',
-        'algrith-green': '#2ca374',
+        'dark-mode-quaternary': process.env.NEXT_PUBLIC_DARK_MODE_QUATERNARY_COLOR,
+        'dark-mode-secondary': process.env.NEXT_PUBLIC_DARK_MODE_SECONDARY_COLOR,
+        'dark-mode-septenary': process.env.NEXT_PUBLIC_DARK_MODE_SEPTENARY_COLOR,
+        'dark-mode-octonary': process.env.NEXT_PUBLIC_DARK_MODE_OCTONARY_COLOR,
+        'dark-mode-tertiary': process.env.NEXT_PUBLIC_DARK_MODE_TERTIARY_COLOR,
+        'dark-mode-quinary': process.env.NEXT_PUBLIC_DARK_MODE_QUINARY_COLOR,
+        'dark-mode-primary': process.env.NEXT_PUBLIC_DARK_MODE_PRIMARY_COLOR,
+        'dark-mode-senary': process.env.NEXT_PUBLIC_DARK_MODE_SENARY_COLOR,
+        'theme-secondary': process.env.NEXT_PUBLIC_SECONDARY_THEME_COLOR,
+        'theme-primary': process.env.NEXT_PUBLIC_PRIMARY_THEME_COLOR,
         'navyblue': '#0b214a'
       },
       spacing: {

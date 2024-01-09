@@ -55,7 +55,7 @@ const ContactForm = () => {
       <div className="mt-5 md:mt-0">
         <form onSubmit={handleSendMail} id="contact-form">
           <div className="shadow rounded-md overflow-hidden">
-            <div className="px-6 py-5 sm:p-12 lg:px-6 xl:px-12 dark:bg-slate-800 bg-white space-y-6">
+            <div className="px-6 py-5 sm:p-12 lg:px-6 xl:px-12 dark:bg-dark-mode-secondary bg-white space-y-6">
               <div className="grid grid-cols-4 gap-6">
                 <div className="col-span-4 sm:col-span-2">
                   <label
@@ -66,12 +66,12 @@ const ContactForm = () => {
                   </label>
 
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
+                    <span className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                       <i className="bi bi-person text-2xl"></i>
                     </span>
 
                     <input
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       onChange={(e) => updateContactDetail('name', e.target.value)}
                       placeholder="e.g. John Doe"
                       value={contactDetails.name}
@@ -92,12 +92,12 @@ const ContactForm = () => {
                   </label>
 
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
+                    <span className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                       <i className="bi bi-at text-2xl"></i>
                     </span>
 
                     <input
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       onChange={(e) => updateContactDetail('email', e.target.value)}
                       placeholder="e.g. johndoe@email.com"
                       value={contactDetails.email}
@@ -128,12 +128,12 @@ const ContactForm = () => {
                   </label>
 
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
+                    <span className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-lg">
                       <i className="bi bi-telephone text-2xl"></i>
                     </span>
 
                     <input
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       onChange={(e) => updateContactDetail('phone', e.target.value)}
                       placeholder="e.g. +88 9209 635"
                       value={contactDetails.phone}
@@ -158,12 +158,12 @@ const ContactForm = () => {
                 </label>
 
                 <div className="mt-1 flex rounded-md shadow-sm">
-                  <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                  <span className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                     <i className="bi bi-crosshair text-2xl"></i>
                   </span>
 
                   <select
-                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                    className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                     onChange={(e) => updateContactDetail("topic", e.target.value)}
                     value={contactDetails.topic}
                     name="Topic"
@@ -203,12 +203,12 @@ const ContactForm = () => {
                   </label>
 
                   <div className="mt-1 flex rounded-md shadow-sm">
-                    <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                    <span className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                       <i className="bi bi-feather text-2xl"></i>
                     </span>
 
                     <input
-                      className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
+                      className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300"
                       onChange={(e) => updateContactDetail('customTopic', e.target.value)}
                       value={contactDetails.customTopic}
                       placeholder="e.g. Custom topic"
@@ -234,7 +234,7 @@ const ContactForm = () => {
 
                 <div className="mt-1">
                   <textarea
-                    className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 shadow-sm focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 mt-1 block w-full text-lg border border-gray-300 rounded-md"
+                    className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary shadow-sm focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary mt-1 block w-full text-lg border border-gray-300 rounded-md"
                     onChange={(e) => updateContactDetail('message', e.target.value)}
                     placeholder="I need a corporate website for my business"
                     value={contactDetails.message}
@@ -252,7 +252,7 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <div className="px-4 py-3 dark:bg-slate-800 bg-gray-50 sm:p-12">
+            <div className="px-4 py-3 dark:bg-dark-mode-secondary bg-gray-50 sm:p-12">
               <button
                 className="inline-flex justify-center items-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white dark:bg-opacity-50 bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 disabled={status === 'sending'}

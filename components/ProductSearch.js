@@ -68,15 +68,15 @@ const ProductSearch = () => {
   ];
 
   return (
-    <section data-aos="fade-up" className="relative mx-auto overflow-hidden dark:bg-slate-800 bg-white rounded-lg shadow-lg hidden lg:block">
-      <header className="dark:bg-slate-700 bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
+    <section data-aos="fade-up" className="relative mx-auto overflow-hidden dark:bg-dark-mode-secondary bg-white rounded-lg shadow-lg hidden lg:block">
+      <header className="dark:bg-dark-mode-tertiary bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
         <div className="flex items-center justify-between">
           <h2 className="dark:text-teal-500 text-xl font-nunito-black tracking-wider text-slate-900">
             Services
           </h2>
 
           <Link
-            className="hover:bg-green-400 group flex items-center rounded-md dark:bg-teal-600 bg-green-500 font-montserrat text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
+            className="hover:bg-green-400 group flex items-center rounded-md dark:bg-teal-600 bg-theme-primary font-montserrat text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
             href="/new"
           >
             <svg
@@ -94,7 +94,7 @@ const ProductSearch = () => {
 
         <form className="group relative">
           <svg
-            className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none dark:group-focus-within:text-teal-500 group-focus-within:text-green-500"
+            className="absolute left-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none dark:group-focus-within:text-teal-500 group-focus-within:text-theme-primary"
             fill="currentColor"
             aria-hidden="true"
             height="20"
@@ -109,9 +109,9 @@ const ProductSearch = () => {
           <input
             className="
               dark:bg-transparent dark:text-slate-200 
-              dark:ring-slate-700 dark:focus:ring-teal-500 
+              dark:ring-dark-mode-tertiary dark:focus:ring-teal-500 
               dark:focus:outline-none dark:outline-none
-              focus:ring-2 focus:ring-green-500 focus:outline-none 
+              focus:ring-2 focus:ring-theme-primary focus:outline-none 
               appearance-none w-full text-sm leading-6 text-slate-900 
               placeholder-slate-400 rounded-md py-2 pl-10 
               ring-1 ring-slate-200 shadow-sm font-montserrat
@@ -123,12 +123,12 @@ const ProductSearch = () => {
         </form>
       </header>
 
-      <ul className="font-montserrat dark:bg-slate-900 bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm leading-6">
+      <ul className="font-montserrat dark:bg-dark-mode-primary bg-dark-mode-primary-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm leading-6">
         {projects.map((project) => {
           return (
             <li key={project.id}>
               <Link
-                className="block dark:hover:bg-teal-700 hover:bg-green-500 dark:hover:ring-teal-700 hover:ring-green-500 hover:shadow-md group rounded-md p-3 dark:bg-slate-800 bg-white ring-1 ring-slate-200 shadow-sm"
+                className="block dark:hover:bg-teal-700 hover:bg-theme-primary dark:hover:ring-teal-700 hover:ring-theme-primary hover:shadow-md group rounded-md p-3 dark:bg-dark-mode-secondary bg-white ring-1 ring-slate-200 shadow-sm"
                 href={project.url}
               >
                 <dl className="grid sm:block grid-cols-2 grid-rows-2 items-center">
@@ -156,11 +156,11 @@ const ProductSearch = () => {
         })}
         <li className="flex">
           <Link
-            className="dark:hover:border-teal-500 hover:border-green-500 hover:border-solid dark:hover:bg-slate-700 hover:bg-white dark:hover:text-teal-500 hover:text-green-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed dark:border-teal-500 border-slate-300 text-sm leading-6 dark:text-teal-500 text-slate-900 font-medium py-3"
+            className="dark:hover:border-teal-500 hover:border-theme-primary hover:border-solid dark:hover:bg-dark-mode-tertiary hover:bg-white dark:hover:text-teal-500 hover:text-theme-primary group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed dark:border-teal-500 border-slate-300 text-sm leading-6 dark:text-teal-500 text-slate-900 font-medium py-3"
             href="/new"
           >
             <svg
-              className="dark:group-hover:text-teal-500 group-hover:text-green-500 mb-1 dark:text-teal-500 text-slate-400"
+              className="dark:group-hover:text-teal-500 group-hover:text-theme-primary mb-1 dark:text-teal-500 text-slate-400"
               fill="currentColor"
               aria-hidden="true"
               height="20"

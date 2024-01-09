@@ -4,22 +4,22 @@ const Outline = ({ outline }) => {
 	const outlines = items.map((outline) => {
 		return (
 			<div key={outline.title} data-aos="fade-up" className="w-full md:w-1/2 lg:w-1/3 m-4 md:m-0 p-2 md:pb-10 md:px-3 lg:p-4 xl:px-8 2xl:px-4">
-				<div className="relative overflow-hidden w-full px-6 pt-24 lg:pt-20 pb-16 dark:bg-slate-800 bg-gray-50 dark:text-slate-300 text-gray-500 text-lg md:leading-9 rounded-xl text-center shadow dark:shadow-none md:min-h-84 lg:min-h-80">
-					<span className="dark:bg-slate-700 bg-white absolute left-0 top-0 w-full py-2 px-6 flex justify-between items-center">
-						<span className="flex justify-center items-center p-2 text-md text-white bg-algrith-green w-10 h-10 rounded-full">
+				<div className="overflow-hidden w-full px-6 pb-16 dark:bg-slate-800 bg-white dark:text-dark-mode-septenary text-gray-500 text-lg md:leading-9 rounded-xl text-center shadow dark:shadow-none md:min-h-84 lg:min-h-80">
+					<div className="pt-6 w-full flex justify-between">
+						<span className="flex justify-center items-center p-2 text-md text-white bg-theme-primary w-10 h-10 rounded-full shadow-lg">
 							<i className={outline.icon}></i>
 						</span>
 
-						<h2 className="text-sm tracking-widest font-public-sans italic text-algrith-yellow">
+						<h3 className="text-sm tracking-widest font-public-sans italic text-theme-secondary">
 							{outline.subtitle}
-						</h2>
-					</span>
+						</h3>
+					</div>
 
-					<h2 className="text-xl text-algrith-green font-bold my-4">
+					<h2 className="text-xl text-theme-primary font-bold mb-4 mt-8">
 						{outline.title}
 					</h2>
 
-					{/* <span className="flex justify-center items-center my-8 mx-auto p-1 text-4xl text-white bg-algrith-green w-20 h-20 rounded-full">
+					{/* <span className="flex justify-center items-center my-8 mx-auto p-1 text-4xl text-white bg-theme-primary w-20 h-20 rounded-full">
 						<i className={outline.icon}></i>
 					</span> */}
 					

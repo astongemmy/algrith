@@ -4,16 +4,16 @@ import React from 'react';
 const GetStarted = () => {
   return (
     <div className="relative pb-10 md:pb-24 px-8 md:px-12 lg:px-20 xl:px-32 w-full 2xl:w-8/12 2xl:mx-auto">
-      <div className="w-full mx-auto rounded-3xl shadow-lg relative dark:bg-slate-900 bg-white overflow-hidden">
+      <div className="w-full mx-auto rounded-3xl shadow-lg relative dark:bg-dark-mode-primary bg-white overflow-hidden">
         <div className="pt-8 pb-10 sm:pt-24 sm:pb-40 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24 xl:pt-12 xl:pb-12">
           
           <div className="md:flex justify-between relative mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             
             <div className="sm:max-w-2xl px-2 md:px-auto">
-              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-algrith-green text-gray-900 sm:leading-tight sm:text-6xl">
+              <h1 className="leading-tight text-4xl font-extrabold tracking-wide dark:text-theme-primary text-gray-900 sm:leading-tight sm:text-6xl">
                 Responsive designs for your web app.
               </h1>
-              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed dark:text-slate-300 text-gray-500">
+              <p className="mt-4 text-xl leading-relaxed md:leading-relaxed dark:text-dark-mode-septenary text-gray-500">
                 🎉 Our designs are sleek and responsive, ensuring a seamless experience across all devices. 
                 Whether you're on a desktop, tablet, or mobile, enjoy a visually stunning and user-friendly interface. 
                 <span className="hidden lg:inline">

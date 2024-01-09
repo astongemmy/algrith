@@ -33,7 +33,7 @@ const Alert = () => {
 	}, [message]);
 
   return (
-	  <div ref={alertRef} className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-green-100 text-green-500 p-4 w-4/5 md:w-3/5 flex justify-between items-center">
+	  <div ref={alertRef} className="fixed z-50 -top-32 rounded-xl left-2/4 transform -translate-x-2/4 bg-theme-primary/30 text-theme-primary p-4 w-4/5 md:w-3/5 flex justify-between items-center">
 			<span id="message">{ message }</span>
 
 			<button type="button" onClick={hideAlert}>

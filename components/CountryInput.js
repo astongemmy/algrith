@@ -17,11 +17,11 @@ const CountryInput = ({ defaultValue, updateValue, required, label, id }) => {
       </label>
       
       <div className="mt-1 flex rounded-md shadow-sm">
-        <span className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+        <span className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary inline-flex items-center px-4 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
           <i className="bi bi-geo text-2xl"></i>
         </span>
         
-        <select onChange={handleSelection} value={value} required={required} name="Country" id={id} className="dark:bg-slate-700 dark:border-slate-600 dark:text-slate-200 border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-slate-600 flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300">
+        <select onChange={handleSelection} value={value} required={required} name="Country" id={id} className="dark:bg-dark-mode-tertiary dark:border-dark-mode-quaternary dark:text-dark-mode-octonary border-l-0 focus:ring-transparent focus:border-gray-300 dark:focus:border-dark-mode-quaternary flex-1 block w-full rounded-none py-3 rounded-r-md text-lg border-gray-300">
           <option value="">--select--</option>
           <option value="Afghanistan">Afghanistan</option>
           <option value="Åland Islands">Åland Islands</option>

@@ -222,14 +222,14 @@ const HowItWorks = () => {
                 </div>
 
                 <div className="pt-6 mb-6">
-                  <h2 className="mb-4 dark:text-slate-400 text-lg md:text-xl font-heading font-bold">
+                  <h2 className="mb-4 dark:text-dark-mode-senary text-lg md:text-xl font-heading font-bold">
                     Congratulations! You can now get started with a product
                   </h2>
-                  <p className="leading-relaxed dark:text-slate-400 text-lg md:text-xl md:leading-relaxed mb-12">
+                  <p className="leading-relaxed dark:text-dark-mode-senary text-lg md:text-xl md:leading-relaxed mb-12">
                     Select a product package from our store and submit your requirements and we will take over from there.
                   </p>
                   <Link
-                    className="rounded-xl px-6 py-4 text-white text-lg bg-algrith-green hover:bg-green-500 font-semibold"
+                    className="rounded-xl px-6 py-4 text-white text-lg bg-theme-primary hover:bg-green-500 font-semibold"
                     href={'/contact-us'}
                   >
                     Get Started
@@ -237,9 +237,9 @@ const HowItWorks = () => {
                 </div>
               </div>
               
-              <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8 dark:text-slate-400">
+              <div className="xl:w-2/5 md:mt-0 mt-12 xl:pl-8 dark:text-dark-mode-senary">
                 <div className="pt-6">
-                  <h2 className="mb-4 text-2xl dark:text-algrith-green font-heading font-bold">
+                  <h2 className="mb-4 text-2xl dark:text-theme-primary font-heading font-bold">
                     Our Aim
                   </h2>
                   <p className="leading-relaxed text-lg md:text-xl md:leading-relaxed mb-8">
@@ -250,7 +250,7 @@ const HowItWorks = () => {
                   <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
                 </div>
                 <div className="pt-12">
-                  <h2 className="mb-4 text-2xl dark:text-algrith-green font-heading font-bold">
+                  <h2 className="mb-4 text-2xl dark:text-theme-primary font-heading font-bold">
                     Excellent Pricing
                   </h2>
                   <p className="leading-relaxed text-lg md:text-xl md:leading-relaxed mb-8">

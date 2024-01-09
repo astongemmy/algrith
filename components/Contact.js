@@ -15,7 +15,7 @@ const Contact = () => {
             <ContactInquiryCard />
           </div>
           <div className="text-center">
-            <p className="mb-4 md:mb-8 py-10 text-xl dark:text-gray-200 text-gray-500">
+            <p className="mb-4 md:mb-8 py-10 text-xl dark:text text-gray-500">
               If you need any support or assistance, do not hesitate to send us a message.
             </p>
           </div>

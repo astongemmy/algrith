@@ -39,7 +39,7 @@ const TermsOfService = () => {
               </p>
             </div>
             <div className="flex flex-wrap w-full pb-6 md:pb-12">
-              <div className="dark:bg-slate-800 bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
+              <div className="dark:bg-dark-mode-secondary bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
                 <div className="relative">
                   <div className="mb-12">
                     <h1 className="text-left mb-8 text-pink-500 text-3xl font-heading font-bold">Purchase</h1>

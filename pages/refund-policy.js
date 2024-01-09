@@ -16,7 +16,7 @@ const RefundPolicy = () => {
           <div className="px-8 md:px-14 lg:px-20 xl:px-28 pt-8 md:pt-12 pb-8 mb:pb-24 mx-auto">
             <div className="py-2">
               <h1 className="mb-4 md:mb-8 text-3xl md:text-5xl font-heading font-bold">
-                <span className="text-yellow-500 text-lg flex mb-2">Updated on 23th March, 2019</span>
+                <span className="text-theme-secondary text-lg flex mb-2">Updated on 23th March, 2019</span>
                 Refund Policy
               </h1>
               <p className="text-xl leading-relaxed text-justify mb-4 md:mb-12">
@@ -27,7 +27,7 @@ const RefundPolicy = () => {
               </p>
             </div>
             <div className="flex flex-wrap w-full pb-6 md:pb-12">
-              <div className="dark:bg-slate-800 bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
+              <div className="dark:bg-dark-mode-secondary bg-white leading-relaxed shadow-sm xl:w-9/12 text-xl p-4 md:p-10 text-justify">
                 <div className="relative">
                   <ul className="mb-12 pl-5 list-decimal space-y-4">
                     <li>
@@ -102,7 +102,7 @@ const RefundPolicy = () => {
                     </li>
                   </ul>
                   <div className="mb-12">
-                    <h1 className="mb-8 text-left text-yellow-500 text-3xl font-heading font-bold">How To Claim Your Refund</h1>
+                    <h1 className="mb-8 text-left text-theme-secondary text-3xl font-heading font-bold">How To Claim Your Refund</h1>
                     <p>
                       To ensure that your refund request is processed effectively and is approved,
                       please make sure that you meet the following requirements.
