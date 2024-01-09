@@ -5,6 +5,9 @@ const DynamicCssGenerator = () => {
     <span 
       className="
         hidden
+
+        md:text-left md:text-right 
+
         md:-left-28 md:-right-28 
         lg:-left-28 lg:-right-28 
         
