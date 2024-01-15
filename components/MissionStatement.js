@@ -28,7 +28,7 @@ const MissionStatement = () => {
 
           <div className="sm:max-w-lg mt-14 md:mt-0 px-2 md:px-auto">
             <div className="rounded-lg overflow-hidden">
-              <img src="./images/illustrations/dribbble.gif" alt="" className="filter dark:brightness-75 w-full h-full object-center object-cover" />
+              <img src="./images/illustrations/dribbble.gif" alt="learn_how_illustration" className="filter dark:brightness-75 w-full h-full object-center object-cover" />
             </div>
           </div>
         </div>

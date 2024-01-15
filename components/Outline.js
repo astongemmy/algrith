@@ -47,7 +47,7 @@ const Outline = ({ outline }) => {
 					justify-center
 					relative flex
 			`}>
-				<img className="rounded-full filter dark:brightness-75" src={illustration.src} alt={`${title}-illustration`} />
+				<img className="rounded-full filter dark:brightness-75" src={illustration.src} alt={`${title}_illustration`} />
 			</div>
 			
 			<h1 className="relative text-5xl leading-tight sm:leading-tight font-extrabold tracking-tight dark:text-slate-200 text-gray-900 sm:text-5xl py-4 mx-auto w-full text-center">

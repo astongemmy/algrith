@@ -6,7 +6,7 @@ const ContactInquiryCard = () => {
     <div className="lg:order-1 w-full md:w-2/4 lg:w-3/12 md:px-4 mt-10 md:mt-16">
       <div className="dark:bg-dark-mode-secondary overflow-hidden bg-white rounded-lg shadow">
         <div className="h-64">
-          <img className="filter dark:brightness-75 h-full w-full object-cover" src="/images/contact-us/how-it-works.gif" alt="" />
+          <img className="filter dark:brightness-75 h-full w-full object-cover" src="/images/illustrations/learn-more.gif" alt="learn_more_icon" />
         </div>
         
         <div className="px-8 py-8">

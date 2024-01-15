@@ -77,6 +77,16 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li className="px-4 py-2">
+									<Link href="/careers" className="text-gray-500">
+										Careers <span className="text-sm italic text-gray-600 bg-theme-secondary/60 px-2 py-1 rounded-full">Not hiring</span>
+									</Link>
+								</li>
+								<li className="px-4 py-2">
+									<Link href="/blog" className="text-gray-500">
+										Blog
+									</Link>
+								</li>
+								<li className="px-4 py-2">
 									<Link href="/" className="text-gray-500">
 										FAQ
 									</Link>

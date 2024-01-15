@@ -6,8 +6,8 @@ const Navbar = ({ closeMenuRef, navbarRef }) => {
     <nav ref={ navbarRef } id="nav-menu" className="navlinks transition-all z-50 ease-in-out duration-500 shadow lg:shadow-none lg:bg-transparent bg-white dark:lg:bg-transparent dark:bg-dark-mode-primary fixed top-0 lg:top-0 -right-full lg:right-24 xl:right-32 lg:mr-3 flex flex-col lg:flex-row justify-between lg:justify-end lg:items-center w-10/12 md:w-5/12 lg:w-auto h-screen lg:h-16 text-gray-600 lg:p-4">
 			<div className="lg:hidden flex flex-grow-0 flex-shrink justify-between content-center mb-2 text-left w-full text-2xl px-5 lg:px-8 py-4">
 				<h1 id="navbar-title" className="h-12 w-64 flex justify-start items-center transform scale-65 origin-left transition-all ease-in-out duration-1000">
-					<img src="/images/logo/algrith-logo-dark.png" className="dark:hidden" alt="brand-logo" />
-					<img src="/images/logo/algrith-logo-light.png" className="hidden dark:block" alt="brand-logo" />
+					<img src="/images/logo/algrith-logo-dark.png" className="dark:hidden" alt="algrith_logo" />
+					<img src="/images/logo/algrith-logo-light.png" className="hidden dark:block" alt="algrith_logo" />
 				</h1>
 
 				<button type="button" ref={ closeMenuRef } id="close-menu" className="flex justify-center rounded-xl items-center bg-transparent focus:bg-transparent hover:bg-transparent border-none outline-none dark:text-dark-mode-octonary text-black">
@@ -16,6 +16,12 @@ const Navbar = ({ closeMenuRef, navbarRef }) => {
 			</div>
 
 			<div id="navbar-links" className="flex flex-col lg:flex-row flex-grow flex-shrink-0 w-11/12 lg:w-full p-2 rounded-xl my-4 lg:my-0 mx-auto">
+				<Link
+				  className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-theme-primary border-b-4 border-opacity-0 dark:border-opacity-0 text-left lg:text-center w-full lg:w-auto text-lg dark:text-dark-mode-octonary text-gray-600"
+					href="/">
+					Home
+				</Link>
+
 				<Link
 				  className="ripple-node transition all ease-in-out duration-400 my-2 mx-auto lg:mx-4 px-0 lg:p-2 hover:border-opacity-100 border-theme-primary border-b-4 border-opacity-0 dark:border-opacity-0 text-left lg:text-center w-full lg:w-auto text-lg dark:text-dark-mode-octonary text-gray-600"
 					href="/about">

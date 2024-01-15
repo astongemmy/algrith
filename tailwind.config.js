@@ -9,9 +9,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'intro-about': "url('/images/sections/intro-about.jpg'), linear-gradient(to bottom, rgba(0,0,0,.9), rgba(255,255,255,.6))",
-        'intro-index-dark': "url('/images/sections/abstract-art-atom.jpeg')",
-        'intro-index': "url('/images/sections/intro-index.jpeg')",
+        'intro-index': "url('/images/section-backgrounds/abstract-art-atom.jpeg')",
+        'intro-about': "url('/images/section-backgrounds/intro-about.jpg')",
       }),
       fontFamily: {
         'nunito-black': ['Nunito-Black', 'sans-serif'],

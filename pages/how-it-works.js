@@ -247,7 +247,7 @@ const HowItWorks = () => {
                     once you initiate this process with us, we will ensure to polish your ideas into
                     satisfactory output that will project your brand steps ahead of the competition.
                   </p>
-                  <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/web-development-process.gif" alt="step" />
+                  <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/illustrations/web-development-process.gif" alt="steps_illustration" />
                 </div>
                 <div className="pt-12">
                   <h2 className="mb-4 text-2xl dark:text-theme-primary font-heading font-bold">
@@ -258,7 +258,7 @@ const HowItWorks = () => {
                     of our client could be possible even with the cheapest of budget.
                     Our plans are easy to afford and our delivery is more than commensurate.
                   </p>
-                  <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/how-it-works/payment-terminal.gif" alt="Pricing plan illustration" />
+                  <img className="filter dark:brightness-75 object-cover object-center rounded-lg md:mt-0 mt-12" src="/images/illustrations/payment-terminal.gif" alt="pricing_illustration" />
                 </div>
               </div>
             </div>

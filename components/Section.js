@@ -20,7 +20,7 @@ const Section = ({ payload }) => {
           filter dark:brightness-75 
           relative flex
         `}>
-        <img className="rounded-full" src={illustration.src} alt={`${title.text}-illustration`} />
+        <img className="rounded-full" src={illustration.src} alt={`${title.text}_illustration`} />
       </div>
       <h1 className={`text-center md:text-${title.align} relative uppercase py-4 text-3xl md:text-4xl dark:text-gray-300 text-gray-600 mx-auto w-full md:w-11/12 lg:px-3 xl:px-10 font-bold`}>
         {title.text}

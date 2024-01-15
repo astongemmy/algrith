@@ -27,88 +27,116 @@ const TechStack = () => {
     {
       dark: '/images/tech-stack/javascript.png',
       class: 'scale-45 md:scale-65',
+      name: 'javascript',
     },
     {
       dark: '/images/tech-stack/nodejs.svg',
+      name: 'nodejs',
     },
     {
       dark: '/images/tech-stack/tailwindcss-light.png',
       light: '/images/tech-stack/tailwindcss.png',
+      name: 'tailwindcss',
     },
     {
       dark: '/images/tech-stack/mongodb-light.png',
       light: '/images/tech-stack/mongodb.png',
+      name: 'mongodb',
     },
     {
       dark: '/images/tech-stack/bootstrap.png',
       class: 'scale-45 md:scale-65',
+      name: 'bootstrapcss',
     },
     {
       dark: '/images/tech-stack/firebase-light.png',
       light: '/images/tech-stack/firebase.png',
+      name: 'firebase',
     },
     {
       dark: '/images/tech-stack/php.png',
       class: 'scale-65 md:scale-75',
+      name: 'php',
     },
     {
       dark: '/images/tech-stack/docker.avif',
+      name: 'docker',
     },
     {
       dark: '/images/tech-stack/python-light.png',
       light: '/images/tech-stack/python.png',
+      name: 'python',
     },
     {
       dark: '/images/tech-stack/redis-light.png',
       light: '/images/tech-stack/redis.png',
-      class: '',
+      name: 'redis',
     },
     {
       dark: '/images/tech-stack/flask.png',
-      class: '',
+      name: 'flask',
     },
     {
       dark: '/images/tech-stack/react-light.png',
       light: '/images/tech-stack/react.png',
-      class: '',
+      name: 'reactjs',
     },
     {
       dark: '/images/tech-stack/laravel.png',
-      class: '',
+      name: 'laravel',
     },
     {
       dark: '/images/tech-stack/git-light.png',
       light: '/images/tech-stack/git.png',
+      name: 'git',
     },
     {
       dark: '/images/tech-stack/expressjs-light.svg',
       light: '/images/tech-stack/expressjs.png',
+      name: 'expressjs',
     },
     {
       dark: '/images/tech-stack/tensorflow-light.png',
       light: '/images/tech-stack/tensorflow.png',
+      name: 'tensorflow',
     },
     {
       dark: '/images/tech-stack/mysql.png',
       class: 'md:scale-75',
+      name: 'mysql',
     },
     {
       dark: '/images/tech-stack/pytorch-light.png',
       light: '/images/tech-stack/pytorch.png',
+      name: 'pytorch',
+    },
+    {
+      dark: '/images/tech-stack/google-cloud.png',
+      name: 'google_cloud',
     },
     {
       dark: '/images/tech-stack/opencv-light.png',
       light: '/images/tech-stack/opencv.png',
-      class: '',
+      name: 'opencv',
     },
     {
       dark: '/images/tech-stack/onnx-light.png',
       light: '/images/tech-stack/onnx.png',
+      name: 'onnx',
     },
     {
       dark: '/images/tech-stack/bash-light.png',
       light: '/images/tech-stack/bash.png',
       class: 'md:scale-85',
+      name: 'bash',
+    },
+    {
+      dark: '/images/tech-stack/fast-api.png',
+      name: 'fast_api',
+    },
+    {
+      dark: '/images/tech-stack/microsoft-azure.png',
+      name: 'microsoft_azure',
     }
   ]
 
@@ -149,8 +177,8 @@ const TechStack = () => {
         >
           {tech_stack_images.map((image) => (
             <div key={image} className={image?.class}>
-              <img src={image?.light || image.dark} className="dark:hidden" />
-              <img src={image.dark} className="hidden dark:block" />
+              <img src={image?.light || image.dark} className="dark:hidden" alt={`${image.name}_logo`} />
+              <img src={image.dark} className="hidden dark:block" alt={`${image.name}_logo`} />
             </div>
           ))}
         </Carousel>

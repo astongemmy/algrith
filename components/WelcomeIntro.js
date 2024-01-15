@@ -6,7 +6,7 @@ const WelcomeIntro = ({ payload }) => {
   useTypist(title.text);
 
   return (
-    <div id="intro-index" className="relative w-full h-auto lg:h-188 bg-intro-index-dark bg-right-top md:bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
+    <div id="intro-index" className="relative w-full h-auto lg:h-188 bg-intro-index bg-right-top md:bg-left-top bg-cover bg-scroll lg:bg-fixed bg-no-repeat">
       <div className="bg-theme-primary/80 dark:bg-dark-mode-primary/90 h-full w-full 2xl:w-8/12 mx-auto flex justify-between items-center px-6 md:px-13 lg:px-23 xl:px-33 py-16">
         <div data-aos="fade" className="relative w-full lg:w-3/5">
           <span className="typing-pad w-full font-bold leading-tight md:leading-tight lg:leading-tight dark:text-dark-mode-octonary text-white text-5xl lg:text-7xl 2xl:text-8xl"></span>
