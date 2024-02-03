@@ -1,10 +1,12 @@
 import { PersistGate } from 'redux-persist/integration/react';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
+import { SessionProvider } from 'next-auth/react'
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { useEffect } from 'react';
 
+import GlobalStyles from '../styled/global';
 import { store, persistor } from '../store';
 import '../public/styles/animate.css';
 import '../public/styles/fonts.css';
@@ -20,7 +22,7 @@ import '../public/styles/aos.css';
 // });
 
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps: { session, pageProps }, }) => {
 	const router = useRouter();
 
 	useEffect(() => {
@@ -33,11 +35,14 @@ const App = ({ Component, pageProps }) => {
 	}, [])
 	
 	return (
-		<Provider store={store}>
-			<PersistGate loading={null} persistor={persistor}>
-				<Component key={router.asPath} {...pageProps} />
-			</PersistGate>
-		</Provider>
+		<SessionProvider session={session}>
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
+					<GlobalStyles />
+					<Component key={router.asPath} {...pageProps} />
+				</PersistGate>
+			</Provider>
+		</SessionProvider>
 	)
 };
 

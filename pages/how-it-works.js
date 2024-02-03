@@ -28,27 +28,30 @@ const HowItWorks = () => {
             <div className="flex flex-wrap w-full">
               <div className="xl:w-3/5 text-xl xl:pr-10 md:py-6">
                 <div className="flex relative pb-16">
-                  <div className="h-full w-12 md:w-32 absolute inset-0 flex items-center justify-center">
+                  <div className="h-full bg-blue-00 w-12 md:w-32 absolute inset-0 flex items-center justify-center">
                     <div className="h-6 w-6 absolute top-1 z-10 bg-white rounded-full" />
                     <div className="h-8 w-8 absolute top-0 bg-red-500 rounded-full pointer-events-none">
                       <div className="h-full w-full animate-ping border border-red-500 bg-white rounded-full" />
                     </div>
-                    <div className="h-full w-1 bg-red-500 pointer-events-none" />
-                    <div className="w-12 h-12 md:h-16 md:w-24 border-red-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-14 left-6 md:left-16 pointer-events-none" />
+                    <div className="h-full w-1 -translate-x-1/2 left-1/2 absolute bg-red-500 pointer-events-none" />
+                    <div className="w-12 h-12 md:h-16 bg-yellow-0 md:w-24 border-red-500 border-t-4 border-l-4 rounded-tl-3xl absolute top-10 left-1/2 pointer-events-none" style={{ borderLeftWidth: '0.25rem'}} />
                   </div>
+                  
                   <div className="mt-20 flex-shrink-0 w-12 md:w-32 h-12 md:h-32 rounded-full bg-red-500 inline-flex items-center justify-center text-white relative z-10">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-8 md:w-20 h-8 md:h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                     </svg>
                   </div>
+
                   <div className="flex-grow pl-6 md:pl-8">
                     <div className="dark:bg-red-900 dark:bg-opacity-10 bg-red-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-red-100 text-gray-900 mb-2 tracking-wider">Step 1</h2>
-                      <h2 className="font-bold title-font text-xl text-red-500 mb-4 tracking-wider">Select a Product</h2>
+                      <h2 className="font-bold title-font text-xl text-red-500 mb-4 tracking-wider">Initial Consultation</h2>
                       <p className="leading-relaxed text-lg md:text-xl md:leading-relaxed dark:text-slate-300">
-                        Visit our <Link href={'/products'} className="text-red-500">products </Link> 
-                        store and select a product that fits your demand exactly.
-                        We have products covering website alongside its underlying web applications to power business demands.
+                        {/* Visit our <Link href={'/products'} className="text-red-500">products </Link>  */}
+                        Initiate contact with us by providing a concise overview of your business, including relevant links and pages.
+                        <br />
+                        Expect a prompt response within 2-3 business days from our team.
                       </p>
                     </div>
                   </div>
@@ -64,13 +67,12 @@ const HowItWorks = () => {
                     </div>
                   </div>
 
-                  <div className="flex-grow pr-6 md:pr-8 text-right">
+                  <div className="flex-grow pr-6 md:pr-8 text-justify">
                     <div className="dark:bg-yellow-900 dark:bg-opacity-10 bg-yellow-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-yellow-100 text-gray-900 mb-2 tracking-wider">Step 2</h2>
-                      <h2 className="font-bold title-font text-xl text-yellow-500 mb-4 tracking-wider">Choose a Package</h2>
+                      <h2 className="font-bold title-font text-xl text-yellow-500 mb-4 tracking-wider">Business Discovery Meeting</h2>
                       <p className="leading-relaxed text-lg md:text-xl dark:text-slate-300 md:leading-relaxed">
-                        Our product display shelf is rich with amazing packages and 
-                        you can choose from a minimum of three packages from any of our product shelves.
+                        A meeting would be scheduled with our experts to delve into the intricacies of your business. By the meeting's conclusion, we aim to have identified your specific requirements, challenges, and objectives. We will discuss any pre-existing systems, technologies, or processes that may require modification or enhancement. Additionally, budget and timeline considerations will be addressed. Should further clarification be needed, a follow-up meeting will be scheduled.
                       </p>
                     </div>
                   </div>
@@ -98,13 +100,13 @@ const HowItWorks = () => {
                     </svg>
                   </div>
 
-                  <div className="flex-grow pl-6 md:pl-8">
+                  <div className="flex-grow pl-6 md:pl-8 text-justify">
                     <div className="dark:bg-green-900 dark:bg-opacity-10 bg-green-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-green-100 text-gray-900 mb-2 tracking-wider">Step 3</h2>
-                      <h2 className="font-bold title-font text-xl text-green-500 mb-4 tracking-wider">Fill in your Requirements</h2>
+                      <h2 className="font-bold title-font text-xl text-green-500 mb-4 tracking-wider">Contract Proposal and Acceptance</h2>
                       <p className="leading-relaxed dark:text-slate-300 text-lg md:text-xl md:leading-relaxed">
-                        For any package selected, there are a list of requirements with which you can specify how
-                        you want your package delivered. Utilize this feature to get exactly what you desire.
+                        Following our understanding of your needs, we will present a comprehensive contract outlining the project proposal.
+                        This document will detail the scope, timeline, cost estimates, deliverables, and acceptance criteria. Subsequently, we will organize a follow-up meeting to negotiate terms and finalize the contractual agreement.
                       </p>
                     </div>
                   </div>
@@ -120,13 +122,12 @@ const HowItWorks = () => {
                     </div>
                   </div>
 
-                  <div className="flex-grow pr-6 md:pr-8 text-right">
+                  <div className="flex-grow pr-6 md:pr-8 text-justify">
                     <div className="dark:bg-blue-900 dark:bg-opacity-10 bg-blue-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-blue-100 text-gray-900 mb-2 tracking-wider">Step 4</h2>
-                      <h2 className="font-bold title-font text-xl text-blue-500 mb-4 tracking-wider">Proceed to Checkout</h2>
+                      <h2 className="font-bold title-font text-xl text-blue-500 mb-4 tracking-wider">Development and Testing</h2>
                       <p className="leading-relaxed dark:text-slate-300 text-lg md:text-xl md:leading-relaxed">
-                        Once you are satisfied with selecting and filling in requirements for a package, proceed to 
-                        checkout in order to make payment.
+                        Leveraging our expertise, we will commence development, ensuring code quality and strict adherence to coding standards. Our testing phase will encompass unit testing to verify individual component functionality, integration testing to ensure seamless module interaction, and system testing to validate compliance with specified requirements.
                       </p>
                     </div>
                   </div>
@@ -154,13 +155,12 @@ const HowItWorks = () => {
                     </svg>
                   </div>
                   
-                  <div className="flex-grow pl-6 md:pl-8">
+                  <div className="flex-grow pl-6 md:pl-8 text-justify">
                     <div className="dark:bg-pink-900 dark:bg-opacity-10 bg-pink-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-pink-100 text-gray-900 mb-2 tracking-wider">Step 5</h2>
-                      <h2 className="font-bold title-font text-xl text-pink-500 mb-4 tracking-wider">Product design and Creation</h2>
+                      <h2 className="font-bold title-font text-xl text-pink-500 mb-4 tracking-wider">Quality Assurance (QA) and Issue Resolution</h2>
                       <p className="leading-relaxed dark:text-slate-300 text-lg md:text-xl md:leading-relaxed">
-                        This is the part where you head back to focus on your business while
-                        we transform your request into a perfect result with reference to your requirements.
+                        Our dedicated QA team will meticulously identify and rectify any bugs or issues discovered during testing. Rigorous QA procedures will be undertaken to guarantee that the software attains the highest quality standards.
                       </p>
                     </div>
                   </div>
@@ -176,13 +176,12 @@ const HowItWorks = () => {
                     </div>
                   </div>
 
-                  <div className="flex-grow pr-6 md:pr-8 text-right">
+                  <div className="flex-grow pr-6 md:pr-8 text-justify">
                     <div className="dark:bg-teal-900 dark:bg-opacity-10 bg-teal-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-teal-100 text-gray-900 mb-2 tracking-wider">Step 6</h2>
-                      <h2 className="font-bold title-font text-xl text-teal-500 mb-4 tracking-wider">Delivery and Completion</h2>
+                      <h2 className="font-bold title-font text-xl text-teal-500 mb-4 tracking-wider">Deployment Preparation</h2>
                       <p className="leading-relaxed dark:text-slate-300 text-lg md:text-xl md:leading-relaxed">
-                        By now you would have received a delivery of your package and can indicate satisfaction
-                        by acknowledging the order as completed.
+                        We will prepare the software for seamless deployment in your environment, accompanied by comprehensive documentation to facilitate a smooth transition.
                       </p>
                     </div>
                   </div>
@@ -209,13 +208,12 @@ const HowItWorks = () => {
                     </svg> */}
                   </div>
 
-                  <div className="flex-grow pl-6 md:pl-8">
+                  <div className="flex-grow pl-6 md:pl-8 text-justify">
                     <div className="dark:bg-rose-900 dark:bg-opacity-10 bg-rose-50 shadow-sm p-8 rounded-3xl">
                       <h2 className="font-bold title-font text-2xl dark:text-rose-100 text-gray-900 mb-2 tracking-wider">Step 7</h2>
-                      <h2 className="font-bold title-font text-xl text-rose-500 mb-4 tracking-wider">Support Us with a Review</h2>
+                      <h2 className="font-bold title-font text-xl text-rose-500 mb-4 tracking-wider">Training and Support(on-demand)</h2>
                       <p className="leading-relaxed dark:text-slate-300 text-lg md:text-xl md:leading-relaxed">
-                        On order delivery, we would like you to give us a feedback on how the whole process
-                        happened. This helps spread the new about our competence and character as a business.
+                       Our commitment extends beyond deployment, as we may conduct thorough training sessions for your team on software usage and maintenance if needed. Throughout the agreed-upon support period, we will remain accessible to address any queries or issues that may arise.
                       </p>
                     </div>
                   </div>
@@ -223,10 +221,10 @@ const HowItWorks = () => {
 
                 <div className="pt-6 mb-6">
                   <h2 className="mb-4 dark:text-dark-mode-senary text-lg md:text-xl font-heading font-bold">
-                    Congratulations! You can now get started with a product
+                    Congratulations! You can now get started
                   </h2>
                   <p className="leading-relaxed dark:text-dark-mode-senary text-lg md:text-xl md:leading-relaxed mb-12">
-                    Select a product package from our store and submit your requirements and we will take over from there.
+                    Please note that while this represents an idealized workflow, adjustments may be made based on the unique industry and services involved, such as the integration technologies like Artificial Intelligence.
                   </p>
                   <Link
                     className="rounded-xl px-6 py-4 text-white text-lg bg-theme-primary hover:bg-green-500 font-semibold"
