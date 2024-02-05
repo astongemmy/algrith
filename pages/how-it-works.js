@@ -69,7 +69,7 @@ const Step = ({content, color, title, icon, step, isFirst, isLast, isLeft}) => {
       className={`
         ${isLeft ? 'border-l-4 rounded-tl-3xl left-5.5 md:left-15' : 'border-r-4 rounded-tr-3xl right-5.5 md:right-15'} 
         absolute top-14 border-t-4 pointer-events-none w-32
-        ${isLast ? 'h-20' : 'h-full'}
+        ${isLast ? 'h-12 md:h-20' : 'h-full'}
         border-${color}-500
       `}
     >
@@ -77,7 +77,7 @@ const Step = ({content, color, title, icon, step, isFirst, isLast, isLeft}) => {
         <div
           style={isLeft ? { left: '-1.125rem' } : { right: '-1.125rem' }}
           className={`
-            h-8 w-8 absolute z-10 rounded-full pointer-events-none 
+            h-8 w-8 absolute z-50 rounded-full pointer-events-none 
             ${isFirst ? '-top-14' : 'bottom-10'} 
             bg-${color}-500
           `}
@@ -145,7 +145,7 @@ const Step = ({content, color, title, icon, step, isFirst, isLast, isLeft}) => {
           {title}
         </h2>
         
-        <p className='leading-relaxed text-lg md:text-xl dark:text-slate-300 md:leading-relaxed text-justify'>
+        <p className='leading-relaxed text-lg md:text-xl dark:text-slate-300 md:leading-relaxed md:text-justify'>
           {content}
         </p>
       </div>
