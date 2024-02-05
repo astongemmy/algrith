@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import tw, { styled } from 'twin.macro';
 
 import Layout from '../components/Layout';
 import Link from 'next/link';
@@ -63,99 +64,111 @@ const howItWorks = [
   }
 ];
 
+const StepIconWrapper = styled.div`
+  ${({ isLeft }) => isLeft ? tw`border-l-4 rounded-tl-3xl left-5.5 md:left-15` : tw`border-r-4 rounded-tr-3xl right-5.5 md:right-15`}
+  ${tw`absolute top-14 border-t-4 pointer-events-none w-32`};
+  ${({ isLast }) => isLast ? tw`h-12 md:h-20` : tw`h-full`};
+
+  .ping-wrapper {
+    ${({ isLeft }) => isLeft ? 'left: -1.125rem' : 'right: -1.125rem'};
+    ${tw`h-8 w-8 absolute z-50 rounded-full pointer-events-none`} ;
+    ${({ isFirst }) => isFirst ? tw`-top-14` : tw`bottom-10`};
+    
+    .ping {
+      ${tw`h-full w-full animate-ping border rounded-full`};
+    }
+
+    .ping.first {
+      ${({ isLeft }) => isLeft ? 'left: 0.225rem' : 'right: 0.225rem'};
+      ${tw`h-6 w-6 absolute top-1 bg-white rounded-full`};
+    }
+  }
+
+  .line.first {
+    ${tw`h-20 w-1 -top-14 absolute bg-red-500 pointer-events-none`};
+    ${({ isLeft }) => isLeft ? tw`-left-1` : tw`-right-1`};
+  }
+`;
+
+const SvgWrapper = styled.div`
+  ${tw`flex items-center justify-center text-white relative z-10 mt-20 w-12 md:w-28 h-12 md:h-28 rounded-full`};
+  
+  svg {
+    ${tw`h-8 w-8 md:h-20 md:w-20`};
+  }
+`;
+
+const IconWrapper = styled.div`
+  ${tw`w-2/12 lg:w-1/12 h-full flex flex-col justify-between absolute`};
+  ${({ isLeft }) => isLeft ? tw`left-0` : tw`right-0 items-end`};
+`;
+
+const ContentWrapper = styled.div`
+  ${({ isLeft }) => isLeft ? tw`pl-4 md:pl-6 lg:pl-14` : tw`pr-4 md:pr-6 lg:pr-14`}
+  ${tw`w-10/12 lg:w-11/12 z-10`};
+
+  .inner {
+    ${tw`dark:bg-opacity-10 shadow-sm p-8 rounded-3xl`} ;
+    
+    h2 {
+      &.step {
+        ${tw`font-bold text-2xl text-gray-900 mb-2 tracking-wider`};
+      }
+      
+      &.title {
+        ${tw`font-bold text-xl mb-4 tracking-wider`};
+      }
+    }
+
+    p {
+      ${tw`leading-relaxed text-lg md:text-xl dark:text-slate-300 md:leading-relaxed md:text-justify`};
+    }
+  }
+`;
+
+
 const Step = ({content, color, title, icon, step, isFirst, isLast, isLeft}) => {
   const Icon = () => (
-    <div
-      className={`
-        ${isLeft ? 'border-l-4 rounded-tl-3xl left-5.5 md:left-15' : 'border-r-4 rounded-tr-3xl right-5.5 md:right-15'} 
-        absolute top-14 border-t-4 pointer-events-none w-32
-        ${isLast ? 'h-12 md:h-20' : 'h-full'}
-        border-${color}-500
-      `}
-    >
+    <StepIconWrapper isFirst={isFirst} isLeft={isLeft} isLast={isLast} className={`border-${color}-500`}>
       {!isLast && (
-        <div
-          style={isLeft ? { left: '-1.125rem' } : { right: '-1.125rem' }}
-          className={`
-            h-8 w-8 absolute z-50 rounded-full pointer-events-none 
-            ${isFirst ? '-top-14' : 'bottom-10'} 
-            bg-${color}-500
-          `}
-        >
-          <div className={`h-full w-full animate-ping border border-${color}-500 rounded-full`} />
-          {isFirst && (
-            <div
-              className={`h-6 w-6 absolute top-1 ${isLeft ? 'left-1' : 'right-1'} bg-white rounded-full`}
-              style={isLeft ? { left: '0.225rem' } : { right: '0.225rem' }}
-            />
-          )}
+        <div className={`ping-wrapper bg-${color}-500`}>
+          <div className={`ping border-${color}-500`} />
+          {isFirst && (<div className={`ping first`} />)}
         </div>
       )}
 
-      {isFirst && (
-        <div
-          className={`
-            h-20 w-1 -top-14 absolute bg-red-500 pointer-events-none
-            ${isLeft ? '-left-1' : '-right-1'}
-          `}
-        />
-      )}
-    </div>
+      {isFirst && (<div className="line first" />)}
+    </StepIconWrapper>
   );
 
   const Svg = () => (
-    <div
-      className={`
-        flex items-center justify-center text-white relative z-10
-        mt-20 w-12 md:w-28 h-12 md:h-28 rounded-full
-        bg-${color}-500
-      `}
-    >
-      <svg
-        className='h-8 w-8 md:h-20 md:w-20'
-        xmlns='http://www.w3.org/2000/svg'
-        stroke='currentColor'
-        viewBox='0 0 24 24'
-        strokeWidth={2}
-        fill='none'
-      >
-        <path strokeLinejoin='round' strokeLinecap='round' d={icon} />
+    <SvgWrapper className={`bg-${color}-500`}>
+      <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} fill="none">
+        <path strokeLinejoin="round" strokeLinecap="round" d={icon} />
       </svg>
-    </div>
-  );
-
-  const IconWrapper = () => (
-    <div className={`
-      ${isLeft ? 'left-0' : 'right-0 items-end'}
-      w-2/12 lg:w-1/12 h-full flex flex-col
-      justify-between absolute
-    `}>
-      <Svg />
-      <Icon />
-    </div>
-  );
-
-  const ContentWrapper = () => (
-    <div className={`w-10/12 lg:w-11/12 ${isLeft ? 'pl-4 md:pl-6 lg:pl-14' : 'pr-4 md:pr-6 lg:pr-14'} z-10`}>
-      <div className={`dark:bg-${color}-900 dark:bg-opacity-10 bg-${color}-50 shadow-sm p-8 rounded-3xl`}>
-        <h2 className={`font-bold title-font text-2xl dark:text-${color}-100 text-gray-900 mb-2 tracking-wider`}>
-          Step {step}
-        </h2>
-        <h2 className={`font-bold title-font text-xl text-${color}-500 mb-4 tracking-wider`}>
-          {title}
-        </h2>
-        
-        <p className='leading-relaxed text-lg md:text-xl dark:text-slate-300 md:leading-relaxed md:text-justify'>
-          {content}
-        </p>
-      </div>
-    </div>
+    </SvgWrapper>
   );
 
   return (
     <div className={`flex ${isLeft ? 'justify-end' : 'justify-between'} relative pb-16`}>
-      <ContentWrapper />
-      <IconWrapper />
+      <ContentWrapper>
+        <div className={`dark:bg-${color}-900 bg-${color}-50`}>
+          <h2 className={`step title-font dark:text-${color}-100`}>
+            Step {step}
+          </h2>
+          
+          <h2 className={`title title-font text-${color}-500`}>
+            {title}
+          </h2>
+          
+          <p>{content}</p>
+        </div>
+      </ContentWrapper>
+      
+      <IconWrapper isLeft={isLeft}>
+        <Svg />
+        <Icon />
+      </IconWrapper>
     </div>
   );
 };
