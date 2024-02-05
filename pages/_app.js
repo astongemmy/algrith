@@ -6,13 +6,13 @@ import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { useEffect } from 'react';
 
-import GlobalStyles from '../styled/global';
+// import GlobalStyles from '../styled/global';
 import { store, persistor } from '../store';
-import '../public/styles/animate.css';
-import '../public/styles/fonts.css';
-import '../public/styles/Icons.css';
-import '../public/styles/App.css';
-import '../public/styles/aos.css';
+import '../public/css/animate.css';
+import '../public/css/fonts.css';
+import '../public/css/icons.css';
+import '../public/css/app.css';
+import '../public/css/aos.css';
 
 // Add a request interceptor
 // window.axios.interceptors.request.use(function (config) {
@@ -38,7 +38,7 @@ const App = ({ Component, pageProps: { session, pageProps }, }) => {
 		<SessionProvider session={session}>
 			<Provider store={store}>
 				<PersistGate loading={null} persistor={persistor}>
-					<GlobalStyles />
+					{/* <GlobalStyles /> */}
 					<Component key={router.asPath} {...pageProps} />
 				</PersistGate>
 			</Provider>

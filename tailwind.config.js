@@ -36,7 +36,9 @@ module.exports = {
         'navyblue': '#0b214a'
       },
       spacing: {
+        '5.5': '1.3rem',
         '13': '3.2rem',
+        '15': '3.3rem',
         '23': '4.7rem',
         '33': '7.3rem',
         '84': '23rem',
